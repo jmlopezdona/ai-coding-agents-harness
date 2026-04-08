@@ -22,7 +22,7 @@ Para un equipo humano esto puede sentirse rígido. Para un agente, es liberador:
 
 ## Dependencias "aburridas"
 
-Otra observación de OpenAI: prefieren librerías "boring" — composables, con APIs estables, bien representadas en el training data del modelo. La razón no es nostalgia. Es que esas librerías son **mecánicamente más fáciles de razonar para el agente**: hay más ejemplos en el corpus, las convenciones son estables, el comportamiento es predecible.
+Otra observación de OpenAI: prefieren librerías "aburridas" — modulares, con APIs estables, bien representadas en los datos de entrenamiento del modelo. La razón no es nostalgia. Es que esas librerías son **mecánicamente más fáciles de razonar para el agente**: hay más ejemplos en el corpus, las convenciones son estables, el comportamiento es predecible.
 
 Hay un caso límite que merece atención porque rompe intuiciones: a veces es más barato que el agente reimplemente un subset de una librería que integrarla. OpenAI da un ejemplo concreto: en lugar de usar `p-limit` (un helper minúsculo de concurrencia), Codex implementó su propia versión integrada con su instrumentación de OpenTelemetry, con 100% de cobertura. ¿Por qué? Porque la librería externa era una caja negra cuyo comportamiento opaco generaba más fricción en el bucle que el código que la reemplaza.
 
