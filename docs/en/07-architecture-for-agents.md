@@ -49,6 +49,23 @@ In practice this means:
 
 There's a consequence many teams find hard to accept: **the resulting code isn't always going to match your stylistic preferences**. And that's fine. As long as it's correct, maintainable and legible for future agent runs, it meets the standard. Arguing about the name of an internal function that a lint doesn't catch is, in this context, pure waste of human attention — and human attention is now the scarce resource.
 
+## The brown-field paradox
+
+There's an uncomfortable observation worth naming before talking tactics: **brown-field projects are at the same time where a good harness is most needed and where it's hardest to build**. Both things at once, and for the same reasons.
+
+**Why it's more needed.** A large, old codebase with years of organic growth, modules inherited from three different teams, and zones nobody on the current team fully understands, is exactly the kind of environment where an agent can multiply the team's output — *if* it can operate safely. A greenfield is trivial for any senior engineer; a brown-field is where the agent, well-directed, saves you weeks of archaeology every month. The potential ROI is maximum.
+
+**Why it's harder.** The same properties that make the agent valuable in brown-field are the ones that make it hard to build a harness for it:
+
+- Discipline lives as culture, not as code. The "rules" are in the heads of seniors, in past PR reviews, in Slack threads from two years ago. Materializing them as lints is archaeological work that has to happen before any investment in the harness.
+- The architecture is heterogeneous. Different domains follow different conventions, layer boundaries exist in some places and not in others. You can't write *one* dependency-direction lint: you have to write *N* lints, one per coherent zone, and accept that some zones aren't codifiable until you refactor them first.
+- Entropy is real and pushes back. Every new rule you introduce hits code that already violates it, and you have to decide case by case whether it's a legitimate exception or debt that has to be paid. That's not the agent's work; it's human calibration work that has to happen first.
+- The team is used to the imperfections. What would be an obvious bug in a greenfield is "it's always been this way" in a brown-field. Turning that into mandatory invariants generates social friction, not just technical.
+
+**And there's an aggravating factor: the agent amplifies existing entropy.** This matters because it turns difficulty into a feedback loop. An agent learns from the code in front of it: if the base is full of bad practices, it imitates them, propagates them faster than a human would, and reinforces the feeling that "this is how we do things here" because the new code looks like the old code. Without a sensor that detects the bad pattern or a guide that forbids it, the agent has no way to distinguish between healthy convention and inherited debt — for the agent, everything it sees in the repo is "what the team does". The loop is silent: it looks like the agent is being productive and consistent, and it is; only the consistency is with what's wrong. In a brown-field without a harness, **introducing an agent accelerates entropy instead of fighting it**. That's the strongest reason not to postpone the harness in this kind of codebase.
+
+**The operational consequence**: in brown-field, harness investment isn't optional — it's a prerequisite. And it can't be done in a week. The question isn't "do we want a harness?" but "what speed of harness construction can we sustain without stopping delivery?". The healthy answer is usually: one new rule per week, one zone codified per month, no big-bang. What the next section describes applies to both cases, but **in brown-field it's the only way that works**.
+
 ## How to introduce this in an existing repo
 
 Doing a big-bang on an existing repo is a bad idea. What works:
