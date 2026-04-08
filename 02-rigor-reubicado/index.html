@@ -1448,12 +1448,16 @@
 <p>En los tres casos, quien interpretó el cambio como "ahora podemos ser más relajados" perdió. Quien entendió dónde se había mudado la disciplina, ganó.</p>
 <h2 id="donde-se-mueve-el-rigor-con-los-agentes-de-codificacion">Dónde se mueve el rigor con los agentes de codificación<a class="headerlink" href="#donde-se-mueve-el-rigor-con-los-agentes-de-codificacion" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Con LLMs escribiendo código, el rigor sale de dos sitios y entra en otros dos:</p>
-<p><strong>Sale de:</strong>
-- Escribir cada línea con cuidado artesanal.
-- Revisar cada PR humano-a-humano como mecanismo principal de calidad.</p>
-<p><strong>Entra en:</strong>
-- <strong>Especificación de la intención.</strong> Lo que antes eran "criterios de aceptación informales" en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La sloppiness en el ticket se convierte en sloppiness en el código. Antes podías compensarlo con conversación de pasillo; con un agente que ejecuta de noche, no.
-- <strong>Evaluación verificable.</strong> Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta. Tests, type checks, evals, validación de schemas, observabilidad, asserts en runtime — todo lo que convierte un "parece que funciona" en una señal binaria.</p>
+<p><strong>Sale de:</strong></p>
+<ul>
+<li>Escribir cada línea con cuidado artesanal.</li>
+<li>Revisar cada PR humano-a-humano como mecanismo principal de calidad.</li>
+</ul>
+<p><strong>Entra en:</strong></p>
+<ul>
+<li><strong>Especificación de la intención.</strong> Lo que antes eran "criterios de aceptación informales" en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La imprecisión en el ticket se convierte en imprecisión en el código. Antes podías compensarlo con conversación de pasillo; con un agente que ejecuta de noche, no.</li>
+<li><strong>Evaluación verificable.</strong> Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta. Tests, type checks, evals, validación de schemas, observabilidad, asserts en runtime — todo lo que convierte un "parece que funciona" en una señal binaria.</li>
+</ul>
 <p>Chad Fowler lo dice mejor: <em>"generative systems only work if invariants are explicit rather than implicit"</em>. Un sistema generativo necesita que las cosas que tienen que ser ciertas estén dichas en algún lugar que la máquina pueda comprobar. Lo implícito — el conocimiento que vivía en la cabeza del senior, en el README de hace dos años, en la conversación de Slack del lunes — deja de funcionar como mecanismo de control.</p>
 <h2 id="la-consecuencia-incomoda">La consecuencia incómoda<a class="headerlink" href="#la-consecuencia-incomoda" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Esto significa que los equipos que tenían más de su disciplina <strong>codificada</strong> (tipos, tests, schemas, IaC, observabilidad estructurada) están mejor posicionados para usar agentes que los equipos que confiaban en disciplina <strong>cultural</strong> (revisiones cuidadosas, seniors atentos, estándares no escritos). No porque los segundos sean peores, sino porque el agente no puede acceder a su disciplina. Es invisible para él.</p>

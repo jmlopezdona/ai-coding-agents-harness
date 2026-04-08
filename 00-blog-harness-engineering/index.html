@@ -1576,7 +1576,7 @@
 <p>Hay una observación de Chad Fowler que conviene tener delante antes de empezar a desmantelar prácticas. Cada vez que el software ha dado un salto importante — lenguajes dinámicos, extreme programming, despliegue continuo — alguien ha anunciado "ya no hace falta tanto rigor". Y cada vez se ha equivocado. <strong>El rigor no desaparece; se traslada a otro sitio</strong>. Los lenguajes dinámicos lo movieron al test suite; XP lo movió a la integración continua; el despliegue continuo lo movió a la observabilidad y a la reversión automática.</p>
 <p>Con agentes pasa lo mismo. El rigor sale de "escribir cada línea con cuidado" y de "revisar humano-a-humano cada PR", y entra en otros dos sitios:</p>
 <ul>
-<li><strong>Especificación de la intención.</strong> Lo que antes eran criterios informales en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La sloppiness en el ticket se convierte en sloppiness en el código.</li>
+<li><strong>Especificación de la intención.</strong> Lo que antes eran criterios informales en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La imprecisión en el ticket se convierte en imprecisión en el código.</li>
 <li><strong>Evaluación verificable.</strong> Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta.</li>
 </ul>
 <p>La heurística que vale la pena adoptar: cuando algo parezca dejar ir el rigor, busca dónde se reubicó. Si no lo encuentras, preocúpate. Las pertenencias quedan en otro sitio o se han perdido.</p>
