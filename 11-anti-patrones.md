@@ -60,7 +60,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué falla.** No acumulas nada. La segunda vez que ves el mismo error, tu pregunta debe ser "¿qué debería haber impedido esto?". Si no la haces, estarás arreglando este patrón toda la vida.
 
-**Qué hacer en su lugar.** La regla de las dos veces: la primera vez que un error ocurre, lo arreglas puntualmente. La segunda vez, paras y lo promueves al harness (capítulo 9). No hay tercera vez bien gestionada.
+**Qué hacer en su lugar.** La regla de las dos veces es un techo de tolerancia, no una recomendación de parchear primero. Si el fallo es obviamente sistémico desde la primera ocurrencia (convención que faltaba, deriva arquitectónica clara, patrón que ya intuyes que va a repetirse), lo promueves al harness inmediatamente. Si parece una rareza genuina, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión: paras y lo promueves al harness (capítulo 9), porque ahora ya tienes evidencia de que es un patrón. La regla no es "fix manual una vez, sistematiza la segunda" — es "duda como mucho una vez; dos es certeza". No hay tercera vez bien gestionada.
 
 ## Anti-patrón 7 — Megalomanía del plan inicial
 

@@ -102,7 +102,7 @@ Si has llegado hasta aquí y te interesa moverte de la teoría a la práctica, h
 1. **Empieza por el aislamiento.** Sandboxes desechables, baratos de crear, baratos de tirar. Es la inversión que más multiplica todas las demás. Sin esto, los siguientes pasos rinden la mitad.
 2. **Materializa el contexto en el repo.** Lo importante que vive en Slack, Google Docs, o cabezas, mudado a markdown versionado. AGENTS.md como índice de 100 líneas, no como enciclopedia de mil.
 3. **Codifica los invariantes que más te importan.** Linters custom con mensajes dirigidos al agente. Direcciones de dependencia validadas mecánicamente. Schemas en el borde.
-4. **Promueve cada fallo recurrente al harness.** La regla de las dos veces: la primera vez que un error ocurre, lo arreglas; la segunda vez, paras y lo conviertes en un guide o un sensor. No hay tercera vez bien gestionada.
+4. **Promueve cada fallo recurrente al harness.** Si el fallo es obviamente sistémico desde el principio, lo conviertes en guide o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.
 5. **Diseña el flujo de PR para que la mayoría se revisen agente-a-agente**, y reserva la atención humana para los casos donde el criterio aporta valor real.
 
 No tienes que hacer todo a la vez. Empieza con los pasos 1 y 2; los demás caen por gravedad cuando los dos primeros están en su sitio.
