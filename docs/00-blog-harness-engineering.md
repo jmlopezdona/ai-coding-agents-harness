@@ -28,7 +28,7 @@ Esto es, en el fondo, una buena noticia. El modelo no lo controlas — lo contro
 
 Böckeler descompone el harness en dos mecanismos, y la distinción es la herramienta más útil que vas a llevarte de este texto:
 
-- **Guides (feedforward).** Indicaciones que orientan al agente *antes* de que actúe. Convenciones, plantillas, schemas, scaffolding generadores, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.
+- **Guides (feedforward).** Indicaciones que orientan al agente *antes* de que actúe. Convenciones, plantillas, schemas, generadores de módulos, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.
 - **Sensors (feedback).** Guardarraíles que actúan *después*. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el harness pueda corregirlo sin tu intervención.
 
 Un harness sin guides produce un agente que se desvía. Un harness sin sensors produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.
