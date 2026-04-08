@@ -50,7 +50,7 @@ Esto cambia varias cosas operativas:
 
 Hay una frase que vale la pena leer dos veces: *"el gusto humano se captura una vez y luego se aplica continuamente en cada línea de código"*. Es la diferencia entre un equipo donde el senior tiene que estar mirando todo, y un equipo donde el senior dedica tiempo a **traducir su gusto en reglas ejecutables** y luego deja que el sistema lo aplique.
 
-Esto vuelve cada hora de trabajo del senior radicalmente más valiosa. En un flujo tradicional, una review consume 30 minutos del senior y mejora *un* PR. En un flujo agéntico bien hecho, esos mismos 30 minutos se invierten en escribir un golden principle o un lint custom, y mejoran *todos los PRs futuros*. El multiplicador es enorme y compounding.
+Esto vuelve cada hora de trabajo del senior radicalmente más valiosa. En un flujo tradicional, una review consume 30 minutos del senior y mejora *un* PR. En un flujo agéntico bien hecho, esos mismos 30 minutos se invierten en escribir un golden principle o un lint custom, y mejoran *todos los PRs futuros*. El multiplicador es enorme y se acumula con el tiempo.
 
 La pregunta diagnóstica para un senior: ¿cuánto del tiempo que dedicas a calidad termina como código que se ejecuta automáticamente, y cuánto termina como conocimiento en tu cabeza que se evapora cuando dejes el equipo? Cuanto más alta la primera proporción, más sano el harness.
 
