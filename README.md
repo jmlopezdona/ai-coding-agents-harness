@@ -1,28 +1,28 @@
-# Harness engineering — guía para construir software a escala con agentes
+# Harness engineering — a guide to building software at scale with agents
 
-Guía en español, en 13 capítulos, sobre cómo equipos técnicos pueden montar un *harness* serio alrededor de los AI coding agents (Claude Code, Codex, Copilot, Cursor, etc.) y dejar de tratarlos como autocomplete glorificado.
+A guide, in 13 chapters, on how technical teams can build a serious *harness* around AI coding agents (Claude Code, Codex, Copilot, Cursor, etc.) and stop treating them as glorified autocomplete.
 
-> El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.
+> The model is the engine. The harness — guides, sensors, sandboxes, loops, structured context — is what turns an LLM into an agent a team can rely on.
 
-## 📖 Lee la versión web
+## 📖 Read the web version
 
 **[https://jmlopezdona.github.io/ai-coding-agents-harness/](https://jmlopezdona.github.io/ai-coding-agents-harness/)**
 
-Maquetada con MkDocs Material: navegación por capítulos, búsqueda integrada, modo claro/oscuro.
+Available in English and Spanish, built with MkDocs Material: chapter navigation, integrated search, light/dark mode, language switcher in the top bar.
 
 ## 📁 Source
 
-Los 13 capítulos están en [`docs/`](docs/). Si prefieres leerlos directamente en GitHub:
+The 13 chapters live in [`docs/`](docs/), organized by language: [`docs/en/`](docs/en/) for English and [`docs/es/`](docs/es/) for Spanish. If you'd rather read them directly on GitHub:
 
-- [Capítulo 0 — Producir software a escala con agentes](docs/es/00-harness-engineering.md)
-- [Índice completo de la guía](docs/es/index.md)
+- [Chapter 0 — Producing software at scale with agents](docs/en/00-harness-engineering.md)
+- [Full guide index](docs/en/index.md)
 
-## Sobre la guía
+## About the guide
 
-Está pensada para equipos técnicos con experiencia previa operando agentes y skills, que ya tienen claro el cómo se usan y quieren dar el siguiente paso: **diseñar el sistema** en lugar de buscar el prompt mágico.
+Written for technical teams already operating agents and skills, who understand how to use them and want to take the next step: **design the system** instead of hunting for the magic prompt.
 
-Sintetiza ideas de Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (equipo Codex de OpenAI) y Alistair Gray (equipo Leverage de Stripe). Las URLs originales están en la [sección de fuentes](docs/es/index.md#fuentes) del índice.
+It synthesizes ideas from Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (OpenAI Codex team) and Alistair Gray (Stripe Leverage team). Original URLs are in the [sources section](docs/en/index.md#sources) of the index.
 
-## Licencia
+## License
 
-[CC-BY-4.0](LICENSE). Puedes compartir y adaptar el contenido libremente, incluso comercialmente, manteniendo la atribución.
+[CC-BY-4.0](LICENSE). You can share and adapt the content freely, even commercially, as long as you keep attribution.
