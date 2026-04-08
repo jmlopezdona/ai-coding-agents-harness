@@ -61,7 +61,7 @@ nav:
       - "10. Where humans still matter": 10-human-role.md
   - Pitfalls:
       - "11. Anti-patterns": 11-anti-patterns.md
-  - Your team:
+  - Apply it:
       - "12. Diagnosis and maturity": 12-diagnosis-and-maturity.md
 
 markdown_extensions:
@@ -129,7 +129,7 @@ plugins:
             "10. Where humans still matter": "10. Dónde sigue importando el humano"
             "Pitfalls": "Errores comunes"
             "11. Anti-patterns": "11. Anti-patrones"
-            "Your team": "Tu equipo"
+            "Apply it": "Aplícalo"
             "12. Diagnosis and maturity": "12. Diagnóstico y madurez"
 
 extra:
