@@ -37,15 +37,15 @@ Cada vez que tu agente falla, deberías poder decir si el fallo se debe a un gui
 
 ## La pregunta que hay que aprender a hacerse
 
-Hay una pregunta concreta que vale más que cualquier framework. Cuando el agente falla — y va a fallar — la mayoría de equipos preguntan: *"¿qué le digo al agente para que esto no pase?"*. Es la pregunta equivocada. Lleva a prompts más largos, instrucciones más enrevesadas, una espiral de microcorrecciones que no acumula nada.
+Hay una pregunta concreta que vale más que cualquier framework. Cuando el agente falla — y va a fallar — la mayoría de equipos preguntan: *"¿qué le digo al agente, en este chat, para que esto no pase?"*. Es la pregunta equivocada. Lleva a instrucciones efímeras que se evaporan al cerrar la sesión, microcorrecciones que no quedan registradas, una espiral de prompt-tweaking que no acumula nada.
 
 La pregunta correcta es esta:
 
 > **¿Qué le falta al harness para que este fallo sea imposible, o para que se detecte automáticamente cuando ocurra?**
 
-La respuesta puede ser un lint nuevo, una sección nueva en un doc del repo, un sensor inferencial que revise un patrón concreto, una restructuración del contexto que el agente recibe, una capa de aislamiento que faltaba. Sea cual sea, la respuesta vive en el sistema, no en el prompt. Y lo importante: una vez que la implementas, **ese fallo concreto no vuelve a ocurrir**. Nunca. En miles de ejecuciones futuras del agente.
+La respuesta puede ser muchas cosas: una sección nueva en AGENTS.md o en un doc del repo, una plantilla de plan actualizada, un linter nuevo, un sensor inferencial que revise un patrón concreto, una restructuración del contexto que el agente recibe, una capa de aislamiento que faltaba. Cualquiera de estas es válida — incluidas las que tocan prompts versionados, porque **un prompt commiteado al repo es harness; un prompt en el chat que desaparece, no**. Lo que distingue una respuesta buena de una mala no es si toca prompts o código, sino si la lección queda registrada en algún sitio que el agente vaya a leer la próxima vez. Y lo importante: una vez que la implementas, **ese fallo concreto no vuelve a ocurrir**. Nunca. En miles de ejecuciones futuras del agente.
 
-Es el mismo cambio mental que distingue a un equipo de plataforma maduro de uno que sigue apagando incendios. No "cómo enseño a este equipo a no romper esto", sino "cómo hago imposible (o trivialmente detectable) que rompan esto". La diferencia es que con agentes el ROI es brutal: cada hora invertida en el harness mejora todas las ejecuciones futuras, y las ejecuciones futuras son muchas más de las que tendrías con un equipo humano.
+Es el mismo cambio mental que distingue a un equipo de plataforma maduro de uno que sigue apagando incendios. No "cómo enseño a este equipo a no romper esto en esta conversación", sino "cómo hago imposible (o trivialmente detectable) que rompan esto en cualquier conversación futura". La diferencia es que con agentes el ROI es brutal: cada hora invertida en el harness mejora todas las ejecuciones futuras, y las ejecuciones futuras son muchas más de las que tendrías con un equipo humano.
 
 ## El rigor no desaparece, se reubica
 
