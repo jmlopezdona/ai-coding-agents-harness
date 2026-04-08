@@ -1053,6 +1053,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#el-compromiso-pragmatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El compromiso pragmático
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#el-principio-detras-de-todo-esto" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1592,6 +1603,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#el-compromiso-pragmatico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El compromiso pragmático
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#el-principio-detras-de-todo-esto" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1697,6 +1719,8 @@
 </ul>
 <h3 id="la-trampa-mas-peligrosa">La trampa más peligrosa<a class="headerlink" href="#la-trampa-mas-peligrosa" title="Enlace permanente a esta sección">&para;</a></h3>
 <p>Vale la pena nombrarla porque es donde más equipos caen: <strong>sincronizar sin freshness check</strong>. Es la combinación que parece responsable — "tenemos un job que copia Notion al repo cada hora" — y que da la falsa sensación de que estás cubierto. Pero entre el último sync y el siguiente puede pasar cualquier cosa, y cuando el sync se rompe (y todos los syncs se rompen tarde o temprano), nadie se entera hasta que un agente toma una decisión basada en información de hace tres semanas. Si vas por sync, el lint de freshness no es opcional. Es lo que distingue una sincronización seria de una sincronización ceremonial.</p>
+<h3 id="el-compromiso-pragmatico">El compromiso pragmático<a class="headerlink" href="#el-compromiso-pragmatico" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Para la mayoría de equipos reales, la respuesta sensata no es "todo al repo" ni "todo a MCP", sino un híbrido deliberado: <strong>lo crítico se materializa en el repo</strong> (con la estrategia que toque — copia, sync con freshness lint, o nacido ya en markdown), y <strong>la documentación adicional</strong> — el long-tail, el contexto histórico, las notas de dominio que ayudan pero no son load-bearing — <strong>se expone vía un MCP server contra un sistema documental con indexación semántica</strong>. El agente tiene garantizado lo que <em>debe</em> ver y enriquecido lo que <em>puede</em> ver. Es un compromiso, no una pureza, pero es el compromiso que escala sin pedirle a la organización que abandone sus herramientas existentes ni que sacrifique las garantías que el agente necesita para ser fiable.</p>
 <h3 id="el-principio-detras-de-todo-esto">El principio detrás de todo esto<a class="headerlink" href="#el-principio-detras-de-todo-esto" title="Enlace permanente a esta sección">&para;</a></h3>
 <p>El cap. 6 entero defiende una idea: el repo es el sistema de registro porque es <strong>determinista, versionado, auditable y siempre disponible</strong>. Cualquier alternativa que pierda alguna de esas cuatro propiedades es aceptable solo donde esa propiedad no era crítica. Un MCP server con búsqueda semántica pierde las cuatro a la vez, y por eso solo encaja como complemento — nunca como reemplazo — para el conocimiento que el agente <em>debe</em> tener delante para no romper nada.</p>
 <p>Dicho de otra forma: MCP es una buena forma de <em>enriquecer</em> el contexto del agente. No es una buena forma de <em>garantizar</em> el contexto del agente. La diferencia entre enriquecer y garantizar es la diferencia entre un asistente que a veces es brillante y un sistema del que un equipo puede depender.</p>
