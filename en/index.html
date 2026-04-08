@@ -538,6 +538,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#premises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central-thesis-in-one-sentence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Central thesis (in one sentence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to read this guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -628,6 +661,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-wont-find-in-this-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you won't find in this version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap-for-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap for v2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1419,6 +1485,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#premises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Premises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#central-thesis-in-one-sentence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Central thesis (in one sentence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to read this guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1512,6 +1611,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-you-wont-find-in-this-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you won't find in this version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap-for-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap for v2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1539,13 +1671,20 @@
 
 <h1 id="harness-engineering">Harness engineering<a class="headerlink" href="#harness-engineering" title="Enlace permanente a esta sección">&para;</a></h1>
 <p>A guide for technical teams already using AI coding agents (Claude Code, Codex, Copilot, Cursor, etc.) who want to take the next step: <strong>stop treating them as autocomplete and start building a serious harness around them</strong>.</p>
+<p>This isn't a step-by-step tutorial or a manual for any particular product. It's an essay, organized in chapters, about the principles and patterns emerging in teams already operating at this scale (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) — patterns that show up regardless of stack or tool.</p>
+<h2 id="premises">Premises<a class="headerlink" href="#premises" title="Enlace permanente a esta sección">&para;</a></h2>
+<ul>
+<li>You work in a technical team with experience operating agents and skills.</li>
+<li>You want to <strong>design the system</strong>, not find the magic prompt.</li>
+<li>You're willing to invest in internal infrastructure (linters, sandboxes, observability, versioned docs) if it multiplies the agent's output.</li>
+<li>You care about sustainability over months, not just the first impressive commit.</li>
+</ul>
+<h2 id="central-thesis-in-one-sentence">Central thesis (in one sentence)<a class="headerlink" href="#central-thesis-in-one-sentence" title="Enlace permanente a esta sección">&para;</a></h2>
 <blockquote>
 <p>The model is the engine. The harness — guides, sensors, sandboxes, loops, structured context — is what turns an LLM into an agent a team can rely on.</p>
 </blockquote>
-<div class="admonition note">
-<p class="admonition-title">Translation in progress</p>
-<p>The English version of this guide is being translated chapter by chapter. Until each chapter is available in English, you will see the Spanish version as fallback. You can switch back to Spanish using the language selector in the top bar.</p>
-</div>
+<h2 id="how-to-read-this-guide">How to read this guide<a class="headerlink" href="#how-to-read-this-guide" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>The chapters are ordered as <strong>mindset → pillars → practice → maintenance → anti-patterns → diagnosis</strong>, but each one stands on its own. If you already get the "why", jump directly to the chapter that solves a concrete problem for you.</p>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Enlace permanente a esta sección">&para;</a></h2>
 <h3 id="chapter-0-entry-point">Chapter 0 — Entry point<a class="headerlink" href="#chapter-0-entry-point" title="Enlace permanente a esta sección">&para;</a></h3>
 <ul>
@@ -1579,7 +1718,34 @@
 </ul>
 <h3 id="part-6-bringing-it-to-your-team">Part 6 — Bringing it to your team<a class="headerlink" href="#part-6-bringing-it-to-your-team" title="Enlace permanente a esta sección">&para;</a></h3>
 <ul>
-<li><a href="12-diagnostico-y-madurez/">12. Diagnosis and maturity</a></li>
+<li><a href="12-diagnostico-y-madurez/">12. Diagnosis and maturity: where you are and what to fix first</a></li>
+</ul>
+<h2 id="what-you-wont-find-in-this-version">What you <em>won't</em> find in this version<a class="headerlink" href="#what-you-wont-find-in-this-version" title="Enlace permanente a esta sección">&para;</a></h2>
+<ul>
+<li>Ready-to-copy templates (sample <code>AGENTS.md</code>, hooks, CI configs). Coming in a later version.</li>
+<li>Comparisons between specific tools. The guide is deliberately tool-agnostic.</li>
+<li>Productivity promises. Stripe's or OpenAI's numbers are references, not guarantees.</li>
+</ul>
+<h2 id="roadmap-for-v2">Roadmap for v2<a class="headerlink" href="#roadmap-for-v2" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Things planned for the next version of the guide:</p>
+<ul>
+<li><strong>Executable templates.</strong> Minimal sample <code>AGENTS.md</code>, full <code>docs/</code> structure, custom linter examples with agent-targeted messages, sandbox config skeleton, execution plan templates.</li>
+<li><strong>Roadmap template as a separate file</strong> (extracted from ch. 12) so teams can copy and fill it in a single session without touching the rest of the guide.</li>
+<li><strong>Short glossary</strong> of terms (harness, guide, sensor, loop, sandbox, blueprint, doc-gardening, golden principles, flywheel) for teams sharing the guide with stakeholders outside the immediate technical circle.</li>
+<li><strong>Chapter 0 as a publishable blog post</strong>, with its own frontmatter, optimized for external distribution.</li>
+<li><strong>Comparative case studies</strong> — a side-by-side analysis of how OpenAI, Stripe, and other public teams solve each of the five dimensions in ch. 12, with an equivalence table.</li>
+<li><strong>Printable diagnostic checklist</strong> (1 page) extracted from ch. 12 to stick on the team's wall.</li>
+<li><strong>Section on security and adversarial isolation</strong> — what changes in the harness when the agent can be the target of prompt injection via context, how to reason about the tool supply chain, MCP servers, etc.</li>
+</ul>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>This guide synthesizes ideas from:</p>
+<ul>
+<li>Birgitta Böckeler (Thoughtworks, published on martinfowler.com) — <a href="https://martinfowler.com/articles/harness-engineering.html"><em>Harness Engineering</em></a>. The term "harness" in this sense emerged around LangChain with the formula <em>"Agent = Model + Harness"</em>.</li>
+<li>Kief Morris (on martinfowler.com) — <a href="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html"><em>Humans and Agents in Software Engineering Cycles</em></a></li>
+<li>Chad Fowler — <a href="https://aicoding.leaflet.pub/3mbrvhyye4k2e"><em>Relocating Rigor — The Phoenix Architecture</em></a></li>
+<li>Geoffrey Huntley — <a href="https://ghuntley.com/loop/"><em>everything is a ralph loop</em></a></li>
+<li>Ryan Lopopolo (OpenAI) — <a href="https://openai.com/index/harness-engineering/"><em>Harness Engineering: leveraging Codex in an agent-first world</em></a></li>
+<li>Alistair Gray (Stripe, Leverage team) — <em>Minions: Stripe's one-shot, end-to-end coding agents</em> — <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">part 1</a> · <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2">part 2</a></li>
 </ul>
 
 
