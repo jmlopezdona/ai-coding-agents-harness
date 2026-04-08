@@ -141,15 +141,13 @@ If you're low on several dimensions at once (most teams are), use this heuristic
 
 If you want to take a single artifact away from this chapter, it's this template. Run it with your team in a 60-90 minute session and fill it in honestly:
 
-```
-Dimension           Current level   Next level   Concrete investment   Estimated timeline
-─────────────────   ─────────────   ──────────   ───────────────────   ──────────────────
-Isolation           _               _            _                     _
-Context             _               _            _                     _
-Invariants          _               _            _                     _
-Loop / PR           _               _            _                     _
-Maintenance         _               _            _                     _
-```
+| Dimension | Current level | Next level | Concrete investment | Estimated timeline |
+|---|---|---|---|---|
+| Isolation | | | | |
+| Context | | | | |
+| Invariants | | | | |
+| Loop / PR | | | | |
+| Maintenance | | | | |
 
 And then, without discussion, **circle the row you're going to attack this month**. Only one. The rule is disciplinary: if you circle two, you circle none.
 
