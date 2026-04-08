@@ -40,7 +40,7 @@ Chad Fowler propone una heurística que vale la pena adoptar: **cuando algo pare
 
 Aplicada a agentes:
 
-- "Ahora el agente escribe los tests." ¿Quién valida que los tests *realmente* prueban lo que dicen probar? ¿Mediante qué mecanismo? Si la respuesta es "el ingeniero los lee", no has reubicado el rigor; lo has eliminado.
+- "Ahora el agente escribe los tests." ¿Quién valida que los tests *realmente* prueban lo que dicen probar? ¿Mediante qué mecanismo? Si la respuesta es "que los revisa un ingeniero", el rigor no ha desaparecido en teoría — pero a los volúmenes que produce un agente, en la práctica nadie los va a leer con la atención necesaria. No has reubicado el rigor a un sitio donde pueda sostenerse; lo has dejado en un sitio donde se va a evaporar por abandono.
 - "Ya no hace falta documentar, el agente lee el código." ¿Cómo va a saber el agente qué decisiones de diseño *no* puede revertir? El código no te dice por qué *no* hiciste algo. Si esa información no está en alguna parte legible, el rigor desapareció.
 - "Mergeamos rápido y el agente arregla lo que rompa." Vale, pero entonces necesitas un sistema de detección de regresiones más rápido y más sensible que antes. Si lo tienes, perfecto. Si no, has cambiado disciplina por velocidad y la velocidad va a desaparecer en tres meses, cuando la deuda te alcance.
 
