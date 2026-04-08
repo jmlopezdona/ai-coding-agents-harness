@@ -18,7 +18,7 @@ Los capítulos están ordenados de **mentalidad → pilares → práctica → ma
 ## Índice
 
 ### Capítulo 0 — Puerta de entrada
-0. [Harness engineering: por qué tu agente no es el problema](00-blog-harness-engineering.md) *(versión autocontenida, sirve como post de blog)*
+0. [Harness engineering: producir software a escala con AI coding agents](00-blog-harness-engineering.md) *(versión autocontenida, sirve como post de blog)*
 
 ### Parte 1 — Mentalidad
 1. [Por qué el harness importa más que el modelo](01-por-que-harness.md)
