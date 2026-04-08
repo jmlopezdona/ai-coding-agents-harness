@@ -23,37 +23,37 @@ The chapters are ordered as **mindset → pillars → practice → maintenance �
 
 ### Chapter 0 — Entry point
 
-- [Harness engineering: producing software at scale with agents](00-blog-harness-engineering.md)
+- [Harness engineering: producing software at scale with agents](00-harness-engineering.md)
 
 ### Part 1 — Mindset
 
-- [1. Why the harness matters more than the model](01-por-que-harness.md)
-- [2. Relocating rigor](02-rigor-reubicado.md)
+- [1. Why the harness matters more than the model](01-why-harness.md)
+- [2. Relocating rigor](02-relocating-rigor.md)
 
 ### Part 2 — The two pillars
 
-- [3. Guides and Sensors: feedforward and feedback](03-pilares-guias-y-sensores.md)
-- [4. The loop: iteration as primitive](04-el-loop.md)
+- [3. Guides and Sensors: feedforward and feedback](03-guides-and-sensors.md)
+- [4. The loop: iteration as primitive](04-the-loop.md)
 
 ### Part 3 — Practice
 
-- [5. Isolated and reproducible environments](05-entornos-aislados.md)
-- [6. Context as a system of record](06-contexto-sistema-de-registro.md)
-- [7. Architecture for agents](07-arquitectura-para-agentes.md)
-- [8. The agentic PR flow](08-flujo-pr-agentico.md)
+- [5. Isolated and reproducible environments](05-isolated-environments.md)
+- [6. Context as a system of record](06-context-system-of-record.md)
+- [7. Architecture for agents](07-architecture-for-agents.md)
+- [8. The agentic PR flow](08-agentic-pr-flow.md)
 
 ### Part 4 — Sustainability
 
-- [9. Entropy and continuous maintenance](09-entropia-y-mantenimiento.md)
-- [10. Where humans still matter](10-rol-humano.md)
+- [9. Entropy and continuous maintenance](09-entropy-and-maintenance.md)
+- [10. Where humans still matter](10-human-role.md)
 
 ### Part 5 — Pitfalls
 
-- [11. Anti-patterns](11-anti-patrones.md)
+- [11. Anti-patterns](11-anti-patterns.md)
 
 ### Part 6 — Bringing it to your team
 
-- [12. Diagnosis and maturity: where you are and what to fix first](12-diagnostico-y-madurez.md)
+- [12. Diagnosis and maturity: where you are and what to fix first](12-diagnosis-and-maturity.md)
 
 ## What you *won't* find in this version
 
