@@ -1,0 +1,101 @@
+site_name: Harness Engineering
+site_description: Guía en español sobre cómo construir software a escala con AI coding agents
+site_author: jmlopezdona
+site_url: https://jmlopezdona.github.io/ai-coding-agents-harness/
+repo_url: https://github.com/jmlopezdona/ai-coding-agents-harness
+repo_name: jmlopezdona/ai-coding-agents-harness
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Inicio: index.md
+  - "Cap. 0 — Producir software a escala con agentes": 00-blog-harness-engineering.md
+  - Parte 1 — Mentalidad:
+      - "1. Por qué el harness importa más que el modelo": 01-por-que-harness.md
+      - "2. La reubicación del rigor": 02-rigor-reubicado.md
+  - Parte 2 — Los dos pilares:
+      - "3. Guides y Sensors: feedforward y feedback": 03-pilares-guides-y-sensors.md
+      - "4. El bucle: iteración como primitiva": 04-el-loop.md
+  - Parte 3 — Práctica:
+      - "5. Entornos aislados y reproducibles": 05-entornos-aislados.md
+      - "6. El contexto como sistema de registro": 06-contexto-sistema-de-registro.md
+      - "7. Arquitectura para agentes": 07-arquitectura-para-agentes.md
+      - "8. El flujo de PR agéntico": 08-flujo-pr-agentico.md
+  - Parte 4 — Sostenibilidad:
+      - "9. Entropía y mantenimiento continuo": 09-entropia-y-mantenimiento.md
+      - "10. Dónde sigue importando el humano": 10-rol-humano.md
+  - Parte 5 — Trampas:
+      - "11. Anti-patrones": 11-anti-patrones.md
+  - Parte 6 — Llevarlo a tu equipo:
+      - "12. Diagnóstico y madurez": 12-diagnostico-y-madurez.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Enlace permanente a esta sección
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.smartsymbols
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: es
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jmlopezdona/ai-coding-agents-harness
