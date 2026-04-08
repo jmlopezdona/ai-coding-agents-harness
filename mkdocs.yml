@@ -51,7 +51,7 @@ nav:
   - Pillars:
       - "3. Guides and Sensors: feedforward and feedback": 03-guides-and-sensors.md
       - "4. The loop: iteration as primitive": 04-the-loop.md
-  - Practice:
+  - Hands-on:
       - "5. Isolated and reproducible environments": 05-isolated-environments.md
       - "6. Context as a system of record": 06-context-system-of-record.md
       - "7. Architecture for agents": 07-architecture-for-agents.md
@@ -119,7 +119,7 @@ plugins:
             "Pillars": "Pilares"
             "3. Guides and Sensors: feedforward and feedback": "3. Guías y Sensores: feedforward y feedback"
             "4. The loop: iteration as primitive": "4. El bucle: iteración como primitiva"
-            "Practice": "Práctica"
+            "Hands-on": "Manos a la obra"
             "5. Isolated and reproducible environments": "5. Entornos aislados y reproducibles"
             "6. Context as a system of record": "6. El contexto como sistema de registro"
             "7. Architecture for agents": "7. Arquitectura para agentes"
