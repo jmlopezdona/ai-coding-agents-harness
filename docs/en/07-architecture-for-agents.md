@@ -49,7 +49,7 @@ In practice this means:
 
 There's a consequence many teams find hard to accept: **the resulting code isn't always going to match your stylistic preferences**. And that's fine. As long as it's correct, maintainable and legible for future agent runs, it meets the standard. Arguing about the name of an internal function that a lint doesn't catch is, in this context, pure waste of human attention — and human attention is now the scarce resource.
 
-## The brown-field paradox
+## How to apply this to an existing repo: the brown-field paradox
 
 There's an uncomfortable observation worth naming before talking tactics: **brown-field projects are at the same time where a good harness is most needed and where it's hardest to build**. Both things at once, and for the same reasons.
 
@@ -62,13 +62,24 @@ There's an uncomfortable observation worth naming before talking tactics: **brow
 - Entropy is real and pushes back. Every new rule you introduce hits code that already violates it, and you have to decide case by case whether it's a legitimate exception or debt that has to be paid. That's not the agent's work; it's human calibration work that has to happen first.
 - The team is used to the imperfections. What would be an obvious bug in a greenfield is "it's always been this way" in a brown-field. Turning that into mandatory invariants generates social friction, not just technical.
 
-**And there's an aggravating factor: the agent amplifies existing entropy.** This matters because it turns difficulty into a feedback loop. An agent learns from the code in front of it: if the base is full of bad practices, it imitates them, propagates them faster than a human would, and reinforces the feeling that "this is how we do things here" because the new code looks like the old code. Without a sensor that detects the bad pattern or a guide that forbids it, the agent has no way to distinguish between healthy convention and inherited debt — for the agent, everything it sees in the repo is "what the team does". The loop is silent: it looks like the agent is being productive and consistent, and it is; only the consistency is with what's wrong. In a brown-field without a harness, **introducing an agent accelerates entropy instead of fighting it**. That's the strongest reason not to postpone the harness in this kind of codebase.
+**And there's an aggravating factor: the agent amplifies existing entropy.** This matters because it turns difficulty into a feedback loop. An agent learns from the code in front of it: if the base is full of bad practices, it imitates them, propagates them faster than a human would, and reinforces the feeling that "this is how we do things here" because the new code looks like the old code. Without a sensor that detects the bad pattern or a guide that forbids it, the agent has no way to distinguish between healthy convention and inherited debt — for the agent, everything it sees in the repo is "what the team does". The loop is silent: it looks like the agent is being productive and consistent, and it is; only the consistency is with what's wrong. In a brown-field without a harness, **introducing an agent accelerates entropy instead of fighting it**. That's the strongest reason not to postpone it.
 
-**The operational consequence**: in brown-field, harness investment isn't optional — it's a prerequisite. And it can't be done in a week. The question isn't "do we want a harness?" but "what speed of harness construction can we sustain without stopping delivery?". The healthy answer is usually: one new rule per week, one zone codified per month, no big-bang. What the next section describes applies to both cases, but **in brown-field it's the only way that works**.
+### Three strategies that coexist
 
-### The third way: refactor to introduce the harness
+In practice, no serious brown-field is attacked with a single strategy. Three coexist, and each one solves a different kind of problem. They're not alternatives: they're layers of the same plan.
 
-There's an alternative to "build the harness on top of the brown-field" that in many cases pays off more: apply the **strangler fig** pattern to the harness itself. Instead of codifying existing entropy rule by rule, you identify the zones that are going to evolve the most — the part of the system where the agent is actually going to operate — you refactor them, and from day one you put them under complete mechanical invariants. The old part stays frozen as it is; the new part is born with the harness from the start.
+#### 1. Codify the existing entropy
+
+This strategy works where implicit discipline is already close to the rule — you just need to make it mechanical. A big-bang is a bad idea; what works is promoting one rule at a time, in order from least to most painful:
+
+1. **Start with the layers that are already clear.** If your repo already has a reasonable distinction between domains or modules, write the lint that makes it mandatory. You're not imposing new architecture, you're freezing the one you already have.
+2. **Promote one rule at a time.** A new lint a week, not twelve at once. Every new lint is a guide, and new guides require adjustment from the agent and the team.
+3. **Start as warning, escalate to error.** A new lint in warning mode teaches you how noisy it's going to be. When the noise drops to zero, escalate it to error.
+4. **Write the linter with the agent.** This is meta-level and worth it: having the agent itself write its constraints (under your supervision) makes the intent explicit and produces code the agent itself can read and modify later.
+
+#### 2. Refactor the hot zones (strangler fig)
+
+Where the entropy is too dense to codify rule by rule, there's an alternative: apply the **strangler fig** pattern to the harness itself. Instead of fighting the existing code, you identify the zones that are going to evolve the most — the part of the system where the agent is actually going to operate — you refactor them, and from day one you put them under complete mechanical invariants. The old part stays frozen as it is; the new part is born with the harness from the start.
 
 Why it works in brown-field:
 
@@ -79,16 +90,13 @@ Why it works in brown-field:
 
 It has three risks worth naming: deciding *what* to refactor is political and technical, and the temptation is to pick the pretty stuff instead of the painful stuff; if the refactor isn't designed with the harness from the start, you end up with "modern" code that still has no invariants (the worst of both worlds); and keeping two architectural models in the same repo for a long time is expensive, so you need a clear horizon for when to absorb the old or assume it as a frozen zone.
 
-In practice, the three strategies — codifying existing entropy, refactoring the hot zones with the harness, and accepting that some zones are cold forever — coexist in any serious brown-field. They're not alternatives; they're layers of the same plan.
+#### 3. Accept that some zones are cold
 
-## How to introduce this in an existing repo
+There are parts of any brown-field where the agent will never operate, or almost never: modules in pure maintenance, code that's going to be deprecated in six months, integrations with legacy systems nobody modifies anymore. For those zones, **don't codify anything and don't refactor anything**. Mark them as "frozen zone" in AGENTS.md, let the agent treat them as read-only, and use them as context but not as a target. This isn't laziness: it's calibration savings applied where the ROI would be negative. The important thing is that the decision is explicit, not by default: a declared cold zone is discipline; a cold zone by accident is drift.
 
-Doing a big-bang on an existing repo is a bad idea. What works:
+### The principle that ties the three together
 
-1. **Start with the layers that are already clear.** If your repo already has a reasonable distinction between domains or modules, write the lint that makes it mandatory. You're not imposing new architecture, you're freezing the one you already have.
-2. **Promote one rule at a time.** A new lint a week, not twelve at once. Every new lint is a guide, and new guides require adjustment from the agent and the team.
-3. **Start as warning, escalate to error.** A new lint in warning mode teaches you how noisy it's going to be. When the noise drops to zero, escalate it to error.
-4. **Write the linter with the agent.** This is meta-level and worth it: having the agent itself write its constraints (under your supervision) makes the intent explicit and produces code the agent itself can read and modify later.
+In brown-field, harness investment isn't optional — it's a prerequisite. And it can't be done in a week. The question isn't "do we want a harness?" but "what speed of harness construction can we sustain without stopping delivery?". The healthy answer is small at every step but constant in rhythm: one new rule per week, one refactored zone per quarter, one cold zone declared when it shows up. The three strategies advance in parallel because they attack three different problems. The one that doesn't work is the fourth: postponing everything until you have time. That time doesn't exist — and while you wait, the agent is accelerating entropy.
 
 ## The shift in horizon
 
