@@ -4,7 +4,7 @@ Birgitta Böckeler descompone el harness en dos mecanismos. Es una distinción s
 
 ## Guides — feedforward
 
-Un guide actúa **antes** de que el agente actúe. Su trabajo es restringir el espacio de acciones para que la decisión por defecto sea la correcta. Un guide bien diseñado no le dice al agente qué hacer; le hace difícil hacer lo incorrecto.
+Un guide actúa **antes** de que el agente actúe. Su trabajo es orientar la acción hacia la decisión correcta dándole al agente, por adelantado, la información que necesita: la forma de los datos, la estructura del módulo, el patrón a seguir, dónde mirar. Un buen guide no es una prohibición; es una indicación que el agente puede leer e imitar.
 
 Ejemplos típicos:
 
