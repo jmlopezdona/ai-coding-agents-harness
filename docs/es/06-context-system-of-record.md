@@ -108,6 +108,10 @@ Operativamente:
 
 Vale la pena nombrarla porque es donde más equipos caen: **sincronizar sin freshness check**. Es la combinación que parece responsable — "tenemos un job que copia Notion al repo cada hora" — y que da la falsa sensación de que estás cubierto. Pero entre el último sync y el siguiente puede pasar cualquier cosa, y cuando el sync se rompe (y todos los syncs se rompen tarde o temprano), nadie se entera hasta que un agente toma una decisión basada en información de hace tres semanas. Si vas por sync, el lint de freshness no es opcional. Es lo que distingue una sincronización seria de una sincronización ceremonial.
 
+### El compromiso pragmático
+
+Para la mayoría de equipos reales, la respuesta sensata no es "todo al repo" ni "todo a MCP", sino un híbrido deliberado: **lo crítico se materializa en el repo** (con la estrategia que toque — copia, sync con freshness lint, o nacido ya en markdown), y **la documentación adicional** — el long-tail, el contexto histórico, las notas de dominio que ayudan pero no son load-bearing — **se expone vía un MCP server contra un sistema documental con indexación semántica**. El agente tiene garantizado lo que *debe* ver y enriquecido lo que *puede* ver. Es un compromiso, no una pureza, pero es el compromiso que escala sin pedirle a la organización que abandone sus herramientas existentes ni que sacrifique las garantías que el agente necesita para ser fiable.
+
 ### El principio detrás de todo esto
 
 El cap. 6 entero defiende una idea: el repo es el sistema de registro porque es **determinista, versionado, auditable y siempre disponible**. Cualquier alternativa que pierda alguna de esas cuatro propiedades es aceptable solo donde esa propiedad no era crítica. Un MCP server con búsqueda semántica pierde las cuatro a la vez, y por eso solo encaja como complemento — nunca como reemplazo — para el conocimiento que el agente *debe* tener delante para no romper nada.

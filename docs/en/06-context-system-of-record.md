@@ -108,6 +108,10 @@ Operationally:
 
 It's worth naming because it's where most teams fall: **syncing without a freshness check**. It's the combination that looks responsible — "we have a job that copies Notion to the repo every hour" — and gives the false sense that you're covered. But between the last sync and the next, anything can happen, and when the sync breaks (and all syncs break sooner or later), nobody finds out until an agent makes a decision based on three-week-old information. If you're going with sync, the freshness lint is not optional. It's what distinguishes a serious sync from a ceremonial one.
 
+### The pragmatic compromise
+
+For most real teams, the sensible answer isn't "everything in the repo" or "everything in MCP" but a deliberate hybrid: **the critical stuff is materialized in the repo** (with whatever strategy fits — point-in-time copy, sync with a freshness lint, or born as markdown in the first place), and **additional documentation** — the long-tail, the historical context, domain notes that help but aren't load-bearing — **is exposed via an MCP server against a documentation system with semantic indexing**. The agent has guaranteed what it *must* see and enriched what it *can* see. It's a compromise, not a purity, but it's the compromise that scales without asking the organization to abandon its existing tools or sacrifice the guarantees the agent needs to be reliable.
+
 ### The principle behind all of this
 
 The whole of chapter 6 defends one idea: the repo is the system of record because it is **deterministic, versioned, auditable, and always available**. Any alternative that loses one of those four properties is acceptable only where that property wasn't critical. An MCP server with semantic search loses all four at once, and that's why it only fits as a complement — never as a replacement — for the knowledge the agent *must* have in front of it to avoid breaking something.
