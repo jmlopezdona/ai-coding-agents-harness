@@ -43,26 +43,26 @@ theme:
     repo: fontawesome/brands/github
 
 nav:
-  - Inicio: index.md
-  - Empieza aquí: 00-harness-engineering.md
-  - Mentalidad:
-      - "1. Por qué el harness importa más que el modelo": 01-why-harness.md
-      - "2. La reubicación del rigor": 02-relocating-rigor.md
-  - Pilares:
-      - "3. Guías y Sensores: feedforward y feedback": 03-guides-and-sensors.md
-      - "4. El bucle: iteración como primitiva": 04-the-loop.md
-  - Práctica:
-      - "5. Entornos aislados y reproducibles": 05-isolated-environments.md
-      - "6. El contexto como sistema de registro": 06-context-system-of-record.md
-      - "7. Arquitectura para agentes": 07-architecture-for-agents.md
-      - "8. El flujo de PR agéntico": 08-agentic-pr-flow.md
-  - Sostenibilidad:
-      - "9. Entropía y mantenimiento continuo": 09-entropy-and-maintenance.md
-      - "10. Dónde sigue importando el humano": 10-human-role.md
-  - Trampas:
-      - "11. Anti-patrones": 11-anti-patterns.md
-  - Tu equipo:
-      - "12. Diagnóstico y madurez": 12-diagnosis-and-maturity.md
+  - Home: index.md
+  - Start here: 00-harness-engineering.md
+  - Mindset:
+      - "1. Why the harness matters more than the model": 01-why-harness.md
+      - "2. Relocating rigor": 02-relocating-rigor.md
+  - Pillars:
+      - "3. Guides and Sensors: feedforward and feedback": 03-guides-and-sensors.md
+      - "4. The loop: iteration as primitive": 04-the-loop.md
+  - Practice:
+      - "5. Isolated and reproducible environments": 05-isolated-environments.md
+      - "6. Context as a system of record": 06-context-system-of-record.md
+      - "7. Architecture for agents": 07-architecture-for-agents.md
+      - "8. The agentic PR flow": 08-agentic-pr-flow.md
+  - Sustainability:
+      - "9. Entropy and continuous maintenance": 09-entropy-and-maintenance.md
+      - "10. Where humans still matter": 10-human-role.md
+  - Pitfalls:
+      - "11. Anti-patterns": 11-anti-patterns.md
+  - Your team:
+      - "12. Diagnosis and maturity": 12-diagnosis-and-maturity.md
 
 markdown_extensions:
   - admonition
@@ -111,26 +111,26 @@ plugins:
           build: true
           site_name: Harness Engineering
           nav_translations:
-            "Inicio": "Home"
-            "Empieza aquí": "Start here"
-            "Mentalidad": "Mindset"
-            "1. Por qué el harness importa más que el modelo": "1. Why the harness matters more than the model"
-            "2. La reubicación del rigor": "2. Relocating rigor"
-            "Pilares": "Pillars"
-            "3. Guías y Sensores: feedforward y feedback": "3. Guides and Sensors: feedforward and feedback"
-            "4. El bucle: iteración como primitiva": "4. The loop: iteration as primitive"
-            "Práctica": "Practice"
-            "5. Entornos aislados y reproducibles": "5. Isolated and reproducible environments"
-            "6. El contexto como sistema de registro": "6. Context as a system of record"
-            "7. Arquitectura para agentes": "7. Architecture for agents"
-            "8. El flujo de PR agéntico": "8. The agentic PR flow"
-            "Sostenibilidad": "Sustainability"
-            "9. Entropía y mantenimiento continuo": "9. Entropy and continuous maintenance"
-            "10. Dónde sigue importando el humano": "10. Where humans still matter"
-            "Trampas": "Pitfalls"
-            "11. Anti-patrones": "11. Anti-patterns"
-            "Tu equipo": "Your team"
-            "12. Diagnóstico y madurez": "12. Diagnosis and maturity"
+            "Home": "Inicio"
+            "Start here": "Empieza aquí"
+            "Mindset": "Mentalidad"
+            "1. Why the harness matters more than the model": "1. Por qué el harness importa más que el modelo"
+            "2. Relocating rigor": "2. La reubicación del rigor"
+            "Pillars": "Pilares"
+            "3. Guides and Sensors: feedforward and feedback": "3. Guías y Sensores: feedforward y feedback"
+            "4. The loop: iteration as primitive": "4. El bucle: iteración como primitiva"
+            "Practice": "Práctica"
+            "5. Isolated and reproducible environments": "5. Entornos aislados y reproducibles"
+            "6. Context as a system of record": "6. El contexto como sistema de registro"
+            "7. Architecture for agents": "7. Arquitectura para agentes"
+            "8. The agentic PR flow": "8. El flujo de PR agéntico"
+            "Sustainability": "Sostenibilidad"
+            "9. Entropy and continuous maintenance": "9. Entropía y mantenimiento continuo"
+            "10. Where humans still matter": "10. Dónde sigue importando el humano"
+            "Pitfalls": "Trampas"
+            "11. Anti-patterns": "11. Anti-patrones"
+            "Your team": "Tu equipo"
+            "12. Diagnosis and maturity": "12. Diagnóstico y madurez"
 
 extra:
   social:
