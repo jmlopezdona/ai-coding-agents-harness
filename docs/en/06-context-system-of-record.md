@@ -28,7 +28,7 @@ OpenAI's conclusion is elegant: **treat AGENTS.md as an index, not an encycloped
 
 What goes into the repo, organized, is the following. This isn't prescriptive — the details vary by team — but the shape recurs:
 
-- **Versioned design docs**, indexed, with a verification status. No "doc in Notion linked from here". The doc lives in the repo, next to the code it describes.
+- **Versioned design docs**, indexed, with a verification status. No "doc linked in Notion, Confluence or Google Docs". The doc lives in the repo, next to the code it describes.
 - **Execution plans as first-class artifacts.** For small changes, lightweight ephemeral plans. For complex work, versioned plans with state: active, completed, abandoned, with reasons. This lets the agent see not just what's happening now, but what was tried before and why it was discarded. It's a memory tool months down the road.
 - **Tech debt tracker.** A file, in the repo, that lists what's wrong on purpose. Without this, the agent "cleans up" things it shouldn't touch, or ignores things it should fix. With this, both categories are legible.
 - **Product specs.** Not Linear epics. The specs *as markdown in the repo*, next to the code that implements them. If the ticket is the only source, the agent only sees what's in the ticket when you pass it in.

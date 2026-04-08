@@ -28,7 +28,7 @@ La conclusión de OpenAI es elegante: **trata el AGENTS.md como un índice, no c
 
 Lo que va al repo, organizado, es lo siguiente. Esto no es prescriptivo — el detalle varía por equipo — pero la forma se repite:
 
-- **Documentos de diseño versionados**, indexados, con un estado de verificación. Nada de "doc en Notion enlazado". El doc vive en el repo, junto al código que describe.
+- **Documentos de diseño versionados**, indexados, con un estado de verificación. Nada de "doc enlazado en Notion, Confluence o Google Docs". El doc vive en el repo, junto al código que describe.
 - **Planes de ejecución como artefactos de primera clase.** Para cambios pequeños, planes ligeros y efímeros. Para trabajo complejo, planes versionados con estado: activos, completados, abandonados, con razones. Esto le permite al agente ver no solo qué está pasando ahora, sino qué se intentó antes y por qué se descartó. Es una herramienta de memoria a meses vista.
 - **Tracker de deuda técnica.** Un archivo, en el repo, que enumera lo que está mal a propósito. Sin esto, el agente "limpia" cosas que no debería tocar, o ignora cosas que debería arreglar. Con esto, las dos categorías son legibles.
 - **Especificaciones de producto.** No las épicas de Linear. Las specs *como markdown en el repo*, junto al código que las implementa. Si el ticket es la única fuente, el agente solo ve lo que está en el ticket cuando se lo pasas.
