@@ -35,7 +35,7 @@ Cuando aceptas que el harness es donde se juega la calidad, dejas de hacer ciert
 
 Y empiezas a hacer cosas que antes parecían over-engineering: linters custom para una sola convención, planes de ejecución versionados, observabilidad en local, agentes de "doc-gardening" que mantienen la documentación al día.
 
-Lo que en un equipo humano sería pedante, en un equipo con agentes es **leverage**. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en el next standup.
+Lo que en un equipo humano sería pedante, en un equipo con agentes **es un multiplicador**. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en el next standup.
 
 ## El principio que recorre toda la guía
 
