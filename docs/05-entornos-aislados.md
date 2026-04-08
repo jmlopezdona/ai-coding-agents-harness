@@ -14,7 +14,28 @@ Con aislamiento, los dos problemas desaparecen a la vez. Y abren una tercera cap
 
 **OpenAI — worktrees git booteables.** OpenAI tomó otra ruta: cada git worktree puede arrancar la aplicación entera, con su propia pila de observabilidad efímera (Vector, Victoria metrics/logs/traces). Cada cambio se valida en su propio worktree, con sus propios logs. Cuando el worktree se borra, todo desaparece con él.
 
+Aclaración importante: el modelo de worktrees no implica "máquina local". OpenAI los usa sobre hosts de desarrollo remotos potentes, no sobre los portátiles de los ingenieros. La distinción real con el modelo de Stripe no es *local vs cloud*, sino **muchas VMs pequeñas vs una máquina grande con muchos worktrees en paralelo**. Cada modelo escala distinto: las VMs por horizontal, los worktrees por vertical hasta donde aguante el host.
+
 Las dos soluciones son distintas en mecánica pero idénticas en filosofía: **el entorno es desechable, instantáneo y completo**.
+
+### Cuándo elegir cuál
+
+La pregunta correcta no es "¿qué hacen los grandes?", sino **¿cuál es mi cuello de botella?**:
+
+- Si lo que más te importa es **paridad con producción y escala horizontal masiva** (cientos de agentes en paralelo, monorepo enorme, infra ya madura), el modelo Stripe encaja mejor.
+- Si lo que más te importa es **velocidad del bucle de iteración y observabilidad cercana al agente** (decenas de agentes en paralelo, repo donde la app arranca rápido), el modelo OpenAI suele ser más barato y más rápido de montar.
+
+La mayoría de equipos están más cerca del segundo caso de lo que creen, y empiezan copiando el primero porque "es lo serio". Acaban con una infra cara que el agente no aprovecha.
+
+### El gotcha de los puertos y las dependencias compartidas
+
+Si vas por la ruta worktree, el primer dolor real no es el aislamiento del filesystem (eso lo da git gratis), son los **recursos compartidos a nivel de proceso**: dos worktrees que intentan abrir el mismo puerto, tocar la misma base de datos local, escribir en el mismo cache de `node_modules`, o registrarse en el mismo socket. Si no lo diseñas desde el principio, lanzas el segundo worktree y todo explota.
+
+Lo que funciona: puertos asignados dinámicamente al arrancar la app, base de datos por worktree (un esquema o una DB efímera por entorno), cualquier path de cache parametrizado por worktree. Es trabajo de un día y desbloquea el resto del modelo. Si lo dejas para "luego", "luego" es cuando cinco agentes en paralelo te demuestran que no tenías aislamiento real.
+
+### No tienes que elegir: modelos híbridos
+
+Los dos enfoques no son excluyentes. Un patrón razonable es usar **worktrees para el bucle interno** del agente — rápido, barato, con observabilidad pegada — y **devboxes (o equivalente) solo para el bucle de PR/CI**, donde lo que importa es la paridad con producción antes del merge. Te quedas con la velocidad de iteración del primero y la garantía del segundo, sin pagar el coste completo de ninguno.
 
 ## Las propiedades que importan
 
