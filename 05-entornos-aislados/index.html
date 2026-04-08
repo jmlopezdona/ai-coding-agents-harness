@@ -892,6 +892,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Las dos referencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-elegir-cual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo elegir cuál
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-gotcha-de-los-puertos-y-las-dependencias-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El gotcha de los puertos y las dependencias compartidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-tienes-que-elegir-modelos-hibridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No tienes que elegir: modelos híbridos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1387,6 +1426,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Las dos referencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-elegir-cual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo elegir cuál
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-gotcha-de-los-puertos-y-las-dependencias-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El gotcha de los puertos y las dependencias compartidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-tienes-que-elegir-modelos-hibridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No tienes que elegir: modelos híbridos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1466,7 +1544,20 @@
 <h2 id="las-dos-referencias">Las dos referencias<a class="headerlink" href="#las-dos-referencias" title="Enlace permanente a esta sección">&para;</a></h2>
 <p><strong>Stripe — devboxes.</strong> Stripe usa instancias EC2 estandarizadas que están "hot and ready" en 10 segundos. Cada minion (su agente interno) se levanta en uno, hace su trabajo, abre un PR, y el devbox se desecha. La latencia de creación es importante: si tardara 5 minutos, el agente esperaría en cada tarea y el sistema sería mucho menos eficiente. 10 segundos es lo bastante rápido como para tratar el entorno como desechable de verdad.</p>
 <p><strong>OpenAI — worktrees git booteables.</strong> OpenAI tomó otra ruta: cada git worktree puede arrancar la aplicación entera, con su propia pila de observabilidad efímera (Vector, Victoria metrics/logs/traces). Cada cambio se valida en su propio worktree, con sus propios logs. Cuando el worktree se borra, todo desaparece con él.</p>
+<p>Aclaración importante: el modelo de worktrees no implica "máquina local". OpenAI los usa sobre hosts de desarrollo remotos potentes, no sobre los portátiles de los ingenieros. La distinción real con el modelo de Stripe no es <em>local vs cloud</em>, sino <strong>muchas VMs pequeñas vs una máquina grande con muchos worktrees en paralelo</strong>. Cada modelo escala distinto: las VMs por horizontal, los worktrees por vertical hasta donde aguante el host.</p>
 <p>Las dos soluciones son distintas en mecánica pero idénticas en filosofía: <strong>el entorno es desechable, instantáneo y completo</strong>.</p>
+<h3 id="cuando-elegir-cual">Cuándo elegir cuál<a class="headerlink" href="#cuando-elegir-cual" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>La pregunta correcta no es "¿qué hacen los grandes?", sino <strong>¿cuál es mi cuello de botella?</strong>:</p>
+<ul>
+<li>Si lo que más te importa es <strong>paridad con producción y escala horizontal masiva</strong> (cientos de agentes en paralelo, monorepo enorme, infra ya madura), el modelo Stripe encaja mejor.</li>
+<li>Si lo que más te importa es <strong>velocidad del bucle de iteración y observabilidad cercana al agente</strong> (decenas de agentes en paralelo, repo donde la app arranca rápido), el modelo OpenAI suele ser más barato y más rápido de montar.</li>
+</ul>
+<p>La mayoría de equipos están más cerca del segundo caso de lo que creen, y empiezan copiando el primero porque "es lo serio". Acaban con una infra cara que el agente no aprovecha.</p>
+<h3 id="el-gotcha-de-los-puertos-y-las-dependencias-compartidas">El gotcha de los puertos y las dependencias compartidas<a class="headerlink" href="#el-gotcha-de-los-puertos-y-las-dependencias-compartidas" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Si vas por la ruta worktree, el primer dolor real no es el aislamiento del filesystem (eso lo da git gratis), son los <strong>recursos compartidos a nivel de proceso</strong>: dos worktrees que intentan abrir el mismo puerto, tocar la misma base de datos local, escribir en el mismo cache de <code>node_modules</code>, o registrarse en el mismo socket. Si no lo diseñas desde el principio, lanzas el segundo worktree y todo explota.</p>
+<p>Lo que funciona: puertos asignados dinámicamente al arrancar la app, base de datos por worktree (un esquema o una DB efímera por entorno), cualquier path de cache parametrizado por worktree. Es trabajo de un día y desbloquea el resto del modelo. Si lo dejas para "luego", "luego" es cuando cinco agentes en paralelo te demuestran que no tenías aislamiento real.</p>
+<h3 id="no-tienes-que-elegir-modelos-hibridos">No tienes que elegir: modelos híbridos<a class="headerlink" href="#no-tienes-que-elegir-modelos-hibridos" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Los dos enfoques no son excluyentes. Un patrón razonable es usar <strong>worktrees para el bucle interno</strong> del agente — rápido, barato, con observabilidad pegada — y <strong>devboxes (o equivalente) solo para el bucle de PR/CI</strong>, donde lo que importa es la paridad con producción antes del merge. Te quedas con la velocidad de iteración del primero y la garantía del segundo, sin pagar el coste completo de ninguno.</p>
 <h2 id="las-propiedades-que-importan">Las propiedades que importan<a class="headerlink" href="#las-propiedades-que-importan" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Un entorno aislado para agentes debe ser:</p>
 <p><strong>Aislado de verdad.</strong> Si dos agentes corriendo en paralelo pueden colisionar (en la misma base de datos, en el mismo puerto, en el mismo archivo de cache), no es aislamiento, es ilusión. El test es brutal: lanza 5 agentes a la vez y mira si alguno falla por el otro. Si pasa, no tienes aislamiento.</p>
