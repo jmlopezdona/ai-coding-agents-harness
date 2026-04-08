@@ -1,6 +1,6 @@
 # 6. El contexto como sistema de registro
 
-Hay una frase del equipo de Codex de OpenAI que vale la pena tatuarse en la pared del equipo: **"lo que el agente no puede ver, no existe"**. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene consecuencias directas sobre dónde tiene que vivir el conocimiento de un proyecto. La respuesta corta: en el repo, versionado, mecánicamente accesible. La respuesta larga es este capítulo.
+Hay una frase del equipo de Codex de OpenAI que vale la pena pintar en la pared del equipo: **"lo que el agente no puede ver, no existe"**. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene consecuencias directas sobre dónde tiene que vivir el conocimiento de un proyecto. La respuesta corta: en el repo, versionado, mecánicamente accesible. La respuesta larga es este capítulo.
 
 ## El cambio de mentalidad
 

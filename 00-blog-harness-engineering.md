@@ -62,7 +62,7 @@ Esto explica una observación que vale la pena tener delante: **los repos con di
 
 ## Lo que el agente no puede ver, no existe
 
-Hay una frase del equipo de Codex de OpenAI que vale la pena tatuarse en la pared: **"lo que el agente no puede ver, no existe"**. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene una consecuencia que cambia cómo ves el repositorio.
+Hay una frase del equipo de Codex de OpenAI que vale la pena pintar en la pared: **"lo que el agente no puede ver, no existe"**. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene una consecuencia que cambia cómo ves el repositorio.
 
 En equipos humanos, el conocimiento vive distribuido: en el README sí, pero también en Slack, en un Google Doc enlazado en algún correo, en la cabeza del senior, en una conversación de pasillo. Esta distribución funciona — mal, pero funciona — porque los humanos sabemos preguntar y cruzar fuentes.
 
