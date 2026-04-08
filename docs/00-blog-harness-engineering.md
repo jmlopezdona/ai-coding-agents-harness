@@ -28,12 +28,12 @@ Esto es, en el fondo, una buena noticia. El modelo no lo controlas — lo contro
 
 Böckeler descompone el harness en dos mecanismos, y la distinción es la herramienta más útil que vas a llevarte de este texto:
 
-- **Guides (feedforward).** Indicaciones que orientan al agente *antes* de que actúe. Convenciones, plantillas, schemas, generadores de módulos, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.
-- **Sensors (feedback).** Guardarraíles que actúan *después*. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el harness pueda corregirlo sin tu intervención.
+- **Guías (feedforward).** Indicaciones que orientan al agente *antes* de que actúe. Convenciones, plantillas, schemas, generadores de módulos, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.
+- **Sensores (feedback).** Guardarraíles que actúan *después*. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el harness pueda corregirlo sin tu intervención.
 
-Un harness sin guides produce un agente que se desvía. Un harness sin sensors produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.
+Un harness sin guías produce un agente que se desvía. Un harness sin sensores produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.
 
-Cada vez que tu agente falla, deberías poder decir si el fallo se debe a un guide ausente o a un sensor ausente. Si no puedes, no tienes harness. Tienes prompts y suerte.
+Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes harness. Tienes prompts y suerte.
 
 ## La pregunta que hay que aprender a hacerse
 
@@ -102,7 +102,7 @@ Si has llegado hasta aquí y te interesa moverte de la teoría a la práctica, h
 1. **Empieza por el aislamiento.** Sandboxes desechables, baratos de crear, baratos de tirar. Es la inversión que más multiplica todas las demás. Sin esto, los siguientes pasos rinden la mitad.
 2. **Materializa el contexto en el repo.** Lo importante que vive en Slack, Google Docs, o cabezas, mudado a markdown versionado. AGENTS.md como índice de 100 líneas, no como enciclopedia de mil.
 3. **Codifica los invariantes que más te importan.** Linters custom con mensajes dirigidos al agente. Direcciones de dependencia validadas mecánicamente. Schemas en el borde.
-4. **Promueve cada fallo recurrente al harness.** Si el fallo es obviamente sistémico desde el principio, lo conviertes en guide o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.
+4. **Promueve cada fallo recurrente al harness.** Si el fallo es obviamente sistémico desde el principio, lo conviertes en guía o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.
 5. **Diseña el flujo de PR para que la mayoría se revisen agente-a-agente**, y reserva la atención humana para los casos donde el criterio aporta valor real.
 
 No tienes que hacer todo a la vez. Empieza con los pasos 1 y 2; los demás caen por gravedad cuando los dos primeros están en su sitio.
@@ -113,7 +113,7 @@ La línea que separa a los equipos que están haciendo cosas notables con agente
 
 Los modelos van a seguir mejorando. Eso es seguro. Lo que está menos claro es cuántos equipos van a aprovecharlos. Los que estén invirtiendo en su harness mientras los demás esperan al próximo modelo van a llegar al próximo modelo con un multiplicador encima. Los que esperen al próximo modelo van a descubrir que el problema no era el modelo y van a volver a esperar al siguiente.
 
-Si esta lectura te ha resonado, los **capítulos 1 a 11 de la guía** desarrollan cada una de las ideas con más detalle: la mentalidad (cap. 1–2), los pilares de guides y sensors (cap. 3–4), la práctica concreta de entornos, contexto, arquitectura y flujo de PR (cap. 5–8), y el mantenimiento sostenible y los anti-patrones (cap. 9–11). Léelos como ensayos independientes; no hace falta orden. Lo que sí hace falta es empezar.
+Si esta lectura te ha resonado, los **capítulos 1 a 11 de la guía** desarrollan cada una de las ideas con más detalle: la mentalidad (cap. 1–2), los pilares de guías y sensores (cap. 3–4), la práctica concreta de entornos, contexto, arquitectura y flujo de PR (cap. 5–8), y el mantenimiento sostenible y los anti-patrones (cap. 9–11). Léelos como ensayos independientes; no hace falta orden. Lo que sí hace falta es empezar.
 
 ---
 

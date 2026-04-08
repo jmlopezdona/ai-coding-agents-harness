@@ -49,7 +49,7 @@ nav:
       - "1. Por qué el harness importa más que el modelo": 01-por-que-harness.md
       - "2. La reubicación del rigor": 02-rigor-reubicado.md
   - Parte 2 — Los dos pilares:
-      - "3. Guides y Sensors: feedforward y feedback": 03-pilares-guides-y-sensors.md
+      - "3. Guías y Sensores: feedforward y feedback": 03-pilares-guias-y-sensores.md
       - "4. El bucle: iteración como primitiva": 04-el-loop.md
   - Parte 3 — Práctica:
       - "5. Entornos aislados y reproducibles": 05-entornos-aislados.md

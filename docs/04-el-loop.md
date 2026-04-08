@@ -23,7 +23,7 @@ Huntley describe lo que llama el *Ralph loop* (en honor al Ralph Wiggum de los S
 La intuición que hay detrás es importante. Cuando un agente falla, hay dos respuestas posibles:
 
 - **Respuesta frágil:** añadir lógica que detecte ese fallo concreto y lo evite. Cada fallo genera código de orquestación.
-- **Respuesta robusta:** asegurarte de que el bucle puede *darse cuenta* de que falló y reintentar de forma diferente. El fallo genera un sensor mejor o un guide mejor, no más lógica.
+- **Respuesta robusta:** asegurarte de que el bucle puede *darse cuenta* de que falló y reintentar de forma diferente. El fallo genera un sensor mejor o una guía mejor, no más lógica.
 
 Huntley llama a esto "watch the loop": mirar dónde el bucle falla repetidamente y, en vez de parchearlo, ponerse el sombrero de ingeniero y arreglar la condición sistémica que lo causa. Es la misma filosofía que SRE: no celebres el héroe que apaga el incendio cada noche, arregla la causa del incendio.
 
@@ -45,7 +45,7 @@ En equipos serios, raramente hay un único bucle. Lo que ves es una jerarquía:
 - **Bucle intermedio (minutos):** PR → CI → revisión automática → respuesta a comentarios → re-merge. Es el bucle que Stripe describe en sus "blueprints", combinando nodos determinísticos (linters, tests) con nodos agénticos (implementar, refactorizar).
 - **Bucle externo (horas o días):** doc-gardening, refactor agents, eliminación de drift, actualización de quality scores. Es el bucle que mantiene la base de código habitable a meses vista.
 
-Los tres bucles se influyen. Un fallo recurrente en el bucle interno se convierte en un guide nuevo en el bucle externo. Una decisión del bucle externo (subir el umbral de cobertura) cambia el comportamiento del bucle interno. Diseñarlos como un sistema, no como tres scripts inconexos, es lo que distingue un harness real de una colección de automatizaciones.
+Los tres bucles se influyen. Un fallo recurrente en el bucle interno se convierte en una guía nueva en el bucle externo. Una decisión del bucle externo (subir el umbral de cobertura) cambia el comportamiento del bucle interno. Diseñarlos como un sistema, no como tres scripts inconexos, es lo que distingue un harness real de una colección de automatizaciones.
 
 ## El bucle como filosofía, no solo como código
 

@@ -56,7 +56,7 @@ La forma concreta varía — puede ser un plan de ejecución versionado, un tick
 
 ### 2. Calibrar el harness
 
-Cuando el agente falla repetidamente, alguien tiene que hacer la pregunta importante: ¿qué le falta al harness? Esto requiere entender el fallo a un nivel que no es solo "el código es incorrecto", sino "el agente no tenía la información que necesitaba" o "el sensor no detectó esto" o "la convención no estaba codificada". El humano hace este diagnóstico y promueve la lección al harness — como un nuevo lint, un nuevo guide, un nuevo agente revisor, o una sección nueva en docs.
+Cuando el agente falla repetidamente, alguien tiene que hacer la pregunta importante: ¿qué le falta al harness? Esto requiere entender el fallo a un nivel que no es solo "el código es incorrecto", sino "el agente no tenía la información que necesitaba" o "el sensor no detectó esto" o "la convención no estaba codificada". El humano hace este diagnóstico y promueve la lección al harness — como un nuevo lint, una nueva guía, un nuevo agente revisor, o una sección nueva en docs.
 
 Este es el trabajo donde un senior multiplica más su impacto. Cada hora invertida aquí se acumula sobre miles de ejecuciones futuras del agente. Es la inversión con mejor ROI del equipo.
 

@@ -14,10 +14,10 @@ Cuando un equipo se queja de que "el agente alucina" o "no entiende el código",
 
 El harness es todo aquello que aumenta la probabilidad de que el agente haga lo correcto a la primera, y que cuando no lo haga, lo descubra y lo corrija sin intervención humana. Böckeler lo descompone en dos mecanismos:
 
-- **Guides (feedforward)** — indicaciones que orientan al agente *antes* de que actúe: convenciones, plantillas, prompts del sistema, AGENTS.md, schemas.
-- **Sensors (feedback)** — guardarraíles que actúan *después*: tests, type checkers, linters, observabilidad, revisores automáticos, evals.
+- **Guías (feedforward)** — indicaciones que orientan al agente *antes* de que actúe: convenciones, plantillas, prompts del sistema, AGENTS.md, schemas.
+- **Sensores (feedback)** — guardarraíles que actúan *después*: tests, type checkers, linters, observabilidad, revisores automáticos, evals.
 
-Un harness sin guides produce un agente que se desvía. Un harness sin sensors produce un agente que se desvía y nunca se entera. Un harness con ambos produce algo que empieza a parecerse a un colaborador.
+Un harness sin guías produce un agente que se desvía. Un harness sin sensores produce un agente que se desvía y nunca se entera. Un harness con ambos produce algo que empieza a parecerse a un colaborador.
 
 ## La evidencia empírica
 
@@ -35,7 +35,7 @@ Cuando aceptas que el harness es donde se juega la calidad, dejas de hacer ciert
 
 Y empiezas a hacer cosas que antes parecían over-engineering: linters custom para una sola convención, planes de ejecución versionados, observabilidad en local, agentes de "doc-gardening" que mantienen la documentación al día.
 
-Lo que en un equipo humano sería pedante, en un equipo con agentes **es un multiplicador**. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en el next standup.
+Lo que en un equipo humano sería quisquilloso, en un equipo con agentes **es un multiplicador**. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en la siguiente reunión diaria.
 
 ## El principio que recorre toda la guía
 

@@ -54,7 +54,7 @@ Hay una consecuencia que a muchos equipos les cuesta aceptar: **el código resul
 Hacer un big-bang sobre un repo existente es mala idea. Lo que funciona:
 
 1. **Empieza por las capas que ya están claras.** Si tu repo ya tiene una distinción razonable entre dominios o módulos, escribe el lint que la haga obligatoria. No estás imponiendo arquitectura nueva, estás congelando la que ya tienes.
-2. **Promueve una regla cada vez.** Un lint nuevo a la semana, no doce a la vez. Cada lint nuevo es un guide, y los guides nuevos requieren ajuste del agente y del equipo.
+2. **Promueve una regla cada vez.** Un lint nuevo a la semana, no doce a la vez. Cada lint nuevo es una guía, y las guías nuevas requieren ajuste del agente y del equipo.
 3. **Empieza por warning, sube a error.** Un lint nuevo en modo warning te enseña qué tan ruidoso va a ser. Cuando el ruido baje a cero, súbelo a error.
 4. **Escribe el linter con el agente.** Esto es metanivel y vale la pena: que el propio agente escriba sus restricciones (con tu supervisión) hace explícita la intención y produce código que el propio agente puede leer y modificar después.
 

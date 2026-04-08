@@ -13,7 +13,7 @@ No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo
 
 ## Tesis central (en una frase)
 
-> El modelo es el motor. El harness — guides, sensors, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.
+> El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.
 
 ## Cómo leer esta guía
 
@@ -32,7 +32,7 @@ Los capítulos están ordenados de **mentalidad → pilares → práctica → ma
 
 ### Parte 2 — Los dos pilares
 
-- [3. Guides y Sensors: feedforward y feedback](03-pilares-guides-y-sensors.md)
+- [3. Guías y Sensores: feedforward y feedback](03-pilares-guias-y-sensores.md)
 - [4. El bucle: iteración como primitiva](04-el-loop.md)
 
 ### Parte 3 — Práctica
@@ -67,7 +67,7 @@ Cosas que están planificadas para la próxima versión de la guía:
 
 - **Plantillas ejecutables.** `AGENTS.md` mínimo de ejemplo, estructura completa de `docs/`, ejemplos de linters custom con mensajes dirigidos al agente, esqueleto de configuración de sandbox, plantillas de plan de ejecución.
 - **Plantilla de hoja de ruta como archivo separado** (extraída del cap. 12) para que los equipos puedan copiarla y rellenarla en una sesión sin tocar el resto de la guía.
-- **Glosario corto** de términos (harness, guide, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.
+- **Glosario corto** de términos (harness, guía, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.
 - **Capítulo 0 como post de blog publicable**, con su propio frontmatter, optimizado para distribución externa.
 - **Estudios de caso comparados** — un análisis lado a lado de cómo OpenAI, Stripe y otros equipos públicos resuelven cada una de las cinco dimensiones del cap. 12, con tabla de equivalencias.
 - **Checklist diagnóstico imprimible** (1 página) extraído del cap. 12 para pegar en la pared del equipo.

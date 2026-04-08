@@ -2,7 +2,7 @@
 
 Guía en español, en 13 capítulos, sobre cómo equipos técnicos pueden montar un *harness* serio alrededor de los AI coding agents (Claude Code, Codex, Copilot, Cursor, etc.) y dejar de tratarlos como autocomplete glorificado.
 
-> El modelo es el motor. El harness — guides, sensors, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.
+> El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.
 
 ## 📖 Lee la versión web
 

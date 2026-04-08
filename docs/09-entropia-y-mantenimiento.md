@@ -72,7 +72,7 @@ Un equipo que tiene esto bien suele notar dos cosas a los pocos meses:
 
 1. **Las PRs de los agentes se vuelven más cortas, no más largas.** Porque el contexto está mejor estructurado, la mayoría de cambios son pequeños y dirigidos. Las megapull requests de mil líneas son síntoma de harness inmaduro.
 
-2. **Los problemas recurrentes desaparecen sin que nadie los persiga.** Porque cada problema recurrente generó un guide o un sensor cuando se detectó la segunda vez. La memoria del equipo vive en el harness, no en la cabeza de la gente.
+2. **Los problemas recurrentes desaparecen sin que nadie los persiga.** Porque cada problema recurrente generó una guía o un sensor cuando se detectó la segunda vez. La memoria del equipo vive en el harness, no en la cabeza de la gente.
 
 Si en cambio observas que las PRs son cada vez más largas, que los mismos errores siguen apareciendo, y que el equipo dedica cada vez más tiempo a "arreglar lo que el agente rompió", el harness está perdiendo. La inversión correcta no es "más limpieza humana" — es promover lo que se aprende durante la limpieza al harness, hasta que la limpieza no haga falta.
 

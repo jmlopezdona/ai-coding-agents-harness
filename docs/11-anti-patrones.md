@@ -56,7 +56,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **El síntoma.** El mismo error aparece repetidamente. Cada vez, el ingeniero le dice al agente "no hagas eso, hazlo así" y sigue adelante. El repo acumula PRs con correcciones del mismo patrón una y otra vez.
 
-**Por qué parece buena idea.** Es más rápido arreglar el síntoma inmediato que escribir un lint o actualizar una guide. Se siente como progreso.
+**Por qué parece buena idea.** Es más rápido arreglar el síntoma inmediato que escribir un lint o actualizar una guía. Se siente como progreso.
 
 **Por qué falla.** No acumulas nada. La segunda vez que ves el mismo error, tu pregunta debe ser "¿qué debería haber impedido esto?". Si no la haces, estarás arreglando este patrón toda la vida.
 
@@ -70,7 +70,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué falla.** El harness es un sistema adaptativo. Muchas de las decisiones correctas solo se pueden tomar después de ver al agente fallar de formas específicas. Un harness diseñado en vacío optimiza problemas imaginarios y deja fuera los reales.
 
-**Qué hacer en su lugar.** Empezar con lo mínimo viable — sandbox básico, AGENTS.md corto, sensores computacionales existentes — y dejar que los problemas reales dirijan la inversión. Cada nuevo lint, nuevo guide, nuevo sensor debería estar justificado por un fallo observado, no por uno hipotético.
+**Qué hacer en su lugar.** Empezar con lo mínimo viable — sandbox básico, AGENTS.md corto, sensores computacionales existentes — y dejar que los problemas reales dirijan la inversión. Cada nuevo lint, nueva guía, nuevo sensor debería estar justificado por un fallo observado, no por uno hipotético.
 
 ## Anti-patrón 8 — No invertir nunca en el harness
 
@@ -80,7 +80,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué falla.** La deuda de harness es como cualquier deuda técnica pero amplificada. En el modelo clásico, la deuda ralentiza a los ingenieros. En el modelo agéntico, la deuda ralentiza *y* produce código drift exponencial. Lo que parecía velocidad al mes 1 se convierte en parálisis al mes 6.
 
-**Qué hacer en su lugar.** Parte del trabajo del equipo es siempre mejorar el harness. Una proporción explícita — 20%, un día por sprint, un miembro rotativo — dedicada a guides, sensors, agentes recurrentes. No negociable. Si es negociable, siempre se negocia en su contra.
+**Qué hacer en su lugar.** Parte del trabajo del equipo es siempre mejorar el harness. Una proporción explícita — 20%, un día por sprint, un miembro rotativo — dedicada a guías, sensores, agentes recurrentes. No negociable. Si es negociable, siempre se negocia en su contra.
 
 ## Anti-patrón 9 — El harness como proyecto paralelo
 
@@ -90,7 +90,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué falla.** El harness tiene que evolucionar basándose en los fallos que observan los que lo usan. Si los que observan los fallos no lo modifican, la retroalimentación se pierde. El equipo de plataforma trabaja en lo que imagina que importa; el equipo de producto sufre lo que realmente importa.
 
-**Qué hacer en su lugar.** Todos contribuyen al harness. Los lints custom los escribe quien observó el fallo. Los guides los actualiza quien tropezó con la ambigüedad. Un equipo de plataforma puede existir como acelerador, pero no como monopolio.
+**Qué hacer en su lugar.** Todos contribuyen al harness. Los lints custom los escribe quien observó el fallo. Las guías las actualiza quien tropezó con la ambigüedad. Un equipo de plataforma puede existir como acelerador, pero no como monopolio.
 
 ## Anti-patrón 10 — Creer que el modelo es el problema
 
@@ -98,7 +98,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué parece buena idea.** A veces es verdad. Los modelos mejoran.
 
-**Por qué falla.** La mayoría de las veces, el fallo no está en el modelo — está en lo que el modelo podía ver (contexto), en cómo se evaluó su salida (sensores), en las restricciones que tenía disponibles (guides), o en el entorno donde ejecutó (sandbox). Esperar un modelo mejor para arreglar un harness roto es gastar el tiempo en el sitio equivocado. Cuando el modelo nuevo llegue, el harness seguirá roto y los problemas seguirán.
+**Por qué falla.** La mayoría de las veces, el fallo no está en el modelo — está en lo que el modelo podía ver (contexto), en cómo se evaluó su salida (sensores), en las restricciones que tenía disponibles (guías), o en el entorno donde ejecutó (sandbox). Esperar un modelo mejor para arreglar un harness roto es gastar el tiempo en el sitio equivocado. Cuando el modelo nuevo llegue, el harness seguirá roto y los problemas seguirán.
 
 **Qué hacer en su lugar.** Primero reflejo: ante cualquier fallo, preguntar "¿qué del harness no está haciendo su trabajo?". Si la respuesta honesta es "el harness está bien, es el modelo", entonces sí, espera al modelo. Ocurre; solo es menos frecuente de lo que tu equipo probablemente cree.
 

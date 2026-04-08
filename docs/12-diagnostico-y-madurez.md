@@ -10,7 +10,7 @@ Después de comprimir todo lo descrito en la guía, el harness se reduce a cinco
 
 1. **Aislamiento** — la calidad de los entornos donde el agente ejecuta (cap. 5).
 2. **Contexto** — cuánto del conocimiento relevante vive en el repo de forma legible para el agente (cap. 6).
-3. **Invariantes** — cuánta de la disciplina del equipo está codificada como guides ejecutables, no como cultura implícita (cap. 3, 7).
+3. **Invariantes** — cuánta de la disciplina del equipo está codificada como guías ejecutables, no como cultura implícita (cap. 3, 7).
 4. **Bucle de feedback** — cuán rápido y rico es el ciclo de validación, corrección y revisión, incluido el flujo de PR (cap. 4, 8).
 5. **Mantenimiento** — qué mecanismos sostienen la base de código contra el drift a meses vista (cap. 9).
 
