@@ -10,7 +10,7 @@ Con aislamiento, los dos problemas desaparecen a la vez. Y abren una tercera cap
 
 ## Las dos referencias
 
-**Stripe — devboxes.** Stripe usa instancias EC2 estandarizadas que están "hot and ready" en 10 segundos. Cada minion (su agente interno) se levanta en uno, hace su trabajo, abre un PR, y el devbox se desecha. La latencia de creación es importante: si tardara 5 minutos, el agente se quedaría esperando y el coste por tarea sería prohibitivo. 10 segundos es lo bastante rápido como para tratar el entorno como desechable de verdad.
+**Stripe — devboxes.** Stripe usa instancias EC2 estandarizadas que están "hot and ready" en 10 segundos. Cada minion (su agente interno) se levanta en uno, hace su trabajo, abre un PR, y el devbox se desecha. La latencia de creación es importante: si tardara 5 minutos, el agente se quedaría esperando y a escala de 1.000 PRs por semana el coste sería inaceptable. 10 segundos es lo bastante rápido como para tratar el entorno como desechable de verdad.
 
 **OpenAI — worktrees git booteables.** OpenAI tomó otra ruta: cada git worktree puede arrancar la aplicación entera, con su propia pila de observabilidad efímera (Vector, Victoria metrics/logs/traces). Cada cambio se valida en su propio worktree, con sus propios logs. Cuando el worktree se borra, todo desaparece con él.
 
