@@ -14,14 +14,14 @@ Maquetada con MkDocs Material: navegación por capítulos, búsqueda integrada, 
 
 Los 13 capítulos están en [`docs/`](docs/). Si prefieres leerlos directamente en GitHub:
 
-- [Capítulo 0 — Producir software a escala con agentes](docs/00-blog-harness-engineering.md)
-- [Índice completo de la guía](docs/index.md)
+- [Capítulo 0 — Producir software a escala con agentes](docs/es/00-blog-harness-engineering.md)
+- [Índice completo de la guía](docs/es/index.md)
 
 ## Sobre la guía
 
 Está pensada para equipos técnicos con experiencia previa operando agentes y skills, que ya tienen claro el cómo se usan y quieren dar el siguiente paso: **diseñar el sistema** en lugar de buscar el prompt mágico.
 
-Sintetiza ideas de Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (equipo Codex de OpenAI) y Alistair Gray (equipo Leverage de Stripe). Las URLs originales están en la [sección de fuentes](docs/index.md#fuentes) del índice.
+Sintetiza ideas de Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (equipo Codex de OpenAI) y Alistair Gray (equipo Leverage de Stripe). Las URLs originales están en la [sección de fuentes](docs/es/index.md#fuentes) del índice.
 
 ## Licencia
 

@@ -93,7 +93,44 @@ markdown_extensions:
 
 plugins:
   - search:
-      lang: es
+      lang:
+        - es
+        - en
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: es
+          default: true
+          name: Español
+          build: true
+        - locale: en
+          name: English
+          build: true
+          site_name: Harness Engineering
+          nav_translations:
+            "Inicio": "Home"
+            "Cap. 0 — Producir software a escala con agentes": "Ch. 0 — Producing software at scale with agents"
+            "Parte 1 — Mentalidad": "Part 1 — Mindset"
+            "1. Por qué el harness importa más que el modelo": "1. Why the harness matters more than the model"
+            "2. La reubicación del rigor": "2. Relocating rigor"
+            "Parte 2 — Los dos pilares": "Part 2 — The two pillars"
+            "3. Guías y Sensores: feedforward y feedback": "3. Guides and Sensors: feedforward and feedback"
+            "4. El bucle: iteración como primitiva": "4. The loop: iteration as primitive"
+            "Parte 3 — Práctica": "Part 3 — Practice"
+            "5. Entornos aislados y reproducibles": "5. Isolated and reproducible environments"
+            "6. El contexto como sistema de registro": "6. Context as a system of record"
+            "7. Arquitectura para agentes": "7. Architecture for agents"
+            "8. El flujo de PR agéntico": "8. The agentic PR flow"
+            "Parte 4 — Sostenibilidad": "Part 4 — Sustainability"
+            "9. Entropía y mantenimiento continuo": "9. Entropy and continuous maintenance"
+            "10. Dónde sigue importando el humano": "10. Where humans still matter"
+            "Parte 5 — Trampas": "Part 5 — Pitfalls"
+            "11. Anti-patrones": "11. Anti-patterns"
+            "Parte 6 — Llevarlo a tu equipo": "Part 6 — Bringing it to your team"
+            "12. Diagnóstico y madurez": "12. Diagnosis and maturity"
 
 extra:
   social:
