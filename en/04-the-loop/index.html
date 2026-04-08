@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,33 +12,35 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/04-the-loop/">
       
       
+        <link rel="prev" href="../03-guides-and-sensors/">
       
-        <link rel="next" href="00-harness-engineering/">
+      
+        <link rel="next" href="../05-isolated-environments/">
       
       
         
-          <link rel="alternate" href="/ai-coding-agents-harness/" hreflang="es">
+          <link rel="alternate" href="../../04-the-loop/" hreflang="es">
         
-          <link rel="alternate" href="/ai-coding-agents-harness/en/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Harness Engineering</title>
+        <title>4. The loop: iteration as primitive - Harness Engineering</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,8 +84,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#harness-engineering" class="md-skip">
-          Saltar a contenido
+        <a href="#4-the-loop-iteration-as-primitive" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -95,8 +97,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inicio
+              4. The loop: iteration as primitive
             
           </span>
         </div>
@@ -156,20 +158,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/" hreflang="es" class="md-select__link">
+            <a href="../../04-the-loop/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/en/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -190,21 +192,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -217,7 +219,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -229,7 +231,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -250,7 +252,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -258,17 +260,15 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
         
   
   
     
   
-  Inicio
+  Home
 
       </a>
     </li>
@@ -281,13 +281,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="00-harness-engineering/" class="md-tabs__link">
+      <a href="../00-harness-engineering/" class="md-tabs__link">
         
   
   
     
   
-  Empieza aquí
+  Start here
 
       </a>
     </li>
@@ -302,13 +302,37 @@
     
     
       <li class="md-tabs__item">
-        <a href="01-why-harness/" class="md-tabs__link">
+        <a href="../01-why-harness/" class="md-tabs__link">
           
   
   
     
   
-  Mentalidad
+  Mindset
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../03-guides-and-sensors/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Pillars
 
         </a>
       </li>
@@ -324,13 +348,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="03-guides-and-sensors/" class="md-tabs__link">
+        <a href="../05-isolated-environments/" class="md-tabs__link">
           
   
   
     
   
-  Pilares
+  Practice
 
         </a>
       </li>
@@ -346,13 +370,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="05-isolated-environments/" class="md-tabs__link">
+        <a href="../09-entropy-and-maintenance/" class="md-tabs__link">
           
   
   
     
   
-  Práctica
+  Sustainability
 
         </a>
       </li>
@@ -368,13 +392,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="09-entropy-and-maintenance/" class="md-tabs__link">
+        <a href="../11-anti-patterns/" class="md-tabs__link">
           
   
   
     
   
-  Sostenibilidad
+  Pitfalls
 
         </a>
       </li>
@@ -390,35 +414,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="11-anti-patterns/" class="md-tabs__link">
+        <a href="../12-diagnosis-and-maturity/" class="md-tabs__link">
           
   
   
     
   
-  Trampas
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="12-diagnosis-and-maturity/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Tu equipo
+  Your team
 
         </a>
       </li>
@@ -446,9 +448,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href="../" title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -458,7 +460,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -475,44 +477,17 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inicio
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Inicio
+    Home
   
 
     
@@ -521,186 +496,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Premisas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tesis central (en una frase)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cómo leer esta guía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capítulo 0 — Puerta de entrada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 1 — Mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Qué no encontrarás en esta versión
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Roadmap para v2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fuentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -712,14 +507,14 @@
   
   
     <li class="md-nav__item">
-      <a href="00-harness-engineering/" class="md-nav__link">
+      <a href="../00-harness-engineering/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Empieza aquí
+    Start here
   
 
     
@@ -768,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Mentalidad
+    Mindset
   
 
     
@@ -784,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Mentalidad
+    Mindset
   
 
           </label>
@@ -797,14 +592,14 @@
   
   
     <li class="md-nav__item">
-      <a href="01-why-harness/" class="md-nav__link">
+      <a href="../01-why-harness/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Por qué el harness importa más que el modelo
+    1. Why the harness matters more than the model
   
 
     
@@ -825,14 +620,14 @@
   
   
     <li class="md-nav__item">
-      <a href="02-relocating-rigor/" class="md-nav__link">
+      <a href="../02-relocating-rigor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La reubicación del rigor
+    2. Relocating rigor
   
 
     
@@ -857,8 +652,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -870,26 +667,29 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Pilares
+    Pillars
   
 
     
@@ -900,12 +700,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Pilares
+    Pillars
   
 
           </label>
@@ -918,14 +718,14 @@
   
   
     <li class="md-nav__item">
-      <a href="03-guides-and-sensors/" class="md-nav__link">
+      <a href="../03-guides-and-sensors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Guías y Sensores: feedforward y feedback
+    3. Guides and Sensors: feedforward and feedback
   
 
     
@@ -943,17 +743,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="04-the-loop/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. The loop: iteration as primitive
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. El bucle: iteración como primitiva
+    4. The loop: iteration as primitive
   
 
     
@@ -962,6 +789,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-mental-model-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The mental model shift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ralph-loop-as-primitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The "Ralph loop" as primitive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-properties-of-a-good-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three properties of a good loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested loops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-as-a-philosophy-not-just-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The loop as a philosophy, not just code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-note-on-parallelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A note on parallelism
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1014,7 +927,7 @@
   <span class="md-ellipsis">
     
   
-    Práctica
+    Practice
   
 
     
@@ -1030,7 +943,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Práctica
+    Practice
   
 
           </label>
@@ -1043,14 +956,14 @@
   
   
     <li class="md-nav__item">
-      <a href="05-isolated-environments/" class="md-nav__link">
+      <a href="../05-isolated-environments/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Entornos aislados y reproducibles
+    5. Isolated and reproducible environments
   
 
     
@@ -1071,14 +984,14 @@
   
   
     <li class="md-nav__item">
-      <a href="06-context-system-of-record/" class="md-nav__link">
+      <a href="../06-context-system-of-record/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. El contexto como sistema de registro
+    6. Context as a system of record
   
 
     
@@ -1099,14 +1012,14 @@
   
   
     <li class="md-nav__item">
-      <a href="07-architecture-for-agents/" class="md-nav__link">
+      <a href="../07-architecture-for-agents/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Arquitectura para agentes
+    7. Architecture for agents
   
 
     
@@ -1127,14 +1040,14 @@
   
   
     <li class="md-nav__item">
-      <a href="08-agentic-pr-flow/" class="md-nav__link">
+      <a href="../08-agentic-pr-flow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. El flujo de PR agéntico
+    8. The agentic PR flow
   
 
     
@@ -1191,7 +1104,7 @@
   <span class="md-ellipsis">
     
   
-    Sostenibilidad
+    Sustainability
   
 
     
@@ -1207,7 +1120,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Sostenibilidad
+    Sustainability
   
 
           </label>
@@ -1220,14 +1133,14 @@
   
   
     <li class="md-nav__item">
-      <a href="09-entropy-and-maintenance/" class="md-nav__link">
+      <a href="../09-entropy-and-maintenance/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Entropía y mantenimiento continuo
+    9. Entropy and continuous maintenance
   
 
     
@@ -1248,14 +1161,14 @@
   
   
     <li class="md-nav__item">
-      <a href="10-human-role/" class="md-nav__link">
+      <a href="../10-human-role/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Dónde sigue importando el humano
+    10. Where humans still matter
   
 
     
@@ -1310,7 +1223,7 @@
   <span class="md-ellipsis">
     
   
-    Trampas
+    Pitfalls
   
 
     
@@ -1326,7 +1239,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Trampas
+    Pitfalls
   
 
           </label>
@@ -1339,14 +1252,14 @@
   
   
     <li class="md-nav__item">
-      <a href="11-anti-patterns/" class="md-nav__link">
+      <a href="../11-anti-patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Anti-patrones
+    11. Anti-patterns
   
 
     
@@ -1401,7 +1314,7 @@
   <span class="md-ellipsis">
     
   
-    Tu equipo
+    Your team
   
 
     
@@ -1417,7 +1330,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tu equipo
+    Your team
   
 
           </label>
@@ -1430,14 +1343,14 @@
   
   
     <li class="md-nav__item">
-      <a href="12-diagnosis-and-maturity/" class="md-nav__link">
+      <a href="../12-diagnosis-and-maturity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Diagnóstico y madurez
+    12. Diagnosis and maturity
   
 
     
@@ -1471,7 +1384,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1480,15 +1393,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
+  <a href="#the-mental-model-shift" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Premisas
+        The mental model shift
       
     </span>
   </a>
@@ -1496,10 +1409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
+  <a href="#the-ralph-loop-as-primitive" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tesis central (en una frase)
+        The "Ralph loop" as primitive
       
     </span>
   </a>
@@ -1507,10 +1420,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
+  <a href="#three-properties-of-a-good-loop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cómo leer esta guía
+        Three properties of a good loop
       
     </span>
   </a>
@@ -1518,104 +1431,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
+  <a href="#nested-loops" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capítulo 0 — Puerta de entrada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 1 — Mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Qué no encontrarás en esta versión
+        Nested loops
       
     </span>
   </a>
@@ -1623,10 +1442,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
+  <a href="#the-loop-as-a-philosophy-not-just-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roadmap para v2
+        The loop as a philosophy, not just code
       
     </span>
   </a>
@@ -1634,10 +1453,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
+  <a href="#a-note-on-parallelism" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuentes
+        A note on parallelism
       
     </span>
   </a>
@@ -1661,7 +1480,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/en/04-the-loop.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1669,84 +1488,47 @@
   
 
 
-<h1 id="harness-engineering">Harness engineering<a class="headerlink" href="#harness-engineering" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Una guía para equipos técnicos que ya usan agentes de codificación (Claude Code, Codex, Copilot, Cursor, etc.) y quieren dar el siguiente paso: <strong>dejar de tratarlos como autocomplete y empezar a montar un harness serio alrededor de ellos</strong>.</p>
-<p>No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo, organizado por capítulos, sobre los principios y patrones que están emergiendo en equipos que ya operan a esta escala (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) y que se repiten independientemente del stack o de la herramienta.</p>
-<h2 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Enlace permanente a esta sección">&para;</a></h2>
+<h1 id="4-the-loop-iteration-as-primitive">4. The loop: iteration as primitive<a class="headerlink" href="#4-the-loop-iteration-as-primitive" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>There's an observation that shows up in every team running agents seriously, and Geoffrey Huntley articulates it better than anyone: <strong>the agent isn't a function, it's a loop</strong>. Treating it as a function — input, output, done — is the source of half the problems you see in teams that are just starting out.</p>
+<h2 id="the-mental-model-shift">The mental model shift<a class="headerlink" href="#the-mental-model-shift" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>When you call a "pure" LLM — chat, completing a message — it's reasonable to think of it as a function. You give it a prompt, it returns text. But an agent doesn't work that way. An agent:</p>
+<ol>
+<li>Receives a goal.</li>
+<li>Looks at the environment (reads files, runs commands, queries tools).</li>
+<li>Decides an action.</li>
+<li>Executes it.</li>
+<li>Observes the result.</li>
+<li>Decides whether to continue, back off, or finish.</li>
+<li>Goes back to step 2.</li>
+</ol>
+<p>That's a loop. And the important thing is that <strong>the quality of the agent doesn't just depend on what decision it makes at each step, but on how many iterations it can sustain before going off the rails</strong>. An average model in a well-designed loop beats an excellent model in a badly-designed one. This is counterintuitive and it's where most money is being lost in the industry right now.</p>
+<h2 id="the-ralph-loop-as-primitive">The "Ralph loop" as primitive<a class="headerlink" href="#the-ralph-loop-as-primitive" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Huntley describes what he calls the <em>Ralph loop</em> (named after Ralph Wiggum from the Simpsons): a monolithic orchestrator that runs one iteration of the loop and starts over. No complicated planning logic, no exquisite decision trees. Just: run a turn, observe, run another.</p>
+<p>The intuition behind it matters. When an agent fails, there are two possible responses:</p>
 <ul>
-<li>Trabajas en un equipo técnico con experiencia operando agentes y skills.</li>
-<li>Te interesa <strong>diseñar el sistema</strong>, no encontrar el prompt mágico.</li>
-<li>Estás dispuesto a invertir en infraestructura interna (linters, sandboxes, observabilidad, docs versionadas) si eso multiplica el rendimiento del agente.</li>
-<li>Te importa la sostenibilidad a meses vista, no solo el primer commit impresionante.</li>
+<li><strong>Brittle response:</strong> add logic that detects that specific failure and avoids it. Every failure spawns orchestration code.</li>
+<li><strong>Robust response:</strong> make sure the loop can <em>notice</em> it failed and retry differently. The failure spawns a better sensor or a better guide, not more logic.</li>
 </ul>
-<h2 id="tesis-central-en-una-frase">Tesis central (en una frase)<a class="headerlink" href="#tesis-central-en-una-frase" title="Enlace permanente a esta sección">&para;</a></h2>
-<blockquote>
-<p>El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.</p>
-</blockquote>
-<h2 id="como-leer-esta-guia">Cómo leer esta guía<a class="headerlink" href="#como-leer-esta-guia" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Los capítulos están ordenados de <strong>mentalidad → pilares → práctica → mantenimiento → anti-patrones → diagnóstico</strong>, pero cada uno se sostiene por sí solo. Si ya tienes claro el "por qué", puedes saltar directamente al capítulo que te resuelva un problema concreto.</p>
-<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Enlace permanente a esta sección">&para;</a></h2>
-<h3 id="capitulo-0-puerta-de-entrada">Capítulo 0 — Puerta de entrada<a class="headerlink" href="#capitulo-0-puerta-de-entrada" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Huntley calls this "watch the loop": watch where the loop fails repeatedly and, instead of patching it, put on your engineer hat and fix the systemic condition that causes it. It's the same philosophy as SRE: don't celebrate the hero who puts out the fire every night, fix the cause of the fire.</p>
+<h2 id="three-properties-of-a-good-loop">Three properties of a good loop<a class="headerlink" href="#three-properties-of-a-good-loop" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>If you're going to invest in the loop (and you should), look for three properties:</p>
+<p><strong>1. Observable.</strong> Each iteration should produce readable signals. It's not enough for the agent to "finish"; it has to leave a trail of what it tried, what it saw, what it decided. The loop's logs are your only debugging mechanism when something goes wrong at 3am.</p>
+<p><strong>2. Interruptible and resumable.</strong> A loop that needs to run uninterrupted for six hours and gets lost if you stop it is brittle. A loop that can stop at any point, persist its state, and resume, is resilient. OpenAI mentions that individual Codex runs can work for over six hours on a single task — that's only possible if the loop is persistent.</p>
+<p><strong>3. Self-terminating by progress, not by attempts.</strong> "Retry up to 5 times" is a bad stop condition. "Retry while you're making measurable progress" is a good one. The difference shows up when the agent has spent 4 rounds working well on a hard task and the loop kills it on an absurd timeout.</p>
+<h2 id="nested-loops">Nested loops<a class="headerlink" href="#nested-loops" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>In serious teams, there's rarely a single loop. What you see is a hierarchy:</p>
 <ul>
-<li><a href="00-harness-engineering/">Harness engineering: producir software a escala con agentes</a></li>
+<li><strong>Inner loop (seconds):</strong> edit → typecheck → fast test → next edit. It's the hottest loop, the one the agent goes around hundreds of times per task.</li>
+<li><strong>Middle loop (minutes):</strong> PR → CI → automatic review → response to comments → re-merge. It's the loop Stripe describes in its "blueprints", combining deterministic nodes (linters, tests) with agentic nodes (implement, refactor).</li>
+<li><strong>Outer loop (hours or days):</strong> doc-gardening, refactor agents, drift elimination, quality score updates. It's the loop that keeps the codebase livable months down the road.</li>
 </ul>
-<h3 id="parte-1-mentalidad">Parte 1 — Mentalidad<a class="headerlink" href="#parte-1-mentalidad" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="01-why-harness/">1. Por qué el harness importa más que el modelo</a></li>
-<li><a href="02-relocating-rigor/">2. La reubicación del rigor</a></li>
-</ul>
-<h3 id="parte-2-los-dos-pilares">Parte 2 — Los dos pilares<a class="headerlink" href="#parte-2-los-dos-pilares" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="03-guides-and-sensors/">3. Guías y Sensores: feedforward y feedback</a></li>
-<li><a href="04-the-loop/">4. El bucle: iteración como primitiva</a></li>
-</ul>
-<h3 id="parte-3-practica">Parte 3 — Práctica<a class="headerlink" href="#parte-3-practica" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="05-isolated-environments/">5. Entornos aislados y reproducibles</a></li>
-<li><a href="06-context-system-of-record/">6. El contexto como sistema de registro</a></li>
-<li><a href="07-architecture-for-agents/">7. Arquitectura para agentes</a></li>
-<li><a href="08-agentic-pr-flow/">8. El flujo de PR agéntico</a></li>
-</ul>
-<h3 id="parte-4-sostenibilidad">Parte 4 — Sostenibilidad<a class="headerlink" href="#parte-4-sostenibilidad" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="09-entropy-and-maintenance/">9. Entropía y mantenimiento continuo</a></li>
-<li><a href="10-human-role/">10. Dónde sigue importando el humano</a></li>
-</ul>
-<h3 id="parte-5-trampas">Parte 5 — Trampas<a class="headerlink" href="#parte-5-trampas" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="11-anti-patterns/">11. Anti-patrones</a></li>
-</ul>
-<h3 id="parte-6-llevarlo-a-tu-equipo">Parte 6 — Llevarlo a tu equipo<a class="headerlink" href="#parte-6-llevarlo-a-tu-equipo" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="12-diagnosis-and-maturity/">12. Diagnóstico y madurez: dónde estás y qué tocar primero</a></li>
-</ul>
-<h2 id="que-no-encontraras-en-esta-version">Qué <em>no</em> encontrarás en esta versión<a class="headerlink" href="#que-no-encontraras-en-esta-version" title="Enlace permanente a esta sección">&para;</a></h2>
-<ul>
-<li>Plantillas listas para copiar (<code>AGENTS.md</code> de ejemplo, hooks, configuraciones de CI). Vendrán en una versión posterior.</li>
-<li>Comparativas entre herramientas concretas. La guía es deliberadamente agnóstica.</li>
-<li>Promesas de productividad. Los números de Stripe o de OpenAI son referencias, no garantías.</li>
-</ul>
-<h2 id="roadmap-para-v2">Roadmap para v2<a class="headerlink" href="#roadmap-para-v2" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Cosas que están planificadas para la próxima versión de la guía:</p>
-<ul>
-<li><strong>Plantillas ejecutables.</strong> <code>AGENTS.md</code> mínimo de ejemplo, estructura completa de <code>docs/</code>, ejemplos de linters custom con mensajes dirigidos al agente, esqueleto de configuración de sandbox, plantillas de plan de ejecución.</li>
-<li><strong>Plantilla de hoja de ruta como archivo separado</strong> (extraída del cap. 12) para que los equipos puedan copiarla y rellenarla en una sesión sin tocar el resto de la guía.</li>
-<li><strong>Glosario corto</strong> de términos (harness, guía, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.</li>
-<li><strong>Capítulo 0 como post de blog publicable</strong>, con su propio frontmatter, optimizado para distribución externa.</li>
-<li><strong>Estudios de caso comparados</strong> — un análisis lado a lado de cómo OpenAI, Stripe y otros equipos públicos resuelven cada una de las cinco dimensiones del cap. 12, con tabla de equivalencias.</li>
-<li><strong>Checklist diagnóstico imprimible</strong> (1 página) extraído del cap. 12 para pegar en la pared del equipo.</li>
-<li><strong>Sección sobre seguridad y aislamiento adversarial</strong> — qué cambia en el harness cuando el agente puede ser objetivo de prompt injection vía contexto, cómo razonar sobre la cadena de suministro de herramientas, MCP servers, etc.</li>
-</ul>
-<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Esta guía sintetiza ideas de:</p>
-<ul>
-<li>Birgitta Böckeler (Thoughtworks, publicado en martinfowler.com) — <a href="https://martinfowler.com/articles/harness-engineering.html"><em>Harness Engineering</em></a>. El término "harness" en este sentido emergió en torno a LangChain con la fórmula <em>"Agent = Model + Harness"</em>.</li>
-<li>Kief Morris (en martinfowler.com) — <a href="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html"><em>Humans and Agents in Software Engineering Cycles</em></a></li>
-<li>Chad Fowler — <a href="https://aicoding.leaflet.pub/3mbrvhyye4k2e"><em>Relocating Rigor — The Phoenix Architecture</em></a></li>
-<li>Geoffrey Huntley — <a href="https://ghuntley.com/loop/"><em>everything is a ralph loop</em></a></li>
-<li>Ryan Lopopolo (OpenAI) — <a href="https://openai.com/es-ES/index/harness-engineering/"><em>Harness Engineering: leveraging Codex in an agent-first world</em></a></li>
-<li>Alistair Gray (Stripe, equipo Leverage) — <em>Minions: Stripe's one-shot, end-to-end coding agents</em> — <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">parte 1</a> · <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2">parte 2</a></li>
-</ul>
+<p>The three loops influence each other. A recurring failure in the inner loop becomes a new guide in the outer loop. A decision in the outer loop (raise the coverage threshold) changes the behavior of the inner loop. Designing them as a system, not as three disconnected scripts, is what distinguishes a real harness from a collection of automations.</p>
+<h2 id="the-loop-as-a-philosophy-not-just-code">The loop as a philosophy, not just code<a class="headerlink" href="#the-loop-as-a-philosophy-not-just-code" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Huntley insists that the loop is also a mindset. When you see the agent fail, don't ask "what do I tell it so this doesn't happen?". Ask "what loop do I need to build so this gets detected and corrected without me?". The first reflex is exhausting and doesn't scale. The second is engineering.</p>
+<p>There's an associated danger: falling in love with the loop to the point of never finishing building it. The loop exists to solve real tasks; if you spend three weeks without shipping anything because you're "perfecting the loop", the loop has become another orphan project. The golden rule: every investment in the loop must be justified by a real, recurring, recent failure. Not a hypothetical one.</p>
+<h2 id="a-note-on-parallelism">A note on parallelism<a class="headerlink" href="#a-note-on-parallelism" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>An agent's natural loop is sequential: one iteration after another. But at the team level, the interesting thing is <strong>launching many loops in parallel</strong>. Stripe describes this explicitly: engineers launch multiple minions at a time, each working on a different task in its own devbox. Parallelization doesn't happen inside the loop, it happens <em>between</em> loops, and it depends entirely on having isolated environments (next chapter) where multiple loops can run without stepping on each other.</p>
+<p>This is the difference between having "an agent" and having "agents". The first is a tool. The second is team capacity. And the transition from one to the other almost always goes through accepting that the primitive isn't the model, or the prompt, or the tool: it's the loop.</p>
 
 
 
@@ -1770,7 +1552,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Volver al principio
+  Back to top
 </button>
         
       </main>
@@ -1818,10 +1600,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

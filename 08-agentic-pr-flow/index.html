@@ -12,33 +12,35 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/08-agentic-pr-flow/">
       
       
+        <link rel="prev" href="../07-architecture-for-agents/">
       
-        <link rel="next" href="00-harness-engineering/">
+      
+        <link rel="next" href="../09-entropy-and-maintenance/">
       
       
         
-          <link rel="alternate" href="/ai-coding-agents-harness/" hreflang="es">
+          <link rel="alternate" href="./" hreflang="es">
         
-          <link rel="alternate" href="/ai-coding-agents-harness/en/" hreflang="en">
+          <link rel="alternate" href="../en/08-agentic-pr-flow/" hreflang="en">
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Harness Engineering</title>
+        <title>8. El flujo de PR agéntico - Harness Engineering</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#harness-engineering" class="md-skip">
+        <a href="#8-el-flujo-de-pr-agentico" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -96,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href=".." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inicio
+              8. El flujo de PR agéntico
             
           </span>
         </div>
@@ -163,13 +165,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/" hreflang="es" class="md-select__link">
+            <a href="./" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/en/" hreflang="en" class="md-select__link">
+            <a href="../en/08-agentic-pr-flow/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -258,11 +260,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="00-harness-engineering/" class="md-tabs__link">
+      <a href="../00-harness-engineering/" class="md-tabs__link">
         
   
   
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="01-why-harness/" class="md-tabs__link">
+        <a href="../01-why-harness/" class="md-tabs__link">
           
   
   
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03-guides-and-sensors/" class="md-tabs__link">
+        <a href="../03-guides-and-sensors/" class="md-tabs__link">
           
   
   
@@ -342,11 +342,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="05-isolated-environments/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../05-isolated-environments/" class="md-tabs__link">
           
   
   
@@ -368,7 +370,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="09-entropy-and-maintenance/" class="md-tabs__link">
+        <a href="../09-entropy-and-maintenance/" class="md-tabs__link">
           
   
   
@@ -390,7 +392,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="11-anti-patterns/" class="md-tabs__link">
+        <a href="../11-anti-patterns/" class="md-tabs__link">
           
   
   
@@ -412,7 +414,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="12-diagnosis-and-maturity/" class="md-tabs__link">
+        <a href="../12-diagnosis-and-maturity/" class="md-tabs__link">
           
   
   
@@ -448,7 +450,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href=".." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -475,37 +477,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inicio
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -521,186 +496,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Premisas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tesis central (en una frase)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cómo leer esta guía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capítulo 0 — Puerta de entrada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 1 — Mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Qué no encontrarás en esta versión
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Roadmap para v2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fuentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -712,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="00-harness-engineering/" class="md-nav__link">
+      <a href="../00-harness-engineering/" class="md-nav__link">
         
   
   
@@ -797,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-why-harness/" class="md-nav__link">
+      <a href="../01-why-harness/" class="md-nav__link">
         
   
   
@@ -825,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-relocating-rigor/" class="md-nav__link">
+      <a href="../02-relocating-rigor/" class="md-nav__link">
         
   
   
@@ -918,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03-guides-and-sensors/" class="md-nav__link">
+      <a href="../03-guides-and-sensors/" class="md-nav__link">
         
   
   
@@ -946,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04-the-loop/" class="md-nav__link">
+      <a href="../04-the-loop/" class="md-nav__link">
         
   
   
@@ -978,8 +773,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -995,19 +792,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1025,7 +825,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1043,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="05-isolated-environments/" class="md-nav__link">
+      <a href="../05-isolated-environments/" class="md-nav__link">
         
   
   
@@ -1071,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="06-context-system-of-record/" class="md-nav__link">
+      <a href="../06-context-system-of-record/" class="md-nav__link">
         
   
   
@@ -1099,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="07-architecture-for-agents/" class="md-nav__link">
+      <a href="../07-architecture-for-agents/" class="md-nav__link">
         
   
   
@@ -1124,10 +924,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="08-agentic-pr-flow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. El flujo de PR agéntico
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1143,6 +970,114 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-rompe-primero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que rompe primero
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-ralph-loop-aplicado-al-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El "Ralph loop" aplicado al PR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-cuatro-categorias-de-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las cuatro categorías de PR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-gates-ligeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merge gates ligeros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-revision-agente-a-agente-como-sensor-inferencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La revisión agente-a-agente como sensor inferencial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-humano-como-revisor-de-excepcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El humano como revisor de excepción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-pr-como-evidencia-no-como-conversacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El PR como evidencia, no como conversación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-esto-pide-del-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que esto pide del repo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1220,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="09-entropy-and-maintenance/" class="md-nav__link">
+      <a href="../09-entropy-and-maintenance/" class="md-nav__link">
         
   
   
@@ -1248,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="10-human-role/" class="md-nav__link">
+      <a href="../10-human-role/" class="md-nav__link">
         
   
   
@@ -1339,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="11-anti-patterns/" class="md-nav__link">
+      <a href="../11-anti-patterns/" class="md-nav__link">
         
   
   
@@ -1430,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="12-diagnosis-and-maturity/" class="md-nav__link">
+      <a href="../12-diagnosis-and-maturity/" class="md-nav__link">
         
   
   
@@ -1485,10 +1420,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
+  <a href="#lo-que-rompe-primero" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Premisas
+        Lo que rompe primero
       
     </span>
   </a>
@@ -1496,10 +1431,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
+  <a href="#el-ralph-loop-aplicado-al-pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tesis central (en una frase)
+        El "Ralph loop" aplicado al PR
       
     </span>
   </a>
@@ -1507,10 +1442,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
+  <a href="#las-cuatro-categorias-de-pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cómo leer esta guía
+        Las cuatro categorías de PR
       
     </span>
   </a>
@@ -1518,104 +1453,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
+  <a href="#merge-gates-ligeros" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capítulo 0 — Puerta de entrada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 1 — Mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Qué no encontrarás en esta versión
+        Merge gates ligeros
       
     </span>
   </a>
@@ -1623,10 +1464,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
+  <a href="#la-revision-agente-a-agente-como-sensor-inferencial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roadmap para v2
+        La revisión agente-a-agente como sensor inferencial
       
     </span>
   </a>
@@ -1634,10 +1475,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
+  <a href="#el-humano-como-revisor-de-excepcion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuentes
+        El humano como revisor de excepción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-pr-como-evidencia-no-como-conversacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El PR como evidencia, no como conversación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-esto-pide-del-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que esto pide del repo
       
     </span>
   </a>
@@ -1661,7 +1524,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/08-agentic-pr-flow.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1669,84 +1532,69 @@
   
 
 
-<h1 id="harness-engineering">Harness engineering<a class="headerlink" href="#harness-engineering" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Una guía para equipos técnicos que ya usan agentes de codificación (Claude Code, Codex, Copilot, Cursor, etc.) y quieren dar el siguiente paso: <strong>dejar de tratarlos como autocomplete y empezar a montar un harness serio alrededor de ellos</strong>.</p>
-<p>No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo, organizado por capítulos, sobre los principios y patrones que están emergiendo en equipos que ya operan a esta escala (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) y que se repiten independientemente del stack o de la herramienta.</p>
-<h2 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Enlace permanente a esta sección">&para;</a></h2>
+<h1 id="8-el-flujo-de-pr-agentico">8. El flujo de PR agéntico<a class="headerlink" href="#8-el-flujo-de-pr-agentico" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>El pull request es la unidad atómica del trabajo en software. Y cuando los agentes empiezan a generarlos en serio — Stripe mergea más de mil por semana, OpenAI ha mergeado mil quinientos en cinco meses con un equipo pequeño — todos los supuestos del flujo de PR tradicional saltan por los aires. Este capítulo es sobre qué reemplazarlos por.</p>
+<h2 id="lo-que-rompe-primero">Lo que rompe primero<a class="headerlink" href="#lo-que-rompe-primero" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>El primer supuesto que se cae es <strong>"todo PR pasa por un humano"</strong>. No por ideología, sino por aritmética. Si tienes 7 ingenieros y el agente abre 20 PRs al día por persona, son 140 PRs diarios. Asumiendo que un humano pueda hacer una revisión decente en 15 minutos, son 35 horas-humano de revisión por día. No salen las cuentas.</p>
+<p>La respuesta intuitiva — "entonces ralentizamos al agente" — es exactamente la equivocada. Lo que tienes que hacer es lo contrario: <strong>delegar la mayoría de la revisión a otros agentes</strong>, y reservar la atención humana para los casos donde realmente importa el criterio.</p>
+<h2 id="el-ralph-loop-aplicado-al-pr">El "Ralph loop" aplicado al PR<a class="headerlink" href="#el-ralph-loop-aplicado-al-pr" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>OpenAI describe su flujo como una iteración continua que parece escrita por un guionista de los Simpson y funciona mejor de lo que parece. El agente:</p>
+<ol>
+<li>Hace su cambio en su worktree aislado.</li>
+<li>Revisa sus propios cambios localmente, antes de abrir nada.</li>
+<li>Solicita revisiones a otros agentes (locales y en la nube), cada uno con foco distinto: arquitectura, seguridad, tests, performance.</li>
+<li>Lee los comentarios — vengan de otros agentes o de humanos — y responde en línea.</li>
+<li>Aplica las correcciones que considere válidas, argumenta contra las que no.</li>
+<li>Vuelve al paso 3 hasta que todos los revisores están satisfechos.</li>
+<li>Mergea (sí, mergea él mismo) cuando todos los gates pasan.</li>
+</ol>
+<p>La revisión humana en este flujo no desaparece, pero <strong>se vuelve opcional para la mayoría de PRs</strong>. El humano interviene cuando un agente revisor escala explícitamente, cuando el cambio toca un área marcada como sensible, o cuando el ingeniero responsable elige mirar.</p>
+<h2 id="las-cuatro-categorias-de-pr">Las cuatro categorías de PR<a class="headerlink" href="#las-cuatro-categorias-de-pr" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>En la práctica, los equipos que llegan a este punto acaban categorizando los PRs en cuatro grupos, aunque no siempre lo hagan explícito:</p>
+<p><strong>1. Trivial — auto-mergeable.</strong> Refactors mecánicos, corrección de typos, actualización de docs, fixes de lint. El agente abre, los sensores pasan, mergea. Cero atención humana.</p>
+<p><strong>2. Rutina — revisado por otros agentes.</strong> La mayoría del trabajo. Implementación de una funcionalidad pequeña, fix de un fallo bien delimitado, tests adicionales. Un agente revisor lee, comenta, el agente original itera. Si convergen, mergean. El humano podría mirar pero no tiene por qué.</p>
+<p><strong>3. Sensible — humano en el bucle.</strong> Cambios en módulos marcados como críticos (auth, billing, migrations, contratos públicos). El humano revisa, decide, posiblemente delega de vuelta al agente para iterar. La marca de "sensible" no la decide cada PR; la decide la arquitectura, codificada en metadatos del repo.</p>
+<p><strong>4. Decisión — humano dirige desde antes.</strong> Cambios que requieren criterio (qué endpoint exponer, qué precio cobrar, qué deprecar). El humano no revisa el PR: define el plan antes de que el agente abra nada. El agente solo ejecuta.</p>
+<p>La proporción típica que se observa en equipos maduros: 60% rutina, 25% trivial, 10% sensible, 5% decisión. Y los porcentajes de las dos primeras siguen creciendo a medida que el harness madura.</p>
+<h2 id="merge-gates-ligeros">Merge gates ligeros<a class="headerlink" href="#merge-gates-ligeros" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Otro supuesto que se rompe: <strong>"el merge tiene que ser cuidadoso"</strong>. OpenAI describe explícitamente que sus merge gates son "mínimamente bloqueantes". Las PRs son cortas, los tests intermitentes se reintentan en lugar de bloquear progreso, y los fixes para fallos pequeños llegan en PRs de seguimiento en vez de detener el flujo.</p>
+<p>Esto suena irresponsable. En un equipo de bajo rendimiento lo sería. En un equipo donde el agente puede arreglar lo que rompa en minutos, <strong>el coste de esperar es mayor que el coste de romper</strong>. La disciplina se reubica (otra vez) hacia detección rápida y reversión barata. Si esos dos no están, no apliques este patrón. Si están, no aplicarlo es dejar dinero en la mesa.</p>
+<p>Hay dos pre-requisitos no negociables para que esto funcione:</p>
 <ul>
-<li>Trabajas en un equipo técnico con experiencia operando agentes y skills.</li>
-<li>Te interesa <strong>diseñar el sistema</strong>, no encontrar el prompt mágico.</li>
-<li>Estás dispuesto a invertir en infraestructura interna (linters, sandboxes, observabilidad, docs versionadas) si eso multiplica el rendimiento del agente.</li>
-<li>Te importa la sostenibilidad a meses vista, no solo el primer commit impresionante.</li>
+<li><strong>Detección rápida.</strong> Sensores en CI que descubren regresiones en minutos, no en horas. Smoke tests, contract tests, type checks.</li>
+<li><strong>Reversión trivial.</strong> Capacidad de revertir un PR sin ceremonia, idealmente automática si una alerta se dispara dentro de N minutos del merge.</li>
 </ul>
-<h2 id="tesis-central-en-una-frase">Tesis central (en una frase)<a class="headerlink" href="#tesis-central-en-una-frase" title="Enlace permanente a esta sección">&para;</a></h2>
-<blockquote>
-<p>El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.</p>
-</blockquote>
-<h2 id="como-leer-esta-guia">Cómo leer esta guía<a class="headerlink" href="#como-leer-esta-guia" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Los capítulos están ordenados de <strong>mentalidad → pilares → práctica → mantenimiento → anti-patrones → diagnóstico</strong>, pero cada uno se sostiene por sí solo. Si ya tienes claro el "por qué", puedes saltar directamente al capítulo que te resuelva un problema concreto.</p>
-<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Enlace permanente a esta sección">&para;</a></h2>
-<h3 id="capitulo-0-puerta-de-entrada">Capítulo 0 — Puerta de entrada<a class="headerlink" href="#capitulo-0-puerta-de-entrada" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Si tienes los dos, los merge gates pueden ser ligeros. Si no los tienes, los merge gates ligeros son una receta para descontrol.</p>
+<h2 id="la-revision-agente-a-agente-como-sensor-inferencial">La revisión agente-a-agente como sensor inferencial<a class="headerlink" href="#la-revision-agente-a-agente-como-sensor-inferencial" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>En el lenguaje del capítulo 3, la revisión por otro agente es un sensor <em>inferencial</em>: no es determinista, pero captura cosas que los sensores computacionales no pueden. Cosas como:</p>
 <ul>
-<li><a href="00-harness-engineering/">Harness engineering: producir software a escala con agentes</a></li>
+<li>"Este nombre es confuso dado el dominio."</li>
+<li>"Esta función no maneja el caso vacío y el contexto sugiere que es importante."</li>
+<li>"Este cambio contradice la decisión del plan de ejecución activo en <code>docs/exec-plans/active/billing-rewrite.md</code>."</li>
+<li>"Esta solución es válida pero hay un patrón ya establecido en <code>domains/orders/repository.ts</code> que deberías reusar."</li>
 </ul>
-<h3 id="parte-1-mentalidad">Parte 1 — Mentalidad<a class="headerlink" href="#parte-1-mentalidad" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Estos comentarios un humano los haría, pero un humano cuesta caro y no escala. Un agente revisor con buen contexto los hace bien la mayoría del tiempo, y los falsos positivos los filtra el agente original argumentando.</p>
+<p>Una propiedad importante: <strong>las revisiones agente-a-agente deben tener foco</strong>. Un único agente intentando revisar "todo" produce revisiones mediocres. Múltiples agentes revisores con prompts especializados — uno para arquitectura, otro para seguridad, otro para tests, otro para coherencia con docs activas — producen señal mucho mejor. Stripe lo formaliza con su modelo de "blueprints" combinando nodos determinísticos y agénticos en pipelines explícitos.</p>
+<h2 id="el-humano-como-revisor-de-excepcion">El humano como revisor de excepción<a class="headerlink" href="#el-humano-como-revisor-de-excepcion" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Cuando un humano sí entra a revisar, su papel cambia. Ya no es "el sistema de calidad", porque hay sensores antes que él. Su papel es:</p>
 <ul>
-<li><a href="01-why-harness/">1. Por qué el harness importa más que el modelo</a></li>
-<li><a href="02-relocating-rigor/">2. La reubicación del rigor</a></li>
+<li><strong>Aplicar criterio que no se puede codificar.</strong> Decisiones de producto, compromisos estratégicos, juicio sobre si una solución "encaja" con la dirección del proyecto.</li>
+<li><strong>Identificar patrones que merecen subir al harness.</strong> Si está corrigiendo lo mismo dos veces, eso no es revisión, es señal de que falta una guía o un sensor. Su trabajo más valioso es traducir esa observación en una mejora del harness.</li>
+<li><strong>Validar áreas marcadas como sensibles</strong> donde el coste de un fallo justifica la latencia.</li>
 </ul>
-<h3 id="parte-2-los-dos-pilares">Parte 2 — Los dos pilares<a class="headerlink" href="#parte-2-los-dos-pilares" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Lo que el humano <em>no</em> tiene que hacer en este modelo: leer cada línea, discutir naming, validar que los tests existen, asegurarse de que el lint pasa. Eso es trabajo de los sensores. Si el humano lo está haciendo, los sensores están incompletos.</p>
+<h2 id="el-pr-como-evidencia-no-como-conversacion">El PR como evidencia, no como conversación<a class="headerlink" href="#el-pr-como-evidencia-no-como-conversacion" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Un cambio sutil que aparece en estos flujos: el PR deja de ser una conversación entre humanos y se vuelve <strong>un registro de evidencia</strong>. El agente original adjunta:</p>
 <ul>
-<li><a href="03-guides-and-sensors/">3. Guías y Sensores: feedforward y feedback</a></li>
-<li><a href="04-the-loop/">4. El bucle: iteración como primitiva</a></li>
+<li>El plan que siguió (referenciado al <code>exec-plans/active/</code>).</li>
+<li>Los logs relevantes del worktree donde validó.</li>
+<li>Screenshots o vídeos del comportamiento antes y después (cuando es UI).</li>
+<li>Las preguntas que se hizo a sí mismo y cómo las resolvió.</li>
 </ul>
-<h3 id="parte-3-practica">Parte 3 — Práctica<a class="headerlink" href="#parte-3-practica" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="05-isolated-environments/">5. Entornos aislados y reproducibles</a></li>
-<li><a href="06-context-system-of-record/">6. El contexto como sistema de registro</a></li>
-<li><a href="07-architecture-for-agents/">7. Arquitectura para agentes</a></li>
-<li><a href="08-agentic-pr-flow/">8. El flujo de PR agéntico</a></li>
-</ul>
-<h3 id="parte-4-sostenibilidad">Parte 4 — Sostenibilidad<a class="headerlink" href="#parte-4-sostenibilidad" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="09-entropy-and-maintenance/">9. Entropía y mantenimiento continuo</a></li>
-<li><a href="10-human-role/">10. Dónde sigue importando el humano</a></li>
-</ul>
-<h3 id="parte-5-trampas">Parte 5 — Trampas<a class="headerlink" href="#parte-5-trampas" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="11-anti-patterns/">11. Anti-patrones</a></li>
-</ul>
-<h3 id="parte-6-llevarlo-a-tu-equipo">Parte 6 — Llevarlo a tu equipo<a class="headerlink" href="#parte-6-llevarlo-a-tu-equipo" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="12-diagnosis-and-maturity/">12. Diagnóstico y madurez: dónde estás y qué tocar primero</a></li>
-</ul>
-<h2 id="que-no-encontraras-en-esta-version">Qué <em>no</em> encontrarás en esta versión<a class="headerlink" href="#que-no-encontraras-en-esta-version" title="Enlace permanente a esta sección">&para;</a></h2>
-<ul>
-<li>Plantillas listas para copiar (<code>AGENTS.md</code> de ejemplo, hooks, configuraciones de CI). Vendrán en una versión posterior.</li>
-<li>Comparativas entre herramientas concretas. La guía es deliberadamente agnóstica.</li>
-<li>Promesas de productividad. Los números de Stripe o de OpenAI son referencias, no garantías.</li>
-</ul>
-<h2 id="roadmap-para-v2">Roadmap para v2<a class="headerlink" href="#roadmap-para-v2" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Cosas que están planificadas para la próxima versión de la guía:</p>
-<ul>
-<li><strong>Plantillas ejecutables.</strong> <code>AGENTS.md</code> mínimo de ejemplo, estructura completa de <code>docs/</code>, ejemplos de linters custom con mensajes dirigidos al agente, esqueleto de configuración de sandbox, plantillas de plan de ejecución.</li>
-<li><strong>Plantilla de hoja de ruta como archivo separado</strong> (extraída del cap. 12) para que los equipos puedan copiarla y rellenarla en una sesión sin tocar el resto de la guía.</li>
-<li><strong>Glosario corto</strong> de términos (harness, guía, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.</li>
-<li><strong>Capítulo 0 como post de blog publicable</strong>, con su propio frontmatter, optimizado para distribución externa.</li>
-<li><strong>Estudios de caso comparados</strong> — un análisis lado a lado de cómo OpenAI, Stripe y otros equipos públicos resuelven cada una de las cinco dimensiones del cap. 12, con tabla de equivalencias.</li>
-<li><strong>Checklist diagnóstico imprimible</strong> (1 página) extraído del cap. 12 para pegar en la pared del equipo.</li>
-<li><strong>Sección sobre seguridad y aislamiento adversarial</strong> — qué cambia en el harness cuando el agente puede ser objetivo de prompt injection vía contexto, cómo razonar sobre la cadena de suministro de herramientas, MCP servers, etc.</li>
-</ul>
-<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Esta guía sintetiza ideas de:</p>
-<ul>
-<li>Birgitta Böckeler (Thoughtworks, publicado en martinfowler.com) — <a href="https://martinfowler.com/articles/harness-engineering.html"><em>Harness Engineering</em></a>. El término "harness" en este sentido emergió en torno a LangChain con la fórmula <em>"Agent = Model + Harness"</em>.</li>
-<li>Kief Morris (en martinfowler.com) — <a href="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html"><em>Humans and Agents in Software Engineering Cycles</em></a></li>
-<li>Chad Fowler — <a href="https://aicoding.leaflet.pub/3mbrvhyye4k2e"><em>Relocating Rigor — The Phoenix Architecture</em></a></li>
-<li>Geoffrey Huntley — <a href="https://ghuntley.com/loop/"><em>everything is a ralph loop</em></a></li>
-<li>Ryan Lopopolo (OpenAI) — <a href="https://openai.com/es-ES/index/harness-engineering/"><em>Harness Engineering: leveraging Codex in an agent-first world</em></a></li>
-<li>Alistair Gray (Stripe, equipo Leverage) — <em>Minions: Stripe's one-shot, end-to-end coding agents</em> — <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">parte 1</a> · <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2">parte 2</a></li>
-</ul>
+<p>OpenAI menciona explícitamente que su agente puede grabar un vídeo del fallo, otro de la corrección, y adjuntarlos al PR. Esto cambia la naturaleza de la revisión: el revisor (humano o agente) no tiene que reproducir nada para entender el cambio. La evidencia ya está. Si la evidencia falta, la revisión es legítimamente bloqueada y se le pide al agente que la añada.</p>
+<h2 id="lo-que-esto-pide-del-repo">Lo que esto pide del repo<a class="headerlink" href="#lo-que-esto-pide-del-repo" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Para que este flujo funcione, el repo necesita estar preparado: marcas de "área sensible" legibles mecánicamente (un metadatos.yml por dominio, por ejemplo), planes de ejecución vivos en una ubicación conocida, agentes revisores con prompts versionados, y sensores rápidos en CI. Es trabajo. Pero es trabajo que se amortiza muy rápido cuando el rendimiento de PRs sube.</p>
+<p>La pregunta diagnóstica final: <strong>si mañana tu agente abre 50 PRs en un día, ¿qué pasa?</strong> Si la respuesta es "tendríamos que parar al agente porque no podemos revisarlos", el flujo de PR no está listo. Si la respuesta es "los sensores filtrarían los problemas y los humanos solo verían los 3-4 que importan", estás cerca.</p>
 
 
 
@@ -1818,10 +1666,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,33 +12,35 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/05-isolated-environments/">
       
       
+        <link rel="prev" href="../04-the-loop/">
       
-        <link rel="next" href="00-harness-engineering/">
+      
+        <link rel="next" href="../06-context-system-of-record/">
       
       
         
-          <link rel="alternate" href="/ai-coding-agents-harness/" hreflang="es">
+          <link rel="alternate" href="../../05-isolated-environments/" hreflang="es">
         
-          <link rel="alternate" href="/ai-coding-agents-harness/en/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Harness Engineering</title>
+        <title>5. Isolated and reproducible environments - Harness Engineering</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,8 +84,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#harness-engineering" class="md-skip">
-          Saltar a contenido
+        <a href="#5-isolated-and-reproducible-environments" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -95,8 +97,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inicio
+              5. Isolated and reproducible environments
             
           </span>
         </div>
@@ -156,20 +158,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/" hreflang="es" class="md-select__link">
+            <a href="../../05-isolated-environments/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/en/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -190,21 +192,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -217,7 +219,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -229,7 +231,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -250,7 +252,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -258,17 +260,15 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
         
   
   
     
   
-  Inicio
+  Home
 
       </a>
     </li>
@@ -281,13 +281,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="00-harness-engineering/" class="md-tabs__link">
+      <a href="../00-harness-engineering/" class="md-tabs__link">
         
   
   
     
   
-  Empieza aquí
+  Start here
 
       </a>
     </li>
@@ -302,13 +302,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="01-why-harness/" class="md-tabs__link">
+        <a href="../01-why-harness/" class="md-tabs__link">
           
   
   
     
   
-  Mentalidad
+  Mindset
 
         </a>
       </li>
@@ -324,13 +324,37 @@
     
     
       <li class="md-tabs__item">
-        <a href="03-guides-and-sensors/" class="md-tabs__link">
+        <a href="../03-guides-and-sensors/" class="md-tabs__link">
           
   
   
     
   
-  Pilares
+  Pillars
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Practice
 
         </a>
       </li>
@@ -346,13 +370,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="05-isolated-environments/" class="md-tabs__link">
+        <a href="../09-entropy-and-maintenance/" class="md-tabs__link">
           
   
   
     
   
-  Práctica
+  Sustainability
 
         </a>
       </li>
@@ -368,13 +392,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="09-entropy-and-maintenance/" class="md-tabs__link">
+        <a href="../11-anti-patterns/" class="md-tabs__link">
           
   
   
     
   
-  Sostenibilidad
+  Pitfalls
 
         </a>
       </li>
@@ -390,35 +414,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="11-anti-patterns/" class="md-tabs__link">
+        <a href="../12-diagnosis-and-maturity/" class="md-tabs__link">
           
   
   
     
   
-  Trampas
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="12-diagnosis-and-maturity/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Tu equipo
+  Your team
 
         </a>
       </li>
@@ -446,9 +448,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href="../" title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -458,7 +460,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -475,44 +477,17 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inicio
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Inicio
+    Home
   
 
     
@@ -521,186 +496,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Premisas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tesis central (en una frase)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cómo leer esta guía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capítulo 0 — Puerta de entrada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 1 — Mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Qué no encontrarás en esta versión
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Roadmap para v2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fuentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -712,14 +507,14 @@
   
   
     <li class="md-nav__item">
-      <a href="00-harness-engineering/" class="md-nav__link">
+      <a href="../00-harness-engineering/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Empieza aquí
+    Start here
   
 
     
@@ -768,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Mentalidad
+    Mindset
   
 
     
@@ -784,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Mentalidad
+    Mindset
   
 
           </label>
@@ -797,14 +592,14 @@
   
   
     <li class="md-nav__item">
-      <a href="01-why-harness/" class="md-nav__link">
+      <a href="../01-why-harness/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Por qué el harness importa más que el modelo
+    1. Why the harness matters more than the model
   
 
     
@@ -825,14 +620,14 @@
   
   
     <li class="md-nav__item">
-      <a href="02-relocating-rigor/" class="md-nav__link">
+      <a href="../02-relocating-rigor/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. La reubicación del rigor
+    2. Relocating rigor
   
 
     
@@ -889,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Pilares
+    Pillars
   
 
     
@@ -905,7 +700,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Pilares
+    Pillars
   
 
           </label>
@@ -918,14 +713,14 @@
   
   
     <li class="md-nav__item">
-      <a href="03-guides-and-sensors/" class="md-nav__link">
+      <a href="../03-guides-and-sensors/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Guías y Sensores: feedforward y feedback
+    3. Guides and Sensors: feedforward and feedback
   
 
     
@@ -946,14 +741,14 @@
   
   
     <li class="md-nav__item">
-      <a href="04-the-loop/" class="md-nav__link">
+      <a href="../04-the-loop/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. El bucle: iteración como primitiva
+    4. The loop: iteration as primitive
   
 
     
@@ -978,8 +773,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -995,26 +792,29 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Práctica
+    Practice
   
 
     
@@ -1025,12 +825,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Práctica
+    Practice
   
 
           </label>
@@ -1040,17 +840,197 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="05-isolated-environments/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Isolated and reproducible environments
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Entornos aislados y reproducibles
+    5. Isolated and reproducible environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-it-solves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The problem it solves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-two-reference-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two reference points
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The two reference points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-pick-which" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to pick which
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-gotcha-of-ports-and-shared-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The gotcha of ports and shared dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-dont-have-to-choose-hybrid-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You don't have to choose: hybrid models
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-properties-that-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The properties that matter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-isolation-unlocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What isolation unlocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-much-to-invest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How much to invest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-isolation-isnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What isolation isn't
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-context-system-of-record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Context as a system of record
   
 
     
@@ -1071,14 +1051,14 @@
   
   
     <li class="md-nav__item">
-      <a href="06-context-system-of-record/" class="md-nav__link">
+      <a href="../07-architecture-for-agents/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. El contexto como sistema de registro
+    7. Architecture for agents
   
 
     
@@ -1099,42 +1079,14 @@
   
   
     <li class="md-nav__item">
-      <a href="07-architecture-for-agents/" class="md-nav__link">
+      <a href="../08-agentic-pr-flow/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Arquitectura para agentes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="08-agentic-pr-flow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    8. El flujo de PR agéntico
+    8. The agentic PR flow
   
 
     
@@ -1191,7 +1143,7 @@
   <span class="md-ellipsis">
     
   
-    Sostenibilidad
+    Sustainability
   
 
     
@@ -1207,7 +1159,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Sostenibilidad
+    Sustainability
   
 
           </label>
@@ -1220,14 +1172,14 @@
   
   
     <li class="md-nav__item">
-      <a href="09-entropy-and-maintenance/" class="md-nav__link">
+      <a href="../09-entropy-and-maintenance/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Entropía y mantenimiento continuo
+    9. Entropy and continuous maintenance
   
 
     
@@ -1248,14 +1200,14 @@
   
   
     <li class="md-nav__item">
-      <a href="10-human-role/" class="md-nav__link">
+      <a href="../10-human-role/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. Dónde sigue importando el humano
+    10. Where humans still matter
   
 
     
@@ -1310,7 +1262,7 @@
   <span class="md-ellipsis">
     
   
-    Trampas
+    Pitfalls
   
 
     
@@ -1326,7 +1278,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Trampas
+    Pitfalls
   
 
           </label>
@@ -1339,14 +1291,14 @@
   
   
     <li class="md-nav__item">
-      <a href="11-anti-patterns/" class="md-nav__link">
+      <a href="../11-anti-patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Anti-patrones
+    11. Anti-patterns
   
 
     
@@ -1401,7 +1353,7 @@
   <span class="md-ellipsis">
     
   
-    Tu equipo
+    Your team
   
 
     
@@ -1417,7 +1369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tu equipo
+    Your team
   
 
           </label>
@@ -1430,14 +1382,14 @@
   
   
     <li class="md-nav__item">
-      <a href="12-diagnosis-and-maturity/" class="md-nav__link">
+      <a href="../12-diagnosis-and-maturity/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Diagnóstico y madurez
+    12. Diagnosis and maturity
   
 
     
@@ -1471,7 +1423,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1480,15 +1432,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
+  <a href="#the-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Premisas
+        The problem it solves
       
     </span>
   </a>
@@ -1496,44 +1448,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
+  <a href="#the-two-reference-points" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tesis central (en una frase)
+        The two reference points
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cómo leer esta guía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
+    <nav class="md-nav" aria-label="The two reference points">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
+  <a href="#when-to-pick-which" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Capítulo 0 — Puerta de entrada
+        When to pick which
       
     </span>
   </a>
@@ -1541,10 +1471,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
+  <a href="#the-gotcha-of-ports-and-shared-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parte 1 — Mentalidad
+        The gotcha of ports and shared dependencies
       
     </span>
   </a>
@@ -1552,54 +1482,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
+  <a href="#you-dont-have-to-choose-hybrid-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
+        You don't have to choose: hybrid models
       
     </span>
   </a>
@@ -1612,10 +1498,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
+  <a href="#the-properties-that-matter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qué no encontrarás en esta versión
+        The properties that matter
       
     </span>
   </a>
@@ -1623,10 +1509,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
+  <a href="#what-isolation-unlocks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roadmap para v2
+        What isolation unlocks
       
     </span>
   </a>
@@ -1634,10 +1520,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
+  <a href="#how-much-to-invest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuentes
+        How much to invest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-isolation-isnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What isolation isn't
       
     </span>
   </a>
@@ -1661,7 +1558,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/en/05-isolated-environments.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1669,84 +1566,54 @@
   
 
 
-<h1 id="harness-engineering">Harness engineering<a class="headerlink" href="#harness-engineering" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Una guía para equipos técnicos que ya usan agentes de codificación (Claude Code, Codex, Copilot, Cursor, etc.) y quieren dar el siguiente paso: <strong>dejar de tratarlos como autocomplete y empezar a montar un harness serio alrededor de ellos</strong>.</p>
-<p>No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo, organizado por capítulos, sobre los principios y patrones que están emergiendo en equipos que ya operan a esta escala (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) y que se repiten independientemente del stack o de la herramienta.</p>
-<h2 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Enlace permanente a esta sección">&para;</a></h2>
+<h1 id="5-isolated-and-reproducible-environments">5. Isolated and reproducible environments<a class="headerlink" href="#5-isolated-and-reproducible-environments" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>If I had to pick a single infrastructure investment that makes the biggest difference when introducing agents to a team, it would be this: <strong>isolated environments, cheap to create and cheap to throw away</strong>. It's not the most glamorous, it doesn't show up in demos, and it's almost always underestimated. But it's the one that multiplies everything else.</p>
+<h2 id="the-problem-it-solves">The problem it solves<a class="headerlink" href="#the-problem-it-solves" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Without isolation, an agent working in your repo is both a risk and a bottleneck. A risk, because any command it runs (installing dependencies, modifying the database, touching environment variables) affects your system and your teammates'. A bottleneck, because you can only have one agent running at a time without them stepping on each other.</p>
+<p>With isolation, both problems disappear at once. And they unlock a third capability which is the real game-changer: <strong>parallelism</strong>. You can launch ten agents at once on ten tasks, each in its own environment, without coordination.</p>
+<h2 id="the-two-reference-points">The two reference points<a class="headerlink" href="#the-two-reference-points" title="Enlace permanente a esta sección">&para;</a></h2>
+<p><strong>Stripe — devboxes.</strong> Stripe uses standardized EC2 instances that are "hot and ready" in 10 seconds. Each minion (their internal agent) spins up on one, does its work, opens a PR, and the devbox gets tossed. Creation latency matters: if it took 5 minutes, the agent would wait on every task and the system would be much less efficient. 10 seconds is fast enough to treat the environment as truly disposable.</p>
+<p><strong>OpenAI — bootable git worktrees.</strong> OpenAI took another route: each git worktree can boot the whole app, with its own ephemeral observability stack (Vector, Victoria metrics/logs/traces). Each change is validated in its own worktree, with its own logs. When the worktree is deleted, everything disappears with it.</p>
+<p>Important clarification: the worktree model doesn't imply "local machine". OpenAI runs them on powerful remote dev hosts, not on engineers' laptops. The real distinction with Stripe's model isn't <em>local vs cloud</em>, it's <strong>many small VMs vs one big machine with many worktrees in parallel</strong>. Each model scales differently: VMs horizontally, worktrees vertically up to what the host can take.</p>
+<p>The two solutions differ in mechanics but are identical in philosophy: <strong>the environment is disposable, instant, and complete</strong>.</p>
+<h3 id="when-to-pick-which">When to pick which<a class="headerlink" href="#when-to-pick-which" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>The right question isn't "what do the big players do?", but <strong>what's my bottleneck?</strong>:</p>
 <ul>
-<li>Trabajas en un equipo técnico con experiencia operando agentes y skills.</li>
-<li>Te interesa <strong>diseñar el sistema</strong>, no encontrar el prompt mágico.</li>
-<li>Estás dispuesto a invertir en infraestructura interna (linters, sandboxes, observabilidad, docs versionadas) si eso multiplica el rendimiento del agente.</li>
-<li>Te importa la sostenibilidad a meses vista, no solo el primer commit impresionante.</li>
+<li>If what you care about most is <strong>production parity and massive horizontal scale</strong> (hundreds of agents in parallel, huge monorepo, mature infra), the Stripe model fits better.</li>
+<li>If what you care about most is <strong>iteration loop speed and observability close to the agent</strong> (dozens of agents in parallel, a repo where the app boots fast), the OpenAI model is usually cheaper and faster to set up.</li>
 </ul>
-<h2 id="tesis-central-en-una-frase">Tesis central (en una frase)<a class="headerlink" href="#tesis-central-en-una-frase" title="Enlace permanente a esta sección">&para;</a></h2>
-<blockquote>
-<p>El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.</p>
-</blockquote>
-<h2 id="como-leer-esta-guia">Cómo leer esta guía<a class="headerlink" href="#como-leer-esta-guia" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Los capítulos están ordenados de <strong>mentalidad → pilares → práctica → mantenimiento → anti-patrones → diagnóstico</strong>, pero cada uno se sostiene por sí solo. Si ya tienes claro el "por qué", puedes saltar directamente al capítulo que te resuelva un problema concreto.</p>
-<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Enlace permanente a esta sección">&para;</a></h2>
-<h3 id="capitulo-0-puerta-de-entrada">Capítulo 0 — Puerta de entrada<a class="headerlink" href="#capitulo-0-puerta-de-entrada" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Most teams are closer to the second case than they think, and start copying the first one because "that's the serious way". They end up with expensive infra the agent doesn't make use of.</p>
+<h3 id="the-gotcha-of-ports-and-shared-dependencies">The gotcha of ports and shared dependencies<a class="headerlink" href="#the-gotcha-of-ports-and-shared-dependencies" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>If you go the worktree route, the first real pain isn't filesystem isolation (git gives you that for free), it's <strong>shared resources at the process level</strong>: two worktrees trying to open the same port, touch the same local database, write to the same <code>node_modules</code> cache, or register on the same socket. If you don't design for it from the start, you launch the second worktree and everything blows up.</p>
+<p>What works: dynamically-assigned ports when the app starts, a database per worktree (a schema or an ephemeral DB per environment), any cache path parameterized by worktree. It's a day's work and unblocks the rest of the model. If you leave it for "later", "later" is when five parallel agents prove to you that you didn't have real isolation.</p>
+<h3 id="you-dont-have-to-choose-hybrid-models">You don't have to choose: hybrid models<a class="headerlink" href="#you-dont-have-to-choose-hybrid-models" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>The two approaches aren't mutually exclusive. A reasonable pattern is to use <strong>worktrees for the agent's inner loop</strong> — fast, cheap, with observability stuck to it — and <strong>devboxes (or equivalent) only for the PR/CI loop</strong>, where what matters is production parity before the merge. You keep the iteration speed of the first and the guarantee of the second, without paying the full cost of either.</p>
+<h2 id="the-properties-that-matter">The properties that matter<a class="headerlink" href="#the-properties-that-matter" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>An isolated environment for agents must be:</p>
+<p><strong>Actually isolated.</strong> If two agents running in parallel can collide (on the same database, on the same port, on the same cache file), it's not isolation, it's an illusion. The test is brutal: launch 5 agents at once and see if any fail because of another. If that happens, you don't have isolation.</p>
+<p><strong>Cheap to create.</strong> "Cheap" means seconds, not minutes. An environment that takes 3 minutes to be ready pushes you to reuse it, and reusing it leads to cross-contamination, which breaks isolation. Boot speed isn't a convenience: it's what sustains the discipline of isolation.</p>
+<p><strong>Cheap to throw away.</strong> No manual steps, no "remember to clean up X", no orphan resources in the cloud. Normal operation is: create, use, destroy. If destroying is expensive, environments pile up and cost runs away.</p>
+<p><strong>Complete.</strong> The agent has to be able to do <em>everything</em> it needs inside the isolated environment: run tests, boot the app, query logs, navigate the UI, talk to mocked or real dependencies. An environment where the agent "almost can" do everything is worse than none: the things it can't do become invisible blockers.</p>
+<p><strong>Reproducible.</strong> Two creations of the same environment should yield the same result. If environments diverge (versions, seeds, data), the agent starts seeing intermittent failures and blames its own code. You lose trust in the sensor.</p>
+<h2 id="what-isolation-unlocks">What isolation unlocks<a class="headerlink" href="#what-isolation-unlocks" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Once you have this, several things become possible that previously seemed too expensive:</p>
 <ul>
-<li><a href="00-harness-engineering/">Harness engineering: producir software a escala con agentes</a></li>
+<li><strong>Ephemeral observability.</strong> Like at OpenAI, you can run a full logs/metrics/traces stack <em>per environment</em>. The agent asks questions like "does this request take less than 200ms?" and gets a verifiable answer, without contaminating production or the team's shared environments.</li>
+<li><strong>Reproducible UI.</strong> The agent can boot the whole app, navigate it with DevTools Protocol, take screenshots, compare before/after. The UI stops being terrain where only humans can validate.</li>
+<li><strong>Destructive testing.</strong> Operations nobody normally wants to run (drop tables, reset migrations, simulate network failures) become safe inside a disposable environment.</li>
+<li><strong>Long tasks without guilt.</strong> If the agent takes 6 hours on a task (OpenAI mentions examples of that), nobody worries, because it's running in its own environment and doesn't block anyone.</li>
+<li><strong>Trivial fan-out.</strong> "Try these five different implementations in parallel and tell me which is best" stops being a theoretical exercise. Five environments, five loops, one comparison at the end.</li>
 </ul>
-<h3 id="parte-1-mentalidad">Parte 1 — Mentalidad<a class="headerlink" href="#parte-1-mentalidad" title="Enlace permanente a esta sección">&para;</a></h3>
+<h2 id="how-much-to-invest">How much to invest<a class="headerlink" href="#how-much-to-invest" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>The reasonable question is: how far should you take this? The practical answer is <strong>to the point where launching a new environment stops being a conscious decision</strong>. If you think twice before launching an agent because "ugh, another environment", you're not there yet. Isolation has worked when the mental cost of launching an agent is indistinguishable from the mental cost of opening a browser tab.</p>
+<h2 id="what-isolation-isnt">What isolation isn't<a class="headerlink" href="#what-isolation-isnt" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>It's worth disambiguating. These things often get confused with isolation and <em>aren't</em>:</p>
 <ul>
-<li><a href="01-why-harness/">1. Por qué el harness importa más que el modelo</a></li>
-<li><a href="02-relocating-rigor/">2. La reubicación del rigor</a></li>
+<li><strong>"The agent runs on my machine":</strong> not isolation; the opposite. You're sharing an environment with everything else you have open.</li>
+<li><strong>A git branch:</strong> a branch is isolation of changes, not of runtime. Two agents on two branches can still step on each other if they share a local DB, ports, or cache.</li>
+<li><strong>A container reused across tasks:</strong> better than nothing, but not disposable. Accumulated cross-contamination becomes a source of intermittent failures.</li>
 </ul>
-<h3 id="parte-2-los-dos-pilares">Parte 2 — Los dos pilares<a class="headerlink" href="#parte-2-los-dos-pilares" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="03-guides-and-sensors/">3. Guías y Sensores: feedforward y feedback</a></li>
-<li><a href="04-the-loop/">4. El bucle: iteración como primitiva</a></li>
-</ul>
-<h3 id="parte-3-practica">Parte 3 — Práctica<a class="headerlink" href="#parte-3-practica" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="05-isolated-environments/">5. Entornos aislados y reproducibles</a></li>
-<li><a href="06-context-system-of-record/">6. El contexto como sistema de registro</a></li>
-<li><a href="07-architecture-for-agents/">7. Arquitectura para agentes</a></li>
-<li><a href="08-agentic-pr-flow/">8. El flujo de PR agéntico</a></li>
-</ul>
-<h3 id="parte-4-sostenibilidad">Parte 4 — Sostenibilidad<a class="headerlink" href="#parte-4-sostenibilidad" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="09-entropy-and-maintenance/">9. Entropía y mantenimiento continuo</a></li>
-<li><a href="10-human-role/">10. Dónde sigue importando el humano</a></li>
-</ul>
-<h3 id="parte-5-trampas">Parte 5 — Trampas<a class="headerlink" href="#parte-5-trampas" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="11-anti-patterns/">11. Anti-patrones</a></li>
-</ul>
-<h3 id="parte-6-llevarlo-a-tu-equipo">Parte 6 — Llevarlo a tu equipo<a class="headerlink" href="#parte-6-llevarlo-a-tu-equipo" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="12-diagnosis-and-maturity/">12. Diagnóstico y madurez: dónde estás y qué tocar primero</a></li>
-</ul>
-<h2 id="que-no-encontraras-en-esta-version">Qué <em>no</em> encontrarás en esta versión<a class="headerlink" href="#que-no-encontraras-en-esta-version" title="Enlace permanente a esta sección">&para;</a></h2>
-<ul>
-<li>Plantillas listas para copiar (<code>AGENTS.md</code> de ejemplo, hooks, configuraciones de CI). Vendrán en una versión posterior.</li>
-<li>Comparativas entre herramientas concretas. La guía es deliberadamente agnóstica.</li>
-<li>Promesas de productividad. Los números de Stripe o de OpenAI son referencias, no garantías.</li>
-</ul>
-<h2 id="roadmap-para-v2">Roadmap para v2<a class="headerlink" href="#roadmap-para-v2" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Cosas que están planificadas para la próxima versión de la guía:</p>
-<ul>
-<li><strong>Plantillas ejecutables.</strong> <code>AGENTS.md</code> mínimo de ejemplo, estructura completa de <code>docs/</code>, ejemplos de linters custom con mensajes dirigidos al agente, esqueleto de configuración de sandbox, plantillas de plan de ejecución.</li>
-<li><strong>Plantilla de hoja de ruta como archivo separado</strong> (extraída del cap. 12) para que los equipos puedan copiarla y rellenarla en una sesión sin tocar el resto de la guía.</li>
-<li><strong>Glosario corto</strong> de términos (harness, guía, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.</li>
-<li><strong>Capítulo 0 como post de blog publicable</strong>, con su propio frontmatter, optimizado para distribución externa.</li>
-<li><strong>Estudios de caso comparados</strong> — un análisis lado a lado de cómo OpenAI, Stripe y otros equipos públicos resuelven cada una de las cinco dimensiones del cap. 12, con tabla de equivalencias.</li>
-<li><strong>Checklist diagnóstico imprimible</strong> (1 página) extraído del cap. 12 para pegar en la pared del equipo.</li>
-<li><strong>Sección sobre seguridad y aislamiento adversarial</strong> — qué cambia en el harness cuando el agente puede ser objetivo de prompt injection vía contexto, cómo razonar sobre la cadena de suministro de herramientas, MCP servers, etc.</li>
-</ul>
-<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Esta guía sintetiza ideas de:</p>
-<ul>
-<li>Birgitta Böckeler (Thoughtworks, publicado en martinfowler.com) — <a href="https://martinfowler.com/articles/harness-engineering.html"><em>Harness Engineering</em></a>. El término "harness" en este sentido emergió en torno a LangChain con la fórmula <em>"Agent = Model + Harness"</em>.</li>
-<li>Kief Morris (en martinfowler.com) — <a href="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html"><em>Humans and Agents in Software Engineering Cycles</em></a></li>
-<li>Chad Fowler — <a href="https://aicoding.leaflet.pub/3mbrvhyye4k2e"><em>Relocating Rigor — The Phoenix Architecture</em></a></li>
-<li>Geoffrey Huntley — <a href="https://ghuntley.com/loop/"><em>everything is a ralph loop</em></a></li>
-<li>Ryan Lopopolo (OpenAI) — <a href="https://openai.com/es-ES/index/harness-engineering/"><em>Harness Engineering: leveraging Codex in an agent-first world</em></a></li>
-<li>Alistair Gray (Stripe, equipo Leverage) — <em>Minions: Stripe's one-shot, end-to-end coding agents</em> — <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">parte 1</a> · <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2">parte 2</a></li>
-</ul>
+<p>The standard to hit is: every task, its own environment; when it's done, it's discarded; it boots in seconds; reproducible byte-for-byte. When you get there, almost every other chapter in this guide becomes easier to apply.</p>
 
 
 
@@ -1770,7 +1637,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Volver al principio
+  Back to top
 </button>
         
       </main>
@@ -1818,10 +1685,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

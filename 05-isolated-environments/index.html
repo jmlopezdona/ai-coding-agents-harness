@@ -12,33 +12,35 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/05-isolated-environments/">
       
       
+        <link rel="prev" href="../04-the-loop/">
       
-        <link rel="next" href="00-harness-engineering/">
+      
+        <link rel="next" href="../06-context-system-of-record/">
       
       
         
-          <link rel="alternate" href="/ai-coding-agents-harness/" hreflang="es">
+          <link rel="alternate" href="./" hreflang="es">
         
-          <link rel="alternate" href="/ai-coding-agents-harness/en/" hreflang="en">
+          <link rel="alternate" href="../en/05-isolated-environments/" hreflang="en">
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Harness Engineering</title>
+        <title>5. Entornos aislados y reproducibles - Harness Engineering</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#harness-engineering" class="md-skip">
+        <a href="#5-entornos-aislados-y-reproducibles" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -96,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href=".." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inicio
+              5. Entornos aislados y reproducibles
             
           </span>
         </div>
@@ -163,13 +165,13 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/" hreflang="es" class="md-select__link">
+            <a href="./" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="/ai-coding-agents-harness/en/" hreflang="en" class="md-select__link">
+            <a href="../en/05-isolated-environments/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -258,11 +260,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="00-harness-engineering/" class="md-tabs__link">
+      <a href="../00-harness-engineering/" class="md-tabs__link">
         
   
   
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="01-why-harness/" class="md-tabs__link">
+        <a href="../01-why-harness/" class="md-tabs__link">
           
   
   
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="03-guides-and-sensors/" class="md-tabs__link">
+        <a href="../03-guides-and-sensors/" class="md-tabs__link">
           
   
   
@@ -342,11 +342,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="05-isolated-environments/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -368,7 +370,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="09-entropy-and-maintenance/" class="md-tabs__link">
+        <a href="../09-entropy-and-maintenance/" class="md-tabs__link">
           
   
   
@@ -390,7 +392,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="11-anti-patterns/" class="md-tabs__link">
+        <a href="../11-anti-patterns/" class="md-tabs__link">
           
   
   
@@ -412,7 +414,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="12-diagnosis-and-maturity/" class="md-tabs__link">
+        <a href="../12-diagnosis-and-maturity/" class="md-tabs__link">
           
   
   
@@ -448,7 +450,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href=".." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -475,37 +477,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inicio
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -521,186 +496,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Premisas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tesis central (en una frase)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cómo leer esta guía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Capítulo 0 — Puerta de entrada
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 1 — Mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Qué no encontrarás en esta versión
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Roadmap para v2
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fuentes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -712,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="00-harness-engineering/" class="md-nav__link">
+      <a href="../00-harness-engineering/" class="md-nav__link">
         
   
   
@@ -797,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-why-harness/" class="md-nav__link">
+      <a href="../01-why-harness/" class="md-nav__link">
         
   
   
@@ -825,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-relocating-rigor/" class="md-nav__link">
+      <a href="../02-relocating-rigor/" class="md-nav__link">
         
   
   
@@ -918,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03-guides-and-sensors/" class="md-nav__link">
+      <a href="../03-guides-and-sensors/" class="md-nav__link">
         
   
   
@@ -946,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04-the-loop/" class="md-nav__link">
+      <a href="../04-the-loop/" class="md-nav__link">
         
   
   
@@ -978,8 +773,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -995,19 +792,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1025,7 +825,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1040,10 +840,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="05-isolated-environments/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Entornos aislados y reproducibles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1059,6 +886,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-problema-que-resuelve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema que resuelve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-dos-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las dos referencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Las dos referencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cuando-elegir-cual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuándo elegir cuál
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-gotcha-de-los-puertos-y-las-dependencias-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El gotcha de los puertos y las dependencias compartidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-tienes-que-elegir-modelos-hibridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No tienes que elegir: modelos híbridos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#las-propiedades-que-importan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las propiedades que importan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-el-aislamiento-desbloquea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que el aislamiento desbloquea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuanto-invertir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuánto invertir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-no-es-aislamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que no es aislamiento
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1071,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="06-context-system-of-record/" class="md-nav__link">
+      <a href="../06-context-system-of-record/" class="md-nav__link">
         
   
   
@@ -1099,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="07-architecture-for-agents/" class="md-nav__link">
+      <a href="../07-architecture-for-agents/" class="md-nav__link">
         
   
   
@@ -1127,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="08-agentic-pr-flow/" class="md-nav__link">
+      <a href="../08-agentic-pr-flow/" class="md-nav__link">
         
   
   
@@ -1220,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="09-entropy-and-maintenance/" class="md-nav__link">
+      <a href="../09-entropy-and-maintenance/" class="md-nav__link">
         
   
   
@@ -1248,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="10-human-role/" class="md-nav__link">
+      <a href="../10-human-role/" class="md-nav__link">
         
   
   
@@ -1339,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="11-anti-patterns/" class="md-nav__link">
+      <a href="../11-anti-patterns/" class="md-nav__link">
         
   
   
@@ -1430,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="12-diagnosis-and-maturity/" class="md-nav__link">
+      <a href="../12-diagnosis-and-maturity/" class="md-nav__link">
         
   
   
@@ -1485,10 +1437,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#premisas" class="md-nav__link">
+  <a href="#el-problema-que-resuelve" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Premisas
+        El problema que resuelve
       
     </span>
   </a>
@@ -1496,44 +1448,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tesis-central-en-una-frase" class="md-nav__link">
+  <a href="#las-dos-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tesis central (en una frase)
+        Las dos referencias
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-leer-esta-guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cómo leer esta guía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Índice
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Índice">
+    <nav class="md-nav" aria-label="Las dos referencias">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#capitulo-0-puerta-de-entrada" class="md-nav__link">
+  <a href="#cuando-elegir-cual" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Capítulo 0 — Puerta de entrada
+        Cuándo elegir cuál
       
     </span>
   </a>
@@ -1541,10 +1471,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#parte-1-mentalidad" class="md-nav__link">
+  <a href="#el-gotcha-de-los-puertos-y-las-dependencias-compartidas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parte 1 — Mentalidad
+        El gotcha de los puertos y las dependencias compartidas
       
     </span>
   </a>
@@ -1552,54 +1482,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#parte-2-los-dos-pilares" class="md-nav__link">
+  <a href="#no-tienes-que-elegir-modelos-hibridos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parte 2 — Los dos pilares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-3-practica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 3 — Práctica
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-4-sostenibilidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 4 — Sostenibilidad
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-5-trampas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 5 — Trampas
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parte-6-llevarlo-a-tu-equipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parte 6 — Llevarlo a tu equipo
+        No tienes que elegir: modelos híbridos
       
     </span>
   </a>
@@ -1612,10 +1498,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#que-no-encontraras-en-esta-version" class="md-nav__link">
+  <a href="#las-propiedades-que-importan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qué no encontrarás en esta versión
+        Las propiedades que importan
       
     </span>
   </a>
@@ -1623,10 +1509,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#roadmap-para-v2" class="md-nav__link">
+  <a href="#lo-que-el-aislamiento-desbloquea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roadmap para v2
+        Lo que el aislamiento desbloquea
       
     </span>
   </a>
@@ -1634,10 +1520,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
+  <a href="#cuanto-invertir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuentes
+        Cuánto invertir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-no-es-aislamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que no es aislamiento
       
     </span>
   </a>
@@ -1661,7 +1558,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/index.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/05-isolated-environments.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1669,84 +1566,54 @@
   
 
 
-<h1 id="harness-engineering">Harness engineering<a class="headerlink" href="#harness-engineering" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Una guía para equipos técnicos que ya usan agentes de codificación (Claude Code, Codex, Copilot, Cursor, etc.) y quieren dar el siguiente paso: <strong>dejar de tratarlos como autocomplete y empezar a montar un harness serio alrededor de ellos</strong>.</p>
-<p>No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo, organizado por capítulos, sobre los principios y patrones que están emergiendo en equipos que ya operan a esta escala (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) y que se repiten independientemente del stack o de la herramienta.</p>
-<h2 id="premisas">Premisas<a class="headerlink" href="#premisas" title="Enlace permanente a esta sección">&para;</a></h2>
+<h1 id="5-entornos-aislados-y-reproducibles">5. Entornos aislados y reproducibles<a class="headerlink" href="#5-entornos-aislados-y-reproducibles" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>Si tuviera que elegir una sola inversión de infraestructura que más diferencia hace al introducir agentes en un equipo, sería esta: <strong>entornos aislados, baratos de crear y baratos de tirar</strong>. No es la más glamurosa, no aparece en demos, y casi siempre se subestima. Pero es la que multiplica todo lo demás.</p>
+<h2 id="el-problema-que-resuelve">El problema que resuelve<a class="headerlink" href="#el-problema-que-resuelve" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Sin aislamiento, un agente trabajando en tu repo es un riesgo y un cuello de botella al mismo tiempo. Riesgo, porque cualquier comando que ejecute (instalar dependencias, modificar la base de datos, tocar variables de entorno) afecta a tu sistema y al de tus compañeros. Cuello de botella, porque solo puedes tener un agente corriendo a la vez sin que se pisen.</p>
+<p>Con aislamiento, los dos problemas desaparecen a la vez. Y abren una tercera capacidad que es la que cambia el juego: <strong>paralelismo</strong>. Puedes lanzar diez agentes a la vez en diez tareas, cada uno en su propio entorno, sin coordinación.</p>
+<h2 id="las-dos-referencias">Las dos referencias<a class="headerlink" href="#las-dos-referencias" title="Enlace permanente a esta sección">&para;</a></h2>
+<p><strong>Stripe — devboxes.</strong> Stripe usa instancias EC2 estandarizadas que están "hot and ready" en 10 segundos. Cada minion (su agente interno) se levanta en uno, hace su trabajo, abre un PR, y el devbox se desecha. La latencia de creación es importante: si tardara 5 minutos, el agente esperaría en cada tarea y el sistema sería mucho menos eficiente. 10 segundos es lo bastante rápido como para tratar el entorno como desechable de verdad.</p>
+<p><strong>OpenAI — worktrees git booteables.</strong> OpenAI tomó otra ruta: cada git worktree puede arrancar la aplicación entera, con su propia pila de observabilidad efímera (Vector, Victoria metrics/logs/traces). Cada cambio se valida en su propio worktree, con sus propios logs. Cuando el worktree se borra, todo desaparece con él.</p>
+<p>Aclaración importante: el modelo de worktrees no implica "máquina local". OpenAI los usa sobre hosts de desarrollo remotos potentes, no sobre los portátiles de los ingenieros. La distinción real con el modelo de Stripe no es <em>local vs cloud</em>, sino <strong>muchas VMs pequeñas vs una máquina grande con muchos worktrees en paralelo</strong>. Cada modelo escala distinto: las VMs por horizontal, los worktrees por vertical hasta donde aguante el host.</p>
+<p>Las dos soluciones son distintas en mecánica pero idénticas en filosofía: <strong>el entorno es desechable, instantáneo y completo</strong>.</p>
+<h3 id="cuando-elegir-cual">Cuándo elegir cuál<a class="headerlink" href="#cuando-elegir-cual" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>La pregunta correcta no es "¿qué hacen los grandes?", sino <strong>¿cuál es mi cuello de botella?</strong>:</p>
 <ul>
-<li>Trabajas en un equipo técnico con experiencia operando agentes y skills.</li>
-<li>Te interesa <strong>diseñar el sistema</strong>, no encontrar el prompt mágico.</li>
-<li>Estás dispuesto a invertir en infraestructura interna (linters, sandboxes, observabilidad, docs versionadas) si eso multiplica el rendimiento del agente.</li>
-<li>Te importa la sostenibilidad a meses vista, no solo el primer commit impresionante.</li>
+<li>Si lo que más te importa es <strong>paridad con producción y escala horizontal masiva</strong> (cientos de agentes en paralelo, monorepo enorme, infra ya madura), el modelo Stripe encaja mejor.</li>
+<li>Si lo que más te importa es <strong>velocidad del bucle de iteración y observabilidad cercana al agente</strong> (decenas de agentes en paralelo, repo donde la app arranca rápido), el modelo OpenAI suele ser más barato y más rápido de montar.</li>
 </ul>
-<h2 id="tesis-central-en-una-frase">Tesis central (en una frase)<a class="headerlink" href="#tesis-central-en-una-frase" title="Enlace permanente a esta sección">&para;</a></h2>
-<blockquote>
-<p>El modelo es el motor. El harness — guías, sensores, sandboxes, bucles, contexto estructurado — es lo que convierte a un LLM en un agente del que un equipo puede depender.</p>
-</blockquote>
-<h2 id="como-leer-esta-guia">Cómo leer esta guía<a class="headerlink" href="#como-leer-esta-guia" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Los capítulos están ordenados de <strong>mentalidad → pilares → práctica → mantenimiento → anti-patrones → diagnóstico</strong>, pero cada uno se sostiene por sí solo. Si ya tienes claro el "por qué", puedes saltar directamente al capítulo que te resuelva un problema concreto.</p>
-<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Enlace permanente a esta sección">&para;</a></h2>
-<h3 id="capitulo-0-puerta-de-entrada">Capítulo 0 — Puerta de entrada<a class="headerlink" href="#capitulo-0-puerta-de-entrada" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>La mayoría de equipos están más cerca del segundo caso de lo que creen, y empiezan copiando el primero porque "es lo serio". Acaban con una infra cara que el agente no aprovecha.</p>
+<h3 id="el-gotcha-de-los-puertos-y-las-dependencias-compartidas">El gotcha de los puertos y las dependencias compartidas<a class="headerlink" href="#el-gotcha-de-los-puertos-y-las-dependencias-compartidas" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Si vas por la ruta worktree, el primer dolor real no es el aislamiento del filesystem (eso lo da git gratis), son los <strong>recursos compartidos a nivel de proceso</strong>: dos worktrees que intentan abrir el mismo puerto, tocar la misma base de datos local, escribir en el mismo cache de <code>node_modules</code>, o registrarse en el mismo socket. Si no lo diseñas desde el principio, lanzas el segundo worktree y todo explota.</p>
+<p>Lo que funciona: puertos asignados dinámicamente al arrancar la app, base de datos por worktree (un esquema o una DB efímera por entorno), cualquier path de cache parametrizado por worktree. Es trabajo de un día y desbloquea el resto del modelo. Si lo dejas para "luego", "luego" es cuando cinco agentes en paralelo te demuestran que no tenías aislamiento real.</p>
+<h3 id="no-tienes-que-elegir-modelos-hibridos">No tienes que elegir: modelos híbridos<a class="headerlink" href="#no-tienes-que-elegir-modelos-hibridos" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Los dos enfoques no son excluyentes. Un patrón razonable es usar <strong>worktrees para el bucle interno</strong> del agente — rápido, barato, con observabilidad pegada — y <strong>devboxes (o equivalente) solo para el bucle de PR/CI</strong>, donde lo que importa es la paridad con producción antes del merge. Te quedas con la velocidad de iteración del primero y la garantía del segundo, sin pagar el coste completo de ninguno.</p>
+<h2 id="las-propiedades-que-importan">Las propiedades que importan<a class="headerlink" href="#las-propiedades-que-importan" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Un entorno aislado para agentes debe ser:</p>
+<p><strong>Aislado de verdad.</strong> Si dos agentes corriendo en paralelo pueden colisionar (en la misma base de datos, en el mismo puerto, en el mismo archivo de cache), no es aislamiento, es ilusión. El test es brutal: lanza 5 agentes a la vez y mira si alguno falla por el otro. Si pasa, no tienes aislamiento.</p>
+<p><strong>Barato de crear.</strong> "Barato" significa segundos, no minutos. Un entorno que tarda 3 minutos en estar listo te empuja a reusarlo, y reusarlo te lleva a contaminación cruzada, que rompe el aislamiento. La velocidad de arranque no es comodidad: es lo que sostiene la disciplina del aislamiento.</p>
+<p><strong>Barato de tirar.</strong> Sin pasos manuales, sin "acuérdate de limpiar X", sin recursos huérfanos en la nube. La operación normal es: crear, usar, destruir. Si destruir es caro, los entornos se acumulan y el coste se descontrola.</p>
+<p><strong>Completo.</strong> El agente tiene que poder hacer en el entorno aislado <em>todo</em> lo que necesita: ejecutar tests, levantar la app, consultar logs, navegar la UI, hablar con dependencias mockeadas o reales. Un entorno donde el agente "casi puede" hacer todo es peor que ninguno: las cosas que no puede se convierten en bloqueos invisibles.</p>
+<p><strong>Reproducible.</strong> Dos creaciones del mismo entorno deben dar el mismo resultado. Si los entornos divergen (versiones, semillas, datos), el agente empieza a ver fallos intermitentes y los achaca a su propio código. Pierdes confianza en el sensor.</p>
+<h2 id="lo-que-el-aislamiento-desbloquea">Lo que el aislamiento desbloquea<a class="headerlink" href="#lo-que-el-aislamiento-desbloquea" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Una vez tienes esto, varias cosas se vuelven posibles que antes parecían demasiado caras:</p>
 <ul>
-<li><a href="00-harness-engineering/">Harness engineering: producir software a escala con agentes</a></li>
+<li><strong>Observabilidad efímera.</strong> Como en OpenAI, puedes correr una pila completa de logs/metrics/traces <em>por entorno</em>. El agente formula preguntas como "¿este request tarda menos de 200ms?" y obtiene respuesta verificable, sin contaminar producción ni los entornos compartidos del equipo.</li>
+<li><strong>UI reproducible.</strong> El agente puede levantar la app entera, navegarla con DevTools Protocol, sacar screenshots, comparar antes/después. La UI deja de ser un terreno donde solo los humanos pueden validar.</li>
+<li><strong>Pruebas destructivas.</strong> Operaciones que normalmente nadie quiere ejecutar (drop tables, reset migrations, simular fallos de red) se vuelven seguras dentro de un entorno desechable.</li>
+<li><strong>Tareas largas sin culpabilidad.</strong> Si el agente tarda 6 horas en una tarea (OpenAI menciona ejemplos de eso), nadie se preocupa, porque está corriendo en su propio entorno y no bloquea a nadie.</li>
+<li><strong>Fan-out trivial.</strong> "Prueba estas cinco implementaciones distintas en paralelo y dime cuál es mejor" deja de ser un ejercicio teórico. Cinco entornos, cinco bucles, una comparación al final.</li>
 </ul>
-<h3 id="parte-1-mentalidad">Parte 1 — Mentalidad<a class="headerlink" href="#parte-1-mentalidad" title="Enlace permanente a esta sección">&para;</a></h3>
+<h2 id="cuanto-invertir">Cuánto invertir<a class="headerlink" href="#cuanto-invertir" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>La pregunta razonable es: ¿hasta dónde llevar esto? La respuesta práctica es <strong>hasta el punto donde lanzar un nuevo entorno deja de costarte una decisión consciente</strong>. Si te lo piensas dos veces antes de lanzar un agente porque "vaya, otro entorno", todavía no estás ahí. El aislamiento ha funcionado cuando el coste mental de lanzar un agente es indistinguible de el coste mental de abrir una pestaña del navegador.</p>
+<h2 id="lo-que-no-es-aislamiento">Lo que no es aislamiento<a class="headerlink" href="#lo-que-no-es-aislamiento" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Conviene desambiguar. Estas cosas suelen confundirse con aislamiento y <em>no</em> lo son:</p>
 <ul>
-<li><a href="01-why-harness/">1. Por qué el harness importa más que el modelo</a></li>
-<li><a href="02-relocating-rigor/">2. La reubicación del rigor</a></li>
+<li><strong>"El agente corre en mi máquina":</strong> no es aislamiento; es lo contrario. Estás compartiendo entorno con todo lo que tienes abierto.</li>
+<li><strong>Una rama de git:</strong> una rama es aislamiento de cambios, no de runtime. Dos agentes en dos ramas pueden seguir pisándose si comparten DB local, puertos, o cache.</li>
+<li><strong>Un contenedor que se reusa entre tareas:</strong> mejor que nada, pero no es desechable. La contaminación cruzada acumulada se vuelve fuente de fallos intermitentes.</li>
 </ul>
-<h3 id="parte-2-los-dos-pilares">Parte 2 — Los dos pilares<a class="headerlink" href="#parte-2-los-dos-pilares" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="03-guides-and-sensors/">3. Guías y Sensores: feedforward y feedback</a></li>
-<li><a href="04-the-loop/">4. El bucle: iteración como primitiva</a></li>
-</ul>
-<h3 id="parte-3-practica">Parte 3 — Práctica<a class="headerlink" href="#parte-3-practica" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="05-isolated-environments/">5. Entornos aislados y reproducibles</a></li>
-<li><a href="06-context-system-of-record/">6. El contexto como sistema de registro</a></li>
-<li><a href="07-architecture-for-agents/">7. Arquitectura para agentes</a></li>
-<li><a href="08-agentic-pr-flow/">8. El flujo de PR agéntico</a></li>
-</ul>
-<h3 id="parte-4-sostenibilidad">Parte 4 — Sostenibilidad<a class="headerlink" href="#parte-4-sostenibilidad" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="09-entropy-and-maintenance/">9. Entropía y mantenimiento continuo</a></li>
-<li><a href="10-human-role/">10. Dónde sigue importando el humano</a></li>
-</ul>
-<h3 id="parte-5-trampas">Parte 5 — Trampas<a class="headerlink" href="#parte-5-trampas" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="11-anti-patterns/">11. Anti-patrones</a></li>
-</ul>
-<h3 id="parte-6-llevarlo-a-tu-equipo">Parte 6 — Llevarlo a tu equipo<a class="headerlink" href="#parte-6-llevarlo-a-tu-equipo" title="Enlace permanente a esta sección">&para;</a></h3>
-<ul>
-<li><a href="12-diagnosis-and-maturity/">12. Diagnóstico y madurez: dónde estás y qué tocar primero</a></li>
-</ul>
-<h2 id="que-no-encontraras-en-esta-version">Qué <em>no</em> encontrarás en esta versión<a class="headerlink" href="#que-no-encontraras-en-esta-version" title="Enlace permanente a esta sección">&para;</a></h2>
-<ul>
-<li>Plantillas listas para copiar (<code>AGENTS.md</code> de ejemplo, hooks, configuraciones de CI). Vendrán en una versión posterior.</li>
-<li>Comparativas entre herramientas concretas. La guía es deliberadamente agnóstica.</li>
-<li>Promesas de productividad. Los números de Stripe o de OpenAI son referencias, no garantías.</li>
-</ul>
-<h2 id="roadmap-para-v2">Roadmap para v2<a class="headerlink" href="#roadmap-para-v2" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Cosas que están planificadas para la próxima versión de la guía:</p>
-<ul>
-<li><strong>Plantillas ejecutables.</strong> <code>AGENTS.md</code> mínimo de ejemplo, estructura completa de <code>docs/</code>, ejemplos de linters custom con mensajes dirigidos al agente, esqueleto de configuración de sandbox, plantillas de plan de ejecución.</li>
-<li><strong>Plantilla de hoja de ruta como archivo separado</strong> (extraída del cap. 12) para que los equipos puedan copiarla y rellenarla en una sesión sin tocar el resto de la guía.</li>
-<li><strong>Glosario corto</strong> de términos (harness, guía, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.</li>
-<li><strong>Capítulo 0 como post de blog publicable</strong>, con su propio frontmatter, optimizado para distribución externa.</li>
-<li><strong>Estudios de caso comparados</strong> — un análisis lado a lado de cómo OpenAI, Stripe y otros equipos públicos resuelven cada una de las cinco dimensiones del cap. 12, con tabla de equivalencias.</li>
-<li><strong>Checklist diagnóstico imprimible</strong> (1 página) extraído del cap. 12 para pegar en la pared del equipo.</li>
-<li><strong>Sección sobre seguridad y aislamiento adversarial</strong> — qué cambia en el harness cuando el agente puede ser objetivo de prompt injection vía contexto, cómo razonar sobre la cadena de suministro de herramientas, MCP servers, etc.</li>
-</ul>
-<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Esta guía sintetiza ideas de:</p>
-<ul>
-<li>Birgitta Böckeler (Thoughtworks, publicado en martinfowler.com) — <a href="https://martinfowler.com/articles/harness-engineering.html"><em>Harness Engineering</em></a>. El término "harness" en este sentido emergió en torno a LangChain con la fórmula <em>"Agent = Model + Harness"</em>.</li>
-<li>Kief Morris (en martinfowler.com) — <a href="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html"><em>Humans and Agents in Software Engineering Cycles</em></a></li>
-<li>Chad Fowler — <a href="https://aicoding.leaflet.pub/3mbrvhyye4k2e"><em>Relocating Rigor — The Phoenix Architecture</em></a></li>
-<li>Geoffrey Huntley — <a href="https://ghuntley.com/loop/"><em>everything is a ralph loop</em></a></li>
-<li>Ryan Lopopolo (OpenAI) — <a href="https://openai.com/es-ES/index/harness-engineering/"><em>Harness Engineering: leveraging Codex in an agent-first world</em></a></li>
-<li>Alistair Gray (Stripe, equipo Leverage) — <em>Minions: Stripe's one-shot, end-to-end coding agents</em> — <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">parte 1</a> · <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2">parte 2</a></li>
-</ul>
+<p>El estándar a alcanzar es: cada tarea, su propio entorno; al terminar, se desecha; arranca en segundos; reproducible byte-a-byte. Cuando llegas ahí, casi todos los demás capítulos de esta guía se vuelven más fáciles de aplicar.</p>
 
 
 
@@ -1818,10 +1685,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
