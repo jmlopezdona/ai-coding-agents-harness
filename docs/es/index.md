@@ -61,18 +61,6 @@ Los capítulos están ordenados de **mentalidad → pilares → práctica → ma
 - Comparativas entre herramientas concretas. La guía es deliberadamente agnóstica.
 - Promesas de productividad. Los números de Stripe o de OpenAI son referencias, no garantías.
 
-## Roadmap para v2
-
-Cosas que están planificadas para la próxima versión de la guía:
-
-- **Plantillas ejecutables.** `AGENTS.md` mínimo de ejemplo, estructura completa de `docs/`, ejemplos de linters custom con mensajes dirigidos al agente, esqueleto de configuración de sandbox, plantillas de plan de ejecución.
-- **Plantilla de hoja de ruta como archivo separado** (extraída del cap. 12) para que los equipos puedan copiarla y rellenarla en una sesión sin tocar el resto de la guía.
-- **Glosario corto** de términos (harness, guía, sensor, bucle, sandbox, blueprint, doc-gardening, golden principles, flywheel) para equipos que comparten la guía con stakeholders fuera del círculo técnico inmediato.
-- **Capítulo 0 como post de blog publicable**, con su propio frontmatter, optimizado para distribución externa.
-- **Estudios de caso comparados** — un análisis lado a lado de cómo OpenAI, Stripe y otros equipos públicos resuelven cada una de las cinco dimensiones del cap. 12, con tabla de equivalencias.
-- **Checklist diagnóstico imprimible** (1 página) extraído del cap. 12 para pegar en la pared del equipo.
-- **Sección sobre seguridad y aislamiento adversarial** — qué cambia en el harness cuando el agente puede ser objetivo de prompt injection vía contexto, cómo razonar sobre la cadena de suministro de herramientas, MCP servers, etc.
-
 ## Fuentes
 
 Esta guía sintetiza ideas de:

@@ -61,18 +61,6 @@ The chapters are ordered as **mindset → pillars → practice → maintenance �
 - Comparisons between specific tools. The guide is deliberately tool-agnostic.
 - Productivity promises. Stripe's or OpenAI's numbers are references, not guarantees.
 
-## Roadmap for v2
-
-Things planned for the next version of the guide:
-
-- **Executable templates.** Minimal sample `AGENTS.md`, full `docs/` structure, custom linter examples with agent-targeted messages, sandbox config skeleton, execution plan templates.
-- **Roadmap template as a separate file** (extracted from ch. 12) so teams can copy and fill it in a single session without touching the rest of the guide.
-- **Short glossary** of terms (harness, guide, sensor, loop, sandbox, blueprint, doc-gardening, golden principles, flywheel) for teams sharing the guide with stakeholders outside the immediate technical circle.
-- **Chapter 0 as a publishable blog post**, with its own frontmatter, optimized for external distribution.
-- **Comparative case studies** — a side-by-side analysis of how OpenAI, Stripe, and other public teams solve each of the five dimensions in ch. 12, with an equivalence table.
-- **Printable diagnostic checklist** (1 page) extracted from ch. 12 to stick on the team's wall.
-- **Section on security and adversarial isolation** — what changes in the harness when the agent can be the target of prompt injection via context, how to reason about the tool supply chain, MCP servers, etc.
-
 ## Sources
 
 This guide synthesizes ideas from:
