@@ -54,12 +54,6 @@ Cuando dudes si una pieza de información debe ir al repo o puede quedarse fuera
 
 Si la respuesta es no, esa información es invisible para el agente también. Y en un equipo serio que opera con agentes, ese nuevo "ingeniero" se incorpora cien veces al día. Cada ejecución de agente es una incorporación desde cero.
 
-## El upside oculto
-
-Hay un efecto secundario que casi nadie anticipa: **al hacer el repo legible para un agente, lo haces enormemente más legible para humanos también**. El doc-gardening te beneficia. Los planes versionados te benefician. El tracker de deuda te beneficia. Los humanos que se incorporan al equipo se incorporan más rápido. Los seniors dejan de ser cuellos de botella de contexto. Lo que parecía una concesión a la máquina termina siendo, en buena parte, ingeniería de plataforma para el propio equipo.
-
-Stripe lo dice de forma directa, y vale la pena cerrar con su frase: *"lo que es bueno para humanos es bueno para agentes"*. La inversión histórica en developer experience rinde dividendos también para el agente, y la inversión en agente rinde dividendos para el developer experience. El bucle es virtuoso si lo dejas serlo.
-
 ## ¿Y si uso un MCP server en lugar de meterlo en el repo?
 
 Esta es la pregunta que aparece en cuanto un equipo tiene buena documentación viva en Notion, Confluence o Google Docs y se enfrenta al coste de moverla. La intuición es razonable: si existe un MCP server que expone esa documentación al agente, ¿por qué duplicarla en el repo? El agente la consulta en vivo, los humanos siguen editando donde editan, cero sincronización, cero drift. Parece la solución elegante.
@@ -110,10 +104,12 @@ Vale la pena nombrarla porque es donde más equipos caen: **sincronizar sin fres
 
 ### El compromiso pragmático
 
-Para la mayoría de equipos reales, la respuesta sensata no es "todo al repo" ni "todo a MCP", sino un híbrido deliberado: **lo crítico se materializa en el repo** (con la estrategia que toque — copia, sync con freshness lint, o nacido ya en markdown), y **la documentación adicional** — el long-tail, el contexto histórico, las notas de dominio que ayudan pero no son load-bearing — **se expone vía un MCP server contra un sistema documental con indexación semántica**. El agente tiene garantizado lo que *debe* ver y enriquecido lo que *puede* ver. Es un compromiso, no una pureza, pero es el compromiso que escala sin pedirle a la organización que abandone sus herramientas existentes ni que sacrifique las garantías que el agente necesita para ser fiable.
+Para la mayoría de equipos reales, la respuesta sensata no es "todo al repo" ni "todo a MCP", sino un híbrido deliberado: **lo crítico se materializa en el repo** (con la estrategia que toque — copia, sync con freshness lint, o nacido ya en markdown), y **la documentación adicional** — el long-tail, el contexto histórico, las notas de dominio que ayudan pero no son load-bearing — **se expone vía un MCP server contra un sistema documental con indexación semántica**.
 
-### El principio detrás de todo esto
+El principio que sostiene este compromiso es el mismo que sostiene todo el capítulo: el repo es el sistema de registro porque es **determinista, versionado, auditable y siempre disponible**. Cualquier alternativa que pierda alguna de esas cuatro propiedades es aceptable solo donde esa propiedad no era crítica. MCP las pierde las cuatro a la vez — y por eso encaja para *enriquecer* el contexto, no para *garantizarlo*. La diferencia entre enriquecer y garantizar es la diferencia entre un asistente que a veces es brillante y un sistema del que un equipo puede depender.
 
-El cap. 6 entero defiende una idea: el repo es el sistema de registro porque es **determinista, versionado, auditable y siempre disponible**. Cualquier alternativa que pierda alguna de esas cuatro propiedades es aceptable solo donde esa propiedad no era crítica. Un MCP server con búsqueda semántica pierde las cuatro a la vez, y por eso solo encaja como complemento — nunca como reemplazo — para el conocimiento que el agente *debe* tener delante para no romper nada.
+## El upside oculto
 
-Dicho de otra forma: MCP es una buena forma de *enriquecer* el contexto del agente. No es una buena forma de *garantizar* el contexto del agente. La diferencia entre enriquecer y garantizar es la diferencia entre un asistente que a veces es brillante y un sistema del que un equipo puede depender.
+Hay un efecto secundario que casi nadie anticipa: **al hacer el repo legible para un agente, lo haces enormemente más legible para humanos también**. El doc-gardening te beneficia. Los planes versionados te benefician. El tracker de deuda te beneficia. Los humanos que se incorporan al equipo se incorporan más rápido. Los seniors dejan de ser cuellos de botella de contexto. Lo que parecía una concesión a la máquina termina siendo, en buena parte, ingeniería de plataforma para el propio equipo.
+
+Stripe lo dice de forma directa, y vale la pena cerrar con su frase: *"lo que es bueno para humanos es bueno para agentes"*. La inversión histórica en developer experience rinde dividendos también para el agente, y la inversión en agente rinde dividendos para el developer experience. El bucle es virtuoso si lo dejas serlo.

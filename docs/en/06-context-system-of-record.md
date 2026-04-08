@@ -54,12 +54,6 @@ When you're in doubt whether a piece of information should go in the repo or can
 
 If the answer is no, that information is invisible to the agent too. And on a serious team operating with agents, that new "engineer" joins a hundred times a day. Every agent run is an onboarding from zero.
 
-## The hidden upside
-
-There's a side effect almost nobody anticipates: **by making the repo legible for an agent, you make it enormously more legible for humans too**. Doc-gardening benefits you. Versioned plans benefit you. The debt tracker benefits you. Humans joining the team onboard faster. Seniors stop being context bottlenecks. What looked like a concession to the machine ends up being, in large part, platform engineering for the team itself.
-
-Stripe puts it directly, and it's worth closing with their line: *"what's good for humans is good for agents"*. The historical investment in developer experience pays dividends for the agent too, and the investment in the agent pays dividends for developer experience. The loop is virtuous if you let it be.
-
 ## What if I use an MCP server instead of putting it in the repo?
 
 This is the question that comes up the moment a team has good living documentation in Notion, Confluence or Google Docs and faces the cost of moving it. The intuition is reasonable: if there's an MCP server that exposes that documentation to the agent, why duplicate it in the repo? The agent queries it live, humans keep editing where they already edit, zero sync, zero drift. It looks like the elegant solution.
@@ -110,10 +104,12 @@ It's worth naming because it's where most teams fall: **syncing without a freshn
 
 ### The pragmatic compromise
 
-For most real teams, the sensible answer isn't "everything in the repo" or "everything in MCP" but a deliberate hybrid: **the critical stuff is materialized in the repo** (with whatever strategy fits — point-in-time copy, sync with a freshness lint, or born as markdown in the first place), and **additional documentation** — the long-tail, the historical context, domain notes that help but aren't load-bearing — **is exposed via an MCP server against a documentation system with semantic indexing**. The agent has guaranteed what it *must* see and enriched what it *can* see. It's a compromise, not a purity, but it's the compromise that scales without asking the organization to abandon its existing tools or sacrifice the guarantees the agent needs to be reliable.
+For most real teams, the sensible answer isn't "everything in the repo" or "everything in MCP" but a deliberate hybrid: **the critical stuff is materialized in the repo** (with whatever strategy fits — point-in-time copy, sync with a freshness lint, or born as markdown in the first place), and **additional documentation** — the long-tail, the historical context, domain notes that help but aren't load-bearing — **is exposed via an MCP server against a documentation system with semantic indexing**.
 
-### The principle behind all of this
+The principle that holds up this compromise is the same one that holds up the whole chapter: the repo is the system of record because it is **deterministic, versioned, auditable, and always available**. Any alternative that loses one of those four properties is acceptable only where that property wasn't critical. MCP loses all four at once — and that's why it fits to *enrich* the context, not to *guarantee* it. The difference between enriching and guaranteeing is the difference between an assistant that is sometimes brilliant and a system a team can rely on.
 
-The whole of chapter 6 defends one idea: the repo is the system of record because it is **deterministic, versioned, auditable, and always available**. Any alternative that loses one of those four properties is acceptable only where that property wasn't critical. An MCP server with semantic search loses all four at once, and that's why it only fits as a complement — never as a replacement — for the knowledge the agent *must* have in front of it to avoid breaking something.
+## The hidden upside
 
-Put differently: MCP is a good way to *enrich* the agent's context. It's not a good way to *guarantee* the agent's context. The difference between enriching and guaranteeing is the difference between an assistant that is sometimes brilliant and a system a team can rely on.
+There's a side effect almost nobody anticipates: **by making the repo legible for an agent, you make it enormously more legible for humans too**. Doc-gardening benefits you. Versioned plans benefit you. The debt tracker benefits you. Humans joining the team onboard faster. Seniors stop being context bottlenecks. What looked like a concession to the machine ends up being, in large part, platform engineering for the team itself.
+
+Stripe puts it directly, and it's worth closing with their line: *"what's good for humans is good for agents"*. The historical investment in developer experience pays dividends for the agent too, and the investment in the agent pays dividends for developer experience. The loop is virtuous if you let it be.
