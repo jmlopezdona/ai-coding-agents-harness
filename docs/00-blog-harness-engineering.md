@@ -53,7 +53,7 @@ Hay una observación de Chad Fowler que conviene tener delante antes de empezar 
 
 Con agentes pasa lo mismo. El rigor sale de "escribir cada línea con cuidado" y de "revisar humano-a-humano cada PR", y entra en otros dos sitios:
 
-- **Especificación de la intención.** Lo que antes eran criterios informales en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La sloppiness en el ticket se convierte en sloppiness en el código.
+- **Especificación de la intención.** Lo que antes eran criterios informales en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La imprecisión en el ticket se convierte en imprecisión en el código.
 - **Evaluación verificable.** Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta.
 
 La heurística que vale la pena adoptar: cuando algo parezca dejar ir el rigor, busca dónde se reubicó. Si no lo encuentras, preocúpate. Las pertenencias quedan en otro sitio o se han perdido.
