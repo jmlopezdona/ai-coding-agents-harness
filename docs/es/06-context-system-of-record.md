@@ -90,7 +90,7 @@ La búsqueda semántica vía MCP introduce varias propiedades que son aceptables
 
 **Permisos y autenticación complican el sandbox.** Para que el MCP funcione, el agente necesita credenciales con scopes que normalmente reservarías solo para humanos. Eso amplía la superficie de ataque del sandbox y mete al agente en un perímetro donde un prompt injection puede pivotar contra el doc store. Es un trade-off de seguridad real, no teórico.
 
-**Coste de tokens y de tiempo en cada ejecución.** Cada llamada al MCP gasta contexto del agente y tokens de la API. El repo es gratis: leer un archivo es esencialmente coste cero. A escala (cientos o miles de invocaciones por día), la diferencia se nota.
+**Una nota sobre el coste de tokens.** Es tentador pensar que el repo es "gratis" en tokens y MCP es caro porque cada llamada gasta. Es una simplificación que conviene corregir. Leer un archivo del repo *también* mete contenido en el contexto del agente y consume tokens; si el agente no sabe qué archivo necesita y tiene que hacer varios grep + read antes de encontrar la sección, el coste se acumula. Una búsqueda semántica vía MCP, en cambio, puede devolver solo los fragmentos relevantes, gastando menos tokens netos en docs grandes y dispersas. El argumento real para preferir el repo no es coste — es determinismo, versionado, disponibilidad y control en authoring-time. El coste de tokens es un trade-off matizado que va en ambas direcciones; las cuatro propiedades anteriores son ventajas categóricas.
 
 ### Cuándo sí, cuándo no
 
