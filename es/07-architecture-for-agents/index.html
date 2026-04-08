@@ -1022,6 +1022,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="La paradoja del brown-field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-tercera-via-refactorizar-para-introducir-el-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La tercera vía: refactorizar para introducir el harness
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1483,6 +1500,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="La paradoja del brown-field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-tercera-via-refactorizar-para-introducir-el-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La tercera vía: refactorizar para introducir el harness
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1572,6 +1606,17 @@
 </ul>
 <p><strong>Y hay un agravante: el agente amplifica la entropía existente.</strong> Esto es importante porque convierte la dificultad en bucle de retroalimentación. Un agente aprende del código que tiene delante: si la base está llena de malas prácticas, las imita, las propaga más rápido de lo que un humano lo haría, y refuerza la sensación de que "así se hace aquí" porque el código nuevo se parece al viejo. Sin un sensor que detecte el patrón malo o una guía que lo prohíba, el agente no tiene cómo distinguir entre convención sana y deuda heredada — para él, todo lo que ve en el repo es "lo que el equipo hace". El bucle es silencioso: parece que el agente está siendo productivo y consistente, y lo es; solo que la consistencia es con lo equivocado. En un brown-field sin harness, <strong>introducir un agente acelera la entropía en lugar de combatirla</strong>. Esa es la razón más fuerte para no posponer el harness en este tipo de bases.</p>
 <p><strong>La consecuencia operativa</strong>: en brown-field, la inversión en harness no es opcional — es prerrequisito. Y no se puede hacer en una semana. La pregunta no es "¿queremos el harness?" sino "¿qué velocidad de construcción del harness podemos sostener sin parar de entregar?". La respuesta sana suele ser: una regla nueva por semana, una zona codificada al mes, ningún big-bang. Lo que el siguiente apartado describe vale para ambos casos, pero <strong>en brown-field es la única forma que funciona</strong>.</p>
+<h3 id="la-tercera-via-refactorizar-para-introducir-el-harness">La tercera vía: refactorizar para introducir el harness<a class="headerlink" href="#la-tercera-via-refactorizar-para-introducir-el-harness" title="Enlace permanente a esta sección">&para;</a></h3>
+<p>Hay una alternativa al "construir el harness encima del brown-field" que en muchos casos rinde más: aplicar el patrón <strong>strangler fig</strong> al propio harness. En lugar de codificar la entropía existente regla por regla, identificas las zonas que más van a evolucionar — la parte del sistema donde el agente va a operar de verdad — las refactorizas, y desde el día uno las metes bajo invariantes mecánicas completas. La parte vieja queda congelada como está; la parte nueva nace con el harness desde el principio.</p>
+<p>Por qué funciona en brown-field:</p>
+<ul>
+<li><strong>Concentras la inversión donde más rinde.</strong> No intentas codificar todo el repo; solo la zona donde el agente va a operar mucho. El ROI por hora invertida es desproporcionadamente alto.</li>
+<li><strong>Esquivas el bucle de retroalimentación de entropía.</strong> Al refactorizar, no le pides al agente que "mejore" código malo — le das código bueno desde el principio. El agente ya no tiene "lo malo" delante para imitarlo.</li>
+<li><strong>Generas una zona de control donde aprender el harness antes de generalizarlo.</strong> Calibras los lints, los mensajes para el agente, las plantillas, todo, en un perímetro pequeño. Cuando funciona, lo aplicas al resto del repo con mucha más confianza.</li>
+<li><strong>Crea presión positiva sobre el código viejo.</strong> La existencia de una zona "moderna y rápida" hace que el código heredado se vea cada vez más como deuda explícita, no como statu quo invisible. Eso desbloquea conversaciones que antes no se podían tener.</li>
+</ul>
+<p>Tiene tres riesgos que conviene nombrar: decidir <em>qué</em> refactorizar es político y técnico, y la tentación es elegir lo bonito en lugar de lo doloroso; si el refactor no se diseña con el harness desde el principio, acabas con código "moderno" pero igualmente sin invariantes (lo peor de los dos mundos); y mantener dos modelos arquitectónicos en el mismo repo durante mucho tiempo es caro, así que necesitas un horizonte claro de cuándo absorber el viejo o asumirlo como zona congelada.</p>
+<p>En la práctica, las tres estrategias — codificar la entropía existente, refactorizar las zonas calientes con harness, y aceptar que algunas zonas son frías para siempre — coexisten en cualquier brown-field serio. No son alternativas; son capas del mismo plan.</p>
 <h2 id="como-introducir-esto-en-un-repo-existente">Cómo introducir esto en un repo existente<a class="headerlink" href="#como-introducir-esto-en-un-repo-existente" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Hacer un big-bang sobre un repo existente es mala idea. Lo que funciona:</p>
 <ol>
