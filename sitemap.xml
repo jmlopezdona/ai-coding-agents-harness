@@ -1,59 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/00-blog-harness-engineering/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/00-blog-harness-engineering/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/00-blog-harness-engineering/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/00-blog-harness-engineering/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/01-por-que-harness/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/01-por-que-harness/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/01-por-que-harness/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/01-por-que-harness/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/02-rigor-reubicado/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/02-rigor-reubicado/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/02-rigor-reubicado/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/02-rigor-reubicado/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/03-pilares-guias-y-sensores/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/03-pilares-guias-y-sensores/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/03-pilares-guias-y-sensores/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/03-pilares-guias-y-sensores/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/04-el-loop/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/04-el-loop/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/04-el-loop/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/04-el-loop/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/05-entornos-aislados/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/05-entornos-aislados/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/05-entornos-aislados/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/05-entornos-aislados/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/06-contexto-sistema-de-registro/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/06-contexto-sistema-de-registro/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/06-contexto-sistema-de-registro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/06-contexto-sistema-de-registro/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/07-arquitectura-para-agentes/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/07-arquitectura-para-agentes/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/07-arquitectura-para-agentes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/07-arquitectura-para-agentes/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/08-flujo-pr-agentico/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/08-flujo-pr-agentico/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/08-flujo-pr-agentico/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/08-flujo-pr-agentico/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/09-entropia-y-mantenimiento/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/09-entropia-y-mantenimiento/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/09-entropia-y-mantenimiento/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/09-entropia-y-mantenimiento/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/10-rol-humano/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/10-rol-humano/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/10-rol-humano/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/10-rol-humano/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/11-anti-patrones/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/11-anti-patrones/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/11-anti-patrones/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/11-anti-patrones/"/>
     </url>
     <url>
-         <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/12-diagnostico-y-madurez/</loc>
-         <lastmod>2026-04-08</lastmod>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/12-diagnostico-y-madurez/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/12-diagnostico-y-madurez/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/12-diagnostico-y-madurez/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/00-blog-harness-engineering/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/00-blog-harness-engineering/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/00-blog-harness-engineering/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/01-por-que-harness/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/01-por-que-harness/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/01-por-que-harness/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/02-rigor-reubicado/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/02-rigor-reubicado/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/02-rigor-reubicado/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/03-pilares-guias-y-sensores/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/03-pilares-guias-y-sensores/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/03-pilares-guias-y-sensores/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/04-el-loop/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/04-el-loop/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/04-el-loop/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/05-entornos-aislados/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/05-entornos-aislados/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/05-entornos-aislados/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/06-contexto-sistema-de-registro/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/06-contexto-sistema-de-registro/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/06-contexto-sistema-de-registro/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/07-arquitectura-para-agentes/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/07-arquitectura-para-agentes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/07-arquitectura-para-agentes/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/08-flujo-pr-agentico/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/08-flujo-pr-agentico/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/08-flujo-pr-agentico/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/09-entropia-y-mantenimiento/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/09-entropia-y-mantenimiento/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/09-entropia-y-mantenimiento/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/10-rol-humano/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/10-rol-humano/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/10-rol-humano/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/11-anti-patrones/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/11-anti-patrones/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/11-anti-patrones/"/>
+    </url>
+    <url>
+        <loc>https://jmlopezdona.github.io/ai-coding-agents-harness/en/12-diagnostico-y-madurez/</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/12-diagnostico-y-madurez/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jmlopezdona.github.io/ai-coding-agents-harness/12-diagnostico-y-madurez/"/>
     </url>
 </urlset>

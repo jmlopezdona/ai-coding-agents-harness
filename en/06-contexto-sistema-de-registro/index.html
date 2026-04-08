@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,35 +12,35 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/10-rol-humano/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/06-contexto-sistema-de-registro/">
       
       
-        <link rel="prev" href="../09-entropia-y-mantenimiento/">
+        <link rel="prev" href="../05-entornos-aislados/">
       
       
-        <link rel="next" href="../11-anti-patrones/">
+        <link rel="next" href="../07-arquitectura-para-agentes/">
       
       
         
-          <link rel="alternate" href="./" hreflang="es">
+          <link rel="alternate" href="../../06-contexto-sistema-de-registro/" hreflang="es">
         
-          <link rel="alternate" href="../en/10-rol-humano/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>10. Dónde sigue importando el humano - Harness Engineering</title>
+        <title>6. Context as a system of record - Harness Engineering</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -59,7 +59,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -84,8 +84,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-donde-sigue-importando-el-humano" class="md-skip">
-          Saltar a contenido
+        <a href="#6-el-contexto-como-sistema-de-registro" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -97,8 +97,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. Dónde sigue importando el humano
+              6. Context as a system of record
             
           </span>
         </div>
@@ -158,20 +158,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="es" class="md-select__link">
+            <a href="../../06-contexto-sistema-de-registro/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/10-rol-humano/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -192,21 +192,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -219,7 +219,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -231,7 +231,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -252,7 +252,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -262,13 +262,13 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
     
   
-  Inicio
+  Home
 
       </a>
     </li>
@@ -287,7 +287,7 @@
   
     
   
-  Cap. 0 — Producir software a escala con agentes
+  Ch. 0 — Producing software at scale with agents
 
       </a>
     </li>
@@ -308,7 +308,7 @@
   
     
   
-  Parte 1 — Mentalidad
+  Part 1 — Mindset
 
         </a>
       </li>
@@ -330,29 +330,7 @@
   
     
   
-  Parte 2 — Los dos pilares
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../05-entornos-aislados/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Parte 3 — Práctica
+  Part 2 — The two pillars
 
         </a>
       </li>
@@ -370,13 +348,35 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
+        <a href="../05-entornos-aislados/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 — Practice
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../09-entropia-y-mantenimiento/" class="md-tabs__link">
           
   
   
     
   
-  Parte 4 — Sostenibilidad
+  Part 4 — Sustainability
 
         </a>
       </li>
@@ -398,7 +398,7 @@
   
     
   
-  Parte 5 — Trampas
+  Part 5 — Pitfalls
 
         </a>
       </li>
@@ -420,7 +420,7 @@
   
     
   
-  Parte 6 — Llevarlo a tu equipo
+  Part 6 — Bringing it to your team
 
         </a>
       </li>
@@ -448,9 +448,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
+    <a href="../" title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -460,7 +460,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -480,14 +480,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Inicio
+    Home
   
 
     
@@ -514,7 +514,7 @@
   <span class="md-ellipsis">
     
   
-    Cap. 0 — Producir software a escala con agentes
+    Ch. 0 — Producing software at scale with agents
   
 
     
@@ -563,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Parte 1 — Mentalidad
+    Part 1 — Mindset
   
 
     
@@ -579,7 +579,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Parte 1 — Mentalidad
+    Part 1 — Mindset
   
 
           </label>
@@ -599,7 +599,7 @@
   <span class="md-ellipsis">
     
   
-    1. Por qué el harness importa más que el modelo
+    1. Why the harness matters more than the model
   
 
     
@@ -627,7 +627,7 @@
   <span class="md-ellipsis">
     
   
-    2. La reubicación del rigor
+    2. Relocating rigor
   
 
     
@@ -684,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Parte 2 — Los dos pilares
+    Part 2 — The two pillars
   
 
     
@@ -700,7 +700,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Parte 2 — Los dos pilares
+    Part 2 — The two pillars
   
 
           </label>
@@ -720,7 +720,7 @@
   <span class="md-ellipsis">
     
   
-    3. Guías y Sensores: feedforward y feedback
+    3. Guides and Sensors: feedforward and feedback
   
 
     
@@ -748,188 +748,7 @@
   <span class="md-ellipsis">
     
   
-    4. El bucle: iteración como primitiva
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parte 3 — Práctica
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Parte 3 — Práctica
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-entornos-aislados/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    5. Entornos aislados y reproducibles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-contexto-sistema-de-registro/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    6. El contexto como sistema de registro
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07-arquitectura-para-agentes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    7. Arquitectura para agentes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08-flujo-pr-agentico/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    8. El flujo de PR agéntico
+    4. The loop: iteration as primitive
   
 
     
@@ -960,6 +779,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -981,17 +804,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Parte 4 — Sostenibilidad
+    Part 3 — Practice
   
 
     
@@ -1002,12 +825,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Parte 4 — Sostenibilidad
+    Part 3 — Practice
   
 
           </label>
@@ -1020,14 +843,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09-entropia-y-mantenimiento/" class="md-nav__link">
+      <a href="../05-entornos-aislados/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Entropía y mantenimiento continuo
+    5. Isolated and reproducible environments
   
 
     
@@ -1064,7 +887,7 @@
   <span class="md-ellipsis">
     
   
-    10. Dónde sigue importando el humano
+    6. Context as a system of record
   
 
     
@@ -1082,7 +905,7 @@
   <span class="md-ellipsis">
     
   
-    10. Dónde sigue importando el humano
+    6. Context as a system of record
   
 
     
@@ -1094,7 +917,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1103,15 +926,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tres-modos-de-delegacion-in-on-outside-the-loop" class="md-nav__link">
+  <a href="#el-cambio-de-mentalidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tres modos de delegación: in, on, outside the loop
+        El cambio de mentalidad
       
     </span>
   </a>
@@ -1119,10 +942,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#los-dos-ciclos-why-y-how" class="md-nav__link">
+  <a href="#el-error-del-agentsmd-gigante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Los dos ciclos: why y how
+        El error del "AGENTS.md gigante"
       
     </span>
   </a>
@@ -1130,10 +953,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lo-que-cambia-no-lo-que-desaparece" class="md-nav__link">
+  <a href="#el-repo-como-sistema-de-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lo que cambia, no lo que desaparece
+        El repo como sistema de registro
       
     </span>
   </a>
@@ -1141,10 +964,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-nuevo-trabajo" class="md-nav__link">
+  <a href="#como-hacer-que-esto-no-se-descomponga" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El nuevo trabajo
+        Cómo hacer que esto no se descomponga
       
     </span>
   </a>
@@ -1152,71 +975,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#las-cuatro-intervenciones-humanas-que-importan" class="md-nav__link">
+  <a href="#el-test-definitivo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Las cuatro intervenciones humanas que importan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Las cuatro intervenciones humanas que importan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-especificar-la-intencion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Especificar la intención
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-calibrar-el-harness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Calibrar el harness
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-decidir-lo-irreversible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Decidir lo irreversible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-revisar-lo-que-ya-se-filtro" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Revisar lo que ya se filtró
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lo-que-conviene-parar-de-hacer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lo que conviene parar de hacer
+        El test definitivo
       
     </span>
   </a>
@@ -1224,21 +986,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-pregunta-de-identidad" class="md-nav__link">
+  <a href="#el-upside-oculto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La pregunta de identidad
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el-cierre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El cierre
+        El upside oculto
       
     </span>
   </a>
@@ -1249,6 +1000,183 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-arquitectura-para-agentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Architecture for agents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-flujo-pr-agentico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. The agentic PR flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 — Sustainability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 — Sustainability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-entropia-y-mantenimiento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Entropy and continuous maintenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-rol-humano/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Where humans still matter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1295,7 +1223,7 @@
   <span class="md-ellipsis">
     
   
-    Parte 5 — Trampas
+    Part 5 — Pitfalls
   
 
     
@@ -1311,7 +1239,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Parte 5 — Trampas
+    Part 5 — Pitfalls
   
 
           </label>
@@ -1331,7 +1259,7 @@
   <span class="md-ellipsis">
     
   
-    11. Anti-patrones
+    11. Anti-patterns
   
 
     
@@ -1386,7 +1314,7 @@
   <span class="md-ellipsis">
     
   
-    Parte 6 — Llevarlo a tu equipo
+    Part 6 — Bringing it to your team
   
 
     
@@ -1402,7 +1330,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Parte 6 — Llevarlo a tu equipo
+    Part 6 — Bringing it to your team
   
 
           </label>
@@ -1422,7 +1350,7 @@
   <span class="md-ellipsis">
     
   
-    12. Diagnóstico y madurez
+    12. Diagnosis and maturity
   
 
     
@@ -1456,7 +1384,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1465,15 +1393,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tres-modos-de-delegacion-in-on-outside-the-loop" class="md-nav__link">
+  <a href="#el-cambio-de-mentalidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tres modos de delegación: in, on, outside the loop
+        El cambio de mentalidad
       
     </span>
   </a>
@@ -1481,10 +1409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#los-dos-ciclos-why-y-how" class="md-nav__link">
+  <a href="#el-error-del-agentsmd-gigante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Los dos ciclos: why y how
+        El error del "AGENTS.md gigante"
       
     </span>
   </a>
@@ -1492,10 +1420,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lo-que-cambia-no-lo-que-desaparece" class="md-nav__link">
+  <a href="#el-repo-como-sistema-de-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lo que cambia, no lo que desaparece
+        El repo como sistema de registro
       
     </span>
   </a>
@@ -1503,10 +1431,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-nuevo-trabajo" class="md-nav__link">
+  <a href="#como-hacer-que-esto-no-se-descomponga" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El nuevo trabajo
+        Cómo hacer que esto no se descomponga
       
     </span>
   </a>
@@ -1514,71 +1442,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#las-cuatro-intervenciones-humanas-que-importan" class="md-nav__link">
+  <a href="#el-test-definitivo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Las cuatro intervenciones humanas que importan
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Las cuatro intervenciones humanas que importan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-especificar-la-intencion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Especificar la intención
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-calibrar-el-harness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Calibrar el harness
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-decidir-lo-irreversible" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Decidir lo irreversible
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-revisar-lo-que-ya-se-filtro" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Revisar lo que ya se filtró
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lo-que-conviene-parar-de-hacer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lo que conviene parar de hacer
+        El test definitivo
       
     </span>
   </a>
@@ -1586,21 +1453,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#la-pregunta-de-identidad" class="md-nav__link">
+  <a href="#el-upside-oculto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        La pregunta de identidad
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el-cierre" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El cierre
+        El upside oculto
       
     </span>
   </a>
@@ -1624,7 +1480,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/10-rol-humano.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/06-contexto-sistema-de-registro.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1632,69 +1488,42 @@
   
 
 
-<h1 id="10-donde-sigue-importando-el-humano">10. Dónde sigue importando el humano<a class="headerlink" href="#10-donde-sigue-importando-el-humano" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Después de nueve capítulos describiendo cómo automatizar todo lo automatizable, conviene parar y hacer la pregunta opuesta: <strong>¿qué tiene que seguir haciendo el humano?</strong>. La respuesta no es "supervisar al agente", aunque eso es lo que muchos equipos terminan haciendo por inercia. La respuesta correcta requiere entender que el papel del ingeniero cambia, no se reduce.</p>
-<h2 id="tres-modos-de-delegacion-in-on-outside-the-loop">Tres modos de delegación: in, on, outside the loop<a class="headerlink" href="#tres-modos-de-delegacion-in-on-outside-the-loop" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Antes de hablar de qué hace el humano, conviene fijar <em>dónde</em> está el humano. Kief Morris articula esto con tres modos de delegación que vale la pena tener delante porque resumen casi toda la confusión que hay en equipos en transición:</p>
-<p><strong>Humans Outside the Loop — "vibe coding".</strong> Los agentes manejan el ciclo entero. Los humanos solo definen el resultado esperado y miran qué sale. Funciona para prototipos y exploración. Falla en producción seria: nadie está calibrando nada, los costes se descontrolan, la calidad deriva sin que nadie lo note. Es seductor porque parece máxima palanca, y es donde más equipos se queman al intentar saltarse las fases intermedias.</p>
-<p><strong>Humans In the Loop — supervisión por artefacto.</strong> El humano revisa cada cosa que el agente produce, línea por línea, antes de aceptarla. Es el modelo por defecto al que llega un equipo conservador. Su problema, ya discutido en el capítulo 8, es aritmético: el humano se convierte en cuello de botella permanente, las revisiones degeneran en ritual, y la palanca del agente nunca se materializa. La velocidad efectiva queda capada por la atención humana disponible.</p>
-<p><strong>Humans On the Loop — supervisión del sistema, no del artefacto.</strong> Es la posición que esta guía entera defiende, y la que Morris recomienda explícitamente. El humano no inspecciona cada salida; diseña y mejora el sistema (el harness) que produce las salidas. Cuando algo va mal, la respuesta no es corregir el artefacto sino <strong>modificar el sistema que produjo el artefacto</strong>. Esa frase merece subrayarse: es la diferencia entre apagar fuegos y diseñar prevención de incendios.</p>
-<p>La transición saludable es de "in" hacia "on", no hacia "outside". "Outside" es una destinación válida solo para fragmentos del trabajo donde los riesgos son aceptablemente bajos; "on" es el régimen estable para todo lo demás. Si tu equipo está atascado en "in", la solución no es relajarlo a "outside" — es invertir en el harness hasta que "on" sea posible.</p>
-<h2 id="los-dos-ciclos-why-y-how">Los dos ciclos: why y how<a class="headerlink" href="#los-dos-ciclos-why-y-how" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Otra distinción de Morris que ayuda a localizar el rol humano: hay dos ciclos en juego, y conviene no confundirlos.</p>
+<h1 id="6-el-contexto-como-sistema-de-registro">6. El contexto como sistema de registro<a class="headerlink" href="#6-el-contexto-como-sistema-de-registro" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>Hay una frase del equipo de Codex de OpenAI que vale la pena pintar en la pared del equipo: <strong>"lo que el agente no puede ver, no existe"</strong>. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene consecuencias directas sobre dónde tiene que vivir el conocimiento de un proyecto. La respuesta corta: en el repo, versionado, mecánicamente accesible. La respuesta larga es este capítulo.</p>
+<h2 id="el-cambio-de-mentalidad">El cambio de mentalidad<a class="headerlink" href="#el-cambio-de-mentalidad" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>En equipos humanos, el conocimiento vive distribuido en muchos lugares: en el README, sí, pero también en Slack del miércoles pasado, en un Google Doc enlazado en algún correo, en la cabeza del senior, en un Linear ticket de hace seis meses, en una conversación de pasillo. Esta distribución funciona — mal pero funciona — porque los humanos sabemos preguntar, cruzar fuentes, y usar contexto implícito.</p>
+<p>Un agente no. El agente solo ve lo que está en su contexto efectivo en el momento de actuar. Si la decisión de "no toques este módulo, lo vamos a deprecar" vive solo en un Slack del 14 de marzo, para el agente esa decisión no existe. No es que la ignore: es que no es accesible.</p>
+<p>La consecuencia es incómoda y liberadora a la vez: <strong>todo lo que quieras que el agente sepa tiene que estar materializado en el repo o accesible mecánicamente desde él</strong>. No "documentado en algún sitio". No "mencionado en una reunión". Materializado, en markdown, indexado, mantenido.</p>
+<h2 id="el-error-del-agentsmd-gigante">El error del "AGENTS.md gigante"<a class="headerlink" href="#el-error-del-agentsmd-gigante" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>La primera reacción de muchos equipos al descubrir esto es razonable: meter todo lo importante en un AGENTS.md enorme. Es exactamente la trampa que OpenAI describe haber probado y abandonado. Cuatro razones por las que falla:</p>
+<p><strong>1. El contexto es un recurso escaso.</strong> Un manual de 1.000 líneas eclipsa la tarea, el código relevante y las herramientas. El modelo tiene dos opciones: ignorar restricciones clave, u optimizar las equivocadas. Las dos son malas.</p>
+<p><strong>2. Si todo es importante, nada lo es.</strong> Cuando todo en el AGENTS.md está en negrita, el agente no tiene cómo priorizar. Acaba aplicando reglas locales sin entender la intención global.</p>
+<p><strong>3. Se descompone instantáneamente.</strong> Un manual monolítico se convierte en un cementerio de reglas obsoletas. El agente no sabe qué sigue siendo verdad, los humanos dejan de mantenerlo, y lentamente se vuelve un riesgo activo.</p>
+<p><strong>4. No es verificable.</strong> Un bloque grande de prosa no se presta a checks automáticos: no puedes validar cobertura, freshness, propiedad o referencias cruzadas. El drift es inevitable.</p>
+<p>La conclusión de OpenAI es elegante: <strong>trata el AGENTS.md como un índice, no como una enciclopedia</strong>. ~100 líneas, apuntando a sitios donde vive cada cosa.</p>
+<h2 id="el-repo-como-sistema-de-registro">El repo como sistema de registro<a class="headerlink" href="#el-repo-como-sistema-de-registro" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Lo que va al repo, organizado, es lo siguiente. Esto no es prescriptivo — el detalle varía por equipo — pero la forma se repite:</p>
 <ul>
-<li>El <strong>ciclo "why"</strong> es donde se transforma una idea en software que importa. Implica entender qué se quiere lograr, para quién, bajo qué restricciones, con qué compromisos, en qué orden. Es trabajo profundamente humano y no se delega.</li>
-<li>El <strong>ciclo "how"</strong> es donde se producen los artefactos intermedios — código, tests, configs, docs — que materializan el "why". Es el ciclo donde los agentes brillan y donde la mayor parte de esta guía aplica.</li>
+<li><strong>Documentos de diseño versionados</strong>, indexados, con un estado de verificación. Nada de "doc en Notion enlazado". El doc vive en el repo, junto al código que describe.</li>
+<li><strong>Planes de ejecución como artefactos de primera clase.</strong> Para cambios pequeños, planes ligeros y efímeros. Para trabajo complejo, planes versionados con estado: activos, completados, abandonados, con razones. Esto le permite al agente ver no solo qué está pasando ahora, sino qué se intentó antes y por qué se descartó. Es una herramienta de memoria a meses vista.</li>
+<li><strong>Tracker de deuda técnica.</strong> Un archivo, en el repo, que enumera lo que está mal a propósito. Sin esto, el agente "limpia" cosas que no debería tocar, o ignora cosas que debería arreglar. Con esto, las dos categorías son legibles.</li>
+<li><strong>Especificaciones de producto.</strong> No las épicas de Linear. Las specs <em>como markdown en el repo</em>, junto al código que las implementa. Si el ticket es la única fuente, el agente solo ve lo que está en el ticket cuando se lo pasas.</li>
+<li><strong>Referencias externas en formato <code>llms.txt</code>.</strong> Documentación de librerías externas, normas internas de seguridad, guías de la plataforma. Importadas al repo, no enlazadas. Una URL en un AGENTS.md es una promesa rota; un archivo en <code>references/</code> es una fuente.</li>
+<li><strong>Mapa de arquitectura.</strong> Capas, dominios, responsabilidades, direcciones de dependencia. Más sobre esto en el capítulo 7.</li>
+<li><strong>Score de calidad por dominio.</strong> OpenAI mantiene un <code>QUALITY_SCORE.md</code> por dominio que registra las lagunas conocidas. Es a la vez documentación y backlog priorizable mecánicamente.</li>
 </ul>
-<p>La trampa más común es ocupar tiempo humano en el "how" y descuidar el "why". Un equipo que delega bien el "how" libera el cuello de botella escaso (atención humana) para invertirlo donde realmente importa (entender qué construir y por qué). Un equipo que se queda atrapado en revisar artefactos del "how" no solo es lento; está usando mal a sus humanos.</p>
-<h2 id="lo-que-cambia-no-lo-que-desaparece">Lo que cambia, no lo que desaparece<a class="headerlink" href="#lo-que-cambia-no-lo-que-desaparece" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Böckeler insiste en un punto que es fácil malinterpretar: el harness no elimina al humano, lo <em>redirige</em>. Los desarrolladores aportan tres cosas que el agente, por construcción, no tiene:</p>
-<ul>
-<li><strong>Experiencia implícita:</strong> patrones aprendidos en otros proyectos, intuiciones formadas en errores anteriores, sensación de "esto va a doler en seis meses" que no se deriva del código que estás mirando.</li>
-<li><strong>Conciencia organizacional:</strong> saber qué quiere el equipo de producto, qué le importa al CFO, qué decisiones tienen contexto político, qué stakeholder se va a oponer.</li>
-<li><strong>Responsabilidad social:</strong> alguien tiene que firmar cuando algo va a producción que afecta a usuarios reales. Esa firma no la puede dar un agente.</li>
-</ul>
-<p>Estas tres cosas no son automatizables, no porque el modelo no sea capaz, sino porque no son problemas técnicos. Son problemas humanos.</p>
-<h2 id="el-nuevo-trabajo">El nuevo trabajo<a class="headerlink" href="#el-nuevo-trabajo" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>OpenAI describe el cambio así, y vale la pena citarlo: <em>"las personas dirigen, los agentes ejecutan"</em>. En la práctica, el trabajo del ingeniero pasa de ser:</p>
-<ul>
-<li>escribir código → <strong>diseñar entornos donde otros (agentes) puedan escribir código bien</strong></li>
-<li>revisar PRs → <strong>diseñar las reglas, sensores y revisores que revisan PRs</strong></li>
-<li>entender el dominio para implementarlo → <strong>entender el dominio para especificarlo de forma que el agente pueda implementarlo correctamente</strong></li>
-<li>arreglar fallos → <strong>diagnosticar por qué el agente cometió el fallo y modificar el harness para que no vuelva a pasarlo</strong></li>
-</ul>
-<p>Esto suena a meta-ingeniería, y lo es. La descripción del puesto se vuelve más parecida a "ingeniero de plataforma para colaboradores no humanos" que a "programador".</p>
-<h2 id="las-cuatro-intervenciones-humanas-que-importan">Las cuatro intervenciones humanas que importan<a class="headerlink" href="#las-cuatro-intervenciones-humanas-que-importan" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Cuando filtras todo el ruido y miras lo que los humanos efectivamente hacen en equipos maduros con agentes, aparecen cuatro categorías de intervención. Las tres primeras son las que aportan valor; la cuarta es la que conviene minimizar.</p>
-<h3 id="1-especificar-la-intencion">1. Especificar la intención<a class="headerlink" href="#1-especificar-la-intencion" title="Enlace permanente a esta sección">&para;</a></h3>
-<p>El agente puede implementar casi cualquier cosa. Lo que no puede es decidir qué <em>vale la pena</em> implementar. Convertir un problema vago en un objetivo accionable, con criterios de aceptación verificables, sigue siendo trabajo humano. Y es probablemente el trabajo más palanca: una especificación clara ahorra horas de bucles mal dirigidos.</p>
-<p>La forma concreta varía — puede ser un plan de ejecución versionado, un ticket bien escrito, un prompt detallado — pero el contenido tiene que tener tres cosas: qué se quiere lograr, cómo se sabrá que está hecho, y qué <em>no</em> hacer. La tercera es la que más a menudo se omite y la que más drift previene.</p>
-<h3 id="2-calibrar-el-harness">2. Calibrar el harness<a class="headerlink" href="#2-calibrar-el-harness" title="Enlace permanente a esta sección">&para;</a></h3>
-<p>Cuando el agente falla repetidamente, alguien tiene que hacer la pregunta importante: ¿qué le falta al harness? Esto requiere entender el fallo a un nivel que no es solo "el código es incorrecto", sino "el agente no tenía la información que necesitaba" o "el sensor no detectó esto" o "la convención no estaba codificada". El humano hace este diagnóstico y promueve la lección al harness — como un nuevo lint, una nueva guía, un nuevo agente revisor, o una sección nueva en docs.</p>
-<p>Este es el trabajo donde un senior multiplica más su impacto. Cada hora invertida aquí se acumula sobre miles de ejecuciones futuras del agente. Es la inversión con mejor ROI del equipo.</p>
-<h3 id="3-decidir-lo-irreversible">3. Decidir lo irreversible<a class="headerlink" href="#3-decidir-lo-irreversible" title="Enlace permanente a esta sección">&para;</a></h3>
-<p>Hay decisiones cuyo coste de error es asimétrico: deprecar una API pública, cambiar un schema de base de datos en producción, modificar un contrato con un proveedor, aceptar un compromiso de seguridad. En estos casos no quieres velocidad, quieres deliberación. Y la deliberación necesita criterio, contexto organizacional, y responsabilidad — las tres cosas humanas que enumeramos al principio.</p>
-<p>La regla operativa: <strong>cuanto más irreversible la decisión, más humano debe haber en el bucle, más temprano</strong>. No al final, revisando un PR que ya se escribió. Al principio, eligiendo si hacerlo y cómo.</p>
-<h3 id="4-revisar-lo-que-ya-se-filtro">4. Revisar lo que ya se filtró<a class="headerlink" href="#4-revisar-lo-que-ya-se-filtro" title="Enlace permanente a esta sección">&para;</a></h3>
-<p>Esta es la categoría que conviene minimizar, no eliminar. El humano revisa cuando:</p>
-<ul>
-<li>Un agente revisor escala explícitamente porque no está seguro.</li>
-<li>El cambio toca un área marcada como sensible.</li>
-<li>El ingeniero responsable elige mirar para mantener su modelo mental al día.</li>
-</ul>
-<p>Lo importante: <strong>no es la primera línea de defensa</strong>. Si el humano está siendo el filtro principal de calidad, los sensores están incompletos. La revisión humana es la red de seguridad final, no el mecanismo primario.</p>
-<h2 id="lo-que-conviene-parar-de-hacer">Lo que conviene parar de hacer<a class="headerlink" href="#lo-que-conviene-parar-de-hacer" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Hay tres hábitos que muchos equipos arrastran del flujo pre-agente y que conviene desmontar conscientemente:</p>
-<p><strong>Revisar cada PR.</strong> Como ya dijimos en el capítulo 8, no escala. Más importante: <strong>da una falsa sensación de control</strong>. Si revisas todo en piloto automático, no estás revisando nada bien. Mejor revisar el 10% que importa con atención que el 100% por encima.</p>
-<p><strong>Discutir estilo.</strong> Si la salida del agente no respeta una preferencia estilística y no la captura un lint, tienes dos opciones: codificar la preferencia como lint, o aceptar la salida. Discutirlo en cada PR es desperdicio puro.</p>
-<p><strong>Pedirle al agente que "haga las cosas como tú las harías".</strong> El agente no es tú. Lo que quieres es que las cosas que hace satisfagan los invariantes que importan. Si los invariantes están bien capturados, el "estilo" del agente es irrelevante. Si no lo están, codificarlos es más útil que pedir.</p>
-<h2 id="la-pregunta-de-identidad">La pregunta de identidad<a class="headerlink" href="#la-pregunta-de-identidad" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Hay un momento incómodo que casi todos los ingenieros experimentan al adoptar este modelo: si ya no escribo código, ¿qué soy? La respuesta sincera es que sigues siendo ingeniero, pero el medio del que sale tu trabajo ha cambiado. Antes producías código; ahora produces <strong>las condiciones que hacen posible que el código correcto exista</strong>. Es ingeniería de un orden distinto, no menos.</p>
-<p>Las habilidades que se vuelven valiosas son las que ya valoraban los buenos seniors: gusto técnico, capacidad de pensar en sistemas, claridad al especificar, habilidad para diseñar interfaces (humanas o no humanas), juicio sobre cuándo invertir en infraestructura. Las habilidades que pierden valor relativo son las puramente artesanales: tipeo rápido, memorización de APIs, dominio de syntax exótica.</p>
-<p>No es un mal trade en general. Pero requiere un realineamiento de identidad profesional que no debería minimizarse. Equipos que ignoran esto tienen ingenieros descontentos haciendo "el trabajo nuevo" con resentimiento. Equipos que lo abordan explícitamente — "este es el nuevo trabajo, esta es la palanca, estos son los nuevos valores" — convierten a sus seniors en multiplicadores en vez de cuellos de botella.</p>
-<h2 id="el-cierre">El cierre<a class="headerlink" href="#el-cierre" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>El humano sigue siendo el centro del sistema. Pero el centro ha cambiado de forma. Ya no estás en el centro porque escribas todo el código; estás en el centro porque diseñas el sistema dentro del cual el código se escribe a sí mismo, y porque cuando ese sistema falla, eres tú quien decide qué falló y qué arreglarlo significa.</p>
-<p>Las máquinas pueden generar cantidad. Solo los humanos pueden decidir qué cantidad merece existir, y bajo qué condiciones se le permite existir. Eso no se va a automatizar pronto. Y mientras siga siendo verdad, el ingeniero sigue siendo el centro — solo en un nivel de abstracción más alto del que está acostumbrado.</p>
+<p>La estructura concreta importa menos que el principio: <strong>carpetas en el repo, no servicios externos; markdown, no PDFs; mantenidos por linters y agentes recurrentes, no por buena voluntad humana</strong>.</p>
+<h2 id="como-hacer-que-esto-no-se-descomponga">Cómo hacer que esto no se descomponga<a class="headerlink" href="#como-hacer-que-esto-no-se-descomponga" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>El miedo razonable es: "si meto todo esto en el repo, en seis meses estará obsoleto". Es un miedo correcto, y sin solución se vuelve realidad. Lo que funciona:</p>
+<p><strong>Linters específicos para la documentación.</strong> Validan que los enlaces internos no estén rotos, que los nombres de archivos referenciados existan, que los planes activos no lleven más de N días sin update, que los documentos tengan los campos de metadata mínimos. Es trabajo aburrido y multiplica el ROI de todo lo demás.</p>
+<p><strong>Agentes de doc-gardening recurrentes.</strong> Esto es un patrón que aparece tanto en OpenAI como, implícitamente, en el flujo de Stripe. Un agente que escanea documentación contra el comportamiento real del código y abre PRs cuando detecta divergencia. No "elimina" la doc obsoleta automáticamente: la marca y deja que un humano (o el agente que la modificó) decida.</p>
+<p><strong>Promueve la regla al código.</strong> Cuando una pieza de documentación describe un patrón que debería ser obligatorio, conviértela en lint. El doc deja de ser la fuente y se vuelve la explicación; el lint es el enforcement. La regla original de OpenAI: <em>"cuando la documentación no basta, promovemos la regla al código"</em>.</p>
+<h2 id="el-test-definitivo">El test definitivo<a class="headerlink" href="#el-test-definitivo" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Cuando dudes si una pieza de información debe ir al repo o puede quedarse fuera, hazte esta pregunta: <strong>si un nuevo ingeniero se incorporara mañana sin acceso a Slack, sin acceso a Google Docs y sin poder hablar con nadie del equipo, ¿podría ser productivo solo con lo que hay en el repo?</strong></p>
+<p>Si la respuesta es no, esa información es invisible para el agente también. Y en un equipo serio que opera con agentes, ese nuevo "ingeniero" se incorpora cien veces al día. Cada ejecución de agente es una incorporación desde cero.</p>
+<h2 id="el-upside-oculto">El upside oculto<a class="headerlink" href="#el-upside-oculto" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Hay un efecto secundario que casi nadie anticipa: <strong>al hacer el repo legible para un agente, lo haces enormemente más legible para humanos también</strong>. El doc-gardening te beneficia. Los planes versionados te benefician. El tracker de deuda te beneficia. Los humanos que se incorporan al equipo se incorporan más rápido. Los seniors dejan de ser cuellos de botella de contexto. Lo que parecía una concesión a la máquina termina siendo, en buena parte, ingeniería de plataforma para el propio equipo.</p>
+<p>Stripe lo dice de forma directa, y vale la pena cerrar con su frase: <em>"lo que es bueno para humanos es bueno para agentes"</em>. La inversión histórica en developer experience rinde dividendos también para el agente, y la inversión en agente rinde dividendos para el developer experience. El bucle es virtuoso si lo dejas serlo.</p>
 
 
 
@@ -1718,7 +1547,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Volver al principio
+  Back to top
 </button>
         
       </main>
@@ -1766,10 +1595,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
