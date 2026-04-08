@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,19 +12,19 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/09-entropy-and-maintenance/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/es/06-context-system-of-record/">
       
       
-        <link rel="prev" href="../08-agentic-pr-flow/">
+        <link rel="prev" href="../05-isolated-environments/">
       
       
-        <link rel="next" href="../10-human-role/">
+        <link rel="next" href="../07-architecture-for-agents/">
       
       
         
-          <link rel="alternate" href="../../09-entropy-and-maintenance/" hreflang="es">
+          <link rel="alternate" href="../../06-context-system-of-record/" hreflang="en">
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="./" hreflang="es">
         
       
       
@@ -33,7 +33,7 @@
     
     
       
-        <title>9. Entropy and continuous maintenance - Harness Engineering</title>
+        <title>6. Context as a system of record - Harness Engineering</title>
       
     
     
@@ -84,8 +84,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#9-entropy-and-continuous-maintenance" class="md-skip">
-          Skip to content
+        <a href="#6-el-contexto-como-sistema-de-registro" class="md-skip">
+          Saltar a contenido
         </a>
       
     </div>
@@ -97,7 +97,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../" title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. Entropy and continuous maintenance
+              6. Context as a system of record
             
           </span>
         </div>
@@ -158,21 +158,21 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../09-entropy-and-maintenance/" hreflang="es" class="md-select__link">
-              Español
+            <a href="../../06-context-system-of-record/" hreflang="en" class="md-select__link">
+              English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
-              English
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
             </a>
           </li>
         
@@ -192,21 +192,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -219,7 +219,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -231,7 +231,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -252,7 +252,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -342,10 +342,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../05-isolated-environments/" class="md-tabs__link">
           
   
@@ -364,13 +366,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../09-entropy-and-maintenance/" class="md-tabs__link">
           
   
   
@@ -448,7 +448,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../" title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
@@ -460,7 +460,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -773,8 +773,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -790,19 +792,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -820,7 +825,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -863,10 +868,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../06-context-system-of-record/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Context as a system of record
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -882,6 +914,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-cambio-de-mentalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El cambio de mentalidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-error-del-agentsmd-gigante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El error del "AGENTS.md gigante"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-repo-como-sistema-de-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El repo como sistema de registro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-hacer-que-esto-no-se-descomponga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo hacer que esto no se descomponga
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-test-definitivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El test definitivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-upside-oculto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El upside oculto
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -954,10 +1072,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -969,22 +1085,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -1002,7 +1115,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1017,37 +1130,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    9. Entropy and continuous maintenance
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../09-entropy-and-maintenance/" class="md-nav__link">
         
   
   
@@ -1063,114 +1149,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-source-of-the-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The source of the problem
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-naive-response-and-why-it-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The naive response and why it fails
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#continuous-garbage-collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Continuous garbage collection
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-philosophy-debt-as-a-high-interest-loan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The philosophy: debt as a high-interest loan
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#human-taste-captured-once" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        "Human taste" captured once
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-three-layers-of-maintenance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The three layers of maintenance
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-signal-that-its-working" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The signal that it's working
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-agentic-flywheel-when-the-harness-maintains-itself" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The agentic flywheel: when the harness maintains itself
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1406,7 +1384,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -1415,15 +1393,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-source-of-the-problem" class="md-nav__link">
+  <a href="#el-cambio-de-mentalidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The source of the problem
+        El cambio de mentalidad
       
     </span>
   </a>
@@ -1431,10 +1409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-naive-response-and-why-it-fails" class="md-nav__link">
+  <a href="#el-error-del-agentsmd-gigante" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The naive response and why it fails
+        El error del "AGENTS.md gigante"
       
     </span>
   </a>
@@ -1442,10 +1420,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#continuous-garbage-collection" class="md-nav__link">
+  <a href="#el-repo-como-sistema-de-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Continuous garbage collection
+        El repo como sistema de registro
       
     </span>
   </a>
@@ -1453,10 +1431,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-philosophy-debt-as-a-high-interest-loan" class="md-nav__link">
+  <a href="#como-hacer-que-esto-no-se-descomponga" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The philosophy: debt as a high-interest loan
+        Cómo hacer que esto no se descomponga
       
     </span>
   </a>
@@ -1464,10 +1442,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#human-taste-captured-once" class="md-nav__link">
+  <a href="#el-test-definitivo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Human taste" captured once
+        El test definitivo
       
     </span>
   </a>
@@ -1475,32 +1453,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-three-layers-of-maintenance" class="md-nav__link">
+  <a href="#el-upside-oculto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three layers of maintenance
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-signal-that-its-working" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The signal that it's working
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-agentic-flywheel-when-the-harness-maintains-itself" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The agentic flywheel: when the harness maintains itself
+        El upside oculto
       
     </span>
   </a>
@@ -1524,7 +1480,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/en/09-entropy-and-maintenance.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/06-context-system-of-record.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1532,69 +1488,42 @@
   
 
 
-<h1 id="9-entropy-and-continuous-maintenance">9. Entropy and continuous maintenance<a class="headerlink" href="#9-entropy-and-continuous-maintenance" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>This is where most teams discover, around month three or four, that they had a problem they hadn't anticipated. The innocent question — "if the agent writes so fast, what's the code going to look like in six months?" — has an unsettling default answer: <strong>chaotic, inconsistent and fragile</strong>, unless you design an explicit system to prevent it. That system is what this chapter describes.</p>
-<h2 id="the-source-of-the-problem">The source of the problem<a class="headerlink" href="#the-source-of-the-problem" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Agents are remarkably good at imitating the patterns that already exist in the repo. That's a virtue — they inherit conventions, maintain local consistency, don't invent new styles every hour — and it's also the source of the problem. Because they imitate <strong>all</strong> the patterns, including the irregular ones, the obsolete ones, the ones somebody introduced on a Friday at 6pm.</p>
-<p>OpenAI describes the cycle like this: the agent replicates existing patterns, even the suboptimal ones. Over time, this produces drift. And drift in an agent-generated codebase is qualitatively different from drift in a human one: it's faster, more consistent (that is, errors are replicated more faithfully), and harder to catch by casual review because the code still "looks" coherent.</p>
-<p>It's a bit like a photocopier that picks up a small mark on the glass and starts putting it on every copy. If nobody cleans the glass, in six months all the copies have the mark and nobody remembers why.</p>
-<h2 id="the-naive-response-and-why-it-fails">The naive response and why it fails<a class="headerlink" href="#the-naive-response-and-why-it-fails" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>The typical first reaction is cleanup Friday. One day a week, the team sits down to clean up what the agent did wrong. OpenAI describes trying exactly this and abandoning it: they used to dedicate Fridays (20% of the week) to "AI slop cleanup", and it simply didn't scale.</p>
-<p>The reasons are obvious in hindsight:</p>
+<h1 id="6-el-contexto-como-sistema-de-registro">6. El contexto como sistema de registro<a class="headerlink" href="#6-el-contexto-como-sistema-de-registro" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>Hay una frase del equipo de Codex de OpenAI que vale la pena pintar en la pared del equipo: <strong>"lo que el agente no puede ver, no existe"</strong>. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene consecuencias directas sobre dónde tiene que vivir el conocimiento de un proyecto. La respuesta corta: en el repo, versionado, mecánicamente accesible. La respuesta larga es este capítulo.</p>
+<h2 id="el-cambio-de-mentalidad">El cambio de mentalidad<a class="headerlink" href="#el-cambio-de-mentalidad" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>En equipos humanos, el conocimiento vive distribuido en muchos lugares: en el README, sí, pero también en Slack del miércoles pasado, en un Google Doc enlazado en algún correo, en la cabeza del senior, en un Linear ticket de hace seis meses, en una conversación de pasillo. Esta distribución funciona — mal pero funciona — porque los humanos sabemos preguntar, cruzar fuentes, y usar contexto implícito.</p>
+<p>Un agente no. El agente solo ve lo que está en su contexto efectivo en el momento de actuar. Si la decisión de "no toques este módulo, lo vamos a deprecar" vive solo en un Slack del 14 de marzo, para el agente esa decisión no existe. No es que la ignore: es que no es accesible.</p>
+<p>La consecuencia es incómoda y liberadora a la vez: <strong>todo lo que quieras que el agente sepa tiene que estar materializado en el repo o accesible mecánicamente desde él</strong>. No "documentado en algún sitio". No "mencionado en una reunión". Materializado, en markdown, indexado, mantenido.</p>
+<h2 id="el-error-del-agentsmd-gigante">El error del "AGENTS.md gigante"<a class="headerlink" href="#el-error-del-agentsmd-gigante" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>La primera reacción de muchos equipos al descubrir esto es razonable: meter todo lo importante en un AGENTS.md enorme. Es exactamente la trampa que OpenAI describe haber probado y abandonado. Cuatro razones por las que falla:</p>
+<p><strong>1. El contexto es un recurso escaso.</strong> Un manual de 1.000 líneas eclipsa la tarea, el código relevante y las herramientas. El modelo tiene dos opciones: ignorar restricciones clave, u optimizar las equivocadas. Las dos son malas.</p>
+<p><strong>2. Si todo es importante, nada lo es.</strong> Cuando todo en el AGENTS.md está en negrita, el agente no tiene cómo priorizar. Acaba aplicando reglas locales sin entender la intención global.</p>
+<p><strong>3. Se descompone instantáneamente.</strong> Un manual monolítico se convierte en un cementerio de reglas obsoletas. El agente no sabe qué sigue siendo verdad, los humanos dejan de mantenerlo, y lentamente se vuelve un riesgo activo.</p>
+<p><strong>4. No es verificable.</strong> Un bloque grande de prosa no se presta a checks automáticos: no puedes validar cobertura, freshness, propiedad o referencias cruzadas. El drift es inevitable.</p>
+<p>La conclusión de OpenAI es elegante: <strong>trata el AGENTS.md como un índice, no como una enciclopedia</strong>. ~100 líneas, apuntando a sitios donde vive cada cosa.</p>
+<h2 id="el-repo-como-sistema-de-registro">El repo como sistema de registro<a class="headerlink" href="#el-repo-como-sistema-de-registro" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Lo que va al repo, organizado, es lo siguiente. Esto no es prescriptivo — el detalle varía por equipo — pero la forma se repite:</p>
 <ul>
-<li><strong>Agent throughput grows faster than human cleanup capacity.</strong> The better the harness, the worse this model scales.</li>
-<li><strong>The knowledge of "what's wrong" stays in the head of whoever is cleaning.</strong> It doesn't translate into harness improvements. The next week, the agent makes the same mistakes.</li>
-<li><strong>Cleanup is low-morale work.</strong> The most senior engineers avoid it or do it poorly. Cleanup quality decays until it's no longer worth it.</li>
+<li><strong>Documentos de diseño versionados</strong>, indexados, con un estado de verificación. Nada de "doc en Notion enlazado". El doc vive en el repo, junto al código que describe.</li>
+<li><strong>Planes de ejecución como artefactos de primera clase.</strong> Para cambios pequeños, planes ligeros y efímeros. Para trabajo complejo, planes versionados con estado: activos, completados, abandonados, con razones. Esto le permite al agente ver no solo qué está pasando ahora, sino qué se intentó antes y por qué se descartó. Es una herramienta de memoria a meses vista.</li>
+<li><strong>Tracker de deuda técnica.</strong> Un archivo, en el repo, que enumera lo que está mal a propósito. Sin esto, el agente "limpia" cosas que no debería tocar, o ignora cosas que debería arreglar. Con esto, las dos categorías son legibles.</li>
+<li><strong>Especificaciones de producto.</strong> No las épicas de Linear. Las specs <em>como markdown en el repo</em>, junto al código que las implementa. Si el ticket es la única fuente, el agente solo ve lo que está en el ticket cuando se lo pasas.</li>
+<li><strong>Referencias externas en formato <code>llms.txt</code>.</strong> Documentación de librerías externas, normas internas de seguridad, guías de la plataforma. Importadas al repo, no enlazadas. Una URL en un AGENTS.md es una promesa rota; un archivo en <code>references/</code> es una fuente.</li>
+<li><strong>Mapa de arquitectura.</strong> Capas, dominios, responsabilidades, direcciones de dependencia. Más sobre esto en el capítulo 7.</li>
+<li><strong>Score de calidad por dominio.</strong> OpenAI mantiene un <code>QUALITY_SCORE.md</code> por dominio que registra las lagunas conocidas. Es a la vez documentación y backlog priorizable mecánicamente.</li>
 </ul>
-<p>The inevitable conclusion: <strong>maintenance has to be part of the loop, not a separate event</strong>.</p>
-<h2 id="continuous-garbage-collection">Continuous garbage collection<a class="headerlink" href="#continuous-garbage-collection" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>OpenAI calls their solution "garbage collection" and the analogy is exact. Instead of accumulating trash and dedicating time to throwing it out, you have a process that picks it up continuously, in small amounts, while the codebase keeps working.</p>
-<p>In practice this looks like:</p>
-<p><strong>Codified Golden Principles.</strong> Mechanical, deliberately prescriptive rules that capture the team's "taste" in a form the agent can read. Not "we prefer clean code", but "we prefer shared utility packages over ad-hoc helpers, to keep invariants centralized". Each principle is documented <em>with its why</em>, so the agent can apply judgment in edge cases.</p>
-<p><strong>Recurring background agents.</strong> Codex tasks (or equivalents) that run on a regular cadence — every night, every week — and do one thing each: detect drift against a specific principle, update quality scores, open small refactor PRs. Each PR is reviewable in under a minute and auto-merges if it passes the sensors.</p>
-<p><strong>Doc-gardening.</strong> A recurring agent that scans documentation and compares it to the actual behavior of the code. When it detects divergence, it opens a PR that updates the doc or (if the doc is the correct source) flags it to the human. It's the equivalent of a doc linter, but inferential.</p>
-<p><strong>Explicit debt tracker.</strong> A file in the repo (<code>tech-debt-tracker.md</code> in OpenAI's case) that lists what's wrong on purpose. This serves two functions: it tells the agent what <em>not</em> to fix (what's wrong on purpose) and what <em>to</em> fix when it has capacity. Without this file, the doc-gardener "fixes" things the team had decided to leave alone.</p>
-<h2 id="the-philosophy-debt-as-a-high-interest-loan">The philosophy: debt as a high-interest loan<a class="headerlink" href="#the-philosophy-debt-as-a-high-interest-loan" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>The metaphor worth internalizing (again from OpenAI): <strong>technical debt is a high-interest loan; it's almost always better to pay continuously in small increments than to let it accumulate and tackle it in painful mountains</strong>.</p>
-<p>This changes several operational things:</p>
-<ul>
-<li><strong>You don't wait for "the next cleanup sprint".</strong> It doesn't exist. Cleanup is ambient.</li>
-<li><strong>You don't batch big refactors.</strong> Small refactor today + small refactor tomorrow &gt; huge refactor in six weeks.</li>
-<li><strong>The value of the small refactor isn't just better code.</strong> It's that it keeps the codebase in a state where the agent's next change is more likely to be correct. Refactors are investments in the harness, not just in the code.</li>
-</ul>
-<h2 id="human-taste-captured-once">"Human taste" captured once<a class="headerlink" href="#human-taste-captured-once" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>There's a phrase worth reading twice: <em>"human taste is captured once and then applied continuously on every line of code"</em>. It's the difference between a team where the senior has to watch everything, and a team where the senior dedicates time to <strong>translating their taste into executable rules</strong> and then lets the system apply them.</p>
-<p>This makes every hour of senior work radically more valuable. In a traditional flow, a review consumes 30 minutes of the senior and improves <em>one</em> PR. In a well-done agentic flow, those same 30 minutes are invested in writing a golden principle or a custom lint, and they improve <em>all future PRs</em>. The multiplier is huge and compounds over time.</p>
-<p>The diagnostic question for a senior: how much of the time you spend on quality ends up as code that runs automatically, and how much ends up as knowledge in your head that evaporates when you leave the team? The higher the first ratio, the healthier the harness.</p>
-<h2 id="the-three-layers-of-maintenance">The three layers of maintenance<a class="headerlink" href="#the-three-layers-of-maintenance" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>It's useful to think of maintenance as three layers that operate on different time scales:</p>
-<p><strong>Layer 1 — sensors in CI (seconds to minutes).</strong> They detect the obvious problems at PR time. Lints, tests, type checks. This layer is the first line and the cheapest.</p>
-<p><strong>Layer 2 — recurring agents (hours to days).</strong> They detect accumulated drift, doc rot, replicated patterns, consolidation opportunities. They run in background, don't block anyone, open reviewable PRs.</p>
-<p><strong>Layer 3 — occasional re-architecture (weeks).</strong> Structural changes that require human judgment. When the golden principles change, when a whole layer needs redesigning, when a library has to be replaced. These still need humans in the driver seat — but they're rare if the first two layers work.</p>
-<p>If you're missing layer 1, the agent introduces errors constantly. If you're missing layer 2, the errors layer 1 doesn't catch accumulate silently. If you're missing layer 3, eventually you hit an architectural ceiling no agent can break through. All three are necessary; none is sufficient.</p>
-<h2 id="the-signal-that-its-working">The signal that it's working<a class="headerlink" href="#the-signal-that-its-working" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>A team that has this right usually notices two things within a few months:</p>
-<ol>
-<li>
-<p><strong>Agent PRs get shorter, not longer.</strong> Because the context is better structured, most changes are small and targeted. Thousand-line mega-PRs are a symptom of an immature harness.</p>
-</li>
-<li>
-<p><strong>Recurring problems disappear without anyone chasing them.</strong> Because every recurring problem produced a guide or a sensor when it was spotted the second time. The team's memory lives in the harness, not in people's heads.</p>
-</li>
-</ol>
-<p>If instead you observe PRs getting longer, the same errors still showing up, and the team spending more and more time "fixing what the agent broke", the harness is losing. The right investment isn't "more human cleanup" — it's promoting what you learn during cleanup into the harness, until cleanup isn't needed.</p>
-<h2 id="the-agentic-flywheel-when-the-harness-maintains-itself">The agentic flywheel: when the harness maintains itself<a class="headerlink" href="#the-agentic-flywheel-when-the-harness-maintains-itself" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>There's a point of maturation worth naming because it's where everything described in this chapter naturally points. Kief Morris calls it the <strong>agentic flywheel</strong>: agents that don't just write code, but <strong>analyze results and recommend improvements to the harness itself</strong>, and even implement them under strategic human supervision.</p>
-<p>The loop becomes something like:</p>
-<ol>
-<li>Sensors detect a recurring pattern (a type of failure, a class of drift, a doc-gardening miss).</li>
-<li>A meta agent reads the accumulated signal and proposes an improvement: "we've fixed this pattern seven times this month; I suggest the following custom lint" or "this doc has diverged from the code three times; I suggest this restructuring".</li>
-<li>The proposal arrives at the human as a PR on the harness itself — not on the application code.</li>
-<li>The human approves, adjusts or rejects with arguments, and the harness improves.</li>
-<li>The next detection cycle starts from a more capable harness.</li>
-</ol>
-<p>This sounds ambitious and should be calibrated: it's not the starting point, it's the direction. A team that starts by trying to build the complete flywheel falls into anti-pattern 7 (megalomania of the initial plan). But a team that disciplines itself into promoting lessons into the harness ends up, almost by gravity, reaching a point where improvement proposals also get generated automatically. The flywheel isn't designed; it's discovered once you were already doing almost everything it requires.</p>
-<p>The signal you're close: more than 50% of the PRs touching the harness are opened by an agent, and the human's work is reduced to approving, adjusting or vetoing with judgment. When you get there, the human role has completed its transition — and what you've built is a system that learns to improve itself.</p>
+<p>La estructura concreta importa menos que el principio: <strong>carpetas en el repo, no servicios externos; markdown, no PDFs; mantenidos por linters y agentes recurrentes, no por buena voluntad humana</strong>.</p>
+<h2 id="como-hacer-que-esto-no-se-descomponga">Cómo hacer que esto no se descomponga<a class="headerlink" href="#como-hacer-que-esto-no-se-descomponga" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>El miedo razonable es: "si meto todo esto en el repo, en seis meses estará obsoleto". Es un miedo correcto, y sin solución se vuelve realidad. Lo que funciona:</p>
+<p><strong>Linters específicos para la documentación.</strong> Validan que los enlaces internos no estén rotos, que los nombres de archivos referenciados existan, que los planes activos no lleven más de N días sin update, que los documentos tengan los campos de metadata mínimos. Es trabajo aburrido y multiplica el ROI de todo lo demás.</p>
+<p><strong>Agentes de doc-gardening recurrentes.</strong> Esto es un patrón que aparece tanto en OpenAI como, implícitamente, en el flujo de Stripe. Un agente que escanea documentación contra el comportamiento real del código y abre PRs cuando detecta divergencia. No "elimina" la doc obsoleta automáticamente: la marca y deja que un humano (o el agente que la modificó) decida.</p>
+<p><strong>Promueve la regla al código.</strong> Cuando una pieza de documentación describe un patrón que debería ser obligatorio, conviértela en lint. El doc deja de ser la fuente y se vuelve la explicación; el lint es el enforcement. La regla original de OpenAI: <em>"cuando la documentación no basta, promovemos la regla al código"</em>.</p>
+<h2 id="el-test-definitivo">El test definitivo<a class="headerlink" href="#el-test-definitivo" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Cuando dudes si una pieza de información debe ir al repo o puede quedarse fuera, hazte esta pregunta: <strong>si un nuevo ingeniero se incorporara mañana sin acceso a Slack, sin acceso a Google Docs y sin poder hablar con nadie del equipo, ¿podría ser productivo solo con lo que hay en el repo?</strong></p>
+<p>Si la respuesta es no, esa información es invisible para el agente también. Y en un equipo serio que opera con agentes, ese nuevo "ingeniero" se incorpora cien veces al día. Cada ejecución de agente es una incorporación desde cero.</p>
+<h2 id="el-upside-oculto">El upside oculto<a class="headerlink" href="#el-upside-oculto" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Hay un efecto secundario que casi nadie anticipa: <strong>al hacer el repo legible para un agente, lo haces enormemente más legible para humanos también</strong>. El doc-gardening te beneficia. Los planes versionados te benefician. El tracker de deuda te beneficia. Los humanos que se incorporan al equipo se incorporan más rápido. Los seniors dejan de ser cuellos de botella de contexto. Lo que parecía una concesión a la máquina termina siendo, en buena parte, ingeniería de plataforma para el propio equipo.</p>
+<p>Stripe lo dice de forma directa, y vale la pena cerrar con su frase: <em>"lo que es bueno para humanos es bueno para agentes"</em>. La inversión histórica en developer experience rinde dividendos también para el agente, y la inversión en agente rinde dividendos para el developer experience. El bucle es virtuoso si lo dejas serlo.</p>
 
 
 
@@ -1618,7 +1547,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Volver al principio
 </button>
         
       </main>
@@ -1666,7 +1595,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="es" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -12,7 +12,7 @@
         <meta name="author" content="jmlopezdona">
       
       
-        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/en/08-agentic-pr-flow/">
+        <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/es/08-agentic-pr-flow/">
       
       
         <link rel="prev" href="../07-architecture-for-agents/">
@@ -22,9 +22,9 @@
       
       
         
-          <link rel="alternate" href="../../08-agentic-pr-flow/" hreflang="es">
+          <link rel="alternate" href="../../08-agentic-pr-flow/" hreflang="en">
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="./" hreflang="es">
         
       
       
@@ -84,8 +84,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#8-the-agentic-pr-flow" class="md-skip">
-          Skip to content
+        <a href="#8-el-flujo-de-pr-agentico" class="md-skip">
+          Saltar a contenido
         </a>
       
     </div>
@@ -97,7 +97,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../" title="Harness Engineering" class="md-header__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
   
@@ -158,21 +158,21 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../08-agentic-pr-flow/" hreflang="es" class="md-select__link">
-              Español
+            <a href="../../08-agentic-pr-flow/" hreflang="en" class="md-select__link">
+              English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
-              English
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
             </a>
           </li>
         
@@ -192,21 +192,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Buscar">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -219,7 +219,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Inicializando búsqueda
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -231,7 +231,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -252,7 +252,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -448,7 +448,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../" title="Harness Engineering" class="md-nav__button md-logo" aria-label="Harness Engineering" data-md-component="logo">
       
@@ -460,7 +460,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/jmlopezdona/ai-coding-agents-harness" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -973,7 +973,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -982,15 +982,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-breaks-first" class="md-nav__link">
+  <a href="#lo-que-rompe-primero" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What breaks first
+        Lo que rompe primero
       
     </span>
   </a>
@@ -998,10 +998,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-ralph-loop-applied-to-the-pr" class="md-nav__link">
+  <a href="#el-ralph-loop-aplicado-al-pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The "Ralph loop" applied to the PR
+        El "Ralph loop" aplicado al PR
       
     </span>
   </a>
@@ -1009,10 +1009,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-four-pr-categories" class="md-nav__link">
+  <a href="#las-cuatro-categorias-de-pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The four PR categories
+        Las cuatro categorías de PR
       
     </span>
   </a>
@@ -1020,10 +1020,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lightweight-merge-gates" class="md-nav__link">
+  <a href="#merge-gates-ligeros" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lightweight merge gates
+        Merge gates ligeros
       
     </span>
   </a>
@@ -1031,10 +1031,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent-to-agent-review-as-an-inferential-sensor" class="md-nav__link">
+  <a href="#la-revision-agente-a-agente-como-sensor-inferencial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent-to-agent review as an inferential sensor
+        La revisión agente-a-agente como sensor inferencial
       
     </span>
   </a>
@@ -1042,10 +1042,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-human-as-exception-reviewer" class="md-nav__link">
+  <a href="#el-humano-como-revisor-de-excepcion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The human as exception reviewer
+        El humano como revisor de excepción
       
     </span>
   </a>
@@ -1053,10 +1053,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-pr-as-evidence-not-conversation" class="md-nav__link">
+  <a href="#el-pr-como-evidencia-no-como-conversacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The PR as evidence, not conversation
+        El PR como evidencia, no como conversación
       
     </span>
   </a>
@@ -1064,10 +1064,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-this-asks-of-the-repo" class="md-nav__link">
+  <a href="#lo-que-esto-pide-del-repo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What this asks of the repo
+        Lo que esto pide del repo
       
     </span>
   </a>
@@ -1406,7 +1406,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
   
   
@@ -1415,15 +1415,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Tabla de contenidos
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-breaks-first" class="md-nav__link">
+  <a href="#lo-que-rompe-primero" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What breaks first
+        Lo que rompe primero
       
     </span>
   </a>
@@ -1431,10 +1431,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-ralph-loop-applied-to-the-pr" class="md-nav__link">
+  <a href="#el-ralph-loop-aplicado-al-pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The "Ralph loop" applied to the PR
+        El "Ralph loop" aplicado al PR
       
     </span>
   </a>
@@ -1442,10 +1442,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-four-pr-categories" class="md-nav__link">
+  <a href="#las-cuatro-categorias-de-pr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The four PR categories
+        Las cuatro categorías de PR
       
     </span>
   </a>
@@ -1453,10 +1453,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lightweight-merge-gates" class="md-nav__link">
+  <a href="#merge-gates-ligeros" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lightweight merge gates
+        Merge gates ligeros
       
     </span>
   </a>
@@ -1464,10 +1464,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agent-to-agent-review-as-an-inferential-sensor" class="md-nav__link">
+  <a href="#la-revision-agente-a-agente-como-sensor-inferencial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent-to-agent review as an inferential sensor
+        La revisión agente-a-agente como sensor inferencial
       
     </span>
   </a>
@@ -1475,10 +1475,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-human-as-exception-reviewer" class="md-nav__link">
+  <a href="#el-humano-como-revisor-de-excepcion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The human as exception reviewer
+        El humano como revisor de excepción
       
     </span>
   </a>
@@ -1486,10 +1486,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-pr-as-evidence-not-conversation" class="md-nav__link">
+  <a href="#el-pr-como-evidencia-no-como-conversacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The PR as evidence, not conversation
+        El PR como evidencia, no como conversación
       
     </span>
   </a>
@@ -1497,10 +1497,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-this-asks-of-the-repo" class="md-nav__link">
+  <a href="#lo-que-esto-pide-del-repo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What this asks of the repo
+        Lo que esto pide del repo
       
     </span>
   </a>
@@ -1524,7 +1524,7 @@
 
 
   
-    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/en/08-agentic-pr-flow.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/jmlopezdona/ai-coding-agents-harness/edit/main/docs/es/08-agentic-pr-flow.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1532,69 +1532,69 @@
   
 
 
-<h1 id="8-the-agentic-pr-flow">8. The agentic PR flow<a class="headerlink" href="#8-the-agentic-pr-flow" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>The pull request is the atomic unit of work in software. And when agents start generating them seriously — Stripe merges more than a thousand a week, OpenAI has merged fifteen hundred in five months with a small team — all the assumptions of the traditional PR flow blow up. This chapter is about what to replace them with.</p>
-<h2 id="what-breaks-first">What breaks first<a class="headerlink" href="#what-breaks-first" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>The first assumption that falls is <strong>"every PR goes through a human"</strong>. Not out of ideology, but out of arithmetic. If you have 7 engineers and the agent opens 20 PRs a day per person, that's 140 PRs daily. Assuming a human can do a decent review in 15 minutes, that's 35 human-hours of review per day. The math doesn't work.</p>
-<p>The intuitive answer — "then we slow the agent down" — is exactly the wrong one. What you have to do is the opposite: <strong>delegate most of the review to other agents</strong>, and save human attention for cases where judgment actually matters.</p>
-<h2 id="the-ralph-loop-applied-to-the-pr">The "Ralph loop" applied to the PR<a class="headerlink" href="#the-ralph-loop-applied-to-the-pr" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>OpenAI describes its flow as a continuous iteration that sounds like it was written by a Simpsons screenwriter and works better than it sounds. The agent:</p>
+<h1 id="8-el-flujo-de-pr-agentico">8. El flujo de PR agéntico<a class="headerlink" href="#8-el-flujo-de-pr-agentico" title="Enlace permanente a esta sección">&para;</a></h1>
+<p>El pull request es la unidad atómica del trabajo en software. Y cuando los agentes empiezan a generarlos en serio — Stripe mergea más de mil por semana, OpenAI ha mergeado mil quinientos en cinco meses con un equipo pequeño — todos los supuestos del flujo de PR tradicional saltan por los aires. Este capítulo es sobre qué reemplazarlos por.</p>
+<h2 id="lo-que-rompe-primero">Lo que rompe primero<a class="headerlink" href="#lo-que-rompe-primero" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>El primer supuesto que se cae es <strong>"todo PR pasa por un humano"</strong>. No por ideología, sino por aritmética. Si tienes 7 ingenieros y el agente abre 20 PRs al día por persona, son 140 PRs diarios. Asumiendo que un humano pueda hacer una revisión decente en 15 minutos, son 35 horas-humano de revisión por día. No salen las cuentas.</p>
+<p>La respuesta intuitiva — "entonces ralentizamos al agente" — es exactamente la equivocada. Lo que tienes que hacer es lo contrario: <strong>delegar la mayoría de la revisión a otros agentes</strong>, y reservar la atención humana para los casos donde realmente importa el criterio.</p>
+<h2 id="el-ralph-loop-aplicado-al-pr">El "Ralph loop" aplicado al PR<a class="headerlink" href="#el-ralph-loop-aplicado-al-pr" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>OpenAI describe su flujo como una iteración continua que parece escrita por un guionista de los Simpson y funciona mejor de lo que parece. El agente:</p>
 <ol>
-<li>Makes its change in its isolated worktree.</li>
-<li>Reviews its own changes locally, before opening anything.</li>
-<li>Requests reviews from other agents (local and in the cloud), each with a different focus: architecture, security, tests, performance.</li>
-<li>Reads the comments — whether from other agents or from humans — and responds inline.</li>
-<li>Applies the corrections it considers valid, argues against the ones it doesn't.</li>
-<li>Goes back to step 3 until all reviewers are satisfied.</li>
-<li>Merges (yes, merges itself) when all gates pass.</li>
+<li>Hace su cambio en su worktree aislado.</li>
+<li>Revisa sus propios cambios localmente, antes de abrir nada.</li>
+<li>Solicita revisiones a otros agentes (locales y en la nube), cada uno con foco distinto: arquitectura, seguridad, tests, performance.</li>
+<li>Lee los comentarios — vengan de otros agentes o de humanos — y responde en línea.</li>
+<li>Aplica las correcciones que considere válidas, argumenta contra las que no.</li>
+<li>Vuelve al paso 3 hasta que todos los revisores están satisfechos.</li>
+<li>Mergea (sí, mergea él mismo) cuando todos los gates pasan.</li>
 </ol>
-<p>Human review in this flow doesn't disappear, but <strong>it becomes optional for most PRs</strong>. The human intervenes when a reviewer agent explicitly escalates, when the change touches an area marked as sensitive, or when the responsible engineer chooses to look.</p>
-<h2 id="the-four-pr-categories">The four PR categories<a class="headerlink" href="#the-four-pr-categories" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>In practice, teams that reach this point end up categorizing PRs into four groups, even if they don't always make it explicit:</p>
-<p><strong>1. Trivial — auto-mergeable.</strong> Mechanical refactors, typo corrections, doc updates, lint fixes. The agent opens, the sensors pass, it merges. Zero human attention.</p>
-<p><strong>2. Routine — reviewed by other agents.</strong> The majority of the work. Implementation of a small feature, a fix for a well-bounded bug, additional tests. A reviewer agent reads, comments, the original agent iterates. If they converge, they merge. The human could look but doesn't have to.</p>
-<p><strong>3. Sensitive — human in the loop.</strong> Changes to modules marked as critical (auth, billing, migrations, public contracts). The human reviews, decides, possibly delegates back to the agent to iterate. The "sensitive" mark isn't decided per PR; it's decided by the architecture, encoded in repo metadata.</p>
-<p><strong>4. Decision — human drives from the start.</strong> Changes that require judgment (which endpoint to expose, what price to charge, what to deprecate). The human doesn't review the PR: they define the plan before the agent opens anything. The agent just executes.</p>
-<p>The typical proportion observed in mature teams: 60% routine, 25% trivial, 10% sensitive, 5% decision. And the percentages of the first two keep growing as the harness matures.</p>
-<h2 id="lightweight-merge-gates">Lightweight merge gates<a class="headerlink" href="#lightweight-merge-gates" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Another assumption that breaks: <strong>"the merge has to be careful"</strong>. OpenAI explicitly describes its merge gates as "minimally blocking". PRs are short, flaky tests are retried instead of blocking progress, and fixes for small breakages arrive in follow-up PRs instead of stopping the flow.</p>
-<p>This sounds irresponsible. On a low-performing team it would be. On a team where the agent can fix whatever breaks in minutes, <strong>the cost of waiting is greater than the cost of breaking</strong>. Discipline relocates (again) toward fast detection and cheap reversion. If those two aren't there, don't apply this pattern. If they are, not applying it is leaving money on the table.</p>
-<p>There are two non-negotiable prerequisites for this to work:</p>
+<p>La revisión humana en este flujo no desaparece, pero <strong>se vuelve opcional para la mayoría de PRs</strong>. El humano interviene cuando un agente revisor escala explícitamente, cuando el cambio toca un área marcada como sensible, o cuando el ingeniero responsable elige mirar.</p>
+<h2 id="las-cuatro-categorias-de-pr">Las cuatro categorías de PR<a class="headerlink" href="#las-cuatro-categorias-de-pr" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>En la práctica, los equipos que llegan a este punto acaban categorizando los PRs en cuatro grupos, aunque no siempre lo hagan explícito:</p>
+<p><strong>1. Trivial — auto-mergeable.</strong> Refactors mecánicos, corrección de typos, actualización de docs, fixes de lint. El agente abre, los sensores pasan, mergea. Cero atención humana.</p>
+<p><strong>2. Rutina — revisado por otros agentes.</strong> La mayoría del trabajo. Implementación de una funcionalidad pequeña, fix de un fallo bien delimitado, tests adicionales. Un agente revisor lee, comenta, el agente original itera. Si convergen, mergean. El humano podría mirar pero no tiene por qué.</p>
+<p><strong>3. Sensible — humano en el bucle.</strong> Cambios en módulos marcados como críticos (auth, billing, migrations, contratos públicos). El humano revisa, decide, posiblemente delega de vuelta al agente para iterar. La marca de "sensible" no la decide cada PR; la decide la arquitectura, codificada en metadatos del repo.</p>
+<p><strong>4. Decisión — humano dirige desde antes.</strong> Cambios que requieren criterio (qué endpoint exponer, qué precio cobrar, qué deprecar). El humano no revisa el PR: define el plan antes de que el agente abra nada. El agente solo ejecuta.</p>
+<p>La proporción típica que se observa en equipos maduros: 60% rutina, 25% trivial, 10% sensible, 5% decisión. Y los porcentajes de las dos primeras siguen creciendo a medida que el harness madura.</p>
+<h2 id="merge-gates-ligeros">Merge gates ligeros<a class="headerlink" href="#merge-gates-ligeros" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Otro supuesto que se rompe: <strong>"el merge tiene que ser cuidadoso"</strong>. OpenAI describe explícitamente que sus merge gates son "mínimamente bloqueantes". Las PRs son cortas, los tests intermitentes se reintentan en lugar de bloquear progreso, y los fixes para fallos pequeños llegan en PRs de seguimiento en vez de detener el flujo.</p>
+<p>Esto suena irresponsable. En un equipo de bajo rendimiento lo sería. En un equipo donde el agente puede arreglar lo que rompa en minutos, <strong>el coste de esperar es mayor que el coste de romper</strong>. La disciplina se reubica (otra vez) hacia detección rápida y reversión barata. Si esos dos no están, no apliques este patrón. Si están, no aplicarlo es dejar dinero en la mesa.</p>
+<p>Hay dos pre-requisitos no negociables para que esto funcione:</p>
 <ul>
-<li><strong>Fast detection.</strong> Sensors in CI that discover regressions in minutes, not hours. Smoke tests, contract tests, type checks.</li>
-<li><strong>Trivial reversion.</strong> The ability to revert a PR without ceremony, ideally automatic if an alert fires within N minutes of merge.</li>
+<li><strong>Detección rápida.</strong> Sensores en CI que descubren regresiones en minutos, no en horas. Smoke tests, contract tests, type checks.</li>
+<li><strong>Reversión trivial.</strong> Capacidad de revertir un PR sin ceremonia, idealmente automática si una alerta se dispara dentro de N minutos del merge.</li>
 </ul>
-<p>If you have both, merge gates can be lightweight. If you don't, lightweight merge gates are a recipe for chaos.</p>
-<h2 id="agent-to-agent-review-as-an-inferential-sensor">Agent-to-agent review as an inferential sensor<a class="headerlink" href="#agent-to-agent-review-as-an-inferential-sensor" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>In the language of chapter 3, review by another agent is an <em>inferential</em> sensor: it's not deterministic, but it captures things that computational sensors can't. Things like:</p>
+<p>Si tienes los dos, los merge gates pueden ser ligeros. Si no los tienes, los merge gates ligeros son una receta para descontrol.</p>
+<h2 id="la-revision-agente-a-agente-como-sensor-inferencial">La revisión agente-a-agente como sensor inferencial<a class="headerlink" href="#la-revision-agente-a-agente-como-sensor-inferencial" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>En el lenguaje del capítulo 3, la revisión por otro agente es un sensor <em>inferencial</em>: no es determinista, pero captura cosas que los sensores computacionales no pueden. Cosas como:</p>
 <ul>
-<li>"This name is confusing given the domain."</li>
-<li>"This function doesn't handle the empty case and the context suggests it's important."</li>
-<li>"This change contradicts the decision from the active execution plan in <code>docs/exec-plans/active/billing-rewrite.md</code>."</li>
-<li>"This solution is valid but there's an established pattern in <code>domains/orders/repository.ts</code> you should reuse."</li>
+<li>"Este nombre es confuso dado el dominio."</li>
+<li>"Esta función no maneja el caso vacío y el contexto sugiere que es importante."</li>
+<li>"Este cambio contradice la decisión del plan de ejecución activo en <code>docs/exec-plans/active/billing-rewrite.md</code>."</li>
+<li>"Esta solución es válida pero hay un patrón ya establecido en <code>domains/orders/repository.ts</code> que deberías reusar."</li>
 </ul>
-<p>A human would make these comments, but a human is expensive and doesn't scale. A reviewer agent with good context makes them well most of the time, and the original agent filters the false positives by arguing back.</p>
-<p>One important property: <strong>agent-to-agent reviews must have focus</strong>. A single agent trying to review "everything" produces mediocre reviews. Multiple reviewer agents with specialized prompts — one for architecture, another for security, another for tests, another for coherence with active docs — produce much better signal. Stripe formalizes this with its "blueprints" model combining deterministic and agentic nodes in explicit pipelines.</p>
-<h2 id="the-human-as-exception-reviewer">The human as exception reviewer<a class="headerlink" href="#the-human-as-exception-reviewer" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>When a human does come in to review, their role changes. They're no longer "the quality system", because there are sensors before them. Their role is:</p>
+<p>Estos comentarios un humano los haría, pero un humano cuesta caro y no escala. Un agente revisor con buen contexto los hace bien la mayoría del tiempo, y los falsos positivos los filtra el agente original argumentando.</p>
+<p>Una propiedad importante: <strong>las revisiones agente-a-agente deben tener foco</strong>. Un único agente intentando revisar "todo" produce revisiones mediocres. Múltiples agentes revisores con prompts especializados — uno para arquitectura, otro para seguridad, otro para tests, otro para coherencia con docs activas — producen señal mucho mejor. Stripe lo formaliza con su modelo de "blueprints" combinando nodos determinísticos y agénticos en pipelines explícitos.</p>
+<h2 id="el-humano-como-revisor-de-excepcion">El humano como revisor de excepción<a class="headerlink" href="#el-humano-como-revisor-de-excepcion" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Cuando un humano sí entra a revisar, su papel cambia. Ya no es "el sistema de calidad", porque hay sensores antes que él. Su papel es:</p>
 <ul>
-<li><strong>Apply judgment that can't be codified.</strong> Product decisions, strategic trade-offs, judgment about whether a solution "fits" the direction of the project.</li>
-<li><strong>Identify patterns that deserve to be promoted into the harness.</strong> If they're correcting the same thing twice, that's not review, it's a signal that a guide or a sensor is missing. Their most valuable work is translating that observation into an improvement to the harness.</li>
-<li><strong>Validate areas marked as sensitive</strong> where the cost of a failure justifies the latency.</li>
+<li><strong>Aplicar criterio que no se puede codificar.</strong> Decisiones de producto, compromisos estratégicos, juicio sobre si una solución "encaja" con la dirección del proyecto.</li>
+<li><strong>Identificar patrones que merecen subir al harness.</strong> Si está corrigiendo lo mismo dos veces, eso no es revisión, es señal de que falta una guía o un sensor. Su trabajo más valioso es traducir esa observación en una mejora del harness.</li>
+<li><strong>Validar áreas marcadas como sensibles</strong> donde el coste de un fallo justifica la latencia.</li>
 </ul>
-<p>What the human does <em>not</em> have to do in this model: read every line, argue about naming, verify the tests exist, make sure the lint passes. That's sensor work. If the human is doing it, the sensors are incomplete.</p>
-<h2 id="the-pr-as-evidence-not-conversation">The PR as evidence, not conversation<a class="headerlink" href="#the-pr-as-evidence-not-conversation" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>A subtle shift that appears in these flows: the PR stops being a conversation between humans and becomes <strong>an evidence record</strong>. The original agent attaches:</p>
+<p>Lo que el humano <em>no</em> tiene que hacer en este modelo: leer cada línea, discutir naming, validar que los tests existen, asegurarse de que el lint pasa. Eso es trabajo de los sensores. Si el humano lo está haciendo, los sensores están incompletos.</p>
+<h2 id="el-pr-como-evidencia-no-como-conversacion">El PR como evidencia, no como conversación<a class="headerlink" href="#el-pr-como-evidencia-no-como-conversacion" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Un cambio sutil que aparece en estos flujos: el PR deja de ser una conversación entre humanos y se vuelve <strong>un registro de evidencia</strong>. El agente original adjunta:</p>
 <ul>
-<li>The plan it followed (referenced from <code>exec-plans/active/</code>).</li>
-<li>The relevant logs from the worktree where it validated.</li>
-<li>Screenshots or videos of the behavior before and after (when it's UI).</li>
-<li>The questions it asked itself and how it resolved them.</li>
+<li>El plan que siguió (referenciado al <code>exec-plans/active/</code>).</li>
+<li>Los logs relevantes del worktree donde validó.</li>
+<li>Screenshots o vídeos del comportamiento antes y después (cuando es UI).</li>
+<li>Las preguntas que se hizo a sí mismo y cómo las resolvió.</li>
 </ul>
-<p>OpenAI explicitly mentions that its agent can record a video of the bug, another of the fix, and attach them to the PR. This changes the nature of the review: the reviewer (human or agent) doesn't have to reproduce anything to understand the change. The evidence is already there. If the evidence is missing, the review is legitimately blocked and the agent is asked to add it.</p>
-<h2 id="what-this-asks-of-the-repo">What this asks of the repo<a class="headerlink" href="#what-this-asks-of-the-repo" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>For this flow to work, the repo needs to be prepared: mechanically-readable "sensitive area" marks (a metadata.yml per domain, for example), live execution plans in a known location, reviewer agents with versioned prompts, and fast sensors in CI. It's work. But it's work that amortizes very quickly when PR throughput goes up.</p>
-<p>The final diagnostic question: <strong>if tomorrow your agent opens 50 PRs in a day, what happens?</strong> If the answer is "we'd have to stop the agent because we can't review them", the PR flow isn't ready. If the answer is "the sensors would filter the problems and humans would only see the 3-4 that matter", you're close.</p>
+<p>OpenAI menciona explícitamente que su agente puede grabar un vídeo del fallo, otro de la corrección, y adjuntarlos al PR. Esto cambia la naturaleza de la revisión: el revisor (humano o agente) no tiene que reproducir nada para entender el cambio. La evidencia ya está. Si la evidencia falta, la revisión es legítimamente bloqueada y se le pide al agente que la añada.</p>
+<h2 id="lo-que-esto-pide-del-repo">Lo que esto pide del repo<a class="headerlink" href="#lo-que-esto-pide-del-repo" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>Para que este flujo funcione, el repo necesita estar preparado: marcas de "área sensible" legibles mecánicamente (un metadatos.yml por dominio, por ejemplo), planes de ejecución vivos en una ubicación conocida, agentes revisores con prompts versionados, y sensores rápidos en CI. Es trabajo. Pero es trabajo que se amortiza muy rápido cuando el rendimiento de PRs sube.</p>
+<p>La pregunta diagnóstica final: <strong>si mañana tu agente abre 50 PRs en un día, ¿qué pasa?</strong> Si la respuesta es "tendríamos que parar al agente porque no podemos revisarlos", el flujo de PR no está listo. Si la respuesta es "los sensores filtrarían los problemas y los humanos solo verían los 3-4 que importan", estás cerca.</p>
 
 
 
@@ -1618,7 +1618,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Volver al principio
 </button>
         
       </main>
@@ -1666,7 +1666,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
