@@ -10,7 +10,7 @@ A ese "todo lo demás" la comunidad le ha puesto un nombre que merece quedarse: 
 
 ## La aritmética que cambia todo
 
-Antes de entrar en filosofía, conviene dejar tres datos sobre la mesa.
+Antes de entrar en materia, conviene dejar tres datos sobre la mesa.
 
 **Stripe** mergea **más de 1.000 pull requests por semana** generados por agentes. La base de código tiene cientos de millones de líneas, en Ruby con Sorbet, con librerías internas que ningún modelo público conoce. Y aún así, los agentes funcionan.
 
