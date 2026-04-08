@@ -44,24 +44,24 @@ theme:
 
 nav:
   - Inicio: index.md
-  - "Cap. 0 — Producir software a escala con agentes": 00-blog-harness-engineering.md
-  - Parte 1 — Mentalidad:
+  - "Cap. 0": 00-blog-harness-engineering.md
+  - Mentalidad:
       - "1. Por qué el harness importa más que el modelo": 01-por-que-harness.md
       - "2. La reubicación del rigor": 02-rigor-reubicado.md
-  - Parte 2 — Los dos pilares:
+  - Pilares:
       - "3. Guías y Sensores: feedforward y feedback": 03-pilares-guias-y-sensores.md
       - "4. El bucle: iteración como primitiva": 04-el-loop.md
-  - Parte 3 — Práctica:
+  - Práctica:
       - "5. Entornos aislados y reproducibles": 05-entornos-aislados.md
       - "6. El contexto como sistema de registro": 06-contexto-sistema-de-registro.md
       - "7. Arquitectura para agentes": 07-arquitectura-para-agentes.md
       - "8. El flujo de PR agéntico": 08-flujo-pr-agentico.md
-  - Parte 4 — Sostenibilidad:
+  - Sostenibilidad:
       - "9. Entropía y mantenimiento continuo": 09-entropia-y-mantenimiento.md
       - "10. Dónde sigue importando el humano": 10-rol-humano.md
-  - Parte 5 — Trampas:
+  - Trampas:
       - "11. Anti-patrones": 11-anti-patrones.md
-  - Parte 6 — Llevarlo a tu equipo:
+  - Tu equipo:
       - "12. Diagnóstico y madurez": 12-diagnostico-y-madurez.md
 
 markdown_extensions:
@@ -112,24 +112,24 @@ plugins:
           site_name: Harness Engineering
           nav_translations:
             "Inicio": "Home"
-            "Cap. 0 — Producir software a escala con agentes": "Ch. 0 — Producing software at scale with agents"
-            "Parte 1 — Mentalidad": "Part 1 — Mindset"
+            "Cap. 0": "Ch. 0"
+            "Mentalidad": "Mindset"
             "1. Por qué el harness importa más que el modelo": "1. Why the harness matters more than the model"
             "2. La reubicación del rigor": "2. Relocating rigor"
-            "Parte 2 — Los dos pilares": "Part 2 — The two pillars"
+            "Pilares": "Pillars"
             "3. Guías y Sensores: feedforward y feedback": "3. Guides and Sensors: feedforward and feedback"
             "4. El bucle: iteración como primitiva": "4. The loop: iteration as primitive"
-            "Parte 3 — Práctica": "Part 3 — Practice"
+            "Práctica": "Practice"
             "5. Entornos aislados y reproducibles": "5. Isolated and reproducible environments"
             "6. El contexto como sistema de registro": "6. Context as a system of record"
             "7. Arquitectura para agentes": "7. Architecture for agents"
             "8. El flujo de PR agéntico": "8. The agentic PR flow"
-            "Parte 4 — Sostenibilidad": "Part 4 — Sustainability"
+            "Sostenibilidad": "Sustainability"
             "9. Entropía y mantenimiento continuo": "9. Entropy and continuous maintenance"
             "10. Dónde sigue importando el humano": "10. Where humans still matter"
-            "Parte 5 — Trampas": "Part 5 — Pitfalls"
+            "Trampas": "Pitfalls"
             "11. Anti-patrones": "11. Anti-patterns"
-            "Parte 6 — Llevarlo a tu equipo": "Part 6 — Bringing it to your team"
+            "Tu equipo": "Your team"
             "12. Diagnóstico y madurez": "12. Diagnosis and maturity"
 
 extra:
