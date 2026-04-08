@@ -47,7 +47,7 @@ Los capítulos están ordenados de **mentalidad → pilares → práctica → ma
 - [9. Entropía y mantenimiento continuo](09-entropy-and-maintenance.md)
 - [10. Dónde sigue importando el humano](10-human-role.md)
 
-### Parte 5 — Trampas
+### Parte 5 — Errores comunes
 
 - [11. Anti-patrones](11-anti-patterns.md)
 
