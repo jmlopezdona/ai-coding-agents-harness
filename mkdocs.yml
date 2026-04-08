@@ -8,7 +8,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  language: es
+  language: en
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -94,20 +94,20 @@ markdown_extensions:
 plugins:
   - search:
       lang:
-        - es
         - en
+        - es
   - i18n:
       docs_structure: folder
       fallback_to_default: true
       reconfigure_material: true
       reconfigure_search: true
       languages:
-        - locale: es
-          default: true
-          name: Español
-          build: true
         - locale: en
+          default: true
           name: English
+          build: true
+        - locale: es
+          name: Español
           build: true
           site_name: Harness Engineering
           nav_translations:
