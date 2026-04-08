@@ -1,9 +1,5 @@
 # Capítulo 0 — Harness engineering: por qué tu agente no es el problema
 
-> *Versión autocontenida pensada para funcionar como post de blog. Sirve también como puerta de entrada a la guía. Si te interesa profundizar, los capítulos 1–11 desarrollan cada idea.*
-
----
-
 Llevamos un par de años en una conversación pública sobre agentes de codificación que está casi enteramente centrada en el sitio equivocado: el modelo. Qué versión, qué benchmark, qué context window, qué proveedor, qué precio por millón de tokens. Es una conversación legítima, pero deja fuera lo que de verdad explica por qué algunos equipos están entregando software con agentes a una escala difícil de creer y otros equipos siguen tratándolos como un autocomplete glorificado. La diferencia no está en el modelo. Está en todo lo que hay alrededor del modelo.
 
 A ese "todo lo demás" la comunidad le ha puesto un nombre que merece quedarse: **el harness**. El término emergió en torno a LangChain — con la fórmula *"Agent = Model + Harness"* — y lo articuló con más detalle Birgitta Böckeler en *Harness Engineering* (Thoughtworks, publicado en martinfowler.com). Este texto es sobre por qué el harness importa más que el modelo, qué forma tiene cuando está bien hecho, y por dónde empezar si tu equipo ya tiene experiencia con agentes pero siente que no está sacándoles partido.
