@@ -23,7 +23,7 @@ Los capítulos están ordenados de **mentalidad → pilares → práctica → ma
 
 ### Capítulo 0 — Puerta de entrada
 
-- [Harness engineering: producir software a escala con agentes](00-blog-harness-engineering.md) *(versión autocontenida, sirve como post de blog)*
+- [Harness engineering: producir software a escala con agentes](00-blog-harness-engineering.md)
 
 ### Parte 1 — Mentalidad
 

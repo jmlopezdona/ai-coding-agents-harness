@@ -14,7 +14,7 @@ Maquetada con MkDocs Material: navegación por capítulos, búsqueda integrada, 
 
 Los 13 capítulos están en [`docs/`](docs/). Si prefieres leerlos directamente en GitHub:
 
-- [Capítulo 0 — Producir software a escala con agentes](docs/00-blog-harness-engineering.md) *(post de blog autocontenido)*
+- [Capítulo 0 — Producir software a escala con agentes](docs/00-blog-harness-engineering.md)
 - [Índice completo de la guía](docs/index.md)
 
 ## Sobre la guía
