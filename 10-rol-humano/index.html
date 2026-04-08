@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03-pilares-guides-y-sensors/" class="md-tabs__link">
+        <a href="../03-pilares-guias-y-sensores/" class="md-tabs__link">
           
   
   
@@ -683,14 +683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-pilares-guides-y-sensors/" class="md-nav__link">
+      <a href="../03-pilares-guias-y-sensores/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Guides y Sensors: feedforward y feedback
+    3. Guías y Sensores: feedforward y feedback
   
 
     
@@ -1640,7 +1640,7 @@
 <p>El agente puede implementar casi cualquier cosa. Lo que no puede es decidir qué <em>vale la pena</em> implementar. Convertir un problema vago en un objetivo accionable, con criterios de aceptación verificables, sigue siendo trabajo humano. Y es probablemente el trabajo más palanca: una especificación clara ahorra horas de bucles mal dirigidos.</p>
 <p>La forma concreta varía — puede ser un plan de ejecución versionado, un ticket bien escrito, un prompt detallado — pero el contenido tiene que tener tres cosas: qué se quiere lograr, cómo se sabrá que está hecho, y qué <em>no</em> hacer. La tercera es la que más a menudo se omite y la que más drift previene.</p>
 <h3 id="2-calibrar-el-harness">2. Calibrar el harness<a class="headerlink" href="#2-calibrar-el-harness" title="Enlace permanente a esta sección">&para;</a></h3>
-<p>Cuando el agente falla repetidamente, alguien tiene que hacer la pregunta importante: ¿qué le falta al harness? Esto requiere entender el fallo a un nivel que no es solo "el código es incorrecto", sino "el agente no tenía la información que necesitaba" o "el sensor no detectó esto" o "la convención no estaba codificada". El humano hace este diagnóstico y promueve la lección al harness — como un nuevo lint, un nuevo guide, un nuevo agente revisor, o una sección nueva en docs.</p>
+<p>Cuando el agente falla repetidamente, alguien tiene que hacer la pregunta importante: ¿qué le falta al harness? Esto requiere entender el fallo a un nivel que no es solo "el código es incorrecto", sino "el agente no tenía la información que necesitaba" o "el sensor no detectó esto" o "la convención no estaba codificada". El humano hace este diagnóstico y promueve la lección al harness — como un nuevo lint, una nueva guía, un nuevo agente revisor, o una sección nueva en docs.</p>
 <p>Este es el trabajo donde un senior multiplica más su impacto. Cada hora invertida aquí se acumula sobre miles de ejecuciones futuras del agente. Es la inversión con mejor ROI del equipo.</p>
 <h3 id="3-decidir-lo-irreversible">3. Decidir lo irreversible<a class="headerlink" href="#3-decidir-lo-irreversible" title="Enlace permanente a esta sección">&para;</a></h3>
 <p>Hay decisiones cuyo coste de error es asimétrico: deprecar una API pública, cambiar un schema de base de datos en producción, modificar un contrato con un proveedor, aceptar un compromiso de seguridad. En estos casos no quieres velocidad, quieres deliberación. Y la deliberación necesita criterio, contexto organizacional, y responsabilidad — las tres cosas humanas que enumeramos al principio.</p>

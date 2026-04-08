@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://jmlopezdona.github.io/ai-coding-agents-harness/04-el-loop/">
       
       
-        <link rel="prev" href="../03-pilares-guides-y-sensors/">
+        <link rel="prev" href="../03-pilares-guias-y-sensores/">
       
       
         <link rel="next" href="../05-entornos-aislados/">
@@ -296,7 +296,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../03-pilares-guides-y-sensors/" class="md-tabs__link">
+        <a href="../03-pilares-guias-y-sensores/" class="md-tabs__link">
           
   
   
@@ -688,14 +688,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-pilares-guides-y-sensors/" class="md-nav__link">
+      <a href="../03-pilares-guias-y-sensores/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Guides y Sensors: feedforward y feedback
+    3. Guías y Sensores: feedforward y feedback
   
 
     
@@ -1477,7 +1477,7 @@
 <p>La intuición que hay detrás es importante. Cuando un agente falla, hay dos respuestas posibles:</p>
 <ul>
 <li><strong>Respuesta frágil:</strong> añadir lógica que detecte ese fallo concreto y lo evite. Cada fallo genera código de orquestación.</li>
-<li><strong>Respuesta robusta:</strong> asegurarte de que el bucle puede <em>darse cuenta</em> de que falló y reintentar de forma diferente. El fallo genera un sensor mejor o un guide mejor, no más lógica.</li>
+<li><strong>Respuesta robusta:</strong> asegurarte de que el bucle puede <em>darse cuenta</em> de que falló y reintentar de forma diferente. El fallo genera un sensor mejor o una guía mejor, no más lógica.</li>
 </ul>
 <p>Huntley llama a esto "watch the loop": mirar dónde el bucle falla repetidamente y, en vez de parchearlo, ponerse el sombrero de ingeniero y arreglar la condición sistémica que lo causa. Es la misma filosofía que SRE: no celebres el héroe que apaga el incendio cada noche, arregla la causa del incendio.</p>
 <h2 id="tres-propiedades-de-un-buen-bucle">Tres propiedades de un buen bucle<a class="headerlink" href="#tres-propiedades-de-un-buen-bucle" title="Enlace permanente a esta sección">&para;</a></h2>
@@ -1492,7 +1492,7 @@
 <li><strong>Bucle intermedio (minutos):</strong> PR → CI → revisión automática → respuesta a comentarios → re-merge. Es el bucle que Stripe describe en sus "blueprints", combinando nodos determinísticos (linters, tests) con nodos agénticos (implementar, refactorizar).</li>
 <li><strong>Bucle externo (horas o días):</strong> doc-gardening, refactor agents, eliminación de drift, actualización de quality scores. Es el bucle que mantiene la base de código habitable a meses vista.</li>
 </ul>
-<p>Los tres bucles se influyen. Un fallo recurrente en el bucle interno se convierte en un guide nuevo en el bucle externo. Una decisión del bucle externo (subir el umbral de cobertura) cambia el comportamiento del bucle interno. Diseñarlos como un sistema, no como tres scripts inconexos, es lo que distingue un harness real de una colección de automatizaciones.</p>
+<p>Los tres bucles se influyen. Un fallo recurrente en el bucle interno se convierte en una guía nueva en el bucle externo. Una decisión del bucle externo (subir el umbral de cobertura) cambia el comportamiento del bucle interno. Diseñarlos como un sistema, no como tres scripts inconexos, es lo que distingue un harness real de una colección de automatizaciones.</p>
 <h2 id="el-bucle-como-filosofia-no-solo-como-codigo">El bucle como filosofía, no solo como código<a class="headerlink" href="#el-bucle-como-filosofia-no-solo-como-codigo" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Huntley insiste en que el bucle también es una mentalidad. Cuando ves al agente fallar, no preguntes "¿qué le digo para que esto no pase?". Pregunta "¿qué bucle necesito construir para que esto se detecte y se corrija sin mí?". El primer reflejo es agotador y no escala. El segundo es ingeniería.</p>
 <p>Hay un peligro asociado: enamorarse del bucle hasta el punto de no terminar nunca de construirlo. El bucle existe para resolver tareas reales; si pasas tres semanas sin entregar nada porque estás "perfeccionando el bucle", el bucle se ha convertido en otro proyecto huérfano. La regla de oro: cada inversión en el bucle debe estar justificada por un fallo real, recurrente y reciente. No por uno hipotético.</p>

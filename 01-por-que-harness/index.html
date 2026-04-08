@@ -296,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03-pilares-guides-y-sensors/" class="md-tabs__link">
+        <a href="../03-pilares-guias-y-sensores/" class="md-tabs__link">
           
   
   
@@ -790,14 +790,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-pilares-guides-y-sensors/" class="md-nav__link">
+      <a href="../03-pilares-guias-y-sensores/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Guides y Sensors: feedforward y feedback
+    3. Guías y Sensores: feedforward y feedback
   
 
     
@@ -1445,10 +1445,10 @@
 <h2 id="la-definicion-operativa">La definición operativa<a class="headerlink" href="#la-definicion-operativa" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>El harness es todo aquello que aumenta la probabilidad de que el agente haga lo correcto a la primera, y que cuando no lo haga, lo descubra y lo corrija sin intervención humana. Böckeler lo descompone en dos mecanismos:</p>
 <ul>
-<li><strong>Guides (feedforward)</strong> — indicaciones que orientan al agente <em>antes</em> de que actúe: convenciones, plantillas, prompts del sistema, AGENTS.md, schemas.</li>
-<li><strong>Sensors (feedback)</strong> — guardarraíles que actúan <em>después</em>: tests, type checkers, linters, observabilidad, revisores automáticos, evals.</li>
+<li><strong>Guías (feedforward)</strong> — indicaciones que orientan al agente <em>antes</em> de que actúe: convenciones, plantillas, prompts del sistema, AGENTS.md, schemas.</li>
+<li><strong>Sensores (feedback)</strong> — guardarraíles que actúan <em>después</em>: tests, type checkers, linters, observabilidad, revisores automáticos, evals.</li>
 </ul>
-<p>Un harness sin guides produce un agente que se desvía. Un harness sin sensors produce un agente que se desvía y nunca se entera. Un harness con ambos produce algo que empieza a parecerse a un colaborador.</p>
+<p>Un harness sin guías produce un agente que se desvía. Un harness sin sensores produce un agente que se desvía y nunca se entera. Un harness con ambos produce algo que empieza a parecerse a un colaborador.</p>
 <h2 id="la-evidencia-empirica">La evidencia empírica<a class="headerlink" href="#la-evidencia-empirica" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Tres datos que conviene tener delante cuando alguien dice "los agentes no están listos":</p>
 <ul>
@@ -1460,7 +1460,7 @@
 <h2 id="por-que-esto-cambia-el-trabajo-del-equipo">Por qué esto cambia el trabajo del equipo<a class="headerlink" href="#por-que-esto-cambia-el-trabajo-del-equipo" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Cuando aceptas que el harness es donde se juega la calidad, dejas de hacer ciertas cosas y empiezas a hacer otras. Dejas de buscar el "prompt perfecto" — los prompts viven en el harness ahora, versionados como código. Dejas de copiar y pegar errores al chat — los errores entran al bucle por sensores automáticos. Dejas de pedirle al agente que adivine el contexto — el contexto vive estructurado en el repo, accesible mecánicamente.</p>
 <p>Y empiezas a hacer cosas que antes parecían over-engineering: linters custom para una sola convención, planes de ejecución versionados, observabilidad en local, agentes de "doc-gardening" que mantienen la documentación al día.</p>
-<p>Lo que en un equipo humano sería pedante, en un equipo con agentes <strong>es un multiplicador</strong>. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en el next standup.</p>
+<p>Lo que en un equipo humano sería quisquilloso, en un equipo con agentes <strong>es un multiplicador</strong>. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en la siguiente reunión diaria.</p>
 <h2 id="el-principio-que-recorre-toda-la-guia">El principio que recorre toda la guía<a class="headerlink" href="#el-principio-que-recorre-toda-la-guia" title="Enlace permanente a esta sección">&para;</a></h2>
 <blockquote>
 <p>Cuando algo falla, la pregunta no es "¿cómo le digo al agente que esto está mal?". La pregunta es "<strong>¿qué le falta al harness para que esto no pueda ocurrir, o para que se detecte automáticamente cuando ocurra?</strong>".</p>

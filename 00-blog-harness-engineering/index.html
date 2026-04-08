@@ -296,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03-pilares-guides-y-sensors/" class="md-tabs__link">
+        <a href="../03-pilares-guias-y-sensores/" class="md-tabs__link">
           
   
   
@@ -840,14 +840,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-pilares-guides-y-sensors/" class="md-nav__link">
+      <a href="../03-pilares-guias-y-sensores/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Guides y Sensors: feedforward y feedback
+    3. Guías y Sensores: feedforward y feedback
   
 
     
@@ -1559,11 +1559,11 @@
 <h2 id="que-es-exactamente-un-harness">Qué es exactamente un harness<a class="headerlink" href="#que-es-exactamente-un-harness" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Böckeler descompone el harness en dos mecanismos, y la distinción es la herramienta más útil que vas a llevarte de este texto:</p>
 <ul>
-<li><strong>Guides (feedforward).</strong> Indicaciones que orientan al agente <em>antes</em> de que actúe. Convenciones, plantillas, schemas, generadores de módulos, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.</li>
-<li><strong>Sensors (feedback).</strong> Guardarraíles que actúan <em>después</em>. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el harness pueda corregirlo sin tu intervención.</li>
+<li><strong>Guías (feedforward).</strong> Indicaciones que orientan al agente <em>antes</em> de que actúe. Convenciones, plantillas, schemas, generadores de módulos, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.</li>
+<li><strong>Sensores (feedback).</strong> Guardarraíles que actúan <em>después</em>. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el harness pueda corregirlo sin tu intervención.</li>
 </ul>
-<p>Un harness sin guides produce un agente que se desvía. Un harness sin sensors produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.</p>
-<p>Cada vez que tu agente falla, deberías poder decir si el fallo se debe a un guide ausente o a un sensor ausente. Si no puedes, no tienes harness. Tienes prompts y suerte.</p>
+<p>Un harness sin guías produce un agente que se desvía. Un harness sin sensores produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.</p>
+<p>Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes harness. Tienes prompts y suerte.</p>
 <h2 id="la-pregunta-que-hay-que-aprender-a-hacerse">La pregunta que hay que aprender a hacerse<a class="headerlink" href="#la-pregunta-que-hay-que-aprender-a-hacerse" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Hay una pregunta concreta que vale más que cualquier framework. Cuando el agente falla — y va a fallar — la mayoría de equipos preguntan: <em>"¿qué le digo al agente, en este chat, para que esto no pase?"</em>. Es la pregunta equivocada. Lleva a instrucciones efímeras que se evaporan al cerrar la sesión, microcorrecciones que no quedan registradas, una espiral de prompt-tweaking que no acumula nada.</p>
 <p>La pregunta correcta es esta:</p>
@@ -1611,14 +1611,14 @@
 <li><strong>Empieza por el aislamiento.</strong> Sandboxes desechables, baratos de crear, baratos de tirar. Es la inversión que más multiplica todas las demás. Sin esto, los siguientes pasos rinden la mitad.</li>
 <li><strong>Materializa el contexto en el repo.</strong> Lo importante que vive en Slack, Google Docs, o cabezas, mudado a markdown versionado. AGENTS.md como índice de 100 líneas, no como enciclopedia de mil.</li>
 <li><strong>Codifica los invariantes que más te importan.</strong> Linters custom con mensajes dirigidos al agente. Direcciones de dependencia validadas mecánicamente. Schemas en el borde.</li>
-<li><strong>Promueve cada fallo recurrente al harness.</strong> Si el fallo es obviamente sistémico desde el principio, lo conviertes en guide o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.</li>
+<li><strong>Promueve cada fallo recurrente al harness.</strong> Si el fallo es obviamente sistémico desde el principio, lo conviertes en guía o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.</li>
 <li><strong>Diseña el flujo de PR para que la mayoría se revisen agente-a-agente</strong>, y reserva la atención humana para los casos donde el criterio aporta valor real.</li>
 </ol>
 <p>No tienes que hacer todo a la vez. Empieza con los pasos 1 y 2; los demás caen por gravedad cuando los dos primeros están en su sitio.</p>
 <h2 id="el-cierre">El cierre<a class="headerlink" href="#el-cierre" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>La línea que separa a los equipos que están haciendo cosas notables con agentes de los que siguen frustrados es una línea de inversión en infraestructura. No de talento, no de modelo, no de presupuesto: de <strong>decisión de tratar al agente como un sistema que se ingenía, no como una herramienta a la que se le pide bien</strong>.</p>
 <p>Los modelos van a seguir mejorando. Eso es seguro. Lo que está menos claro es cuántos equipos van a aprovecharlos. Los que estén invirtiendo en su harness mientras los demás esperan al próximo modelo van a llegar al próximo modelo con un multiplicador encima. Los que esperen al próximo modelo van a descubrir que el problema no era el modelo y van a volver a esperar al siguiente.</p>
-<p>Si esta lectura te ha resonado, los <strong>capítulos 1 a 11 de la guía</strong> desarrollan cada una de las ideas con más detalle: la mentalidad (cap. 1–2), los pilares de guides y sensors (cap. 3–4), la práctica concreta de entornos, contexto, arquitectura y flujo de PR (cap. 5–8), y el mantenimiento sostenible y los anti-patrones (cap. 9–11). Léelos como ensayos independientes; no hace falta orden. Lo que sí hace falta es empezar.</p>
+<p>Si esta lectura te ha resonado, los <strong>capítulos 1 a 11 de la guía</strong> desarrollan cada una de las ideas con más detalle: la mentalidad (cap. 1–2), los pilares de guías y sensores (cap. 3–4), la práctica concreta de entornos, contexto, arquitectura y flujo de PR (cap. 5–8), y el mantenimiento sostenible y los anti-patrones (cap. 9–11). Léelos como ensayos independientes; no hace falta orden. Lo que sí hace falta es empezar.</p>
 <hr />
 <p><em>Este texto sintetiza ideas de Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (equipo Codex de OpenAI) y Alistair Gray (equipo Leverage de Stripe, Minions). El término "harness" en este sentido se popularizó en torno a LangChain. URLs en la sección de fuentes del <a href="README.md#fuentes">README de la guía</a>.</em></p>
 
