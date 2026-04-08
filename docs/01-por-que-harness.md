@@ -14,8 +14,8 @@ Cuando un equipo se queja de que "el agente alucina" o "no entiende el código",
 
 El harness es todo aquello que aumenta la probabilidad de que el agente haga lo correcto a la primera, y que cuando no lo haga, lo descubra y lo corrija sin intervención humana. Böckeler lo descompone en dos mecanismos:
 
-- **Guides (feedforward)** — restricciones que actúan *antes* de que el agente actúe: convenciones, plantillas, prompts del sistema, AGENTS.md, schemas, linters preventivos.
-- **Sensors (feedback)** — validadores que actúan *después*: tests, type checkers, observabilidad, revisores automáticos, evals.
+- **Guides (feedforward)** — indicaciones que orientan al agente *antes* de que actúe: convenciones, plantillas, prompts del sistema, AGENTS.md, schemas.
+- **Sensors (feedback)** — guardarraíles que actúan *después*: tests, type checkers, linters, observabilidad, revisores automáticos, evals.
 
 Un harness sin guides produce un agente que se desvía. Un harness sin sensors produce un agente que se desvía y nunca se entera. Un harness con ambos produce algo que empieza a parecerse a un colaborador.
 
