@@ -11,8 +11,7 @@ Ejemplos típicos:
 - **AGENTS.md / system prompts versionados.** No como lugar donde meter "todo lo importante", sino como índice corto que apunta a los sitios donde vive cada cosa (ver cap. 6). La diferencia entre un AGENTS.md de 100 líneas y uno de 1.000 no es de escala: es de filosofía.
 - **Convenciones embebidas en el scaffolding.** Plantillas de servicio, generadores de módulos, bootstraps de componentes. Si cada nuevo módulo lo crea un comando, el agente hereda la estructura sin tener que adivinarla.
 - **Schemas y tipos en el borde.** Validar entradas con Zod, Pydantic, JSON Schema o lo que toque. Esto no es solo defensa runtime: es un contrato legible que el agente puede leer e imitar. OpenAI menciona explícitamente que exigen parsear las formas de datos en el borde sin ser prescriptivos sobre la herramienta.
-- **Linters custom con mensajes dirigidos al agente.** Esto es subestimado. Un lint custom no solo bloquea el patrón malo: su mensaje de error puede contener la instrucción de remedio. El agente lee el error, entiende el patrón correcto, lo aplica. Un linter es un tutor pasivo.
-- **Reglas de arquitectura mecanizadas.** Direcciones de dependencia entre capas, módulos prohibidos, imports no permitidos. Validadas estructuralmente, no en una review.
+- **Reglas de arquitectura mecanizadas.** Direcciones de dependencia entre capas, módulos prohibidos, imports no permitidos. Validadas estructuralmente, no en una review. (Nota: la *regla* es el guide; el linter que la valida es un sensor — ver más abajo.)
 - **Plantillas de PR y de plan.** Si todos los planes de ejecución tienen la misma forma, el agente sabe cómo escribirlos y cómo leer los antiguos.
 
 El test de un buen guide es este: **¿podría un agente nuevo, sin contexto previo, hacer lo correcto solo siguiéndolo?** Si la respuesta es "depende del juicio", el guide está incompleto.
@@ -36,6 +35,7 @@ Ejemplos prácticos:
 
 - **Tests rápidos y reproducibles.** No "tests de integración que tardan 8 minutos y a veces fallan por flaky". Tests que el agente puede correr sin pensárselo y de los que se fía.
 - **Type checks como sensor primario.** Un type checker estricto es uno de los sensores más baratos y más densos en señal. Si tu stack lo permite, súbele las restricciones.
+- **Linters custom con mensajes dirigidos al agente.** Esto es subestimado. Un lint custom no solo señala el patrón malo: su mensaje de error puede contener la instrucción de remedio. El agente lee el error, entiende el patrón correcto, lo aplica en el siguiente intento. Un buen linter custom es un tutor pasivo: actúa después del fallo (por eso es sensor), pero su señal es lo bastante didáctica como para que el agente converja en una o dos iteraciones.
 - **Observabilidad efímera en local.** Esto es lo que OpenAI hizo con la pila Vector + Victoria + LogQL/PromQL/TraceQL por worktree. Permite que el agente formule preguntas como "¿el arranque tarda menos de 800ms?" y obtenga una respuesta verificable. La observabilidad deja de ser un lujo de prod y se vuelve parte del bucle de desarrollo.
 - **Smoke tests del UI vía DevTools.** OpenAI conecta Chrome DevTools Protocol al runtime del agente: el agente puede sacar screenshots, navegar el DOM, reproducir bugs visuales. La UI deja de ser una caja negra para el agente.
 - **Reviews automáticas de otro agente.** Un agente revisa el PR de otro contra una rúbrica. No reemplaza al humano, pero filtra el 80% del ruido antes de que llegue a un humano.
