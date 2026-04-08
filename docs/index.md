@@ -27,33 +27,33 @@ Los capítulos están ordenados de **mentalidad → pilares → práctica → ma
 
 ### Parte 1 — Mentalidad
 
-1. [Por qué el harness importa más que el modelo](01-por-que-harness.md)
-2. [La reubicación del rigor](02-rigor-reubicado.md)
+- [1. Por qué el harness importa más que el modelo](01-por-que-harness.md)
+- [2. La reubicación del rigor](02-rigor-reubicado.md)
 
 ### Parte 2 — Los dos pilares
 
-3. [Guides y Sensors: feedforward y feedback](03-pilares-guides-y-sensors.md)
-4. [El bucle: iteración como primitiva](04-el-loop.md)
+- [3. Guides y Sensors: feedforward y feedback](03-pilares-guides-y-sensors.md)
+- [4. El bucle: iteración como primitiva](04-el-loop.md)
 
 ### Parte 3 — Práctica
 
-5. [Entornos aislados y reproducibles](05-entornos-aislados.md)
-6. [El contexto como sistema de registro](06-contexto-sistema-de-registro.md)
-7. [Arquitectura para agentes](07-arquitectura-para-agentes.md)
-8. [El flujo de PR agéntico](08-flujo-pr-agentico.md)
+- [5. Entornos aislados y reproducibles](05-entornos-aislados.md)
+- [6. El contexto como sistema de registro](06-contexto-sistema-de-registro.md)
+- [7. Arquitectura para agentes](07-arquitectura-para-agentes.md)
+- [8. El flujo de PR agéntico](08-flujo-pr-agentico.md)
 
 ### Parte 4 — Sostenibilidad
 
-9. [Entropía y mantenimiento continuo](09-entropia-y-mantenimiento.md)
-10. [Dónde sigue importando el humano](10-rol-humano.md)
+- [9. Entropía y mantenimiento continuo](09-entropia-y-mantenimiento.md)
+- [10. Dónde sigue importando el humano](10-rol-humano.md)
 
 ### Parte 5 — Trampas
 
-11. [Anti-patrones](11-anti-patrones.md)
+- [11. Anti-patrones](11-anti-patrones.md)
 
 ### Parte 6 — Llevarlo a tu equipo
 
-12. [Diagnóstico y madurez: dónde estás y qué tocar primero](12-diagnostico-y-madurez.md)
+- [12. Diagnóstico y madurez: dónde estás y qué tocar primero](12-diagnostico-y-madurez.md)
 
 ## Qué *no* encontrarás en esta versión
 
