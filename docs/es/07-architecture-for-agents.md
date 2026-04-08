@@ -1,6 +1,6 @@
 # 7. Arquitectura para agentes
 
-Este es el capítulo que más resistencia genera en equipos con experiencia. La idea — que la arquitectura del software debería diseñarse pensando en cómo la van a leer y modificar los agentes, no solo los humanos — suena a empezar la casa por el tejado. Pero cuando empiezas a operar agentes en serio, la observación se vuelve difícil de evitar: **bases de código con invariantes mecánicamente verificables y límites estrictos producen mejores resultados de agente que bases de código "elegantes" con disciplina implícita**. No es una preferencia estética. Es una propiedad medible.
+Este es el capítulo que más resistencia genera en equipos con experiencia. La idea — que la arquitectura del software debería diseñarse pensando en cómo la van a leer y modificar los agentes, no solo los humanos — suena a poner al agente por delante del humano. Pero cuando empiezas a operar agentes en serio, la observación se vuelve difícil de evitar: **bases de código con invariantes mecánicamente verificables y límites estrictos producen mejores resultados de agente que bases de código "elegantes" con disciplina implícita**. No es una preferencia estética. Es una propiedad medible.
 
 ## La observación incómoda
 
