@@ -49,6 +49,23 @@ En la práctica esto significa:
 
 Hay una consecuencia que a muchos equipos les cuesta aceptar: **el código resultante no siempre va a coincidir con tus preferencias estilísticas**. Y no pasa nada. Mientras sea correcto, mantenible y legible para futuras ejecuciones del agente, cumple el estándar. Discutir sobre el nombre de una función interna que un lint no captura es, en este contexto, gasto puro de atención humana — y la atención humana es ahora el recurso escaso.
 
+## La paradoja del brown-field
+
+Hay una observación incómoda que merece nombrarse antes de hablar de tácticas: **los proyectos brown-field son a la vez donde más se necesita un buen harness y donde más cuesta construirlo**. Las dos cosas a la vez, y por las mismas razones.
+
+**Por qué se necesita más.** Una base de código grande, vieja, con años de crecimiento orgánico, módulos heredados de tres equipos distintos y zonas que nadie del equipo actual entiende del todo, es exactamente el tipo de entorno donde un agente puede multiplicar el rendimiento del equipo — *si* puede operar con seguridad. Un greenfield es trivial para cualquier ingeniero senior; un brown-field es donde el agente, bien dirigido, te ahorra semanas de arqueología cada mes. El ROI potencial es máximo.
+
+**Por qué cuesta más.** Las mismas propiedades que hacen valioso al agente en brown-field son las que hacen difícil construirle un harness:
+
+- La disciplina vive como cultura, no como código. Las "reglas" están en la cabeza de los seniors, en revisiones de PR pasadas, en hilos de Slack de hace dos años. Materializarlas en lints es trabajo arqueológico previo a cualquier inversión en el harness.
+- La arquitectura es heterogénea. Distintos dominios siguen distintas convenciones, los límites entre capas existen en algunos sitios y en otros no. No puedes escribir *un* lint de direcciones de dependencia: tienes que escribir *N* lints, uno por zona coherente, y aceptar que algunas zonas no son codificables hasta que las refactorices primero.
+- La entropía es real y se resiste. Cada regla nueva que introduces choca con código que ya la viola, y tienes que decidir caso por caso si es excepción legítima o deuda que toca pagar. No es trabajo del agente; es trabajo humano de calibración previa.
+- El equipo está acostumbrado a las imperfecciones. Lo que en un greenfield sería un bug evidente, en brown-field es "siempre ha sido así". Convertir eso en invariantes obligatorios genera fricción social, no solo técnica.
+
+**Y hay un agravante: el agente amplifica la entropía existente.** Esto es importante porque convierte la dificultad en bucle de retroalimentación. Un agente aprende del código que tiene delante: si la base está llena de malas prácticas, las imita, las propaga más rápido de lo que un humano lo haría, y refuerza la sensación de que "así se hace aquí" porque el código nuevo se parece al viejo. Sin un sensor que detecte el patrón malo o una guía que lo prohíba, el agente no tiene cómo distinguir entre convención sana y deuda heredada — para él, todo lo que ve en el repo es "lo que el equipo hace". El bucle es silencioso: parece que el agente está siendo productivo y consistente, y lo es; solo que la consistencia es con lo equivocado. En un brown-field sin harness, **introducir un agente acelera la entropía en lugar de combatirla**. Esa es la razón más fuerte para no posponer el harness en este tipo de bases.
+
+**La consecuencia operativa**: en brown-field, la inversión en harness no es opcional — es prerrequisito. Y no se puede hacer en una semana. La pregunta no es "¿queremos el harness?" sino "¿qué velocidad de construcción del harness podemos sostener sin parar de entregar?". La respuesta sana suele ser: una regla nueva por semana, una zona codificada al mes, ningún big-bang. Lo que el siguiente apartado describe vale para ambos casos, pero **en brown-field es la única forma que funciona**.
+
 ## Cómo introducir esto en un repo existente
 
 Hacer un big-bang sobre un repo existente es mala idea. Lo que funciona:
