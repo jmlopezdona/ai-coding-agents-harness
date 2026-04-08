@@ -62,7 +62,7 @@ Con agentes pasa lo mismo. El rigor sale de "escribir cada línea con cuidado" y
 
 La heurística que vale la pena adoptar: cuando algo parezca dejar ir el rigor, busca dónde se reubicó. Si no lo encuentras, preocúpate. Las pertenencias quedan en otro sitio o se han perdido.
 
-Esto explica una observación incómoda: **los repos "feos pero estrictos" funcionan mejor con agentes que los "bonitos pero implícitos"**. Un repo con un linter agresivo, schemas validados en el borde, tests rápidos y un README denso es más amable para un agente que un repo con código elegante y disciplina cultural. Esto duele decirlo. También es cierto.
+Esto explica una observación que vale la pena tener delante: **los repos con disciplina codificada funcionan mejor con agentes que los repos con disciplina cultural**, aunque ambos produzcan código humano de calidad equivalente. Disciplina codificada significa linters agresivos, schemas validados en el borde, tests rápidos, docs versionadas. Disciplina cultural significa revisiones cuidadosas, seniors atentos, convenciones no escritas. La razón es directa: el agente no puede acceder a la cultura. Solo ve lo que el código deja claro mecánicamente.
 
 ## Lo que el agente no puede ver, no existe
 

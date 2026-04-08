@@ -30,7 +30,7 @@ Chad Fowler lo dice mejor: *"generative systems only work if invariants are expl
 
 Esto significa que los equipos que tenían más de su disciplina **codificada** (tipos, tests, schemas, IaC, observabilidad estructurada) están mejor posicionados para usar agentes que los equipos que confiaban en disciplina **cultural** (revisiones cuidadosas, seniors atentos, estándares no escritos). No porque los segundos sean peores, sino porque el agente no puede acceder a su disciplina. Es invisible para él.
 
-Esto explica una observación que se repite en equipos que están introduciendo agentes: **los repos "feos pero estrictos" funcionan mejor que los "bonitos pero implícitos"**. Un repo con un linter agresivo, schemas validados en el borde, tests rápidos y un README denso es más amable para un agente que un repo con código elegante y una cultura de pair programming impecable. Esto duele decirlo. También es cierto.
+El corolario práctico es que **dos repos con calidad humana equivalente pueden estar muy desigualmente preparados para agentes**. El que tiene la disciplina materializada en linters, schemas y tests funciona; el que la tiene en la cabeza de los seniors, no. La diferencia no se ve hasta que metes un agente y lo compruebas — y entonces es tarde para fingir que no estaba ahí.
 
 ## La señal de alarma
 
