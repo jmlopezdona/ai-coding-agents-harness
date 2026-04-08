@@ -141,15 +141,13 @@ Si estás bajo en varias dimensiones a la vez (la mayoría de equipos lo están)
 
 Si quieres llevarte un único artefacto de este capítulo, es esta plantilla. Pásala con tu equipo en una sesión de 60-90 minutos y rellénala con honestidad:
 
-```
-Dimensión           Nivel actual   Próximo nivel   Inversión concreta   Plazo estimado
-─────────────────   ────────────   ─────────────   ──────────────────   ──────────────
-Aislamiento         _              _               _                    _
-Contexto            _              _               _                    _
-Invariantes         _              _               _                    _
-Bucle / PR          _              _               _                    _
-Mantenimiento       _              _               _                    _
-```
+| Dimensión | Nivel actual | Próximo nivel | Inversión concreta | Plazo estimado |
+|---|---|---|---|---|
+| Aislamiento | | | | |
+| Contexto | | | | |
+| Invariantes | | | | |
+| Bucle / PR | | | | |
+| Mantenimiento | | | | |
 
 Y luego, sin discusión, **encierra en un círculo la fila que vas a atacar este mes**. Solo una. La regla es disciplinaria: si encierras dos, no encierras ninguna.
 
