@@ -44,7 +44,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Start here: 00-harness-engineering.md
+  - Overview: 00-harness-engineering.md
   - Mindset:
       - "1. Why the harness matters more than the model": 01-why-harness.md
       - "2. Relocating rigor": 02-relocating-rigor.md
@@ -112,7 +112,7 @@ plugins:
           site_name: Harness Engineering
           nav_translations:
             "Home": "Inicio"
-            "Start here": "Empieza aquí"
+            "Overview": "Resumen"
             "Mindset": "Mentalidad"
             "1. Why the harness matters more than the model": "1. Por qué el harness importa más que el modelo"
             "2. Relocating rigor": "2. La reubicación del rigor"
