@@ -16,11 +16,11 @@ La primera reacción típica es la viernes-de-limpieza. Un día a la semana, el 
 
 Las razones son obvias en retrospectiva:
 
-- **El throughput del agente sube más rápido que la capacidad humana de limpieza.** Cuanto mejor el harness, peor escala este modelo.
+- **El rendimiento del agente sube más rápido que la capacidad humana de limpieza.** Cuanto mejor el harness, peor escala este modelo.
 - **El conocimiento de "qué está mal" se queda en la cabeza del que limpia.** No se traduce en mejoras del harness. La semana siguiente, el agente comete los mismos errores.
 - **Limpiar es trabajo de baja moral.** Los ingenieros más senior lo evitan o lo hacen mal. La calidad del cleanup decae hasta que ya no compensa.
 
-La conclusión inevitable: **el mantenimiento tiene que ser parte del loop, no un evento separado**.
+La conclusión inevitable: **el mantenimiento tiene que ser parte del bucle, no un evento separado**.
 
 ## Garbage collection continuo
 
@@ -50,7 +50,7 @@ Esto cambia varias cosas operativas:
 
 Hay una frase que vale la pena leer dos veces: *"el gusto humano se captura una vez y luego se aplica continuamente en cada línea de código"*. Es la diferencia entre un equipo donde el senior tiene que estar mirando todo, y un equipo donde el senior dedica tiempo a **traducir su gusto en reglas ejecutables** y luego deja que el sistema lo aplique.
 
-Esto vuelve cada hora de trabajo del senior radicalmente más valiosa. En un flujo tradicional, una review consume 30 minutos del senior y mejora *un* PR. En un flujo agéntico bien hecho, esos mismos 30 minutos se invierten en escribir un golden principle o un lint custom, y mejoran *todos los PRs futuros*. El multiplicador es enorme y se acumula con el tiempo.
+Esto vuelve cada hora de trabajo del senior radicalmente más valiosa. En un flujo tradicional, una revisión consume 30 minutos del senior y mejora *un* PR. En un flujo agéntico bien hecho, esos mismos 30 minutos se invierten en escribir un golden principle o un lint custom, y mejoran *todos los PRs futuros*. El multiplicador es enorme y se acumula con el tiempo.
 
 La pregunta diagnóstica para un senior: ¿cuánto del tiempo que dedicas a calidad termina como código que se ejecuta automáticamente, y cuánto termina como conocimiento en tu cabeza que se evapora cuando dejes el equipo? Cuanto más alta la primera proporción, más sano el harness.
 
@@ -82,7 +82,7 @@ Hay un punto de maduración que vale la pena nombrar porque es hacia donde apunt
 
 El bucle se vuelve algo así:
 
-1. Sensores detectan un patrón recurrente (un tipo de bug, una clase de drift, un fallo de doc-gardening).
+1. Sensores detectan un patrón recurrente (un tipo de fallo, una clase de drift, un fallo de doc-gardening).
 2. Un agente meta lee la señal acumulada y propone una mejora: "este patrón lo hemos arreglado siete veces este mes; sugiero el siguiente lint custom" o "este doc ha desviado del código tres veces; sugiero esta restructuración".
 3. La propuesta llega al humano como un PR sobre el harness mismo — no sobre el código de la aplicación.
 4. El humano aprueba, ajusta o rechaza con argumentos, y el harness mejora.

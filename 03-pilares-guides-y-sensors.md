@@ -11,7 +11,7 @@ Ejemplos típicos:
 - **AGENTS.md / system prompts versionados.** No como lugar donde meter "todo lo importante", sino como índice corto que apunta a los sitios donde vive cada cosa (ver cap. 6). La diferencia entre un AGENTS.md de 100 líneas y uno de 1.000 no es de escala: es de filosofía.
 - **Convenciones embebidas en el scaffolding.** Plantillas de servicio, generadores de módulos, bootstraps de componentes. Si cada nuevo módulo lo crea un comando, el agente hereda la estructura sin tener que adivinarla.
 - **Schemas y tipos en el borde.** Validar entradas con Zod, Pydantic, JSON Schema o lo que toque. Esto no es solo defensa runtime: es un contrato legible que el agente puede leer e imitar. OpenAI menciona explícitamente que exigen parsear las formas de datos en el borde sin ser prescriptivos sobre la herramienta.
-- **Reglas de arquitectura mecanizadas.** Direcciones de dependencia entre capas, módulos prohibidos, imports no permitidos. Validadas estructuralmente, no en una review. (Nota: la *regla* es el guide; el linter que la valida es un sensor — ver más abajo.)
+- **Reglas de arquitectura mecanizadas.** Direcciones de dependencia entre capas, módulos prohibidos, imports no permitidos. Validadas estructuralmente, no en una revisión. (Nota: la *regla* es el guide; el linter que la valida es un sensor — ver más abajo.)
 - **Plantillas de PR y de plan.** Si todos los planes de ejecución tienen la misma forma, el agente sabe cómo escribirlos y cómo leer los antiguos.
 
 El test de un buen guide es este: **¿podría un agente nuevo, sin contexto previo, hacer lo correcto solo siguiéndolo?** Si la respuesta es "depende del juicio", el guide está incompleto.
@@ -27,7 +27,7 @@ Un sensor actúa **después**. Su trabajo es detectar cuándo algo está mal con
 Böckeler distingue dos tipos de ejecución:
 
 - **Computacional** — determinístico, rápido, barato. Tests, type checkers, linters, validación de schemas, builds, smoke tests.
-- **Inferencial** — no determinístico, más lento, capaz de evaluación semántica. Evals con LLM, revisión por otro agente, comparación de outputs contra una rúbrica.
+- **Inferencial** — no determinístico, más lento, capaz de evaluación semántica. Evals con LLM, revisión por otro agente, comparación de salidas contra una rúbrica.
 
 Los dos son necesarios. El error es usar el segundo donde basta con el primero (caro, ruidoso) o intentar usar el primero donde necesitas el segundo (imposible). La mayoría de equipos pecan de no aprovechar bien los computacionales.
 
@@ -37,13 +37,13 @@ Ejemplos prácticos:
 - **Type checks como sensor primario.** Un type checker estricto es uno de los sensores más baratos y más densos en señal. Si tu stack lo permite, súbele las restricciones.
 - **Linters custom con mensajes dirigidos al agente.** Esto es subestimado. Un lint custom no solo señala el patrón malo: su mensaje de error puede contener la instrucción de remedio. El agente lee el error, entiende el patrón correcto, lo aplica en el siguiente intento. Un buen linter custom es un tutor pasivo: actúa después del fallo (por eso es sensor), pero su señal es lo bastante didáctica como para que el agente converja en una o dos iteraciones.
 - **Observabilidad efímera en local.** Esto es lo que OpenAI hizo con la pila Vector + Victoria + LogQL/PromQL/TraceQL por worktree. Permite que el agente formule preguntas como "¿el arranque tarda menos de 800ms?" y obtenga una respuesta verificable. La observabilidad deja de ser un lujo de prod y se vuelve parte del bucle de desarrollo.
-- **Smoke tests del UI vía DevTools.** OpenAI conecta Chrome DevTools Protocol al runtime del agente: el agente puede sacar screenshots, navegar el DOM, reproducir bugs visuales. La UI deja de ser una caja negra para el agente.
-- **Reviews automáticas de otro agente.** Un agente revisa el PR de otro contra una rúbrica. No reemplaza al humano, pero filtra el 80% del ruido antes de que llegue a un humano.
-- **Evals con conjuntos congelados.** Para tareas donde no hay oracle determinístico (ej. calidad de un mensaje generado), un eval con casos congelados.
+- **Smoke tests del UI vía DevTools.** OpenAI conecta Chrome DevTools Protocol al runtime del agente: el agente puede sacar screenshots, navegar el DOM, reproducir fallos visuales. La UI deja de ser una caja negra para el agente.
+- **Revisiones automáticas de otro agente.** Un agente revisa el PR de otro contra una rúbrica. No reemplaza al humano, pero filtra el 80% del ruido antes de que llegue a un humano.
+- **Evals con conjuntos congelados.** Para tareas donde no hay oráculo determinístico (ej. calidad de un mensaje generado), un eval con casos congelados.
 
 ### El criterio para añadir un sensor
 
-Un sensor solo es útil si su señal entra de vuelta al loop. Un test que falla y nadie corrige no es un sensor: es ruido. Un dashboard que un humano mira una vez al mes no es un sensor para el agente: es un memorial.
+Un sensor solo es útil si su señal entra de vuelta al bucle. Un test que falla y nadie corrige no es un sensor: es ruido. Un dashboard que un humano mira una vez al mes no es un sensor para el agente: es un memorial.
 
 La pregunta correcta antes de añadir un sensor es: **¿cuándo este sensor se dispare, qué pasa? ¿Quién (o qué) lee la señal y qué hace con ella?** Si no hay una respuesta concreta, no añadas el sensor todavía; primero diseña el bucle.
 
@@ -62,6 +62,6 @@ Esto es exactamente lo que OpenAI describe como *"cuando la documentación no ba
 
 ## Una advertencia sobre el equilibrio
 
-Es posible sobre-restringir. Un harness con demasiados guides estrictos y demasiados sensors hipersensibles paraliza al agente: cualquier acción razonable dispara cinco alarmas y el loop se atasca. La regla útil es la misma que aplica a un equipo humano: **límites estrictos donde las consecuencias son irreversibles, autonomía donde son baratas de revertir**.
+Es posible sobre-restringir. Un harness con demasiados guides estrictos y demasiados sensors hipersensibles paraliza al agente: cualquier acción razonable dispara cinco alarmas y el bucle se atasca. La regla útil es la misma que aplica a un equipo humano: **límites estrictos donde las consecuencias son irreversibles, autonomía donde son baratas de revertir**.
 
-Los próximos capítulos aplican estos dos pilares a problemas concretos: el loop (cap. 4), los entornos aislados (cap. 5), el contexto (cap. 6), la arquitectura (cap. 7) y el flujo de PR (cap. 8). En cada uno verás guides y sensors trabajando juntos.
+Los próximos capítulos aplican estos dos pilares a problemas concretos: el bucle (cap. 4), los entornos aislados (cap. 5), el contexto (cap. 6), la arquitectura (cap. 7) y el flujo de PR (cap. 8). En cada uno verás guides y sensors trabajando juntos.

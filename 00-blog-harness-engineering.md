@@ -10,7 +10,7 @@ Antes de entrar en materia, conviene dejar tres datos sobre la mesa.
 
 **Stripe** mergea **más de 1.000 pull requests por semana** generados por agentes. La base de código tiene cientos de millones de líneas, en Ruby con Sorbet, con librerías internas que ningún modelo público conoce. Y aún así, los agentes funcionan.
 
-**OpenAI** construyó un producto interno con **un millón de líneas de código y 1.500 PRs en cinco meses**, con un equipo que creció de 3 a 7 ingenieros, bajo una regla absoluta: **cero líneas escritas a mano**. Ninguna. Ni la lógica, ni los tests, ni la configuración de CI, ni la documentación, ni los scripts de tooling. Todo Codex.
+**OpenAI** construyó un producto interno con **un millón de líneas de código y 1.500 PRs en cinco meses**, con un equipo que creció de 3 a 7 ingenieros, bajo una regla absoluta: **cero líneas escritas a mano**. Ninguna. Ni la lógica, ni los tests, ni la configuración de CI, ni la documentación, ni los scripts de herramientas. Todo Codex.
 
 **Geoffrey Huntley** describe un patrón que llama "Ralph loop" — un orquestador minúsculo y monolítico que ejecuta una iteración, observa el resultado, y vuelve a empezar — y lo presenta no como un truco, sino como la primitiva más importante del trabajo agéntico.
 
@@ -49,12 +49,12 @@ Es el mismo cambio mental que distingue a un equipo de plataforma maduro de uno 
 
 ## El rigor no desaparece, se reubica
 
-Hay una observación de Chad Fowler que conviene tener delante antes de empezar a desmantelar prácticas. Cada vez que el software ha dado un salto importante — lenguajes dinámicos, extreme programming, despliegue continuo — alguien ha anunciado "ya no hace falta tanto rigor". Y cada vez se ha equivocado. **El rigor no desaparece; se traslada a otro sitio**. Los lenguajes dinámicos lo movieron al test suite; XP lo movió a la integración continua; el despliegue continuo lo movió a la observabilidad y al rollback automático.
+Hay una observación de Chad Fowler que conviene tener delante antes de empezar a desmantelar prácticas. Cada vez que el software ha dado un salto importante — lenguajes dinámicos, extreme programming, despliegue continuo — alguien ha anunciado "ya no hace falta tanto rigor". Y cada vez se ha equivocado. **El rigor no desaparece; se traslada a otro sitio**. Los lenguajes dinámicos lo movieron al test suite; XP lo movió a la integración continua; el despliegue continuo lo movió a la observabilidad y a la reversión automática.
 
 Con agentes pasa lo mismo. El rigor sale de "escribir cada línea con cuidado" y de "revisar humano-a-humano cada PR", y entra en otros dos sitios:
 
 - **Especificación de la intención.** Lo que antes eran criterios informales en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La sloppiness en el ticket se convierte en sloppiness en el código.
-- **Evaluación verificable.** Si no puedes evaluar mecánicamente si el output del agente es correcto, no tienes harness, tienes una ruleta.
+- **Evaluación verificable.** Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta.
 
 La heurística que vale la pena adoptar: cuando algo parezca dejar ir el rigor, busca dónde se reubicó. Si no lo encuentras, preocúpate. Las pertenencias quedan en otro sitio o se han perdido.
 
@@ -74,10 +74,10 @@ Y aquí ocurre un efecto secundario que casi nadie anticipa: **al hacer el repo 
 
 ## Tres modos de delegación, y solo uno escala
 
-Kief Morris articula una distinción que evita la mitad de las discusiones improductivas que hay sobre supervisión humana. Hay tres modos de meter humanos en el loop con agentes:
+Kief Morris articula una distinción que evita la mitad de las discusiones improductivas que hay sobre supervisión humana. Hay tres modos de meter humanos en el bucle con agentes:
 
 - **Humans Outside the Loop ("vibe coding").** El humano define el resultado y mira qué sale. Funciona para prototipos. Falla en producción seria.
-- **Humans In the Loop.** El humano revisa cada artefacto, línea por línea. Es aritméticamente insostenible cuando el throughput del agente sube. El humano se vuelve cuello de botella.
+- **Humans In the Loop.** El humano revisa cada artefacto, línea por línea. Es aritméticamente insostenible cuando el rendimiento del agente sube. El humano se vuelve cuello de botella.
 - **Humans On the Loop.** El humano supervisa el sistema, no los artefactos. Cuando algo va mal, **no corrige el artefacto: modifica el sistema que produjo el artefacto**.
 
 El único modo que escala a meses vista es "on the loop". El "in the loop" es el régimen al que llega un equipo conservador por defecto y donde se queda atascado. La transición saludable es de "in" hacia "on", invirtiendo en el harness hasta que la supervisión del sistema sea posible. La transición a "outside" — saltarse el harness directamente — es donde más equipos se queman intentando ahorrarse las fases intermedias.
@@ -87,9 +87,9 @@ El único modo que escala a meses vista es "on the loop". El "in the loop" es el
 Cuando aceptas todo lo anterior, el trabajo del ingeniero cambia. Sigues siendo el centro del sistema, pero el centro tiene una forma distinta:
 
 - Antes escribías código. Ahora **diseñas entornos donde el código correcto puede escribirse a sí mismo**.
-- Antes revisabas PRs. Ahora **diseñas las reglas, sensores y reviewers que revisan PRs**.
+- Antes revisabas PRs. Ahora **diseñas las reglas, sensores y revisores que revisan PRs**.
 - Antes entendías el dominio para implementarlo. Ahora **entiendes el dominio para especificarlo de forma que el agente pueda implementarlo correctamente**.
-- Antes arreglabas bugs. Ahora **diagnosticas por qué el agente cometió el bug y modificas el harness para que no vuelva a pasar**.
+- Antes arreglabas fallos. Ahora **diagnosticas por qué el agente cometió el fallo y modificas el harness para que no vuelva a pasar**.
 
 Las habilidades que ganan valor son las que ya distinguían a los buenos seniors: gusto técnico, pensamiento sistémico, claridad al especificar, juicio sobre cuándo invertir en infraestructura. Las que pierden valor relativo son las puramente artesanales: tipear rápido, memorizar APIs, dominar syntax exótica.
 

@@ -18,12 +18,12 @@ Cada una se evalúa en cinco niveles, del 0 al 4. Los niveles no son notas: son 
 
 ## Niveles, en una tabla
 
-| Nivel | Aislamiento | Contexto | Invariantes | Loop / PR | Mantenimiento |
+| Nivel | Aislamiento | Contexto | Invariantes | Bucle / PR | Mantenimiento |
 |---|---|---|---|---|---|
-| **0** | Agente corre en máquina del dev sobre el checkout principal | Conocimiento en Slack, Notion, cabezas | Disciplina cultural, sin lints custom | Loop manual: copiar/pegar al chat | Limpieza humana ad hoc |
+| **0** | Agente corre en máquina del dev sobre el checkout principal | Conocimiento en Slack, Notion, cabezas | Disciplina cultural, sin lints custom | Bucle manual: copiar/pegar al chat | Limpieza humana ad hoc |
 | **1** | Contenedor reusado entre tareas | README + AGENTS.md monolítico | Linters genéricos del lenguaje | Agente ejecuta y reporta, humano valida cada paso | Viernes de cleanup |
-| **2** | Sandboxes dedicados por tarea, creados manualmente | AGENTS.md como índice + carpeta `docs/` parcial | Algunos lints custom, mensajes para humanos | Loop interno automatizado, PR revisado humano-a-humano | Agentes recurrentes para casos puntuales |
-| **3** | Sandboxes desechables, creación en segundos, paralelizables | `docs/` estructurado, planes versionados, doc-gardening básico | Lints custom con mensajes dirigidos al agente, arquitectura mecanizada | Reviews agente-a-agente para PRs rutinarios, merge gates ligeros | Golden principles + agentes recurrentes que abren PRs de refactor |
+| **2** | Sandboxes dedicados por tarea, creados manualmente | AGENTS.md como índice + carpeta `docs/` parcial | Algunos lints custom, mensajes para humanos | Bucle interno automatizado, PR revisado humano-a-humano | Agentes recurrentes para casos puntuales |
+| **3** | Sandboxes desechables, creación en segundos, paralelizables | `docs/` estructurado, planes versionados, doc-gardening básico | Lints custom con mensajes dirigidos al agente, arquitectura mecanizada | Revisiones agente-a-agente para PRs rutinarios, merge gates ligeros | Golden principles + agentes recurrentes que abren PRs de refactor |
 | **4** | Aislamiento + observabilidad efímera por entorno (logs/metrics/traces consultables por el agente) | Repo como sistema de registro completo, agent-readable end-to-end | Invariantes ejecutables que cubren toda la arquitectura, escritos por el propio agente | Flujo de PR mayoritariamente agente-a-agente, humano por excepción | Agentic flywheel: agentes proponen mejoras al propio harness |
 
 Lee cada columna como una escalera. La mayoría de equipos que han adoptado agentes están en el rango **0-2** en casi todo. Los equipos que aparecen en los artículos de referencia (OpenAI, Stripe) están en el rango **3-4**, y no en todas las dimensiones por igual.
@@ -58,10 +58,10 @@ Para cada dimensión, responde con honestidad. La trampa es leer las preguntas y
 4. Los mensajes de error de tus linters custom, ¿están escritos para que un agente los entienda y aplique el remedio?
 5. Las invariantes de estilo (logging estructurado, naming, tamaño de archivos), ¿están ejecutadas o documentadas?
 
-### Loop / Flujo de PR
+### Bucle / Flujo de PR
 
-1. ¿El agente puede ejecutar tests, ver su output e iterar sin que un humano intervenga?
-2. ¿Cuánto tarda el loop interno típico (edición → typecheck → test → siguiente edición)?
+1. ¿El agente puede ejecutar tests, ver su salida e iterar sin que un humano intervenga?
+2. ¿Cuánto tarda el bucle interno típico (edición → typecheck → test → siguiente edición)?
 3. ¿Hay revisiones agente-a-agente en tu flujo de PR, o todo lo revisa un humano?
 4. ¿Cuántas categorías de PR tienes definidas (trivial/rutinario/sensible/decisión), o todos los PRs van por el mismo camino?
 5. Cuando un test es flaky, ¿lo reintentan automáticamente o bloquea el merge indefinidamente?
@@ -101,18 +101,18 @@ Una vez tengas tus cinco niveles aproximados, esta matriz te dice qué inversió
 | De | A | Inversión |
 |---|---|---|
 | 0 → 1 | Linters genéricos en CI | Habilitar y endurecer las herramientas estándar de tu stack (eslint, ruff, golangci-lint, etc.). |
-| 1 → 2 | Primeros lints custom | Identificar 2-3 patrones que se repiten en reviews y convertirlos en reglas. Empezar en warning. |
+| 1 → 2 | Primeros lints custom | Identificar 2-3 patrones que se repiten en revisiones y convertirlos en reglas. Empezar en warning. |
 | 2 → 3 | Lints custom con mensajes para el agente + arquitectura mecanizada | Reescribir mensajes de error como instrucciones. Validar direcciones de dependencia entre capas. |
 | 3 → 4 | Cobertura completa de invariantes, escritas por el agente | El propio agente propone y mantiene los lints. Cobertura de invariantes arquitectónicos al 100%. |
 
-### Loop / Flujo de PR
+### Bucle / Flujo de PR
 
 | De | A | Inversión |
 |---|---|---|
-| 0 → 1 | Loop interno mínimo | El agente puede correr `test` y ver el resultado. Sin intervención humana en cada paso. |
-| 1 → 2 | Loop interno completo + PR automatizado | El agente ejecuta typecheck/test/lint en bucle hasta verde. Abre PR. Humano revisa antes de merge. |
-| 2 → 3 | Categorización de PRs + reviews agente-a-agente | Definir las 4 categorías (trivial/rutinario/sensible/decisión). Introducir un agente revisor para los rutinarios. |
-| 3 → 4 | Flujo de PR mayoritariamente agente-a-agente | Múltiples agentes revisores especializados. Humano interviene por excepción. Merge gates ligeros con rollback rápido. |
+| 0 → 1 | Bucle interno mínimo | El agente puede correr `test` y ver el resultado. Sin intervención humana en cada paso. |
+| 1 → 2 | Bucle interno completo + PR automatizado | El agente ejecuta typecheck/test/lint en bucle hasta verde. Abre PR. Humano revisa antes de merge. |
+| 2 → 3 | Categorización de PRs + revisiones agente-a-agente | Definir las 4 categorías (trivial/rutinario/sensible/decisión). Introducir un agente revisor para los rutinarios. |
+| 3 → 4 | Flujo de PR mayoritariamente agente-a-agente | Múltiples agentes revisores especializados. Humano interviene por excepción. Merge gates ligeros con reversión rápida. |
 
 ### Mantenimiento
 
@@ -131,7 +131,7 @@ Si estás bajo en varias dimensiones a la vez (la mayoría de equipos lo están)
 
 **2. Si Aislamiento ≥ 2 pero Contexto está en 0 o 1, ataca Contexto.** Un agente con buen sandbox pero mal contexto produce código sintácticamente correcto e ideológicamente equivocado. Subir Contexto a 2 ya elimina la mayoría de las divergencias arquitectónicas.
 
-**3. Si Aislamiento y Contexto ≥ 2, mira en cuál estás más bajo: Invariantes o Loop.** Las dos son importantes y se refuerzan mutuamente. Como heurística: si tu equipo se queja más de "el agente no sigue las convenciones", sube Invariantes. Si se queja más de "el agente tarda demasiado en iterar" o "tengo que revisar todo a mano", sube Loop.
+**3. Si Aislamiento y Contexto ≥ 2, mira en cuál estás más bajo: Invariantes o Bucle.** Las dos son importantes y se refuerzan mutuamente. Como heurística: si tu equipo se queja más de "el agente no sigue las convenciones", sube Invariantes. Si se queja más de "el agente tarda demasiado en iterar" o "tengo que revisar todo a mano", sube Bucle.
 
 **4. Mantenimiento es la última, pero no la opcional.** Por debajo de nivel 2 en Mantenimiento, todo lo que has construido se va a degradar. La buena noticia: cuando subes las otras dimensiones a 2-3, Mantenimiento sube parcialmente sola, porque los agentes recurrentes tienen sobre qué operar.
 
@@ -147,7 +147,7 @@ Dimensión           Nivel actual   Próximo nivel   Inversión concreta   Plazo
 Aislamiento         _              _               _                    _
 Contexto            _              _               _                    _
 Invariantes         _              _               _                    _
-Loop / PR           _              _               _                    _
+Bucle / PR          _              _               _                    _
 Mantenimiento       _              _               _                    _
 ```
 

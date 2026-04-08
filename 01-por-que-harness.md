@@ -8,7 +8,7 @@ A ese "alrededor" la comunidad lo llama el *harness*: el conjunto de prompts, he
 
 Un motor de Fórmula 1 dentro de un utilitario no gana carreras. Lo que gana carreras es el chasis, la aerodinámica, los neumáticos, la telemetría y el equipo de boxes. El modelo es el motor; todo lo demás es donde se gana o se pierde la carrera. Y lo importante: ese "todo lo demás" lo construyes tú, no el proveedor del modelo.
 
-Cuando un equipo se queja de que "el agente alucina" o "no entiende el código", el problema casi nunca es el modelo. El problema es que el agente está operando en un entorno en el que sería irrazonable esperar que un humano nuevo tampoco entendiera nada. No tiene mapa, no tiene tests rápidos, no puede reproducir el bug, no sabe cuál es la convención del equipo y nadie le dice cuándo lo que hizo está mal.
+Cuando un equipo se queja de que "el agente alucina" o "no entiende el código", el problema casi nunca es el modelo. El problema es que el agente está operando en un entorno en el que sería irrazonable esperar que un humano nuevo tampoco entendiera nada. No tiene mapa, no tiene tests rápidos, no puede reproducir el fallo, no sabe cuál es la convención del equipo y nadie le dice cuándo lo que hizo está mal.
 
 ## La definición operativa
 
@@ -31,7 +31,7 @@ Ninguno de estos equipos ganó porque tuviera acceso a un modelo secreto. Ganaro
 
 ## Por qué esto cambia el trabajo del equipo
 
-Cuando aceptas que el harness es donde se juega la calidad, dejas de hacer ciertas cosas y empiezas a hacer otras. Dejas de buscar el "prompt perfecto" — los prompts viven en el harness ahora, versionados como código. Dejas de copiar y pegar errores al chat — los errores entran al loop por sensores automáticos. Dejas de pedirle al agente que adivine el contexto — el contexto vive estructurado en el repo, accesible mecánicamente.
+Cuando aceptas que el harness es donde se juega la calidad, dejas de hacer ciertas cosas y empiezas a hacer otras. Dejas de buscar el "prompt perfecto" — los prompts viven en el harness ahora, versionados como código. Dejas de copiar y pegar errores al chat — los errores entran al bucle por sensores automáticos. Dejas de pedirle al agente que adivine el contexto — el contexto vive estructurado en el repo, accesible mecánicamente.
 
 Y empiezas a hacer cosas que antes parecían over-engineering: linters custom para una sola convención, planes de ejecución versionados, observabilidad en local, agentes de "doc-gardening" que mantienen la documentación al día.
 

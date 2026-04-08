@@ -24,7 +24,7 @@ Para un equipo humano esto puede sentirse rígido. Para un agente, es liberador:
 
 Otra observación de OpenAI: prefieren librerías "boring" — composables, con APIs estables, bien representadas en el training data del modelo. La razón no es nostalgia. Es que esas librerías son **mecánicamente más fáciles de razonar para el agente**: hay más ejemplos en el corpus, las convenciones son estables, el comportamiento es predecible.
 
-Hay un caso límite que merece atención porque rompe intuiciones: a veces es más barato que el agente reimplemente un subset de una librería que integrarla. OpenAI da un ejemplo concreto: en lugar de usar `p-limit` (un helper minúsculo de concurrencia), Codex implementó su propia versión integrada con su instrumentación de OpenTelemetry, con 100% de cobertura. ¿Por qué? Porque la librería externa era una caja negra cuyo comportamiento opaco generaba más fricción en el loop que el código que la reemplaza.
+Hay un caso límite que merece atención porque rompe intuiciones: a veces es más barato que el agente reimplemente un subset de una librería que integrarla. OpenAI da un ejemplo concreto: en lugar de usar `p-limit` (un helper minúsculo de concurrencia), Codex implementó su propia versión integrada con su instrumentación de OpenTelemetry, con 100% de cobertura. ¿Por qué? Porque la librería externa era una caja negra cuyo comportamiento opaco generaba más fricción en el bucle que el código que la reemplaza.
 
 Esto va contra el reflejo "no reinventes la rueda", y es importante calibrarlo. La regla útil es: **si el agente puede leer, modificar y validar el código completo de algo en su contexto efectivo, eso es una ventaja arquitectónica neta**. Las dependencias externas que el agente no puede inspeccionar son fricción permanente. Las que puede inspeccionar son colaboradores. La diferencia se nota a meses vista.
 
@@ -36,7 +36,7 @@ OpenAI menciona "invariantes de estilo" enforcadas estáticamente: registro estr
 
 La diferencia es decisiva. Un style guide humano descansa en que el revisor lo recuerde y lo aplique. Un lint no descansa en nada: o está, o no está. Y dado que el agente puede generar miles de líneas por día, la única forma de mantener consistencia es renunciando a que algún humano la mantenga.
 
-Un detalle táctico importante: **el output del lint es para el agente, no solo para el humano**. Cuando escribas un lint custom, escribe el mensaje de error pensando que lo va a leer un agente: explica el patrón correcto, da un ejemplo, indica dónde mirar. Un lint con mensaje "incorrect import" es inútil. Un lint con mensaje "este módulo solo puede importar de los Providers; mueve la dependencia a `providers/auth.ts` o reescribe usando el provider existente" es enseñanza activa.
+Un detalle táctico importante: **la salida del lint es para el agente, no solo para el humano**. Cuando escribas un lint custom, escribe el mensaje de error pensando que lo va a leer un agente: explica el patrón correcto, da un ejemplo, indica dónde mirar. Un lint con mensaje "incorrect import" es inútil. Un lint con mensaje "este módulo solo puede importar de los Providers; mueve la dependencia a `providers/auth.ts` o reescribe usando el provider existente" es enseñanza activa.
 
 ## Límites estrictos, autonomía local
 
@@ -45,7 +45,7 @@ El equilibrio que OpenAI articula merece copiarse literalmente: *"liderar como u
 En la práctica esto significa:
 
 - **Los límites son sagrados:** direcciones de dependencia, contratos de schemas, observabilidad obligatoria, gestión de errores en bordes. Bloqueas merge.
-- **Lo de dentro es libre:** cómo se nombra una variable interna, cómo se estructura una función privada, qué patrón concreto usa para iterar una lista. No es asunto del lint ni de la review.
+- **Lo de dentro es libre:** cómo se nombra una variable interna, cómo se estructura una función privada, qué patrón concreto usa para iterar una lista. No es asunto del lint ni de la revisión.
 
 Hay una consecuencia que a muchos equipos les cuesta aceptar: **el código resultante no siempre va a coincidir con tus preferencias estilísticas**. Y no pasa nada. Mientras sea correcto, mantenible y legible para futuras ejecuciones del agente, cumple el estándar. Discutir sobre el nombre de una función interna que un lint no captura es, en este contexto, gasto puro de atención humana — y la atención humana es ahora el recurso escaso.
 

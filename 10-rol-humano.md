@@ -8,9 +8,9 @@ Antes de hablar de qué hace el humano, conviene fijar *dónde* está el humano.
 
 **Humans Outside the Loop — "vibe coding".** Los agentes manejan el ciclo entero. Los humanos solo definen el resultado esperado y miran qué sale. Funciona para prototipos y exploración. Falla en producción seria: nadie está calibrando nada, los costes se descontrolan, la calidad deriva sin que nadie lo note. Es seductor porque parece máxima palanca, y es donde más equipos se queman al intentar saltarse las fases intermedias.
 
-**Humans In the Loop — supervisión por artefacto.** El humano revisa cada cosa que el agente produce, línea por línea, antes de aceptarla. Es el modelo por defecto al que llega un equipo conservador. Su problema, ya discutido en el capítulo 8, es aritmético: el humano se convierte en cuello de botella permanente, las reviews degeneran en ritual, y la palanca del agente nunca se materializa. La velocidad efectiva queda capada por la atención humana disponible.
+**Humans In the Loop — supervisión por artefacto.** El humano revisa cada cosa que el agente produce, línea por línea, antes de aceptarla. Es el modelo por defecto al que llega un equipo conservador. Su problema, ya discutido en el capítulo 8, es aritmético: el humano se convierte en cuello de botella permanente, las revisiones degeneran en ritual, y la palanca del agente nunca se materializa. La velocidad efectiva queda capada por la atención humana disponible.
 
-**Humans On the Loop — supervisión del sistema, no del artefacto.** Es la posición que esta guía entera defiende, y la que Morris recomienda explícitamente. El humano no inspecciona cada output; diseña y mejora el sistema (el harness) que produce los outputs. Cuando algo va mal, la respuesta no es corregir el artefacto sino **modificar el sistema que produjo el artefacto**. Esa frase merece subrayarse: es la diferencia entre apagar fuegos y diseñar prevención de incendios.
+**Humans On the Loop — supervisión del sistema, no del artefacto.** Es la posición que esta guía entera defiende, y la que Morris recomienda explícitamente. El humano no inspecciona cada salida; diseña y mejora el sistema (el harness) que produce las salidas. Cuando algo va mal, la respuesta no es corregir el artefacto sino **modificar el sistema que produjo el artefacto**. Esa frase merece subrayarse: es la diferencia entre apagar fuegos y diseñar prevención de incendios.
 
 La transición saludable es de "in" hacia "on", no hacia "outside". "Outside" es una destinación válida solo para fragmentos del trabajo donde los riesgos son aceptablemente bajos; "on" es el régimen estable para todo lo demás. Si tu equipo está atascado en "in", la solución no es relajarlo a "outside" — es invertir en el harness hasta que "on" sea posible.
 
@@ -18,7 +18,7 @@ La transición saludable es de "in" hacia "on", no hacia "outside". "Outside" es
 
 Otra distinción de Morris que ayuda a localizar el rol humano: hay dos ciclos en juego, y conviene no confundirlos.
 
-- El **ciclo "why"** es donde se transforma una idea en software que importa. Implica entender qué se quiere lograr, para quién, bajo qué restricciones, con qué trade-offs, en qué orden. Es trabajo profundamente humano y no se delega.
+- El **ciclo "why"** es donde se transforma una idea en software que importa. Implica entender qué se quiere lograr, para quién, bajo qué restricciones, con qué compromisos, en qué orden. Es trabajo profundamente humano y no se delega.
 - El **ciclo "how"** es donde se producen los artefactos intermedios — código, tests, configs, docs — que materializan el "why". Es el ciclo donde los agentes brillan y donde la mayor parte de esta guía aplica.
 
 La trampa más común es ocupar tiempo humano en el "how" y descuidar el "why". Un equipo que delega bien el "how" libera el cuello de botella escaso (atención humana) para invertirlo donde realmente importa (entender qué construir y por qué). Un equipo que se queda atrapado en revisar artefactos del "how" no solo es lento; está usando mal a sus humanos.
@@ -38,9 +38,9 @@ Estas tres cosas no son automatizables, no porque el modelo no sea capaz, sino p
 OpenAI describe el cambio así, y vale la pena citarlo: *"las personas dirigen, los agentes ejecutan"*. En la práctica, el trabajo del ingeniero pasa de ser:
 
 - escribir código → **diseñar entornos donde otros (agentes) puedan escribir código bien**
-- revisar PRs → **diseñar las reglas, sensores y reviewers que revisan PRs**
+- revisar PRs → **diseñar las reglas, sensores y revisores que revisan PRs**
 - entender el dominio para implementarlo → **entender el dominio para especificarlo de forma que el agente pueda implementarlo correctamente**
-- arreglar bugs → **diagnosticar por qué el agente cometió el bug y modificar el harness para que no vuelva a pasarlo**
+- arreglar fallos → **diagnosticar por qué el agente cometió el fallo y modificar el harness para que no vuelva a pasarlo**
 
 Esto suena a meta-ingeniería, y lo es. La descripción del puesto se vuelve más parecida a "ingeniero de plataforma para colaboradores no humanos" que a "programador".
 
@@ -50,7 +50,7 @@ Cuando filtras todo el ruido y miras lo que los humanos efectivamente hacen en e
 
 ### 1. Especificar la intención
 
-El agente puede implementar casi cualquier cosa. Lo que no puede es decidir qué *vale la pena* implementar. Convertir un problema vago en un objetivo accionable, con criterios de aceptación verificables, sigue siendo trabajo humano. Y es probablemente el trabajo más palanca: una especificación clara ahorra horas de loops mal dirigidos.
+El agente puede implementar casi cualquier cosa. Lo que no puede es decidir qué *vale la pena* implementar. Convertir un problema vago en un objetivo accionable, con criterios de aceptación verificables, sigue siendo trabajo humano. Y es probablemente el trabajo más palanca: una especificación clara ahorra horas de bucles mal dirigidos.
 
 La forma concreta varía — puede ser un plan de ejecución versionado, un ticket bien escrito, un prompt detallado — pero el contenido tiene que tener tres cosas: qué se quiere lograr, cómo se sabrá que está hecho, y qué *no* hacer. La tercera es la que más a menudo se omite y la que más drift previene.
 
@@ -62,9 +62,9 @@ Este es el trabajo donde un senior aporta más leverage. Cada hora invertida aqu
 
 ### 3. Decidir lo irreversible
 
-Hay decisiones cuyo coste de error es asimétrico: deprecar una API pública, cambiar un schema de base de datos en producción, modificar un contrato con un proveedor, aceptar un trade-off de seguridad. En estos casos no quieres velocidad, quieres deliberación. Y la deliberación necesita criterio, contexto organizacional, y responsabilidad — las tres cosas humanas que enumeramos al principio.
+Hay decisiones cuyo coste de error es asimétrico: deprecar una API pública, cambiar un schema de base de datos en producción, modificar un contrato con un proveedor, aceptar un compromiso de seguridad. En estos casos no quieres velocidad, quieres deliberación. Y la deliberación necesita criterio, contexto organizacional, y responsabilidad — las tres cosas humanas que enumeramos al principio.
 
-La regla operativa: **cuanto más irreversible la decisión, más humano debe haber en el loop, más temprano**. No al final, revisando un PR que ya se escribió. Al principio, eligiendo si hacerlo y cómo.
+La regla operativa: **cuanto más irreversible la decisión, más humano debe haber en el bucle, más temprano**. No al final, revisando un PR que ya se escribió. Al principio, eligiendo si hacerlo y cómo.
 
 ### 4. Revisar lo que ya se filtró
 
@@ -82,7 +82,7 @@ Hay tres hábitos que muchos equipos arrastran del flujo pre-agente y que convie
 
 **Revisar cada PR.** Como ya dijimos en el capítulo 8, no escala. Más importante: **da una falsa sensación de control**. Si revisas todo en piloto automático, no estás revisando nada bien. Mejor revisar el 10% que importa con atención que el 100% por encima.
 
-**Discutir estilo.** Si el output del agente no respeta una preferencia estilística y no la captura un lint, tienes dos opciones: codificar la preferencia como lint, o aceptar el output. Discutirlo en cada PR es desperdicio puro.
+**Discutir estilo.** Si la salida del agente no respeta una preferencia estilística y no la captura un lint, tienes dos opciones: codificar la preferencia como lint, o aceptar la salida. Discutirlo en cada PR es desperdicio puro.
 
 **Pedirle al agente que "haga las cosas como tú las harías".** El agente no es tú. Lo que quieres es que las cosas que hace satisfagan los invariantes que importan. Si los invariantes están bien capturados, el "estilo" del agente es irrelevante. Si no lo están, codificarlos es más útil que pedir.
 

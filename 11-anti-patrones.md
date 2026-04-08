@@ -18,19 +18,19 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué parece buena idea.** Parece responsable. "Los humanos siguen teniendo la última palabra" suena bien en reuniones.
 
-**Por qué falla.** Aritmética: si el agente produce 50 PRs al día y cada review lleva 15 minutos, los humanos son el cuello de botella permanente. Peor, las reviews en esas condiciones se vuelven superficiales y no pillan nada; se convierten en ritual, no en control.
+**Por qué falla.** Aritmética: si el agente produce 50 PRs al día y cada revisión lleva 15 minutos, los humanos son el cuello de botella permanente. Peor, las revisiones en esas condiciones se vuelven superficiales y no pillan nada; se convierten en ritual, no en control.
 
 **Qué hacer en su lugar.** Categorizar PRs (capítulo 8): trivial auto-mergeable, rutinarios revisados por agentes, sensibles con humano, decisiones con humano desde antes. Reserva la atención humana para los casos donde aporta valor real.
 
 ## Anti-patrón 3 — Tratar al agente como autocomplete glorificado
 
-**El síntoma.** Los ingenieros usan al agente para generar fragmentos de código dentro de su editor, copian, pegan, ajustan manualmente. No hay loop, no hay sandbox, no hay sensores automáticos.
+**El síntoma.** Los ingenieros usan al agente para generar fragmentos de código dentro de su editor, copian, pegan, ajustan manualmente. No hay bucle, no hay sandbox, no hay sensores automáticos.
 
 **Por qué parece buena idea.** Es la adopción más suave, sin reestructurar nada. Se siente como una productividad pequeña pero segura.
 
 **Por qué falla.** Es lo contrario de un harness. No acumulas nada, no mejoras nada, no desbloqueas el paralelismo. El agente es útil al 5% de su capacidad y los ingenieros se convencen de que "los agentes son útiles pero limitados" basándose en una muestra que es exactamente el peor caso.
 
-**Qué hacer en su lugar.** Invertir en el loop desde el principio (capítulo 4). El agente trabaja en su sandbox, ejecuta, valida, itera. Si todavía usas el agente principalmente como autocomplete, no estás en el mundo que describe esta guía.
+**Qué hacer en su lugar.** Invertir en el bucle desde el principio (capítulo 4). El agente trabaja en su sandbox, ejecuta, valida, itera. Si todavía usas el agente principalmente como autocomplete, no estás en el mundo que describe esta guía.
 
 ## Anti-patrón 4 — Ignorar el aislamiento de entornos
 
@@ -44,7 +44,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 ## Anti-patrón 5 — Documentación humana como harness
 
-**El síntoma.** "Lo tenemos documentado en el wiki del equipo", "está en el style guide", "se explica en la página de onboarding". El equipo confía en que el agente respetará convenciones que viven en documentos que no están en el repo.
+**El síntoma.** "Lo tenemos documentado en el wiki del equipo", "está en el style guide", "se explica en la página de incorporación". El equipo confía en que el agente respetará convenciones que viven en documentos que no están en el repo.
 
 **Por qué parece buena idea.** Ya existe la documentación; ¿por qué duplicarla?
 
@@ -98,7 +98,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué parece buena idea.** A veces es verdad. Los modelos mejoran.
 
-**Por qué falla.** La mayoría de las veces, el fallo no está en el modelo — está en lo que el modelo podía ver (contexto), en cómo se evaluó su output (sensores), en las restricciones que tenía disponibles (guides), o en el entorno donde ejecutó (sandbox). Esperar un modelo mejor para arreglar un harness roto es gastar el tiempo en el sitio equivocado. Cuando el modelo nuevo llegue, el harness seguirá roto y los problemas seguirán.
+**Por qué falla.** La mayoría de las veces, el fallo no está en el modelo — está en lo que el modelo podía ver (contexto), en cómo se evaluó su salida (sensores), en las restricciones que tenía disponibles (guides), o en el entorno donde ejecutó (sandbox). Esperar un modelo mejor para arreglar un harness roto es gastar el tiempo en el sitio equivocado. Cuando el modelo nuevo llegue, el harness seguirá roto y los problemas seguirán.
 
 **Qué hacer en su lugar.** Primero reflejo: ante cualquier fallo, preguntar "¿qué del harness no está haciendo su trabajo?". Si la respuesta honesta es "el harness está bien, es el modelo", entonces sí, espera al modelo. Ocurre; solo es menos frecuente de lo que tu equipo probablemente cree.
 
@@ -112,4 +112,4 @@ Esto es, en el fondo, una buena noticia. El modelo no lo controlas tú — lo co
 
 Los capítulos 1 al 10 describen los pilares. Este capítulo 11 describe las trampas. La siguiente versión de esta guía añadirá plantillas ejecutables (AGENTS.md de ejemplo, estructura de `docs/`, linters, hooks, configuraciones de sandbox) para que puedas ir del ensayo a la implementación sin empezar desde cero.
 
-Mientras tanto: empieza con el loop, invierte en el aislamiento, materializa el contexto en el repo, codifica los invariantes que más te importan, y cuando algo falle dos veces, promuévelo al harness. El resto sale por gravedad.
+Mientras tanto: empieza con el bucle, invierte en el aislamiento, materializa el contexto en el repo, codifica los invariantes que más te importan, y cuando algo falle dos veces, promuévelo al harness. El resto sale por gravedad.

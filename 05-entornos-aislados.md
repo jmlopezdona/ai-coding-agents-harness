@@ -38,7 +38,7 @@ Una vez tienes esto, varias cosas se vuelven posibles que antes parecían demasi
 - **UI reproducible.** El agente puede levantar la app entera, navegarla con DevTools Protocol, sacar screenshots, comparar antes/después. La UI deja de ser un terreno donde solo los humanos pueden validar.
 - **Pruebas destructivas.** Operaciones que normalmente nadie quiere ejecutar (drop tables, reset migrations, simular fallos de red) se vuelven seguras dentro de un entorno desechable.
 - **Tareas largas sin culpabilidad.** Si el agente tarda 6 horas en una tarea (OpenAI menciona ejemplos de eso), nadie se preocupa, porque está corriendo en su propio entorno y no bloquea a nadie.
-- **Fan-out trivial.** "Prueba estas cinco implementaciones distintas en paralelo y dime cuál es mejor" deja de ser un ejercicio teórico. Cinco entornos, cinco loops, una comparación al final.
+- **Fan-out trivial.** "Prueba estas cinco implementaciones distintas en paralelo y dime cuál es mejor" deja de ser un ejercicio teórico. Cinco entornos, cinco bucles, una comparación al final.
 
 ## Cuánto invertir
 
@@ -50,6 +50,6 @@ Conviene desambiguar. Estas cosas suelen confundirse con aislamiento y *no* lo s
 
 - **"El agente corre en mi máquina":** no es aislamiento; es lo contrario. Estás compartiendo entorno con todo lo que tienes abierto.
 - **Una rama de git:** una rama es aislamiento de cambios, no de runtime. Dos agentes en dos ramas pueden seguir pisándose si comparten DB local, puertos, o cache.
-- **Un contenedor que se reusa entre tareas:** mejor que nada, pero no es desechable. La contaminación cruzada acumulada se vuelve fuente de bugs intermitentes.
+- **Un contenedor que se reusa entre tareas:** mejor que nada, pero no es desechable. La contaminación cruzada acumulada se vuelve fuente de fallos intermitentes.
 
 El estándar a alcanzar es: cada tarea, su propio entorno; al terminar, se desecha; arranca en segundos; reproducible byte-a-byte. Cuando llegas ahí, casi todos los demás capítulos de esta guía se vuelven más fáciles de aplicar.

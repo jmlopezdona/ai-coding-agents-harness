@@ -52,7 +52,7 @@ El miedo razonable es: "si meto todo esto en el repo, en seis meses estará obso
 
 Cuando dudes si una pieza de información debe ir al repo o puede quedarse fuera, hazte esta pregunta: **si un nuevo ingeniero se incorporara mañana sin acceso a Slack, sin acceso a Google Docs y sin poder hablar con nadie del equipo, ¿podría ser productivo solo con lo que hay en el repo?**
 
-Si la respuesta es no, esa información es invisible para el agente también. Y en un equipo serio que opera con agentes, ese nuevo "ingeniero" se incorpora cien veces al día. Cada ejecución de agente es un onboarding desde cero.
+Si la respuesta es no, esa información es invisible para el agente también. Y en un equipo serio que opera con agentes, ese nuevo "ingeniero" se incorpora cien veces al día. Cada ejecución de agente es una incorporación desde cero.
 
 ## El upside oculto
 

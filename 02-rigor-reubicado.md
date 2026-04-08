@@ -22,7 +22,7 @@ Con LLMs escribiendo código, el rigor sale de dos sitios y entra en otros dos:
 
 **Entra en:**
 - **Especificación de la intención.** Lo que antes eran "criterios de aceptación informales" en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La sloppiness en el ticket se convierte en sloppiness en el código. Antes podías compensarlo con conversación de pasillo; con un agente que ejecuta de noche, no.
-- **Evaluación verificable.** Si no puedes evaluar mecánicamente si el output del agente es correcto, no tienes harness, tienes una ruleta. Tests, type checks, evals, validación de schemas, observabilidad, asserts en runtime — todo lo que convierte un "parece que funciona" en una señal binaria.
+- **Evaluación verificable.** Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta. Tests, type checks, evals, validación de schemas, observabilidad, asserts en runtime — todo lo que convierte un "parece que funciona" en una señal binaria.
 
 Chad Fowler lo dice mejor: *"generative systems only work if invariants are explicit rather than implicit"*. Un sistema generativo necesita que las cosas que tienen que ser ciertas estén dichas en algún lugar que la máquina pueda comprobar. Lo implícito — el conocimiento que vivía en la cabeza del senior, en el README de hace dos años, en la conversación de Slack del lunes — deja de funcionar como mecanismo de control.
 
