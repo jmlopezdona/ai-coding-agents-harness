@@ -1,6 +1,6 @@
 # 3. Guías y Sensores: feedforward y feedback
 
-Birgitta Böckeler descompone el harness en dos mecanismos. Es una distinción simple pero útil porque te obliga a clasificar cada inversión que haces: ¿esto previene un error antes de que ocurra (guía), o lo detecta después (sensor)? Si no es ni una cosa ni la otra, probablemente no pertenece al harness.
+Birgitta Böckeler divide el harness en dos mecanismos. Una distinción simple pero útil, porque te obliga a clasificar cada inversión que haces: ¿esto evita un error antes de que ocurra (guía), o lo detecta después (sensor)? Si no es ninguna de las dos cosas, probablemente no pertenece al harness.
 
 ## Guías — feedforward
 
