@@ -1,4 +1,4 @@
-# Capítulo 0 — Harness engineering: producir software a escala con agentes
+# Harness engineering: producir software a escala con agentes
 
 Llevamos un par de años en una conversación pública sobre agentes de codificación que está casi enteramente centrada en el sitio equivocado: el modelo. Qué versión, qué benchmark, qué context window, qué proveedor, qué precio por millón de tokens. Es una conversación legítima, pero deja fuera lo que de verdad explica por qué algunos equipos están entregando software con agentes a una escala difícil de creer y otros equipos siguen tratándolos como un autocomplete glorificado. La diferencia no está en el modelo. Está en todo lo que hay alrededor del modelo.
 

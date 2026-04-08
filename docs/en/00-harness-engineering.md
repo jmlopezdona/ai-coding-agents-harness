@@ -1,4 +1,4 @@
-# Chapter 0 — Harness engineering: shipping software at scale with agents
+# Harness engineering: shipping software at scale with agents
 
 We've spent a couple of years in a public conversation about coding agents that is almost entirely focused on the wrong place: the model. Which version, which benchmark, which context window, which provider, which price per million tokens. It's a legitimate conversation, but it leaves out what actually explains why some teams are shipping software with agents at a scale that's hard to believe and other teams are still treating them as a glorified autocomplete. The difference isn't in the model. It's in everything around the model.
 
