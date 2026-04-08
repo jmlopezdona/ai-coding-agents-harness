@@ -66,6 +66,21 @@ There's an uncomfortable observation worth naming before talking tactics: **brow
 
 **The operational consequence**: in brown-field, harness investment isn't optional — it's a prerequisite. And it can't be done in a week. The question isn't "do we want a harness?" but "what speed of harness construction can we sustain without stopping delivery?". The healthy answer is usually: one new rule per week, one zone codified per month, no big-bang. What the next section describes applies to both cases, but **in brown-field it's the only way that works**.
 
+### The third way: refactor to introduce the harness
+
+There's an alternative to "build the harness on top of the brown-field" that in many cases pays off more: apply the **strangler fig** pattern to the harness itself. Instead of codifying existing entropy rule by rule, you identify the zones that are going to evolve the most — the part of the system where the agent is actually going to operate — you refactor them, and from day one you put them under complete mechanical invariants. The old part stays frozen as it is; the new part is born with the harness from the start.
+
+Why it works in brown-field:
+
+- **You concentrate the investment where it pays off most.** You don't try to codify the whole repo; only the zone where the agent will operate a lot. The ROI per hour invested is disproportionately high.
+- **You sidestep the entropy feedback loop.** When you refactor, you're not asking the agent to "improve" bad code — you give it good code from the start. The agent no longer has "the bad stuff" in front of it to imitate.
+- **You create a control zone where you can learn the harness before generalizing it.** You calibrate the lints, the agent-targeted messages, the templates, everything, in a small perimeter. When it works, you apply it to the rest of the repo with much more confidence.
+- **It creates positive pressure on the old code.** The existence of a "modern and fast" zone makes the inherited code increasingly look like explicit debt, not invisible status quo. That unlocks conversations that previously couldn't happen.
+
+It has three risks worth naming: deciding *what* to refactor is political and technical, and the temptation is to pick the pretty stuff instead of the painful stuff; if the refactor isn't designed with the harness from the start, you end up with "modern" code that still has no invariants (the worst of both worlds); and keeping two architectural models in the same repo for a long time is expensive, so you need a clear horizon for when to absorb the old or assume it as a frozen zone.
+
+In practice, the three strategies — codifying existing entropy, refactoring the hot zones with the harness, and accepting that some zones are cold forever — coexist in any serious brown-field. They're not alternatives; they're layers of the same plan.
+
 ## How to introduce this in an existing repo
 
 Doing a big-bang on an existing repo is a bad idea. What works:

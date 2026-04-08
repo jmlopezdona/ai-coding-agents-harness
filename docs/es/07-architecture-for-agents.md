@@ -66,6 +66,21 @@ Hay una observación incómoda que merece nombrarse antes de hablar de tácticas
 
 **La consecuencia operativa**: en brown-field, la inversión en harness no es opcional — es prerrequisito. Y no se puede hacer en una semana. La pregunta no es "¿queremos el harness?" sino "¿qué velocidad de construcción del harness podemos sostener sin parar de entregar?". La respuesta sana suele ser: una regla nueva por semana, una zona codificada al mes, ningún big-bang. Lo que el siguiente apartado describe vale para ambos casos, pero **en brown-field es la única forma que funciona**.
 
+### La tercera vía: refactorizar para introducir el harness
+
+Hay una alternativa al "construir el harness encima del brown-field" que en muchos casos rinde más: aplicar el patrón **strangler fig** al propio harness. En lugar de codificar la entropía existente regla por regla, identificas las zonas que más van a evolucionar — la parte del sistema donde el agente va a operar de verdad — las refactorizas, y desde el día uno las metes bajo invariantes mecánicas completas. La parte vieja queda congelada como está; la parte nueva nace con el harness desde el principio.
+
+Por qué funciona en brown-field:
+
+- **Concentras la inversión donde más rinde.** No intentas codificar todo el repo; solo la zona donde el agente va a operar mucho. El ROI por hora invertida es desproporcionadamente alto.
+- **Esquivas el bucle de retroalimentación de entropía.** Al refactorizar, no le pides al agente que "mejore" código malo — le das código bueno desde el principio. El agente ya no tiene "lo malo" delante para imitarlo.
+- **Generas una zona de control donde aprender el harness antes de generalizarlo.** Calibras los lints, los mensajes para el agente, las plantillas, todo, en un perímetro pequeño. Cuando funciona, lo aplicas al resto del repo con mucha más confianza.
+- **Crea presión positiva sobre el código viejo.** La existencia de una zona "moderna y rápida" hace que el código heredado se vea cada vez más como deuda explícita, no como statu quo invisible. Eso desbloquea conversaciones que antes no se podían tener.
+
+Tiene tres riesgos que conviene nombrar: decidir *qué* refactorizar es político y técnico, y la tentación es elegir lo bonito en lugar de lo doloroso; si el refactor no se diseña con el harness desde el principio, acabas con código "moderno" pero igualmente sin invariantes (lo peor de los dos mundos); y mantener dos modelos arquitectónicos en el mismo repo durante mucho tiempo es caro, así que necesitas un horizonte claro de cuándo absorber el viejo o asumirlo como zona congelada.
+
+En la práctica, las tres estrategias — codificar la entropía existente, refactorizar las zonas calientes con harness, y aceptar que algunas zonas son frías para siempre — coexisten en cualquier brown-field serio. No son alternativas; son capas del mismo plan.
+
 ## Cómo introducir esto en un repo existente
 
 Hacer un big-bang sobre un repo existente es mala idea. Lo que funciona:
