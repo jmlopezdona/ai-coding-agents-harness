@@ -56,7 +56,7 @@ nav:
       - "6. Context as a system of record": 06-context-system-of-record.md
       - "7. Architecture for agents": 07-architecture-for-agents.md
       - "8. The agentic PR flow": 08-agentic-pr-flow.md
-  - Sustainability:
+  - Long-term:
       - "9. Entropy and continuous maintenance": 09-entropy-and-maintenance.md
       - "10. Where humans still matter": 10-human-role.md
   - Pitfalls:
@@ -124,7 +124,7 @@ plugins:
             "6. Context as a system of record": "6. El contexto como sistema de registro"
             "7. Architecture for agents": "7. Arquitectura para agentes"
             "8. The agentic PR flow": "8. El flujo de PR agéntico"
-            "Sustainability": "Sostenibilidad"
+            "Long-term": "A largo plazo"
             "9. Entropy and continuous maintenance": "9. Entropía y mantenimiento continuo"
             "10. Where humans still matter": "10. Dónde sigue importando el humano"
             "Pitfalls": "Errores comunes"
