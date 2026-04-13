@@ -1,6 +1,6 @@
 # Harness engineering
 
-Una guía para equipos técnicos que ya usan agentes de codificación (Claude Code, Codex, Copilot, Cursor, etc.) y quieren dar el siguiente paso: **dejar de tratarlos como autocomplete y empezar a montar un harness serio alrededor de ellos**.
+Esta es la tercera guía de una trilogía. En [Fundamentals](https://jmlopezdona.github.io/ai-coding-agents-fundamentals/es/) vimos cómo pilotar un agente de codificación; en [Spec-Driven Development](https://jmlopezdona.github.io/ai-coding-agents-sdd/es/) aprendimos a especificar la intención para que el agente la ejecute bien. Ahora toca lo que queda: **diseñar el sistema que rodea al agente** — guías, sensores, sandboxes, bucles, contexto estructurado — para que un equipo pueda depender de él de forma sostenible.
 
 No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo, organizado por capítulos, sobre los principios y patrones que están emergiendo en equipos que ya operan a esta escala (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) y que se repiten independientemente del stack o de la herramienta.
 

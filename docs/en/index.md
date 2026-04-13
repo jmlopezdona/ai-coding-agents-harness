@@ -1,6 +1,6 @@
 # Harness engineering
 
-A guide for technical teams already using AI coding agents (Claude Code, Codex, Copilot, Cursor, etc.) who want to take the next step: **stop treating them as autocomplete and start building a serious harness around them**.
+This is the third guide in a trilogy. In [Fundamentals](https://jmlopezdona.github.io/ai-coding-agents-fundamentals/) we covered how to pilot a coding agent; in [Spec-Driven Development](https://jmlopezdona.github.io/ai-coding-agents-sdd/) we learned to specify intent so the agent can execute it well. Now comes what's left: **designing the system that surrounds the agent** — guides, sensors, sandboxes, loops, structured context — so a team can rely on it sustainably.
 
 This isn't a step-by-step tutorial or a manual for any particular product. It's an essay, organized in chapters, about the principles and patterns emerging in teams already operating at this scale (OpenAI, Stripe, Thoughtworks/Böckeler, Geoffrey Huntley) — patterns that show up regardless of stack or tool.
 
