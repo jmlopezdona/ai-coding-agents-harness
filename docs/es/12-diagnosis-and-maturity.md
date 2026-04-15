@@ -6,7 +6,7 @@ Una nota importante antes de empezar: **resiste la tentación de subir todas las
 
 ## Las cinco dimensiones del harness
 
-Después de comprimir todo lo descrito en la guía, el harness se reduce a cinco dimensiones que se pueden evaluar y mejorar de forma relativamente independiente:
+Después de comprimir todo lo descrito en la guía, el arnés se reduce a cinco dimensiones que se pueden evaluar y mejorar de forma relativamente independiente:
 
 1. **Aislamiento** — la calidad de los entornos donde el agente ejecuta (cap. 5).
 2. **Contexto** — cuánto del conocimiento relevante vive en el repo de forma legible para el agente (cap. 6).
@@ -24,7 +24,7 @@ Cada una se evalúa en cinco niveles, del 0 al 4. Los niveles no son notas: son 
 | **1** | Contenedor reusado entre tareas | README + AGENTS.md monolítico | Linters genéricos del lenguaje | Agente ejecuta y reporta, humano valida cada paso | Viernes de cleanup |
 | **2** | Sandboxes dedicados por tarea, creados manualmente | AGENTS.md como índice + carpeta `docs/` parcial | Algunos lints custom, mensajes para humanos | Bucle interno automatizado, PR revisado humano-a-humano | Agentes recurrentes para casos puntuales |
 | **3** | Sandboxes desechables, creación en segundos, paralelizables | `docs/` estructurado, planes versionados, doc-gardening básico | Lints custom con mensajes dirigidos al agente, arquitectura mecanizada | Revisiones agente-a-agente para PRs rutinarios, merge gates ligeros | Golden principles + agentes recurrentes que abren PRs de refactor |
-| **4** | Aislamiento + observabilidad efímera por entorno (logs/metrics/traces consultables por el agente) | Repo como sistema de registro completo, agent-readable end-to-end | Invariantes ejecutables que cubren toda la arquitectura, escritos por el propio agente | Flujo de PR mayoritariamente agente-a-agente, humano por excepción | Agentic flywheel: agentes proponen mejoras al propio harness |
+| **4** | Aislamiento + observabilidad efímera por entorno (logs/metrics/traces consultables por el agente) | Repo como sistema de registro completo, agent-readable end-to-end | Invariantes ejecutables que cubren toda la arquitectura, escritos por el propio agente | Flujo de PR mayoritariamente agente-a-agente, humano por excepción | Agentic flywheel: agentes proponen mejoras al propio arnés |
 
 Lee cada columna como una escalera. La mayoría de equipos que han adoptado agentes están en el rango **0-2** en casi todo. Los equipos que aparecen en los artículos de referencia (OpenAI, Stripe) están en el rango **3-4**, y no en todas las dimensiones por igual.
 
@@ -72,7 +72,7 @@ Para cada dimensión, responde con honestidad. La trampa es leer las preguntas y
 2. ¿Hay agentes recurrentes que corren en background y abren PRs de refactor pequeños?
 3. Tienes "golden principles" / convenciones críticas, ¿están escritas en algún sitio que el agente lea automáticamente?
 4. Cuando el mismo error aparece por tercera vez, ¿qué pasa?
-5. ¿Algún agente analiza el harness mismo y propone mejoras?
+5. ¿Algún agente analiza el arnés mismo y propone mejoras?
 
 ## Matriz de inversiones: nivel actual → siguiente paso
 
@@ -121,7 +121,7 @@ Una vez tengas tus cinco niveles aproximados, esta matriz te dice qué inversió
 | 0 → 1 | Cleanup explícito (peor que nada, pero es un paso) | Reservar tiempo recurrente para limpiar drift. Aceptar que no escala — es punto de partida. |
 | 1 → 2 | Agentes recurrentes para casos puntuales | Empezar por uno: doc-gardening, o un agente que detecta TODOs huérfanos, o uno que actualiza dependencias. |
 | 2 → 3 | Golden principles + flota de agentes recurrentes | Codificar las 5-10 reglas no negociables. Varios agentes en background, cada uno con foco. |
-| 3 → 4 | Agentic flywheel | Un agente meta lee la señal acumulada de los sensores y propone mejoras al propio harness. |
+| 3 → 4 | Agentic flywheel | Un agente meta lee la señal acumulada de los sensores y propone mejoras al propio arnés. |
 
 ## Cómo priorizar entre dimensiones
 
@@ -151,12 +151,12 @@ Si quieres llevarte un único artefacto de este capítulo, es esta plantilla. P�
 
 Y luego, sin discusión, **encierra en un círculo la fila que vas a atacar este mes**. Solo una. La regla es disciplinaria: si encierras dos, no encierras ninguna.
 
-Cuando termines esa inversión, vuelve a esta plantilla, vuelve a evaluar (probablemente tu nivel actual ha subido en algunas dimensiones colateralmente), y elige la siguiente. No hay un "harness terminado" — hay un harness en mejora continua, que es exactamente el tipo de sistema que esta guía describe en el resto de los capítulos.
+Cuando termines esa inversión, vuelve a esta plantilla, vuelve a evaluar (probablemente tu nivel actual ha subido en algunas dimensiones colateralmente), y elige la siguiente. No hay un "harness terminado" — hay un arnés en mejora continua, que es exactamente el tipo de sistema que esta guía describe en el resto de los capítulos.
 
 ## El cierre real de la guía
 
-Hay una propiedad interesante de los harnesses bien construidos: **no se notan cuando funcionan**. El equipo entrega rápido, el código se mantiene coherente, los agentes producen cosas útiles, los humanos se concentran en lo importante, y nada de eso se siente como "estamos haciendo algo especial". Solo se siente como ingeniería bien hecha. Los equipos que lo tienen rara vez escriben sobre ello porque desde dentro parece evidente.
+Hay una propiedad interesante de los arneses bien construidos: **no se notan cuando funcionan**. El equipo entrega rápido, el código se mantiene coherente, los agentes producen cosas útiles, los humanos se concentran en lo importante, y nada de eso se siente como "estamos haciendo algo especial". Solo se siente como ingeniería bien hecha. Los equipos que lo tienen rara vez escriben sobre ello porque desde dentro parece evidente.
 
-Los equipos que aún no lo tienen miran desde fuera y atribuyen la diferencia al modelo. El modelo es lo más visible — tiene marca, versión, número de parámetros. El harness es invisible. Y precisamente por eso es donde está la palanca: porque todos los demás están mirando al sitio equivocado.
+Los equipos que aún no lo tienen miran desde fuera y atribuyen la diferencia al modelo. El modelo es lo más visible — tiene marca, versión, número de parámetros. El arnés es invisible. Y precisamente por eso es donde está la palanca: porque todos los demás están mirando al sitio equivocado.
 
-Si solo te llevas una cosa de los doce capítulos, llévate esta: **tu próxima inversión no es esperar a un modelo mejor. Es construir el harness que tu modelo actual ya puede aprovechar**. Hay un siguiente paso concreto. Está en la fila que acabas de encerrar en un círculo. Hazlo este mes.
+Si solo te llevas una cosa de los doce capítulos, llévate esta: **tu próxima inversión no es esperar a un modelo mejor. Es construir el arnés que tu modelo actual ya puede aprovechar**. Hay un siguiente paso concreto. Está en la fila que acabas de encerrar en un círculo. Hazlo este mes.

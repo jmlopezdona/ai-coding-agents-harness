@@ -55,14 +55,14 @@ Hay una observación incómoda que merece nombrarse antes de hablar de tácticas
 
 **Por qué se necesita más.** Una base de código grande, vieja, con años de crecimiento orgánico, módulos heredados de tres equipos distintos y zonas que nadie del equipo actual entiende del todo, es exactamente el tipo de entorno donde un agente puede multiplicar el rendimiento del equipo — *si* puede operar con seguridad. Un greenfield es trivial para cualquier ingeniero senior; un brown-field es donde el agente, bien dirigido, te ahorra semanas de arqueología cada mes. El ROI potencial es máximo.
 
-**Por qué cuesta más.** Las mismas propiedades que hacen valioso al agente en brown-field son las que hacen difícil construirle un harness:
+**Por qué cuesta más.** Las mismas propiedades que hacen valioso al agente en brown-field son las que hacen difícil construirle un arnés:
 
-- La disciplina vive como cultura, no como código. Las "reglas" están en la cabeza de los seniors, en revisiones de PR pasadas, en hilos de Slack de hace dos años. Materializarlas en lints es trabajo arqueológico previo a cualquier inversión en el harness.
+- La disciplina vive como cultura, no como código. Las "reglas" están en la cabeza de los seniors, en revisiones de PR pasadas, en hilos de Slack de hace dos años. Materializarlas en lints es trabajo arqueológico previo a cualquier inversión en el arnés.
 - La arquitectura es heterogénea. Distintos dominios siguen distintas convenciones, los límites entre capas existen en algunos sitios y en otros no. No puedes escribir *un* lint de direcciones de dependencia: tienes que escribir *N* lints, uno por zona coherente, y aceptar que algunas zonas no son codificables hasta que las refactorices primero.
 - La entropía es real y se resiste. Cada regla nueva que introduces choca con código que ya la viola, y tienes que decidir caso por caso si es excepción legítima o deuda que toca pagar. No es trabajo del agente; es trabajo humano de calibración previa.
 - El equipo está acostumbrado a las imperfecciones. Lo que en un greenfield sería un bug evidente, en brown-field es "siempre ha sido así". Convertir eso en invariantes obligatorios genera fricción social, no solo técnica.
 
-**Y hay un agravante: el agente amplifica la entropía existente.** Esto es importante porque convierte la dificultad en bucle de retroalimentación. Un agente aprende del código que tiene delante: si la base está llena de malas prácticas, las imita, las propaga más rápido de lo que un humano lo haría, y refuerza la sensación de que "así se hace aquí" porque el código nuevo se parece al viejo. Sin un sensor que detecte el patrón malo o una guía que lo prohíba, el agente no tiene cómo distinguir entre convención sana y deuda heredada — para él, todo lo que ve en el repo es "lo que el equipo hace". El bucle es silencioso: parece que el agente está siendo productivo y consistente, y lo es; solo que la consistencia es con lo equivocado. En un brown-field sin harness, **introducir un agente acelera la entropía en lugar de combatirla**. Esa es la razón más fuerte para no posponerlo.
+**Y hay un agravante: el agente amplifica la entropía existente.** Esto es importante porque convierte la dificultad en bucle de retroalimentación. Un agente aprende del código que tiene delante: si la base está llena de malas prácticas, las imita, las propaga más rápido de lo que un humano lo haría, y refuerza la sensación de que "así se hace aquí" porque el código nuevo se parece al viejo. Sin un sensor que detecte el patrón malo o una guía que lo prohíba, el agente no tiene cómo distinguir entre convención sana y deuda heredada — para él, todo lo que ve en el repo es "lo que el equipo hace". El bucle es silencioso: parece que el agente está siendo productivo y consistente, y lo es; solo que la consistencia es con lo equivocado. En un brown-field sin arnés, **introducir un agente acelera la entropía en lugar de combatirla**. Esa es la razón más fuerte para no posponerlo.
 
 ### Tres estrategias que coexisten
 
@@ -79,16 +79,16 @@ Esta estrategia funciona donde la disciplina implícita ya se acerca a la regla 
 
 #### 2. Refactorizar las zonas calientes (strangler fig)
 
-Donde la entropía es demasiado densa para codificarla regla por regla, hay una alternativa: aplicar el patrón **strangler fig** al propio harness. En lugar de pelearte con el código existente, identificas las zonas que más van a evolucionar — la parte del sistema donde el agente va a operar de verdad — las refactorizas, y desde el día uno las metes bajo invariantes mecánicas completas. La parte vieja queda congelada como está; la parte nueva nace con el harness desde el principio.
+Donde la entropía es demasiado densa para codificarla regla por regla, hay una alternativa: aplicar el patrón **strangler fig** al propio harness. En lugar de pelearte con el código existente, identificas las zonas que más van a evolucionar — la parte del sistema donde el agente va a operar de verdad — las refactorizas, y desde el día uno las metes bajo invariantes mecánicas completas. La parte vieja queda congelada como está; la parte nueva nace con el arnés desde el principio.
 
 Por qué funciona en brown-field:
 
 - **Concentras la inversión donde más rinde.** No intentas codificar todo el repo; solo la zona donde el agente va a operar mucho. El ROI por hora invertida es desproporcionadamente alto.
 - **Esquivas el bucle de retroalimentación de entropía.** Al refactorizar, no le pides al agente que "mejore" código malo — le das código bueno desde el principio. El agente ya no tiene "lo malo" delante para imitarlo.
-- **Generas una zona de control donde aprender el harness antes de generalizarlo.** Calibras los lints, los mensajes para el agente, las plantillas, todo, en un perímetro pequeño. Cuando funciona, lo aplicas al resto del repo con mucha más confianza.
+- **Generas una zona de control donde aprender el arnés antes de generalizarlo.** Calibras los lints, los mensajes para el agente, las plantillas, todo, en un perímetro pequeño. Cuando funciona, lo aplicas al resto del repo con mucha más confianza.
 - **Crea presión positiva sobre el código viejo.** La existencia de una zona "moderna y rápida" hace que el código heredado se vea cada vez más como deuda explícita, no como statu quo invisible. Eso desbloquea conversaciones que antes no se podían tener.
 
-Tiene tres riesgos que conviene nombrar: decidir *qué* refactorizar es político y técnico, y la tentación es elegir lo bonito en lugar de lo doloroso; si el refactor no se diseña con el harness desde el principio, acabas con código "moderno" pero igualmente sin invariantes (lo peor de los dos mundos); y mantener dos modelos arquitectónicos en el mismo repo durante mucho tiempo es caro, así que necesitas un horizonte claro de cuándo absorber el viejo o asumirlo como zona congelada.
+Tiene tres riesgos que conviene nombrar: decidir *qué* refactorizar es político y técnico, y la tentación es elegir lo bonito en lugar de lo doloroso; si el refactor no se diseña con el arnés desde el principio, acabas con código "moderno" pero igualmente sin invariantes (lo peor de los dos mundos); y mantener dos modelos arquitectónicos en el mismo repo durante mucho tiempo es caro, así que necesitas un horizonte claro de cuándo absorber el viejo o asumirlo como zona congelada.
 
 #### 3. Aceptar que algunas zonas son frías
 
@@ -96,7 +96,7 @@ Hay partes de cualquier brown-field donde el agente no va a operar nunca, o casi
 
 ### El principio que une las tres
 
-En brown-field, la inversión en harness no es opcional — es prerrequisito. Y no se puede hacer en una semana. La pregunta no es "¿queremos el harness?" sino "¿qué velocidad de construcción del harness podemos sostener sin parar de entregar?". La respuesta sana es pequeña en cada paso pero constante en el ritmo: una regla nueva por semana, una zona refactorizada al trimestre, una zona congelada declarada cuando aparece. Las tres estrategias avanzan en paralelo porque atacan tres problemas distintos. La que no funciona es la cuarta: posponerlo todo hasta tener tiempo. Ese tiempo no existe — y mientras esperas, el agente está acelerando la entropía.
+En brown-field, la inversión en arnés no es opcional — es prerrequisito. Y no se puede hacer en una semana. La pregunta no es "¿queremos el harness?" sino "¿qué velocidad de construcción del arnés podemos sostener sin parar de entregar?". La respuesta sana es pequeña en cada paso pero constante en el ritmo: una regla nueva por semana, una zona refactorizada al trimestre, una zona congelada declarada cuando aparece. Las tres estrategias avanzan en paralelo porque atacan tres problemas distintos. La que no funciona es la cuarta: posponerlo todo hasta tener tiempo. Ese tiempo no existe — y mientras esperas, el agente está acelerando la entropía.
 
 ## El cambio de horizonte
 

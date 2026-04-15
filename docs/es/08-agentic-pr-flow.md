@@ -67,7 +67,7 @@ Una propiedad importante: **las revisiones agente-a-agente deben tener foco**. U
 Cuando un humano sí entra a revisar, su papel cambia. Ya no es "el sistema de calidad", porque hay sensores antes que él. Su papel es:
 
 - **Aplicar criterio que no se puede codificar.** Decisiones de producto, compromisos estratégicos, juicio sobre si una solución "encaja" con la dirección del proyecto.
-- **Identificar patrones que merecen subir al harness.** Si está corrigiendo lo mismo dos veces, eso no es revisión, es señal de que falta una guía o un sensor. Su trabajo más valioso es traducir esa observación en una mejora del harness.
+- **Identificar patrones que merecen subir al arnés.** Si está corrigiendo lo mismo dos veces, eso no es revisión, es señal de que falta una guía o un sensor. Su trabajo más valioso es traducir esa observación en una mejora del arnés.
 - **Validar áreas marcadas como sensibles** donde el coste de un fallo justifica la latencia.
 
 Lo que el humano *no* tiene que hacer en este modelo: leer cada línea, discutir naming, validar que los tests existen, asegurarse de que el lint pasa. Eso es trabajo de los sensores. Si el humano lo está haciendo, los sensores están incompletos.

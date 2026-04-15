@@ -22,7 +22,7 @@ Confundir guía con documentación. Una guía es ejecutable o casi ejecutable. L
 
 ## Sensores — feedback
 
-Un sensor actúa **después**. Su trabajo es detectar cuándo algo está mal con suficiente precisión y velocidad para que el propio agente (o el harness) pueda corregirlo sin intervención humana.
+Un sensor actúa **después**. Su trabajo es detectar cuándo algo está mal con suficiente precisión y velocidad para que el propio agente (o el arnés) pueda corregirlo sin intervención humana.
 
 Böckeler distingue dos tipos de ejecución:
 
@@ -62,6 +62,6 @@ Esto es exactamente lo que OpenAI describe como *"cuando la documentación no ba
 
 ## Una advertencia sobre el equilibrio
 
-Es posible sobre-restringir. Un harness con demasiadas guías estrictas y demasiados sensores hipersensibles paraliza al agente: cualquier acción razonable dispara cinco alarmas y el bucle se atasca. La regla útil es la misma que aplica a un equipo humano: **límites estrictos donde las consecuencias son irreversibles, autonomía donde son baratas de revertir**.
+Es posible sobre-restringir. Un arnés con demasiadas guías estrictas y demasiados sensores hipersensibles paraliza al agente: cualquier acción razonable dispara cinco alarmas y el bucle se atasca. La regla útil es la misma que aplica a un equipo humano: **límites estrictos donde las consecuencias son irreversibles, autonomía donde son baratas de revertir**.
 
 Los próximos capítulos aplican estos dos pilares a problemas concretos: el bucle (cap. 4), los entornos aislados (cap. 5), el contexto (cap. 6), la arquitectura (cap. 7) y el flujo de PR (cap. 8). En cada uno verás guías y sensores trabajando juntos.

@@ -28,7 +28,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué parece buena idea.** Es la adopción más suave, sin reestructurar nada. Se siente como una productividad pequeña pero segura.
 
-**Por qué falla.** Es lo contrario de un harness. No acumulas nada, no mejoras nada, no desbloqueas el paralelismo. El agente es útil al 5% de su capacidad y los ingenieros se convencen de que "los agentes son útiles pero limitados" basándose en una muestra que es exactamente el peor caso.
+**Por qué falla.** Es lo contrario de un arnés. No acumulas nada, no mejoras nada, no desbloqueas el paralelismo. El agente es útil al 5% de su capacidad y los ingenieros se convencen de que "los agentes son útiles pero limitados" basándose en una muestra que es exactamente el peor caso.
 
 **Qué hacer en su lugar.** Invertir en el bucle desde el principio (capítulo 4). El agente trabaja en su sandbox, ejecuta, valida, itera. Si todavía usas el agente principalmente como autocomplete, no estás en el mundo que describe esta guía.
 
@@ -60,15 +60,15 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué falla.** No acumulas nada. La segunda vez que ves el mismo error, tu pregunta debe ser "¿qué debería haber impedido esto?". Si no la haces, estarás arreglando este patrón toda la vida.
 
-**Qué hacer en su lugar.** La regla de las dos veces es un techo de tolerancia, no una recomendación de parchear primero. Si el fallo es obviamente sistémico desde la primera ocurrencia (convención que faltaba, deriva arquitectónica clara, patrón que ya intuyes que va a repetirse), lo promueves al harness inmediatamente. Si parece una rareza genuina, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión: paras y lo promueves al harness (capítulo 9), porque ahora ya tienes evidencia de que es un patrón. La regla no es "fix manual una vez, sistematiza la segunda" — es "duda como mucho una vez; dos es certeza". No hay tercera vez bien gestionada.
+**Qué hacer en su lugar.** La regla de las dos veces es un techo de tolerancia, no una recomendación de parchear primero. Si el fallo es obviamente sistémico desde la primera ocurrencia (convención que faltaba, deriva arquitectónica clara, patrón que ya intuyes que va a repetirse), lo promueves al arnés inmediatamente. Si parece una rareza genuina, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión: paras y lo promueves al arnés (capítulo 9), porque ahora ya tienes evidencia de que es un patrón. La regla no es "fix manual una vez, sistematiza la segunda" — es "duda como mucho una vez; dos es certeza". No hay tercera vez bien gestionada.
 
 ## Anti-patrón 7 — Megalomanía del plan inicial
 
-**El síntoma.** Antes de dejar que el agente toque nada, el equipo se pasa semanas diseñando el harness "perfecto": arquitectura detallada, plantillas exhaustivas, veinte lints custom, pipeline de CI con doce fases. Cuando por fin se pone a funcionar, la mitad de las decisiones están mal calibradas.
+**El síntoma.** Antes de dejar que el agente toque nada, el equipo se pasa semanas diseñando el arnés "perfecto": arquitectura detallada, plantillas exhaustivas, veinte lints custom, pipeline de CI con doce fases. Cuando por fin se pone a funcionar, la mitad de las decisiones están mal calibradas.
 
 **Por qué parece buena idea.** Se siente responsable. "Primero hagamos las cosas bien".
 
-**Por qué falla.** El harness es un sistema adaptativo. Muchas de las decisiones correctas solo se pueden tomar después de ver al agente fallar de formas específicas. Un harness diseñado en vacío optimiza problemas imaginarios y deja fuera los reales.
+**Por qué falla.** El arnés es un sistema adaptativo. Muchas de las decisiones correctas solo se pueden tomar después de ver al agente fallar de formas específicas. Un arnés diseñado en vacío optimiza problemas imaginarios y deja fuera los reales.
 
 **Qué hacer en su lugar.** Empezar con lo mínimo viable — sandbox básico, AGENTS.md corto, sensores computacionales existentes — y dejar que los problemas reales dirijan la inversión. Cada nuevo lint, nueva guía, nuevo sensor debería estar justificado por un fallo observado, no por uno hipotético.
 
@@ -78,19 +78,19 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué parece buena idea.** Velocidad visible a corto plazo. Resultados "inmediatos".
 
-**Por qué falla.** La deuda de harness es como cualquier deuda técnica pero amplificada. En el modelo clásico, la deuda ralentiza a los ingenieros. En el modelo agéntico, la deuda ralentiza *y* produce código drift exponencial. Lo que parecía velocidad al mes 1 se convierte en parálisis al mes 6.
+**Por qué falla.** La deuda de arnés es como cualquier deuda técnica pero amplificada. En el modelo clásico, la deuda ralentiza a los ingenieros. En el modelo agéntico, la deuda ralentiza *y* produce código drift exponencial. Lo que parecía velocidad al mes 1 se convierte en parálisis al mes 6.
 
-**Qué hacer en su lugar.** Parte del trabajo del equipo es siempre mejorar el harness. Una proporción explícita — 20%, un día por sprint, un miembro rotativo — dedicada a guías, sensores, agentes recurrentes. No negociable. Si es negociable, siempre se negocia en su contra.
+**Qué hacer en su lugar.** Parte del trabajo del equipo es siempre mejorar el arnés. Una proporción explícita — 20%, un día por sprint, un miembro rotativo — dedicada a guías, sensores, agentes recurrentes. No negociable. Si es negociable, siempre se negocia en su contra.
 
 ## Anti-patrón 9 — El harness como proyecto paralelo
 
-**El síntoma.** Un "equipo de plataforma" separado construye el harness; el resto del equipo lo consume sin entenderlo. Cuando algo falla, la respuesta es "pedidlo al equipo de plataforma".
+**El síntoma.** Un "equipo de plataforma" separado construye el arnés; el resto del equipo lo consume sin entenderlo. Cuando algo falla, la respuesta es "pedidlo al equipo de plataforma".
 
 **Por qué parece buena idea.** Especialización. Deja que los "expertos" construyan la infraestructura y los demás entregan producto.
 
-**Por qué falla.** El harness tiene que evolucionar basándose en los fallos que observan los que lo usan. Si los que observan los fallos no lo modifican, la retroalimentación se pierde. El equipo de plataforma trabaja en lo que imagina que importa; el equipo de producto sufre lo que realmente importa.
+**Por qué falla.** El arnés tiene que evolucionar basándose en los fallos que observan los que lo usan. Si los que observan los fallos no lo modifican, la retroalimentación se pierde. El equipo de plataforma trabaja en lo que imagina que importa; el equipo de producto sufre lo que realmente importa.
 
-**Qué hacer en su lugar.** Todos contribuyen al harness. Los lints custom los escribe quien observó el fallo. Las guías las actualiza quien tropezó con la ambigüedad. Un equipo de plataforma puede existir como acelerador, pero no como monopolio.
+**Qué hacer en su lugar.** Todos contribuyen al arnés. Los lints custom los escribe quien observó el fallo. Las guías las actualiza quien tropezó con la ambigüedad. Un equipo de plataforma puede existir como acelerador, pero no como monopolio.
 
 ## Anti-patrón 10 — Creer que el modelo es el problema
 
@@ -98,7 +98,7 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 **Por qué parece buena idea.** A veces es verdad. Los modelos mejoran.
 
-**Por qué falla.** La mayoría de las veces, el fallo no está en el modelo — está en lo que el modelo podía ver (contexto), en cómo se evaluó su salida (sensores), en las restricciones que tenía disponibles (guías), o en el entorno donde ejecutó (sandbox). Esperar un modelo mejor para arreglar un harness roto es gastar el tiempo en el sitio equivocado. Cuando el modelo nuevo llegue, el harness seguirá roto y los problemas seguirán.
+**Por qué falla.** La mayoría de las veces, el fallo no está en el modelo — está en lo que el modelo podía ver (contexto), en cómo se evaluó su salida (sensores), en las restricciones que tenía disponibles (guías), o en el entorno donde ejecutó (sandbox). Esperar un modelo mejor para arreglar un arnés roto es gastar el tiempo en el sitio equivocado. Cuando el modelo nuevo llegue, el arnés seguirá roto y los problemas seguirán.
 
 **Qué hacer en su lugar.** Primero reflejo: ante cualquier fallo, preguntar "¿qué del harness no está haciendo su trabajo?". Si la respuesta honesta es "el harness está bien, es el modelo", entonces sí, espera al modelo. Ocurre; solo es menos frecuente de lo que tu equipo probablemente cree.
 
@@ -106,10 +106,10 @@ Este capítulo cierra la guía listando las trampas que los equipos caen más a 
 
 ## Cierre de la guía
 
-Si esta guía tiene una única conclusión transferible es esta: **la calidad de un agente no está en el modelo que usas; está en el sistema que construyes alrededor del modelo**. El modelo es una commodity. El harness es tu ventaja competitiva.
+Si esta guía tiene una única conclusión transferible es esta: **la calidad de un agente no está en el modelo que usas; está en el sistema que construyes alrededor del modelo**. El modelo es una commodity. El arnés es tu ventaja competitiva.
 
-Esto es, en el fondo, una buena noticia. El modelo no lo controlas tú — lo controla OpenAI, Anthropic, Google o quien sea. El harness sí. Y como todas las cosas que controlas en ingeniería, mejora con intención, con disciplina, y con un equipo que entiende qué está construyendo y por qué.
+Esto es, en el fondo, una buena noticia. El modelo no lo controlas tú — lo controla OpenAI, Anthropic, Google o quien sea. El arnés sí. Y como todas las cosas que controlas en ingeniería, mejora con intención, con disciplina, y con un equipo que entiende qué está construyendo y por qué.
 
 Los capítulos 1 al 10 describen los pilares. Este capítulo 11 describe las trampas. La siguiente versión de esta guía añadirá plantillas ejecutables (AGENTS.md de ejemplo, estructura de `docs/`, linters, hooks, configuraciones de sandbox) para que puedas ir del ensayo a la implementación sin empezar desde cero.
 
-Mientras tanto: empieza con el bucle, invierte en el aislamiento, materializa el contexto en el repo, codifica los invariantes que más te importan, y cuando algo falle dos veces, promuévelo al harness. El resto sale por gravedad.
+Mientras tanto: empieza con el bucle, invierte en el aislamiento, materializa el contexto en el repo, codifica los invariantes que más te importan, y cuando algo falle dos veces, promuévelo al arnés. El resto sale por gravedad.

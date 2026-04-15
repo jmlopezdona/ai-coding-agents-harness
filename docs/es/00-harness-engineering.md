@@ -20,20 +20,20 @@ Si lo único que te separa de estos equipos fuera el modelo, todos tendríamos s
 
 > El modelo es el motor. El harness es lo que convierte un LLM en un agente del que un equipo puede depender.
 
-El modelo es intercambiable. Sale uno nuevo cada seis meses, todos parecidos en lo importante. El harness no. El harness lo construyes tú, evoluciona con tu proyecto, captura el conocimiento de tu equipo, y se acumula sobre sí mismo a meses vista. Es, en términos directos, **donde está tu ventaja competitiva**. El modelo está donde está la commodity.
+El modelo es intercambiable. Sale uno nuevo cada seis meses, todos parecidos en lo importante. El arnés no. El arnés lo construyes tú, evoluciona con tu proyecto, captura el conocimiento de tu equipo, y se acumula sobre sí mismo a meses vista. Es, en términos directos, **donde está tu ventaja competitiva**. El modelo está donde está la commodity.
 
-Esto es, en el fondo, una buena noticia. El modelo no lo controlas — lo controla un proveedor que va a optimizarlo para todos por igual. El harness sí. Y como casi todo lo que controlas en ingeniería, mejora con intención, con disciplina, y con un equipo que entiende qué está construyendo y por qué.
+Esto es, en el fondo, una buena noticia. El modelo no lo controlas — lo controla un proveedor que va a optimizarlo para todos por igual. El arnés sí. Y como casi todo lo que controlas en ingeniería, mejora con intención, con disciplina, y con un equipo que entiende qué está construyendo y por qué.
 
 ## Qué es exactamente un harness
 
-Böckeler descompone el harness en dos mecanismos, y la distinción es la herramienta más útil que vas a llevarte de este texto:
+Böckeler descompone el arnés en dos mecanismos, y la distinción es la herramienta más útil que vas a llevarte de este texto:
 
 - **Guías (feedforward).** Indicaciones que orientan al agente *antes* de que actúe. Convenciones, plantillas, schemas, generadores de módulos, documentos de arquitectura legibles, AGENTS.md como mapa del repo. Le dicen al agente cómo proceder.
-- **Sensores (feedback).** Guardarraíles que actúan *después*. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el harness pueda corregirlo sin tu intervención.
+- **Sensores (feedback).** Guardarraíles que actúan *después*. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el arnés pueda corregirlo sin tu intervención.
 
-Un harness sin guías produce un agente que se desvía. Un harness sin sensores produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.
+Un arnés sin guías produce un agente que se desvía. Un arnés sin sensores produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.
 
-Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes harness. Tienes prompts y suerte.
+Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes arnés. Tienes prompts y suerte.
 
 ## El harness que ya tienes y el que tienes que construir
 
@@ -49,9 +49,9 @@ La pregunta correcta es esta:
 
 > **¿Qué le falta al harness para que este fallo sea imposible, o para que se detecte automáticamente cuando ocurra?**
 
-La respuesta puede ser muchas cosas: una sección nueva en AGENTS.md o en un doc del repo, una plantilla de plan actualizada, un linter nuevo, un sensor inferencial que revise un patrón concreto, una restructuración del contexto que el agente recibe, una capa de aislamiento que faltaba. Cualquiera de estas es válida — incluidas las que tocan prompts versionados, porque **un prompt commiteado al repo es harness; un prompt en el chat que desaparece, no**. Lo que distingue una respuesta buena de una mala no es si toca prompts o código, sino si la lección queda registrada en algún sitio que el agente vaya a leer la próxima vez. Y lo importante: una vez que la implementas, **ese fallo concreto no vuelve a ocurrir**. Nunca. En miles de ejecuciones futuras del agente.
+La respuesta puede ser muchas cosas: una sección nueva en AGENTS.md o en un doc del repo, una plantilla de plan actualizada, un linter nuevo, un sensor inferencial que revise un patrón concreto, una restructuración del contexto que el agente recibe, una capa de aislamiento que faltaba. Cualquiera de estas es válida — incluidas las que tocan prompts versionados, porque **un prompt commiteado al repo es arnés; un prompt en el chat que desaparece, no**. Lo que distingue una respuesta buena de una mala no es si toca prompts o código, sino si la lección queda registrada en algún sitio que el agente vaya a leer la próxima vez. Y lo importante: una vez que la implementas, **ese fallo concreto no vuelve a ocurrir**. Nunca. En miles de ejecuciones futuras del agente.
 
-Es el mismo cambio mental que distingue a un equipo de plataforma maduro de uno que sigue apagando incendios. No "cómo enseño a este equipo a no romper esto en esta conversación", sino "cómo hago imposible (o trivialmente detectable) que rompan esto en cualquier conversación futura". La diferencia es que con agentes el ROI es brutal: cada hora invertida en el harness mejora todas las ejecuciones futuras, y las ejecuciones futuras son muchas más de las que tendrías con un equipo humano.
+Es el mismo cambio mental que distingue a un equipo de plataforma maduro de uno que sigue apagando incendios. No "cómo enseño a este equipo a no romper esto en esta conversación", sino "cómo hago imposible (o trivialmente detectable) que rompan esto en cualquier conversación futura". La diferencia es que con agentes el ROI es brutal: cada hora invertida en el arnés mejora todas las ejecuciones futuras, y las ejecuciones futuras son muchas más de las que tendrías con un equipo humano.
 
 ## El rigor no desaparece, se reubica
 
@@ -60,7 +60,7 @@ Hay una observación de Chad Fowler que conviene tener delante antes de empezar 
 Con agentes pasa lo mismo. El rigor sale de "escribir cada línea con cuidado" y de "revisar humano-a-humano cada PR", y entra en otros dos sitios:
 
 - **Especificación de la intención.** Lo que antes eran criterios informales en un ticket ahora tiene que ser legible mecánicamente, porque es lo que el agente va a interpretar. La imprecisión en el ticket se convierte en imprecisión en el código.
-- **Evaluación verificable.** Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes harness, tienes una ruleta.
+- **Evaluación verificable.** Si no puedes evaluar mecánicamente si la salida del agente es correcta, no tienes arnés, tienes una ruleta.
 
 La heurística que vale la pena adoptar: cuando algo parezca dejar ir el rigor, busca dónde se reubicó. Si no lo encuentras, preocúpate. Las pertenencias quedan en otro sitio o se han perdido.
 
@@ -86,7 +86,7 @@ Kief Morris articula una distinción que evita la mitad de las discusiones impro
 - **Humans In the Loop.** El humano revisa cada artefacto, línea por línea. Es aritméticamente insostenible cuando el rendimiento del agente sube. El humano se vuelve cuello de botella.
 - **Humans On the Loop.** El humano supervisa el sistema, no los artefactos. Cuando algo va mal, **no corrige el artefacto: modifica el sistema que produjo el artefacto**.
 
-El único modo que escala a meses vista es "on the loop". El "in the loop" es el régimen al que llega un equipo conservador por defecto y donde se queda atascado. La transición saludable es de "in" hacia "on", invirtiendo en el harness hasta que la supervisión del sistema sea posible. La transición a "outside" — saltarse el harness directamente — es donde más equipos se queman intentando ahorrarse las fases intermedias.
+El único modo que escala a meses vista es "on the loop". El "in the loop" es el régimen al que llega un equipo conservador por defecto y donde se queda atascado. La transición saludable es de "in" hacia "on", invirtiendo en el arnés hasta que la supervisión del sistema sea posible. La transición a "outside" — saltarse el arnés directamente — es donde más equipos se queman intentando ahorrarse las fases intermedias.
 
 ## El tipo de trabajo que esto pide
 
@@ -95,7 +95,7 @@ Cuando aceptas todo lo anterior, el trabajo del ingeniero cambia. Sigues siendo 
 - Antes escribías código. Ahora **diseñas entornos donde el código correcto puede escribirse a sí mismo**.
 - Antes revisabas PRs. Ahora **diseñas las reglas, sensores y revisores que revisan PRs**.
 - Antes entendías el dominio para implementarlo. Ahora **entiendes el dominio para especificarlo de forma que el agente pueda implementarlo correctamente**.
-- Antes arreglabas fallos. Ahora **diagnosticas por qué el agente cometió el fallo y modificas el harness para que no vuelva a pasar**.
+- Antes arreglabas fallos. Ahora **diagnosticas por qué el agente cometió el fallo y modificas el arnés para que no vuelva a pasar**.
 
 Las habilidades que ganan valor son las que ya distinguían a los buenos seniors: gusto técnico, pensamiento sistémico, claridad al especificar, juicio sobre cuándo invertir en infraestructura. Las que pierden valor relativo son las puramente artesanales: tipear rápido, memorizar APIs, dominar syntax exótica.
 
@@ -108,7 +108,7 @@ Si has llegado hasta aquí y te interesa moverte de la teoría a la práctica, h
 1. **Empieza por el aislamiento.** Sandboxes desechables, baratos de crear, baratos de tirar. Es la inversión que más multiplica todas las demás. Sin esto, los siguientes pasos rinden la mitad.
 2. **Materializa el contexto en el repo.** Lo importante que vive en Slack, Google Docs, o cabezas, mudado a markdown versionado. AGENTS.md como índice de 100 líneas, no como enciclopedia de mil.
 3. **Codifica los invariantes que más te importan.** Linters custom con mensajes dirigidos al agente. Direcciones de dependencia validadas mecánicamente. Schemas en el borde.
-4. **Promueve cada fallo recurrente al harness.** Si el fallo es obviamente sistémico desde el principio, lo conviertes en guía o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.
+4. **Promueve cada fallo recurrente al arnés.** Si el fallo es obviamente sistémico desde el principio, lo conviertes en guía o sensor de inmediato. Si parece una rareza, lo arreglas con el mínimo gasto y lo anotas — pero la segunda vez no hay decisión que tomar: paras y lo promueves, porque ahora ya sabes que es un patrón. No hay tercera vez bien gestionada.
 5. **Diseña el flujo de PR para que la mayoría se revisen agente-a-agente**, y reserva la atención humana para los casos donde el criterio aporta valor real.
 
 No tienes que hacer todo a la vez. Empieza con los pasos 1 y 2; los demás caen por gravedad cuando los dos primeros están en su sitio.
@@ -117,7 +117,7 @@ No tienes que hacer todo a la vez. Empieza con los pasos 1 y 2; los demás caen 
 
 La línea que separa a los equipos que están haciendo cosas notables con agentes de los que siguen frustrados es una línea de inversión en infraestructura. No de talento, no de modelo, no de presupuesto: de **decisión de tratar al agente como un sistema que se ingenía, no como una herramienta a la que se le pide bien**.
 
-Los modelos van a seguir mejorando. Eso es seguro. Lo que está menos claro es cuántos equipos van a aprovecharlos. Los que estén invirtiendo en su harness mientras los demás esperan al próximo modelo van a llegar al próximo modelo con un multiplicador encima. Los que esperen al próximo modelo van a descubrir que el problema no era el modelo y van a volver a esperar al siguiente.
+Los modelos van a seguir mejorando. Eso es seguro. Lo que está menos claro es cuántos equipos van a aprovecharlos. Los que estén invirtiendo en su arnés mientras los demás esperan al próximo modelo van a llegar al próximo modelo con un multiplicador encima. Los que esperen al próximo modelo van a descubrir que el problema no era el modelo y van a volver a esperar al siguiente.
 
 Si esta lectura te ha resonado, los **capítulos 1 a 11 de la guía** desarrollan cada una de las ideas con más detalle: la mentalidad (cap. 1–2), los pilares de guías y sensores (cap. 3–4), la práctica concreta de entornos, contexto, arquitectura y flujo de PR (cap. 5–8), y el mantenimiento sostenible y los anti-patrones (cap. 9–11). Léelos como ensayos independientes; no hace falta orden. Lo que sí hace falta es empezar.
 
