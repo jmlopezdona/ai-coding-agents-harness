@@ -20,7 +20,7 @@ Si lo único que te separa de estos equipos fuera el modelo, todos tendríamos s
 
 > El modelo es el motor. El harness es lo que convierte un LLM en un agente del que un equipo puede depender.
 
-El modelo es intercambiable. Sale uno nuevo cada seis meses, todos parecidos en lo importante. El arnés no. El arnés lo construyes tú, evoluciona con tu proyecto, captura el conocimiento de tu equipo, y se acumula sobre sí mismo a meses vista. Es, en términos directos, **donde está tu ventaja competitiva**. El modelo está donde está la commodity.
+El modelo es intercambiable. Sale uno nuevo cada seis meses, todos parecidos en lo importante. El arnés no. El arnés lo construyes tú, evoluciona con tu proyecto, captura el conocimiento de tu equipo, y se acumula sobre sí mismo a meses vista. Es, en términos directos, **donde está tu ventaja competitiva**. El modelo es materia prima; el arnés, producto propio.
 
 Esto es, en el fondo, una buena noticia. El modelo no lo controlas — lo controla un proveedor que va a optimizarlo para todos por igual. El arnés sí. Y como casi todo lo que controlas en ingeniería, mejora con intención, con disciplina, y con un equipo que entiende qué está construyendo y por qué.
 

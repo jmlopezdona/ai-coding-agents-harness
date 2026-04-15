@@ -20,7 +20,7 @@ If the only thing separating you from these teams were the model, we'd all have 
 
 > The model is the engine. The harness is what turns an LLM into an agent a team can depend on.
 
-The model is interchangeable. A new one comes out every six months, all similar in what matters. The harness isn't. The harness is something you build, it evolves with your project, it captures your team's knowledge, and it compounds on itself months down the road. It is, bluntly, **where your competitive advantage lives**. The model is where the commodity lives.
+The model is interchangeable. A new one comes out every six months, all similar in what matters. The harness isn't. The harness is something you build, it evolves with your project, it captures your team's knowledge, and it compounds on itself months down the road. It is, bluntly, **where your competitive advantage lives**. The model is raw material; the harness is your own product.
 
 This is, deep down, good news. You don't control the model — a vendor controls it, and they're going to optimize it for everyone equally. You do control the harness. And like almost everything you control in engineering, it improves with intent, with discipline, and with a team that understands what it's building and why.
 
