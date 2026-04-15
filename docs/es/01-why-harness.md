@@ -1,6 +1,6 @@
 # 1. Por qué el harness importa más que el modelo
 
-La conversación pública sobre agentes de codificación gira casi siempre alrededor del modelo: qué versión, qué benchmark, qué context window. Es la pregunta equivocada para un equipo que ya usa estas herramientas a diario. La pregunta útil es otra: **¿qué hay alrededor del modelo?**
+La conversación pública sobre agentes de codificación gira casi siempre alrededor del modelo: qué versión, qué benchmark, qué ventana de contexto. Es la pregunta equivocada para un equipo que ya usa estas herramientas a diario. La pregunta útil es otra: **¿qué hay alrededor del modelo?**
 
 A ese "alrededor" la comunidad lo llama el *harness*: el conjunto de prompts, herramientas, reglas, sandboxes, validadores y bucles de feedback que rodean al LLM cuando actúa como agente. El término emergió en torno a LangChain (*"Agent = Model + Harness"*) y Birgitta Böckeler lo articuló con más detalle en *Harness Engineering* (Thoughtworks, publicado en martinfowler.com). El modelo es intercambiable. El harness, no.
 
