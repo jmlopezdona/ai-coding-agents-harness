@@ -123,4 +123,4 @@ If this read resonated, **chapters 1 through 11 of the guide** develop each of t
 
 ---
 
-*This piece synthesizes ideas from Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (OpenAI Codex team) and Alistair Gray (Stripe Leverage team, Minions). The term "harness" in this sense was popularized around LangChain. URLs in the sources section of the [guide's README](README.md#fuentes).*
+*This piece synthesizes ideas from Birgitta Böckeler (Thoughtworks), Chad Fowler, Geoffrey Huntley, Kief Morris, Ryan Lopopolo (OpenAI Codex team) and Alistair Gray (Stripe Leverage team, Minions). The term "harness" in this sense was popularized around LangChain. URLs in the [sources section](index.md#sources) of the index.*
