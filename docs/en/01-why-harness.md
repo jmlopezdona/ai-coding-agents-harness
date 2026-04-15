@@ -14,11 +14,11 @@ When a team complains that "the agent hallucinates" or "doesn't understand the c
 
 ## What's inside the harness (a brief reminder)
 
-Ch. 0 breaks the harness into two mechanisms worth keeping in mind: **guides** (feedforward — conventions, templates, AGENTS.md, schemas) that orient the agent before it acts, and **sensors** (feedback — tests, type checkers, linters, observability, evals) that correct it after. We take that distinction as given; we'll use it without redefining it for the rest of the guide.
+The introductory chapter breaks the harness into two mechanisms worth keeping in mind: **guides** (feedforward — conventions, templates, AGENTS.md, schemas) that orient the agent before it acts, and **sensors** (feedback — tests, type checkers, linters, observability, evals) that correct it after. We take that distinction as given; we'll use it without redefining it for the rest of the guide.
 
 ## What they actually built
 
-The headline numbers — Stripe's >1,000 PRs/week, OpenAI's ~1M lines and ~1,500 PRs in five months — are already in Ch. 0. What's worth adding here is what they *specifically* built, because that's where the shape of the work we're proposing lives:
+The headline numbers — Stripe's >1,000 PRs/week, OpenAI's ~1M lines and ~1,500 PRs in five months — are already in the introductory chapter. What's worth adding here is what they *specifically* built, because that's where the shape of the work we're proposing lives:
 
 - **Stripe** didn't win with a better model. They won with **Toolshed** (~500 internal tools exposed to the agent via MCP), **devboxes pre-instantiated in 10 seconds**, and a **blueprints** system that combines deterministic nodes with agentic nodes depending on the kind of work. All three pieces are harness, not model.
 - **OpenAI** did it with an **app bootable per worktree** (one agent per feature, running in parallel, no collisions), **Chrome DevTools Protocol wired to the runtime** (the agent sees the UI the way the user sees it), **ephemeral observability queryable with LogQL/PromQL**, and a `docs/` tree structured as a system of record (more in ch. 6).
@@ -36,4 +36,4 @@ What in a human team would be nitpicky, in a team with agents **is a multiplier*
 
 ## The principle that runs through the whole guide
 
-Ch. 0 stated it: when something fails, the useful question isn't "how do I tell the agent this is wrong?" but **"what is missing from the harness so this can't happen, or so it gets detected automatically when it happens?"**. The chapters that follow are, in large part, a catalog of what you can add to the harness when you ask yourself that question — guide by guide, sensor by sensor.
+The introductory chapter stated it: when something fails, the useful question isn't "how do I tell the agent this is wrong?" but **"what is missing from the harness so this can't happen, or so it gets detected automatically when it happens?"**. The chapters that follow are, in large part, a catalog of what you can add to the harness when you ask yourself that question — guide by guide, sensor by sensor.

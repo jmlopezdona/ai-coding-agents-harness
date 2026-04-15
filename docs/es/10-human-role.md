@@ -4,7 +4,7 @@ Después de nueve capítulos describiendo cómo automatizar todo lo automatizabl
 
 ## Dónde está el humano: un recordatorio rápido
 
-El Cap. 0 introdujo los tres modos de delegación que articula Kief Morris — *outside the loop* (vibe coding), *in the loop* (supervisión por cada artefacto) y *on the loop* (supervisión del sistema) — y argumentó que "on the loop" es el único régimen que escala: el humano no inspecciona cada salida, sino que modifica el sistema que las produce cuando algo va mal.
+El capítulo introductorio introdujo los tres modos de delegación que articula Kief Morris — *outside the loop* (vibe coding), *in the loop* (supervisión por cada artefacto) y *on the loop* (supervisión del sistema) — y argumentó que "on the loop" es el único régimen que escala: el humano no inspecciona cada salida, sino que modifica el sistema que las produce cuando algo va mal.
 
 Damos esa discusión por cerrada. La pregunta que organiza este capítulo es la siguiente: **si estás "on the loop", ¿qué haces exactamente con tu tiempo?** Porque "supervisar el sistema" es una frase bonita que, sin desglosar, deja a la mitad de los ingenieros sin saber qué hacer el lunes por la mañana.
 
@@ -29,9 +29,9 @@ Estas tres cosas no son automatizables, no porque el modelo no sea capaz, sino p
 
 ## El nuevo trabajo
 
-El Cap. 0 ya enumeró el cambio — de escribir código a diseñar entornos, de revisar PRs a diseñar los revisores, de implementar el dominio a especificarlo, de arreglar fallos a diagnosticar por qué el agente los cometió — y lo resumió con la frase de OpenAI: *"las personas dirigen, los agentes ejecutan"*. Es meta-ingeniería, y la descripción del puesto se parece más a "ingeniero de plataforma para colaboradores no humanos" que a "programador".
+El capítulo introductorio ya enumeró el cambio — de escribir código a diseñar entornos, de revisar PRs a diseñar los revisores, de implementar el dominio a especificarlo, de arreglar fallos a diagnosticar por qué el agente los cometió — y lo resumió con la frase de OpenAI: *"las personas dirigen, los agentes ejecutan"*. Es meta-ingeniería, y la descripción del puesto se parece más a "ingeniero de plataforma para colaboradores no humanos" que a "programador".
 
-Lo que el Cap. 0 no hizo es desglosarlo al nivel de "qué ocupa tus horas". Eso es lo siguiente.
+Lo que el capítulo introductorio no hizo es desglosarlo al nivel de "qué ocupa tus horas". Eso es lo siguiente.
 
 ## Las cuatro intervenciones humanas que importan
 

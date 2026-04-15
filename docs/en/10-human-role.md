@@ -4,7 +4,7 @@ After nine chapters describing how to automate everything automatable, it's wort
 
 ## Where the human is: a quick recap
 
-Ch. 0 introduced the three delegation modes Kief Morris articulates — *outside the loop* (vibe coding), *in the loop* (per-artifact supervision), and *on the loop* (system supervision) — and argued that "on the loop" is the only regime that scales: the human doesn't inspect each output but modifies the system that produces them when things go wrong.
+The introductory chapter introduced the three delegation modes Kief Morris articulates — *outside the loop* (vibe coding), *in the loop* (per-artifact supervision), and *on the loop* (system supervision) — and argued that "on the loop" is the only regime that scales: the human doesn't inspect each output but modifies the system that produces them when things go wrong.
 
 We take that discussion as closed. The question this chapter organizes is the next one: **if you're "on the loop", what exactly do you do with your time?** Because "supervise the system" is a nice phrase that, left unbroken-down, leaves half the engineers on the team not knowing what to do on Monday morning.
 
@@ -29,9 +29,9 @@ These three things aren't automatable, not because the model isn't capable, but 
 
 ## The new work
 
-Ch. 0 already enumerated the shift — from writing code to designing environments, from reviewing PRs to designing the reviewers, from implementing the domain to specifying it, from fixing bugs to diagnosing why the agent made them — and summed it up with OpenAI's phrase: *"people direct, agents execute"*. It's meta-engineering, and the job description starts to look more like "platform engineer for non-human collaborators" than "programmer".
+The introductory chapter already enumerated the shift — from writing code to designing environments, from reviewing PRs to designing the reviewers, from implementing the domain to specifying it, from fixing bugs to diagnosing why the agent made them — and summed it up with OpenAI's phrase: *"people direct, agents execute"*. It's meta-engineering, and the job description starts to look more like "platform engineer for non-human collaborators" than "programmer".
 
-What Ch. 0 didn't do is break it down to the level of "what fills your hours". That's next.
+What the introductory chapter didn't do is break it down to the level of "what fills your hours". That's next.
 
 ## The four human interventions that matter
 

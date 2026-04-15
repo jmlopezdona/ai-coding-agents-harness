@@ -1,6 +1,6 @@
 # 6. El contexto como sistema de registro
 
-En el Cap. 0 instalamos la frase del equipo de Codex: **"lo que el agente no puede ver, no existe"** — y la consecuencia inmediata de que todo lo que el agente tenga que saber debe estar *materializado* en el repo, no solo "documentado en algún sitio". Este capítulo es la versión operativa de esa consecuencia: qué formas concretas toma la materialización, qué trampas evitar (AGENTS.md enciclopédico, sincronizaciones sin freshness check), cómo evitar que se pudra con el tiempo, y cuándo sustituir el repo por un MCP server es una opción razonable y cuándo no lo es.
+En el capítulo introductorio instalamos la frase del equipo de Codex: **"lo que el agente no puede ver, no existe"** — y la consecuencia inmediata de que todo lo que el agente tenga que saber debe estar *materializado* en el repo, no solo "documentado en algún sitio". Este capítulo es la versión operativa de esa consecuencia: qué formas concretas toma la materialización, qué trampas evitar (AGENTS.md enciclopédico, sincronizaciones sin freshness check), cómo evitar que se pudra con el tiempo, y cuándo sustituir el repo por un MCP server es una opción razonable y cuándo no lo es.
 
 ## El error del "AGENTS.md gigante"
 
@@ -102,4 +102,4 @@ El principio que sostiene este compromiso es el mismo que sostiene todo el capí
 
 ## El upside oculto
 
-El Cap. 0 ya apuntó al bucle virtuoso que Stripe resume como *"lo que es bueno para humanos es bueno para agentes"*. Aquí se concreta: los artefactos de este capítulo — doc-gardening, planes versionados, tracker de deuda, specs en el repo, score de calidad por dominio — reducen el tiempo de onboarding de un nuevo ingeniero en la misma medida en que hacen al agente productivo. Lo que parecía una concesión a la máquina es, en buena parte, ingeniería de plataforma para el propio equipo. Cada hora que dedicas al agente mejora la experiencia humana del repo, y viceversa. Ahí está la tracción.
+El capítulo introductorio ya apuntó al bucle virtuoso que Stripe resume como *"lo que es bueno para humanos es bueno para agentes"*. Aquí se concreta: los artefactos de este capítulo — doc-gardening, planes versionados, tracker de deuda, specs en el repo, score de calidad por dominio — reducen el tiempo de onboarding de un nuevo ingeniero en la misma medida en que hacen al agente productivo. Lo que parecía una concesión a la máquina es, en buena parte, ingeniería de plataforma para el propio equipo. Cada hora que dedicas al agente mejora la experiencia humana del repo, y viceversa. Ahí está la tracción.

@@ -1,6 +1,6 @@
 # 2. Relocating rigor
 
-Ch. 0 summarized Chad Fowler's observation: every time software takes a major leap, someone announces that "we don't need so much rigor anymore", and every time they're wrong. Rigor doesn't disappear; **it relocates**. Dynamic languages moved it to the test suite; XP moved it to continuous integration; continuous deployment moved it to observability and automatic rollback. In all three cases, whoever read the change as "now we can relax" lost; whoever understood where discipline had moved to, won.
+The introductory chapter summarized Chad Fowler's observation: every time software takes a major leap, someone announces that "we don't need so much rigor anymore", and every time they're wrong. Rigor doesn't disappear; **it relocates**. Dynamic languages moved it to the test suite; XP moved it to continuous integration; continuous deployment moved it to observability and automatic rollback. In all three cases, whoever read the change as "now we can relax" lost; whoever understood where discipline had moved to, won.
 
 With coding agents it's the same pattern. This chapter is about where rigor *specifically* relocates, what happens if you miss the move, and how to tell a sustainable relocation apart from a disguised evaporation.
 

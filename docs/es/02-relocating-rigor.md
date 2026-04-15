@@ -1,6 +1,6 @@
 # 2. La reubicación del rigor
 
-En el Cap. 0 resumimos la observación de Chad Fowler: cada vez que el software da un salto importante, alguien anuncia que "ya no hace falta tanto rigor", y cada vez se equivoca. El rigor no desaparece; **se reubica**. Los lenguajes dinámicos lo movieron al test suite; XP lo movió a la integración continua; el despliegue continuo lo movió a la observabilidad y a la reversión automática. En los tres casos, quien leyó el cambio como "ahora podemos ser más relajados" perdió; quien entendió dónde se había mudado la disciplina, ganó.
+En el capítulo introductorio resumimos la observación de Chad Fowler: cada vez que el software da un salto importante, alguien anuncia que "ya no hace falta tanto rigor", y cada vez se equivoca. El rigor no desaparece; **se reubica**. Los lenguajes dinámicos lo movieron al test suite; XP lo movió a la integración continua; el despliegue continuo lo movió a la observabilidad y a la reversión automática. En los tres casos, quien leyó el cambio como "ahora podemos ser más relajados" perdió; quien entendió dónde se había mudado la disciplina, ganó.
 
 Con agentes de codificación pasa lo mismo. Este capítulo es sobre dónde se reubica *específicamente* el rigor, qué pasa si no te enteras, y cómo distinguir una reubicación sostenible de una evaporación disfrazada.
 

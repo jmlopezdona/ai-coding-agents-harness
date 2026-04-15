@@ -1,6 +1,6 @@
 # 6. Context as a system of record
 
-Ch. 0 installed the line from OpenAI's Codex team: **"what the agent can't see doesn't exist"** — and the immediate consequence that everything the agent needs to know has to be *materialized* in the repo, not just "documented somewhere". This chapter is the operational version of that consequence: what concrete shapes the materialization takes, what traps to avoid (the encyclopedic AGENTS.md, syncs without a freshness check), how to keep it from rotting over time, and when swapping the repo for an MCP server is a reasonable choice and when it isn't.
+The introductory chapter installed the line from OpenAI's Codex team: **"what the agent can't see doesn't exist"** — and the immediate consequence that everything the agent needs to know has to be *materialized* in the repo, not just "documented somewhere". This chapter is the operational version of that consequence: what concrete shapes the materialization takes, what traps to avoid (the encyclopedic AGENTS.md, syncs without a freshness check), how to keep it from rotting over time, and when swapping the repo for an MCP server is a reasonable choice and when it isn't.
 
 ## The "giant AGENTS.md" mistake
 
@@ -102,4 +102,4 @@ The principle that holds up this compromise is the same one that holds up the wh
 
 ## The hidden upside
 
-Ch. 0 already pointed at the virtuous loop Stripe sums up as *"what's good for humans is good for agents"*. This is where it gets concrete: the artifacts from this chapter — doc-gardening, versioned plans, debt tracker, specs in the repo, per-domain quality score — cut the onboarding time for a new engineer by the same amount they make the agent productive. What looked like a concession to the machine is, in large part, platform engineering for the team itself. Every hour you spend on the agent improves the human experience of the repo, and vice versa. That's where the traction comes from.
+The introductory chapter already pointed at the virtuous loop Stripe sums up as *"what's good for humans is good for agents"*. This is where it gets concrete: the artifacts from this chapter — doc-gardening, versioned plans, debt tracker, specs in the repo, per-domain quality score — cut the onboarding time for a new engineer by the same amount they make the agent productive. What looked like a concession to the machine is, in large part, platform engineering for the team itself. Every hour you spend on the agent improves the human experience of the repo, and vice versa. That's where the traction comes from.

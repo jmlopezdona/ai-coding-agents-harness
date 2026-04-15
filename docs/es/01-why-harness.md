@@ -14,11 +14,11 @@ Cuando un equipo se queja de que "el agente alucina" o "no entiende el código",
 
 ## Lo que hay dentro del harness (recordatorio)
 
-El Cap. 0 descompone el arnés en dos mecanismos que conviene tener delante: **guías** (feedforward — convenciones, plantillas, AGENTS.md, schemas) que orientan al agente antes de actuar, y **sensores** (feedback — tests, type checkers, linters, observabilidad, evals) que lo corrigen después. Damos esa distinción por sabida; la usaremos sin redefinirla el resto de la guía.
+El capítulo introductorio descompone el arnés en dos mecanismos que conviene tener delante: **guías** (feedforward — convenciones, plantillas, AGENTS.md, schemas) que orientan al agente antes de actuar, y **sensores** (feedback — tests, type checkers, linters, observabilidad, evals) que lo corrigen después. Damos esa distinción por sabida; la usaremos sin redefinirla el resto de la guía.
 
 ## Qué construyeron, exactamente
 
-Las cifras de referencia — Stripe con >1.000 PRs/semana, OpenAI con ~1M de líneas y ~1.500 PRs en cinco meses — ya están en el Cap. 0. Lo que conviene añadir aquí es qué *específicamente* construyeron, porque ahí está la forma del trabajo que proponemos:
+Las cifras de referencia — Stripe con >1.000 PRs/semana, OpenAI con ~1M de líneas y ~1.500 PRs en cinco meses — ya están en el capítulo introductorio. Lo que conviene añadir aquí es qué *específicamente* construyeron, porque ahí está la forma del trabajo que proponemos:
 
 - **Stripe** no ganó con un modelo mejor. Ganó con **Toolshed** (~500 herramientas internas expuestas al agente vía MCP), **devboxes pre-instanciados en 10 segundos**, y un sistema de **blueprints** que combina nodos determinísticos con nodos agénticos según el tipo de trabajo. Las tres piezas son arnés, no modelo.
 - **OpenAI** lo hizo con **app booteable por worktree** (un agente por feature, ejecutándose en paralelo, sin colisiones), **Chrome DevTools Protocol conectado al runtime** (el agente ve la UI como la ve el usuario), **observabilidad efímera consultable con LogQL/PromQL**, y `docs/` estructurado como sistema de registro (más en el cap. 6).
@@ -36,4 +36,4 @@ Lo que en un equipo humano sería quisquilloso, en un equipo con agentes **es un
 
 ## El principio que recorre toda la guía
 
-El Cap. 0 lo enunció: cuando algo falla, la pregunta útil no es "¿cómo le digo al agente que esto está mal?" sino **"¿qué le falta al harness para que esto no pueda ocurrir, o para que se detecte automáticamente cuando ocurra?"**. Los capítulos que siguen son, en buena parte, un catálogo de qué puedes añadir al arnés cuando te haces esa pregunta — guía a guía, sensor a sensor.
+El capítulo introductorio lo enunció: cuando algo falla, la pregunta útil no es "¿cómo le digo al agente que esto está mal?" sino **"¿qué le falta al harness para que esto no pueda ocurrir, o para que se detecte automáticamente cuando ocurra?"**. Los capítulos que siguen son, en buena parte, un catálogo de qué puedes añadir al arnés cuando te haces esa pregunta — guía a guía, sensor a sensor.
