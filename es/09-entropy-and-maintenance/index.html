@@ -1543,7 +1543,7 @@
 <p>Las razones son obvias en retrospectiva:</p>
 <ul>
 <li><strong>El rendimiento del agente sube más rápido que la capacidad humana de limpieza.</strong> Cuanto mejor el harness, peor escala este modelo.</li>
-<li><strong>El conocimiento de "qué está mal" se queda en la cabeza del que limpia.</strong> No se traduce en mejoras del harness. La semana siguiente, el agente comete los mismos errores.</li>
+<li><strong>El conocimiento de "qué está mal" se queda en la cabeza del que limpia.</strong> No se traduce en mejoras del arnés. La semana siguiente, el agente comete los mismos errores.</li>
 <li><strong>Limpiar es trabajo de baja moral.</strong> Los ingenieros más senior lo evitan o lo hacen mal. La calidad del cleanup decae hasta que ya no compensa.</li>
 </ul>
 <p>La conclusión inevitable: <strong>el mantenimiento tiene que ser parte del bucle, no un evento separado</strong>.</p>
@@ -1560,12 +1560,12 @@
 <ul>
 <li><strong>No esperas a "la próxima sprint de cleanup".</strong> No existe. El cleanup es ambient.</li>
 <li><strong>No batchas refactors grandes.</strong> Refactor pequeño hoy + refactor pequeño mañana &gt; refactor enorme en seis semanas.</li>
-<li><strong>El valor del refactor pequeño no es solo el código mejor.</strong> Es que mantiene la base de código en un estado donde el próximo cambio del agente es más probable que sea correcto. Los refactors son inversiones en el harness, no solo en el código.</li>
+<li><strong>El valor del refactor pequeño no es solo el código mejor.</strong> Es que mantiene la base de código en un estado donde el próximo cambio del agente es más probable que sea correcto. Los refactors son inversiones en el arnés, no solo en el código.</li>
 </ul>
 <h2 id="el-gusto-humano-capturado-una-vez">El "gusto humano" capturado una vez<a class="headerlink" href="#el-gusto-humano-capturado-una-vez" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Hay una frase que vale la pena leer dos veces: <em>"el gusto humano se captura una vez y luego se aplica continuamente en cada línea de código"</em>. Es la diferencia entre un equipo donde el senior tiene que estar mirando todo, y un equipo donde el senior dedica tiempo a <strong>traducir su gusto en reglas ejecutables</strong> y luego deja que el sistema lo aplique.</p>
 <p>Esto vuelve cada hora de trabajo del senior radicalmente más valiosa. En un flujo tradicional, una revisión consume 30 minutos del senior y mejora <em>un</em> PR. En un flujo agéntico bien hecho, esos mismos 30 minutos se invierten en escribir un golden principle o un lint custom, y mejoran <em>todos los PRs futuros</em>. El multiplicador es enorme y se acumula con el tiempo.</p>
-<p>La pregunta diagnóstica para un senior: ¿cuánto del tiempo que dedicas a calidad termina como código que se ejecuta automáticamente, y cuánto termina como conocimiento en tu cabeza que se evapora cuando dejes el equipo? Cuanto más alta la primera proporción, más sano el harness.</p>
+<p>La pregunta diagnóstica para un senior: ¿cuánto del tiempo que dedicas a calidad termina como código que se ejecuta automáticamente, y cuánto termina como conocimiento en tu cabeza que se evapora cuando dejes el equipo? Cuanto más alta la primera proporción, más sano el arnés.</p>
 <h2 id="las-tres-capas-de-mantenimiento">Las tres capas de mantenimiento<a class="headerlink" href="#las-tres-capas-de-mantenimiento" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Es útil pensar el mantenimiento como tres capas que actúan en escalas de tiempo distintas:</p>
 <p><strong>Capa 1 — sensores en CI (segundos a minutos).</strong> Detectan los problemas obvios en el momento del PR. Lints, tests, type checks. Esta capa es la primera línea y es la más barata.</p>
@@ -1576,25 +1576,25 @@
 <p>Un equipo que tiene esto bien suele notar dos cosas a los pocos meses:</p>
 <ol>
 <li>
-<p><strong>Las PRs de los agentes se vuelven más cortas, no más largas.</strong> Porque el contexto está mejor estructurado, la mayoría de cambios son pequeños y dirigidos. Las megapull requests de mil líneas son síntoma de harness inmaduro.</p>
+<p><strong>Las PRs de los agentes se vuelven más cortas, no más largas.</strong> Porque el contexto está mejor estructurado, la mayoría de cambios son pequeños y dirigidos. Las megapull requests de mil líneas son síntoma de arnés inmaduro.</p>
 </li>
 <li>
-<p><strong>Los problemas recurrentes desaparecen sin que nadie los persiga.</strong> Porque cada problema recurrente generó una guía o un sensor cuando se detectó la segunda vez. La memoria del equipo vive en el harness, no en la cabeza de la gente.</p>
+<p><strong>Los problemas recurrentes desaparecen sin que nadie los persiga.</strong> Porque cada problema recurrente generó una guía o un sensor cuando se detectó la segunda vez. La memoria del equipo vive en el arnés, no en la cabeza de la gente.</p>
 </li>
 </ol>
-<p>Si en cambio observas que las PRs son cada vez más largas, que los mismos errores siguen apareciendo, y que el equipo dedica cada vez más tiempo a "arreglar lo que el agente rompió", el harness está perdiendo. La inversión correcta no es "más limpieza humana" — es promover lo que se aprende durante la limpieza al harness, hasta que la limpieza no haga falta.</p>
+<p>Si en cambio observas que las PRs son cada vez más largas, que los mismos errores siguen apareciendo, y que el equipo dedica cada vez más tiempo a "arreglar lo que el agente rompió", el arnés está perdiendo. La inversión correcta no es "más limpieza humana" — es promover lo que se aprende durante la limpieza al arnés, hasta que la limpieza no haga falta.</p>
 <h2 id="el-flywheel-agentico-cuando-el-harness-se-mantiene-a-si-mismo">El flywheel agéntico: cuando el harness se mantiene a sí mismo<a class="headerlink" href="#el-flywheel-agentico-cuando-el-harness-se-mantiene-a-si-mismo" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Hay un punto de maduración que vale la pena nombrar porque es hacia donde apunta naturalmente todo lo descrito en este capítulo. Kief Morris lo llama el <strong>agentic flywheel</strong>: agentes que no solo escriben código, sino que <strong>analizan resultados y recomiendan mejoras al propio harness</strong>, e incluso las implementan bajo supervisión humana estratégica.</p>
 <p>El bucle se vuelve algo así:</p>
 <ol>
 <li>Sensores detectan un patrón recurrente (un tipo de fallo, una clase de drift, un fallo de doc-gardening).</li>
 <li>Un agente meta lee la señal acumulada y propone una mejora: "este patrón lo hemos arreglado siete veces este mes; sugiero el siguiente lint custom" o "este doc ha desviado del código tres veces; sugiero esta restructuración".</li>
-<li>La propuesta llega al humano como un PR sobre el harness mismo — no sobre el código de la aplicación.</li>
-<li>El humano aprueba, ajusta o rechaza con argumentos, y el harness mejora.</li>
-<li>El siguiente ciclo de detección parte de un harness más capaz.</li>
+<li>La propuesta llega al humano como un PR sobre el arnés mismo — no sobre el código de la aplicación.</li>
+<li>El humano aprueba, ajusta o rechaza con argumentos, y el arnés mejora.</li>
+<li>El siguiente ciclo de detección parte de un arnés más capaz.</li>
 </ol>
-<p>Esto suena ambicioso y conviene calibrarlo: no es el punto de partida, es la dirección. Un equipo que empieza intentando construir el flywheel completo cae en el anti-patrón 7 (megalomanía del plan inicial). Pero un equipo que va promoviendo aprendizajes al harness con disciplina termina, casi por gravedad, llegando a un punto donde las propuestas de mejora también se generan automáticamente. El flywheel no se diseña; se descubre cuando ya estabas haciendo casi todo lo que requiere.</p>
-<p>La señal de que estás cerca: más del 50% de los PRs que tocan el harness los abre un agente, y el trabajo del humano se reduce a aprobar, ajustar o vetar con criterio. Cuando llegues ahí, el rol humano ha completado su transición — y lo que has construido es un sistema que aprende a mejorarse solo.</p>
+<p>Esto suena ambicioso y conviene calibrarlo: no es el punto de partida, es la dirección. Un equipo que empieza intentando construir el flywheel completo cae en el anti-patrón 7 (megalomanía del plan inicial). Pero un equipo que va promoviendo aprendizajes al arnés con disciplina termina, casi por gravedad, llegando a un punto donde las propuestas de mejora también se generan automáticamente. El flywheel no se diseña; se descubre cuando ya estabas haciendo casi todo lo que requiere.</p>
+<p>La señal de que estás cerca: más del 50% de los PRs que tocan el arnés los abre un agente, y el trabajo del humano se reduce a aprobar, ajustar o vetar con criterio. Cuando llegues ahí, el rol humano ha completado su transición — y lo que has construido es un sistema que aprende a mejorarse solo.</p>
 
 
 
