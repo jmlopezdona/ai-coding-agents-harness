@@ -287,7 +287,7 @@
   
     
   
-  Overview
+  Introduction
 
       </a>
     </li>
@@ -514,7 +514,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    Introduction
   
 
     
@@ -1474,9 +1474,9 @@
 <p>An F1 engine inside a compact car doesn't win races. What wins races is the chassis, the aerodynamics, the tires, the telemetry and the pit crew. The model is the engine; everything else is where the race is won or lost. And the important part: that "everything else" is something you build, not the model vendor.</p>
 <p>When a team complains that "the agent hallucinates" or "doesn't understand the code", the problem is almost never the model. The problem is that the agent is operating in an environment where it would be unreasonable to expect a new human to understand anything either. It has no map, no fast tests, can't reproduce the bug, doesn't know the team convention and nobody tells it when what it did is wrong.</p>
 <h2 id="whats-inside-the-harness-a-brief-reminder">What's inside the harness (a brief reminder)<a class="headerlink" href="#whats-inside-the-harness-a-brief-reminder" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Ch. 0 breaks the harness into two mechanisms worth keeping in mind: <strong>guides</strong> (feedforward — conventions, templates, AGENTS.md, schemas) that orient the agent before it acts, and <strong>sensors</strong> (feedback — tests, type checkers, linters, observability, evals) that correct it after. We take that distinction as given; we'll use it without redefining it for the rest of the guide.</p>
+<p>The introductory chapter breaks the harness into two mechanisms worth keeping in mind: <strong>guides</strong> (feedforward — conventions, templates, AGENTS.md, schemas) that orient the agent before it acts, and <strong>sensors</strong> (feedback — tests, type checkers, linters, observability, evals) that correct it after. We take that distinction as given; we'll use it without redefining it for the rest of the guide.</p>
 <h2 id="what-they-actually-built">What they actually built<a class="headerlink" href="#what-they-actually-built" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>The headline numbers — Stripe's &gt;1,000 PRs/week, OpenAI's ~1M lines and ~1,500 PRs in five months — are already in Ch. 0. What's worth adding here is what they <em>specifically</em> built, because that's where the shape of the work we're proposing lives:</p>
+<p>The headline numbers — Stripe's &gt;1,000 PRs/week, OpenAI's ~1M lines and ~1,500 PRs in five months — are already in the introductory chapter. What's worth adding here is what they <em>specifically</em> built, because that's where the shape of the work we're proposing lives:</p>
 <ul>
 <li><strong>Stripe</strong> didn't win with a better model. They won with <strong>Toolshed</strong> (~500 internal tools exposed to the agent via MCP), <strong>devboxes pre-instantiated in 10 seconds</strong>, and a <strong>blueprints</strong> system that combines deterministic nodes with agentic nodes depending on the kind of work. All three pieces are harness, not model.</li>
 <li><strong>OpenAI</strong> did it with an <strong>app bootable per worktree</strong> (one agent per feature, running in parallel, no collisions), <strong>Chrome DevTools Protocol wired to the runtime</strong> (the agent sees the UI the way the user sees it), <strong>ephemeral observability queryable with LogQL/PromQL</strong>, and a <code>docs/</code> tree structured as a system of record (more in ch. 6).</li>
@@ -1488,7 +1488,7 @@
 <p>And you start doing things that used to look like over-engineering: custom linters for a single convention, versioned execution plans, local observability, "doc-gardening" agents that keep documentation up to date.</p>
 <p>What in a human team would be nitpicky, in a team with agents <strong>is a multiplier</strong>. A rule codified once applies forever, on every PR, without wear, without debate, without having to remind anyone at the next standup.</p>
 <h2 id="the-principle-that-runs-through-the-whole-guide">The principle that runs through the whole guide<a class="headerlink" href="#the-principle-that-runs-through-the-whole-guide" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Ch. 0 stated it: when something fails, the useful question isn't "how do I tell the agent this is wrong?" but <strong>"what is missing from the harness so this can't happen, or so it gets detected automatically when it happens?"</strong>. The chapters that follow are, in large part, a catalog of what you can add to the harness when you ask yourself that question — guide by guide, sensor by sensor.</p>
+<p>The introductory chapter stated it: when something fails, the useful question isn't "how do I tell the agent this is wrong?" but <strong>"what is missing from the harness so this can't happen, or so it gets detected automatically when it happens?"</strong>. The chapters that follow are, in large part, a catalog of what you can add to the harness when you ask yourself that question — guide by guide, sensor by sensor.</p>
 
 
 
@@ -1524,7 +1524,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../00-harness-engineering/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+          <a href="../00-harness-engineering/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1534,7 +1534,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Overview
+                Introduction
               </div>
             </div>
           </a>

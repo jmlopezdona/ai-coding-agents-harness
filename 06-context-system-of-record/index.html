@@ -287,7 +287,7 @@
   
     
   
-  Overview
+  Introduction
 
       </a>
     </li>
@@ -514,7 +514,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    Introduction
   
 
     
@@ -1611,7 +1611,7 @@
 
 
 <h1 id="6-context-as-a-system-of-record">6. Context as a system of record<a class="headerlink" href="#6-context-as-a-system-of-record" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Ch. 0 installed the line from OpenAI's Codex team: <strong>"what the agent can't see doesn't exist"</strong> — and the immediate consequence that everything the agent needs to know has to be <em>materialized</em> in the repo, not just "documented somewhere". This chapter is the operational version of that consequence: what concrete shapes the materialization takes, what traps to avoid (the encyclopedic AGENTS.md, syncs without a freshness check), how to keep it from rotting over time, and when swapping the repo for an MCP server is a reasonable choice and when it isn't.</p>
+<p>The introductory chapter installed the line from OpenAI's Codex team: <strong>"what the agent can't see doesn't exist"</strong> — and the immediate consequence that everything the agent needs to know has to be <em>materialized</em> in the repo, not just "documented somewhere". This chapter is the operational version of that consequence: what concrete shapes the materialization takes, what traps to avoid (the encyclopedic AGENTS.md, syncs without a freshness check), how to keep it from rotting over time, and when swapping the repo for an MCP server is a reasonable choice and when it isn't.</p>
 <h2 id="the-giant-agentsmd-mistake">The "giant AGENTS.md" mistake<a class="headerlink" href="#the-giant-agentsmd-mistake" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Many teams' first reaction when they discover this is reasonable: cram everything important into a huge AGENTS.md. It's exactly the trap OpenAI describes having tried and abandoned. Four reasons it fails:</p>
 <p><strong>1. Context is a scarce resource.</strong> A 1,000-line manual overshadows the task, the relevant code, and the tools. The model has two options: ignore key constraints, or optimize the wrong ones. Both are bad.</p>
@@ -1672,7 +1672,7 @@
 <p>For most real teams, the sensible answer isn't "everything in the repo" or "everything in MCP" but a deliberate hybrid: <strong>the critical stuff is materialized in the repo</strong> (with whatever strategy fits — point-in-time copy, sync with a freshness lint, or born as markdown in the first place), and <strong>additional documentation</strong> — the long-tail, the historical context, domain notes that help but aren't load-bearing — <strong>is exposed via an MCP server against a documentation system with semantic indexing</strong>.</p>
 <p>The principle that holds up this compromise is the same one that holds up the whole chapter: the repo is the system of record because it is <strong>deterministic, versioned, auditable, and always available</strong>. Any alternative that loses one of those four properties is acceptable only where that property wasn't critical. MCP loses all four at once — and that's why it fits to <em>enrich</em> the context, not to <em>guarantee</em> it. The difference between enriching and guaranteeing is the difference between an assistant that is sometimes brilliant and a system a team can rely on.</p>
 <h2 id="the-hidden-upside">The hidden upside<a class="headerlink" href="#the-hidden-upside" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Ch. 0 already pointed at the virtuous loop Stripe sums up as <em>"what's good for humans is good for agents"</em>. This is where it gets concrete: the artifacts from this chapter — doc-gardening, versioned plans, debt tracker, specs in the repo, per-domain quality score — cut the onboarding time for a new engineer by the same amount they make the agent productive. What looked like a concession to the machine is, in large part, platform engineering for the team itself. Every hour you spend on the agent improves the human experience of the repo, and vice versa. That's where the traction comes from.</p>
+<p>The introductory chapter already pointed at the virtuous loop Stripe sums up as <em>"what's good for humans is good for agents"</em>. This is where it gets concrete: the artifacts from this chapter — doc-gardening, versioned plans, debt tracker, specs in the repo, per-domain quality score — cut the onboarding time for a new engineer by the same amount they make the agent productive. What looked like a concession to the machine is, in large part, platform engineering for the team itself. Every hour you spend on the agent improves the human experience of the repo, and vice versa. That's where the traction comes from.</p>
 
 
 
