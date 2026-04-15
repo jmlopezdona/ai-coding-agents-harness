@@ -931,17 +931,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#el-cambio-de-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El cambio de mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#el-error-del-agentsmd-gigante" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1470,17 +1459,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#el-cambio-de-mentalidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El cambio de mentalidad
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#el-error-del-agentsmd-gigante" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1633,11 +1611,7 @@
 
 
 <h1 id="6-el-contexto-como-sistema-de-registro">6. El contexto como sistema de registro<a class="headerlink" href="#6-el-contexto-como-sistema-de-registro" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Hay una frase del equipo de Codex de OpenAI que vale la pena pintar en la pared del equipo: <strong>"lo que el agente no puede ver, no existe"</strong>. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene consecuencias directas sobre dónde tiene que vivir el conocimiento de un proyecto. La respuesta corta: en el repo, versionado, mecánicamente accesible. La respuesta larga es este capítulo.</p>
-<h2 id="el-cambio-de-mentalidad">El cambio de mentalidad<a class="headerlink" href="#el-cambio-de-mentalidad" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>En equipos humanos, el conocimiento vive distribuido en muchos lugares: en el README, sí, pero también en Slack del miércoles pasado, en un Google Doc enlazado en algún correo, en la cabeza del senior, en un Linear ticket de hace seis meses, en una conversación de pasillo. Esta distribución funciona — mal pero funciona — porque los humanos sabemos preguntar, cruzar fuentes, y usar contexto implícito.</p>
-<p>Un agente no. El agente solo ve lo que está en su contexto efectivo en el momento de actuar. Si la decisión de "no toques este módulo, lo vamos a deprecar" vive solo en un Slack del 14 de marzo, para el agente esa decisión no existe. No es que la ignore: es que no es accesible.</p>
-<p>La consecuencia es incómoda y liberadora a la vez: <strong>todo lo que quieras que el agente sepa tiene que estar materializado en el repo o accesible mecánicamente desde él</strong>. No "documentado en algún sitio". No "mencionado en una reunión". Materializado, en markdown, indexado, mantenido.</p>
+<p>En el Cap. 0 instalamos la frase del equipo de Codex: <strong>"lo que el agente no puede ver, no existe"</strong> — y la consecuencia inmediata de que todo lo que el agente tenga que saber debe estar <em>materializado</em> en el repo, no solo "documentado en algún sitio". Este capítulo es la versión operativa de esa consecuencia: qué formas concretas toma la materialización, qué trampas evitar (AGENTS.md enciclopédico, sincronizaciones sin freshness check), cómo evitar que se pudra con el tiempo, y cuándo sustituir el repo por un MCP server es una opción razonable y cuándo no lo es.</p>
 <h2 id="el-error-del-agentsmd-gigante">El error del "AGENTS.md gigante"<a class="headerlink" href="#el-error-del-agentsmd-gigante" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>La primera reacción de muchos equipos al descubrir esto es razonable: meter todo lo importante en un AGENTS.md enorme. Es exactamente la trampa que OpenAI describe haber probado y abandonado. Cuatro razones por las que falla:</p>
 <p><strong>1. El contexto es un recurso escaso.</strong> Un manual de 1.000 líneas eclipsa la tarea, el código relevante y las herramientas. El modelo tiene dos opciones: ignorar restricciones clave, u optimizar las equivocadas. Las dos son malas.</p>
@@ -1698,8 +1672,7 @@
 <p>Para la mayoría de equipos reales, la respuesta sensata no es "todo al repo" ni "todo a MCP", sino un híbrido deliberado: <strong>lo crítico se materializa en el repo</strong> (con la estrategia que toque — copia, sync con freshness lint, o nacido ya en markdown), y <strong>la documentación adicional</strong> — el long-tail, el contexto histórico, las notas de dominio que ayudan pero no son load-bearing — <strong>se expone vía un MCP server contra un sistema documental con indexación semántica</strong>.</p>
 <p>El principio que sostiene este compromiso es el mismo que sostiene todo el capítulo: el repo es el sistema de registro porque es <strong>determinista, versionado, auditable y siempre disponible</strong>. Cualquier alternativa que pierda alguna de esas cuatro propiedades es aceptable solo donde esa propiedad no era crítica. MCP las pierde las cuatro a la vez — y por eso encaja para <em>enriquecer</em> el contexto, no para <em>garantizarlo</em>. La diferencia entre enriquecer y garantizar es la diferencia entre un asistente que a veces es brillante y un sistema del que un equipo puede depender.</p>
 <h2 id="el-upside-oculto">El upside oculto<a class="headerlink" href="#el-upside-oculto" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Hay un efecto secundario que casi nadie anticipa: <strong>al hacer el repo legible para un agente, lo haces enormemente más legible para humanos también</strong>. El doc-gardening te beneficia. Los planes versionados te benefician. El tracker de deuda te beneficia. Los humanos que se incorporan al equipo se incorporan más rápido. Los seniors dejan de ser cuellos de botella de contexto. Lo que parecía una concesión a la máquina termina siendo, en buena parte, ingeniería de plataforma para el propio equipo.</p>
-<p>Stripe lo dice de forma directa, y vale la pena cerrar con su frase: <em>"lo que es bueno para humanos es bueno para agentes"</em>. La inversión histórica en developer experience rinde dividendos también para el agente, y la inversión en agente rinde dividendos para el developer experience. El bucle es virtuoso si lo dejas serlo.</p>
+<p>El Cap. 0 ya apuntó al bucle virtuoso que Stripe resume como <em>"lo que es bueno para humanos es bueno para agentes"</em>. Aquí se concreta: los artefactos de este capítulo — doc-gardening, planes versionados, tracker de deuda, specs en el repo, score de calidad por dominio — reducen el tiempo de onboarding de un nuevo ingeniero en la misma medida en que hacen al agente productivo. Lo que parecía una concesión a la máquina es, en buena parte, ingeniería de plataforma para el propio equipo. Cada hora que dedicas al agente mejora la experiencia humana del repo, y viceversa. Ahí está la tracción.</p>
 
 
 

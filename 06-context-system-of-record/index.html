@@ -931,17 +931,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-mindset-shift" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The mindset shift
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-giant-agentsmd-mistake" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1470,17 +1459,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-mindset-shift" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The mindset shift
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#the-giant-agentsmd-mistake" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1633,11 +1611,7 @@
 
 
 <h1 id="6-context-as-a-system-of-record">6. Context as a system of record<a class="headerlink" href="#6-context-as-a-system-of-record" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>There's a line from OpenAI's Codex team worth painting on the team wall: <strong>"what the agent can't see doesn't exist"</strong>. It's a literal statement about how a coding agent operates, and it has direct consequences for where a project's knowledge needs to live. The short answer: in the repo, versioned, mechanically accessible. The long answer is this chapter.</p>
-<h2 id="the-mindset-shift">The mindset shift<a class="headerlink" href="#the-mindset-shift" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>On human teams, knowledge lives scattered across many places: in the README, sure, but also in last Wednesday's Slack, in a Google Doc linked from some email, in the senior's head, in a Linear ticket from six months ago, in a hallway conversation. This distribution works — badly, but it works — because humans know how to ask, cross-reference sources, and use implicit context.</p>
-<p>An agent doesn't. The agent only sees what's in its effective context at the moment it acts. If the decision "don't touch this module, we're going to deprecate it" lives only in a Slack message from March 14<sup>th</sup>, for the agent that decision doesn't exist. It's not that it ignores it: it's that it's not accessible.</p>
-<p>The consequence is uncomfortable and liberating at once: <strong>everything you want the agent to know has to be materialized in the repo or mechanically accessible from it</strong>. Not "documented somewhere". Not "mentioned in a meeting". Materialized, in markdown, indexed, maintained.</p>
+<p>Ch. 0 installed the line from OpenAI's Codex team: <strong>"what the agent can't see doesn't exist"</strong> — and the immediate consequence that everything the agent needs to know has to be <em>materialized</em> in the repo, not just "documented somewhere". This chapter is the operational version of that consequence: what concrete shapes the materialization takes, what traps to avoid (the encyclopedic AGENTS.md, syncs without a freshness check), how to keep it from rotting over time, and when swapping the repo for an MCP server is a reasonable choice and when it isn't.</p>
 <h2 id="the-giant-agentsmd-mistake">The "giant AGENTS.md" mistake<a class="headerlink" href="#the-giant-agentsmd-mistake" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Many teams' first reaction when they discover this is reasonable: cram everything important into a huge AGENTS.md. It's exactly the trap OpenAI describes having tried and abandoned. Four reasons it fails:</p>
 <p><strong>1. Context is a scarce resource.</strong> A 1,000-line manual overshadows the task, the relevant code, and the tools. The model has two options: ignore key constraints, or optimize the wrong ones. Both are bad.</p>
@@ -1698,8 +1672,7 @@
 <p>For most real teams, the sensible answer isn't "everything in the repo" or "everything in MCP" but a deliberate hybrid: <strong>the critical stuff is materialized in the repo</strong> (with whatever strategy fits — point-in-time copy, sync with a freshness lint, or born as markdown in the first place), and <strong>additional documentation</strong> — the long-tail, the historical context, domain notes that help but aren't load-bearing — <strong>is exposed via an MCP server against a documentation system with semantic indexing</strong>.</p>
 <p>The principle that holds up this compromise is the same one that holds up the whole chapter: the repo is the system of record because it is <strong>deterministic, versioned, auditable, and always available</strong>. Any alternative that loses one of those four properties is acceptable only where that property wasn't critical. MCP loses all four at once — and that's why it fits to <em>enrich</em> the context, not to <em>guarantee</em> it. The difference between enriching and guaranteeing is the difference between an assistant that is sometimes brilliant and a system a team can rely on.</p>
 <h2 id="the-hidden-upside">The hidden upside<a class="headerlink" href="#the-hidden-upside" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>There's a side effect almost nobody anticipates: <strong>by making the repo legible for an agent, you make it enormously more legible for humans too</strong>. Doc-gardening benefits you. Versioned plans benefit you. The debt tracker benefits you. Humans joining the team onboard faster. Seniors stop being context bottlenecks. What looked like a concession to the machine ends up being, in large part, platform engineering for the team itself.</p>
-<p>Stripe puts it directly, and it's worth closing with their line: <em>"what's good for humans is good for agents"</em>. The historical investment in developer experience pays dividends for the agent too, and the investment in the agent pays dividends for developer experience. The loop is virtuous if you let it be.</p>
+<p>Ch. 0 already pointed at the virtuous loop Stripe sums up as <em>"what's good for humans is good for agents"</em>. This is where it gets concrete: the artifacts from this chapter — doc-gardening, versioned plans, debt tracker, specs in the repo, per-domain quality score — cut the onboarding time for a new engineer by the same amount they make the agent productive. What looked like a concession to the machine is, in large part, platform engineering for the team itself. Every hour you spend on the agent improves the human experience of the repo, and vice versa. That's where the traction comes from.</p>
 
 
 

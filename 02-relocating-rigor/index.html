@@ -685,17 +685,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-historical-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The historical pattern
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#where-rigor-moves-with-coding-agents" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1387,17 +1376,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-historical-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The historical pattern
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#where-rigor-moves-with-coding-agents" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1467,15 +1445,8 @@
 
 
 <h1 id="2-relocating-rigor">2. Relocating rigor<a class="headerlink" href="#2-relocating-rigor" title="Enlace permanente a esta sección">&para;</a></h1>
-<p>Every time software has taken a major leap, someone has shown up to announce that "we don't need so much rigor anymore". And every time they've been wrong. Rigor doesn't disappear; <strong>it relocates</strong>. This is probably the most useful observation Chad Fowler makes about the generative-AI era, and it's worth keeping in mind before you start dismantling practices that look "no longer necessary".</p>
-<h2 id="the-historical-pattern">The historical pattern<a class="headerlink" href="#the-historical-pattern" title="Enlace permanente a esta sección">&para;</a></h2>
-<p>Three examples tend to be cited:</p>
-<ol>
-<li><strong>Dynamic languages vs static type systems.</strong> When Ruby and Python became popular in the 2000s, plenty of people declared typing dead. It didn't die: rigor moved to the <em>test suite</em>. Serious Ruby teams ended up writing more tests per line of code than Java teams of the same era. Discipline didn't evaporate, it changed location.</li>
-<li><strong>Extreme Programming vs waterfall planning.</strong> Eliminating detailed plans and long phases didn't mean "winging it". It meant moving rigor to continuous integration, disciplined refactoring and immediate feedback. What you stopped doing in a Gantt you started doing on every commit.</li>
-<li><strong>Continuous deployment vs release windows.</strong> Removing the release ceremony didn't relax anything: it demanded first-rate observability, immediate reversibility, exhaustive automation and feature flags. Rigor moved to the runtime and to the platform.</li>
-</ol>
-<p>In all three cases, whoever interpreted the change as "now we can be more relaxed" lost. Whoever understood where discipline had moved to, won.</p>
+<p>Ch. 0 summarized Chad Fowler's observation: every time software takes a major leap, someone announces that "we don't need so much rigor anymore", and every time they're wrong. Rigor doesn't disappear; <strong>it relocates</strong>. Dynamic languages moved it to the test suite; XP moved it to continuous integration; continuous deployment moved it to observability and automatic rollback. In all three cases, whoever read the change as "now we can relax" lost; whoever understood where discipline had moved to, won.</p>
+<p>With coding agents it's the same pattern. This chapter is about where rigor <em>specifically</em> relocates, what happens if you miss the move, and how to tell a sustainable relocation apart from a disguised evaporation.</p>
 <h2 id="where-rigor-moves-with-coding-agents">Where rigor moves with coding agents<a class="headerlink" href="#where-rigor-moves-with-coding-agents" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>With LLMs writing code, rigor moves out of two places and into two others:</p>
 <p><strong>Moves out of:</strong></p>
