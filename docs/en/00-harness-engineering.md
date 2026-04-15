@@ -35,6 +35,12 @@ A harness without guides produces an agent that drifts. A harness without sensor
 
 Every time your agent fails, you should be able to say whether the failure is due to a missing guide or a missing sensor. If you can't, you don't have a harness. You have prompts and luck.
 
+## The harness you already have and the one you have to build
+
+One thing worth clarifying before moving on: when you talk about a "coding agent" today, you rarely mean a bare LLM. Claude Code, GitHub Copilot, Cursor, Codex and similar tools **are already a harness** on top of the model — tool calls, sandboxed execution, file read/write, repo retrieval, session memory, stop rules, subagents, hooks, MCP, skills. Each new release pushes more capabilities inside the product: what you had to build by hand twelve months ago now ships out of the box, and that trend will continue as models and tools mature.
+
+This doesn't eliminate harness engineering; it shifts it. The layer the vendor gives you serves every team equally — it's a shared commodity, just like the model is. The layer *your* team builds — your repo's conventions, sensors on your domain, context materialized in your markdown, validators for your invariants, your specific PR flow — is the one only you can build, and it's where the edge still lives. The question isn't whether to use an AI tool with a built-in harness (you will), it's **what layer of harness engineering you build on top**. When a new capability rises into the vendor's harness, it retires that part of your work and pushes your investment toward what remains specific to your context.
+
 ## The question worth learning to ask
 
 There is one concrete question worth more than any framework. When the agent fails — and it will fail — most teams ask: *"what do I tell the agent, in this chat, so this doesn't happen?"*. It's the wrong question. It leads to ephemeral instructions that evaporate when you close the session, micro-corrections that don't get recorded anywhere, a prompt-tweaking spiral that accumulates nothing.

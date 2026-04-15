@@ -2,17 +2,11 @@
 
 After nine chapters describing how to automate everything automatable, it's worth stopping and asking the opposite question: **what does the human still have to do?**. The answer isn't "supervise the agent", even though that's what many teams end up doing by inertia. The right answer requires understanding that the engineer's role changes, it doesn't shrink.
 
-## Three modes of delegation: in, on, outside the loop
+## Where the human is: a quick recap
 
-Before talking about what the human does, it's worth pinning down *where* the human is. Kief Morris articulates this with three modes of delegation that are worth having in front of you because they summarize almost all the confusion in teams in transition:
+Ch. 0 introduced the three delegation modes Kief Morris articulates — *outside the loop* (vibe coding), *in the loop* (per-artifact supervision), and *on the loop* (system supervision) — and argued that "on the loop" is the only regime that scales: the human doesn't inspect each output but modifies the system that produces them when things go wrong.
 
-**Humans Outside the Loop — "vibe coding".** The agents handle the whole cycle. Humans just define the expected outcome and look at what comes out. It works for prototypes and exploration. It fails in serious production: nobody is calibrating anything, costs spiral, quality drifts without anyone noticing. It's seductive because it looks like maximum leverage, and it's where most teams get burned trying to skip the intermediate phases.
-
-**Humans In the Loop — supervision by artifact.** The human reviews every single thing the agent produces, line by line, before accepting it. It's the default model a conservative team lands on. Its problem, already discussed in chapter 8, is arithmetic: the human becomes a permanent bottleneck, reviews degenerate into ritual, and the agent's leverage never materializes. Effective speed is capped by available human attention.
-
-**Humans On the Loop — supervision of the system, not the artifact.** It's the position this whole guide defends, and the one Morris explicitly recommends. The human doesn't inspect each output; they design and improve the system (the harness) that produces the outputs. When something goes wrong, the answer isn't to correct the artifact but to **modify the system that produced the artifact**. That phrase deserves underlining: it's the difference between putting out fires and designing fire prevention.
-
-The healthy transition is from "in" toward "on", not toward "outside". "Outside" is a valid destination only for fragments of work where the risks are acceptably low; "on" is the stable regime for everything else. If your team is stuck in "in", the solution isn't to relax it to "outside" — it's to invest in the harness until "on" is possible.
+We take that discussion as closed. The question this chapter organizes is the next one: **if you're "on the loop", what exactly do you do with your time?** Because "supervise the system" is a nice phrase that, left unbroken-down, leaves half the engineers on the team not knowing what to do on Monday morning.
 
 ## The two cycles: why and how
 
@@ -35,14 +29,9 @@ These three things aren't automatable, not because the model isn't capable, but 
 
 ## The new work
 
-OpenAI describes the shift like this, and it's worth quoting: *"people direct, agents execute"*. In practice, the engineer's work shifts from:
+Ch. 0 already enumerated the shift — from writing code to designing environments, from reviewing PRs to designing the reviewers, from implementing the domain to specifying it, from fixing bugs to diagnosing why the agent made them — and summed it up with OpenAI's phrase: *"people direct, agents execute"*. It's meta-engineering, and the job description starts to look more like "platform engineer for non-human collaborators" than "programmer".
 
-- writing code → **designing environments where others (agents) can write code well**
-- reviewing PRs → **designing the rules, sensors and reviewers that review PRs**
-- understanding the domain to implement it → **understanding the domain to specify it so the agent can implement it correctly**
-- fixing bugs → **diagnosing why the agent made the mistake and modifying the harness so it doesn't happen again**
-
-This sounds like meta-engineering, and it is. The job description becomes more like "platform engineer for non-human collaborators" than "programmer".
+What Ch. 0 didn't do is break it down to the level of "what fills your hours". That's next.
 
 ## The four human interventions that matter
 

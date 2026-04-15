@@ -2,17 +2,11 @@
 
 Después de nueve capítulos describiendo cómo automatizar todo lo automatizable, conviene parar y hacer la pregunta opuesta: **¿qué tiene que seguir haciendo el humano?**. La respuesta no es "supervisar al agente", aunque eso es lo que muchos equipos terminan haciendo por inercia. La respuesta correcta requiere entender que el papel del ingeniero cambia, no se reduce.
 
-## Tres modos de delegación: in, on, outside the loop
+## Dónde está el humano: un recordatorio rápido
 
-Antes de hablar de qué hace el humano, conviene fijar *dónde* está el humano. Kief Morris articula esto con tres modos de delegación que vale la pena tener delante porque resumen casi toda la confusión que hay en equipos en transición:
+El Cap. 0 introdujo los tres modos de delegación que articula Kief Morris — *outside the loop* (vibe coding), *in the loop* (supervisión por cada artefacto) y *on the loop* (supervisión del sistema) — y argumentó que "on the loop" es el único régimen que escala: el humano no inspecciona cada salida, sino que modifica el sistema que las produce cuando algo va mal.
 
-**Humans Outside the Loop — "vibe coding".** Los agentes manejan el ciclo entero. Los humanos solo definen el resultado esperado y miran qué sale. Funciona para prototipos y exploración. Falla en producción seria: nadie está calibrando nada, los costes se descontrolan, la calidad deriva sin que nadie lo note. Es seductor porque parece máxima palanca, y es donde más equipos se queman al intentar saltarse las fases intermedias.
-
-**Humans In the Loop — supervisión por artefacto.** El humano revisa cada cosa que el agente produce, línea por línea, antes de aceptarla. Es el modelo por defecto al que llega un equipo conservador. Su problema, ya discutido en el capítulo 8, es aritmético: el humano se convierte en cuello de botella permanente, las revisiones degeneran en ritual, y la palanca del agente nunca se materializa. La velocidad efectiva queda capada por la atención humana disponible.
-
-**Humans On the Loop — supervisión del sistema, no del artefacto.** Es la posición que esta guía entera defiende, y la que Morris recomienda explícitamente. El humano no inspecciona cada salida; diseña y mejora el sistema (el harness) que produce las salidas. Cuando algo va mal, la respuesta no es corregir el artefacto sino **modificar el sistema que produjo el artefacto**. Esa frase merece subrayarse: es la diferencia entre apagar fuegos y diseñar prevención de incendios.
-
-La transición saludable es de "in" hacia "on", no hacia "outside". "Outside" es una destinación válida solo para fragmentos del trabajo donde los riesgos son aceptablemente bajos; "on" es el régimen estable para todo lo demás. Si tu equipo está atascado en "in", la solución no es relajarlo a "outside" — es invertir en el harness hasta que "on" sea posible.
+Damos esa discusión por cerrada. La pregunta que organiza este capítulo es la siguiente: **si estás "on the loop", ¿qué haces exactamente con tu tiempo?** Porque "supervisar el sistema" es una frase bonita que, sin desglosar, deja a la mitad de los ingenieros sin saber qué hacer el lunes por la mañana.
 
 ## Los dos ciclos: why y how
 
@@ -35,14 +29,9 @@ Estas tres cosas no son automatizables, no porque el modelo no sea capaz, sino p
 
 ## El nuevo trabajo
 
-OpenAI describe el cambio así, y vale la pena citarlo: *"las personas dirigen, los agentes ejecutan"*. En la práctica, el trabajo del ingeniero pasa de ser:
+El Cap. 0 ya enumeró el cambio — de escribir código a diseñar entornos, de revisar PRs a diseñar los revisores, de implementar el dominio a especificarlo, de arreglar fallos a diagnosticar por qué el agente los cometió — y lo resumió con la frase de OpenAI: *"las personas dirigen, los agentes ejecutan"*. Es meta-ingeniería, y la descripción del puesto se parece más a "ingeniero de plataforma para colaboradores no humanos" que a "programador".
 
-- escribir código → **diseñar entornos donde otros (agentes) puedan escribir código bien**
-- revisar PRs → **diseñar las reglas, sensores y revisores que revisan PRs**
-- entender el dominio para implementarlo → **entender el dominio para especificarlo de forma que el agente pueda implementarlo correctamente**
-- arreglar fallos → **diagnosticar por qué el agente cometió el fallo y modificar el harness para que no vuelva a pasarlo**
-
-Esto suena a meta-ingeniería, y lo es. La descripción del puesto se vuelve más parecida a "ingeniero de plataforma para colaboradores no humanos" que a "programador".
+Lo que el Cap. 0 no hizo es desglosarlo al nivel de "qué ocupa tus horas". Eso es lo siguiente.
 
 ## Las cuatro intervenciones humanas que importan
 

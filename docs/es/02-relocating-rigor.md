@@ -1,16 +1,8 @@
 # 2. La reubicación del rigor
 
-Cada vez que el software ha dado un salto importante, alguien ha aparecido para anunciar que "ya no hace falta tanto rigor". Y cada vez se ha equivocado. El rigor no desaparece; **se traslada a otro sitio**. Esta es probablemente la observación más útil que Chad Fowler hace sobre la era de la IA generativa, y conviene tenerla en mente antes de empezar a desmantelar prácticas que parecen "ya no necesarias".
+En el Cap. 0 resumimos la observación de Chad Fowler: cada vez que el software da un salto importante, alguien anuncia que "ya no hace falta tanto rigor", y cada vez se equivoca. El rigor no desaparece; **se reubica**. Los lenguajes dinámicos lo movieron al test suite; XP lo movió a la integración continua; el despliegue continuo lo movió a la observabilidad y a la reversión automática. En los tres casos, quien leyó el cambio como "ahora podemos ser más relajados" perdió; quien entendió dónde se había mudado la disciplina, ganó.
 
-## El patrón histórico
-
-Tres ejemplos suelen citarse:
-
-1. **Lenguajes dinámicos vs sistemas de tipos estáticos.** Cuando Ruby y Python se hicieron populares en los 2000s, mucha gente declaró muerto al tipado. No murió: el rigor se mudó al *test suite*. Los equipos serios de Ruby acabaron escribiendo más tests por línea de código que los equipos de Java de la misma época. La disciplina no se evaporó, cambió de lugar.
-2. **Extreme Programming vs planificación waterfall.** Eliminar planes detallados y fases largas no significó "improvisar". Significó mover la rigurosidad a integración continua, refactor disciplinado y feedback inmediato. Lo que dejaste de hacer en un Gantt lo empezaste a hacer en cada commit.
-3. **Despliegue continuo vs ventanas de release.** Quitar la ceremonia del release no relajó nada: exigió observabilidad de primera, reversibilidad inmediata, automatización exhaustiva y feature flags. El rigor se mudó al runtime y a la plataforma.
-
-En los tres casos, quien interpretó el cambio como "ahora podemos ser más relajados" perdió. Quien entendió dónde se había mudado la disciplina, ganó.
+Con agentes de codificación pasa lo mismo. Este capítulo es sobre dónde se reubica *específicamente* el rigor, qué pasa si no te enteras, y cómo distinguir una reubicación sostenible de una evaporación disfrazada.
 
 ## Dónde se mueve el rigor con los agentes de codificación
 

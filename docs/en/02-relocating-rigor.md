@@ -1,16 +1,8 @@
 # 2. Relocating rigor
 
-Every time software has taken a major leap, someone has shown up to announce that "we don't need so much rigor anymore". And every time they've been wrong. Rigor doesn't disappear; **it relocates**. This is probably the most useful observation Chad Fowler makes about the generative-AI era, and it's worth keeping in mind before you start dismantling practices that look "no longer necessary".
+Ch. 0 summarized Chad Fowler's observation: every time software takes a major leap, someone announces that "we don't need so much rigor anymore", and every time they're wrong. Rigor doesn't disappear; **it relocates**. Dynamic languages moved it to the test suite; XP moved it to continuous integration; continuous deployment moved it to observability and automatic rollback. In all three cases, whoever read the change as "now we can relax" lost; whoever understood where discipline had moved to, won.
 
-## The historical pattern
-
-Three examples tend to be cited:
-
-1. **Dynamic languages vs static type systems.** When Ruby and Python became popular in the 2000s, plenty of people declared typing dead. It didn't die: rigor moved to the *test suite*. Serious Ruby teams ended up writing more tests per line of code than Java teams of the same era. Discipline didn't evaporate, it changed location.
-2. **Extreme Programming vs waterfall planning.** Eliminating detailed plans and long phases didn't mean "winging it". It meant moving rigor to continuous integration, disciplined refactoring and immediate feedback. What you stopped doing in a Gantt you started doing on every commit.
-3. **Continuous deployment vs release windows.** Removing the release ceremony didn't relax anything: it demanded first-rate observability, immediate reversibility, exhaustive automation and feature flags. Rigor moved to the runtime and to the platform.
-
-In all three cases, whoever interpreted the change as "now we can be more relaxed" lost. Whoever understood where discipline had moved to, won.
+With coding agents it's the same pattern. This chapter is about where rigor *specifically* relocates, what happens if you miss the move, and how to tell a sustainable relocation apart from a disguised evaporation.
 
 ## Where rigor moves with coding agents
 

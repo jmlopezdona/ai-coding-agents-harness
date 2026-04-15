@@ -35,6 +35,12 @@ Un harness sin guías produce un agente que se desvía. Un harness sin sensores 
 
 Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes harness. Tienes prompts y suerte.
 
+## El harness que ya tienes y el que tienes que construir
+
+Conviene aclarar algo antes de seguir: cuando hoy hablas de un "agente de codificación" rara vez te refieres a un LLM desnudo. Claude Code, GitHub Copilot, Cursor, Codex y similares **ya son un harness** sobre el modelo — tool calls, ejecución en sandbox, lectura y escritura de archivos, retrieval del repo, memoria de sesión, reglas de stop, subagentes, hooks, MCP, skills. Cada versión nueva empuja más capacidades dentro del producto: lo que hace doce meses tenías que construir a mano hoy viene de fábrica, y esa tendencia va a continuar a medida que modelos y herramientas maduran.
+
+Esto no elimina la ingeniería de harness; la desplaza. La capa que el vendor te da sirve para todos los equipos por igual — es una commodity compartida, igual que lo es el modelo. La capa que *tu* equipo construye — convenciones de tu repo, sensores sobre tu dominio, contexto materializado en tu markdown, validadores de tus invariantes, flujo de PR específico — es la que solo puedes construir tú, y es donde sigue estando la ventaja. La pregunta no es si usar un AI tool con harness incorporado (lo vas a hacer), sino **qué capa de harness engineering construyes encima**. Cuando una capacidad nueva sube al harness del vendor, retira esa parte de tu trabajo y empuja tu inversión hacia lo que aún queda específico de tu contexto.
+
 ## La pregunta que hay que aprender a hacerse
 
 Hay una pregunta concreta que vale más que cualquier framework. Cuando el agente falla — y va a fallar — la mayoría de equipos preguntan: *"¿qué le digo al agente, en este chat, para que esto no pase?"*. Es la pregunta equivocada. Lleva a instrucciones efímeras que se evaporan al cerrar la sesión, microcorrecciones que no quedan registradas, una espiral de prompt-tweaking que no acumula nada.

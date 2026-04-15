@@ -1,14 +1,6 @@
 # 6. El contexto como sistema de registro
 
-Hay una frase del equipo de Codex de OpenAI que vale la pena pintar en la pared del equipo: **"lo que el agente no puede ver, no existe"**. Es una afirmación literal sobre cómo opera un agente de codificación, y tiene consecuencias directas sobre dónde tiene que vivir el conocimiento de un proyecto. La respuesta corta: en el repo, versionado, mecánicamente accesible. La respuesta larga es este capítulo.
-
-## El cambio de mentalidad
-
-En equipos humanos, el conocimiento vive distribuido en muchos lugares: en el README, sí, pero también en Slack del miércoles pasado, en un Google Doc enlazado en algún correo, en la cabeza del senior, en un Linear ticket de hace seis meses, en una conversación de pasillo. Esta distribución funciona — mal pero funciona — porque los humanos sabemos preguntar, cruzar fuentes, y usar contexto implícito.
-
-Un agente no. El agente solo ve lo que está en su contexto efectivo en el momento de actuar. Si la decisión de "no toques este módulo, lo vamos a deprecar" vive solo en un Slack del 14 de marzo, para el agente esa decisión no existe. No es que la ignore: es que no es accesible.
-
-La consecuencia es incómoda y liberadora a la vez: **todo lo que quieras que el agente sepa tiene que estar materializado en el repo o accesible mecánicamente desde él**. No "documentado en algún sitio". No "mencionado en una reunión". Materializado, en markdown, indexado, mantenido.
+En el Cap. 0 instalamos la frase del equipo de Codex: **"lo que el agente no puede ver, no existe"** — y la consecuencia inmediata de que todo lo que el agente tenga que saber debe estar *materializado* en el repo, no solo "documentado en algún sitio". Este capítulo es la versión operativa de esa consecuencia: qué formas concretas toma la materialización, qué trampas evitar (AGENTS.md enciclopédico, sincronizaciones sin freshness check), cómo evitar que se pudra con el tiempo, y cuándo sustituir el repo por un MCP server es una opción razonable y cuándo no lo es.
 
 ## El error del "AGENTS.md gigante"
 
@@ -110,6 +102,4 @@ El principio que sostiene este compromiso es el mismo que sostiene todo el capí
 
 ## El upside oculto
 
-Hay un efecto secundario que casi nadie anticipa: **al hacer el repo legible para un agente, lo haces enormemente más legible para humanos también**. El doc-gardening te beneficia. Los planes versionados te benefician. El tracker de deuda te beneficia. Los humanos que se incorporan al equipo se incorporan más rápido. Los seniors dejan de ser cuellos de botella de contexto. Lo que parecía una concesión a la máquina termina siendo, en buena parte, ingeniería de plataforma para el propio equipo.
-
-Stripe lo dice de forma directa, y vale la pena cerrar con su frase: *"lo que es bueno para humanos es bueno para agentes"*. La inversión histórica en developer experience rinde dividendos también para el agente, y la inversión en agente rinde dividendos para el developer experience. El bucle es virtuoso si lo dejas serlo.
+El Cap. 0 ya apuntó al bucle virtuoso que Stripe resume como *"lo que es bueno para humanos es bueno para agentes"*. Aquí se concreta: los artefactos de este capítulo — doc-gardening, planes versionados, tracker de deuda, specs en el repo, score de calidad por dominio — reducen el tiempo de onboarding de un nuevo ingeniero en la misma medida en que hacen al agente productivo. Lo que parecía una concesión a la máquina es, en buena parte, ingeniería de plataforma para el propio equipo. Cada hora que dedicas al agente mejora la experiencia humana del repo, y viceversa. Ahí está la tracción.
