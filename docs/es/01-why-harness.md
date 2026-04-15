@@ -21,8 +21,8 @@ El capítulo introductorio descompone el arnés en dos mecanismos que conviene t
 Las cifras de referencia — Stripe con >1.000 PRs/semana, OpenAI con ~1M de líneas y ~1.500 PRs en cinco meses — ya están en el capítulo introductorio. Lo que conviene añadir aquí es qué *específicamente* construyeron, porque ahí está la forma del trabajo que proponemos:
 
 - **Stripe** no ganó con un modelo mejor. Ganó con **Toolshed** (~500 herramientas internas expuestas al agente vía MCP), **devboxes pre-instanciados en 10 segundos**, y un sistema de **blueprints** que combina nodos determinísticos con nodos agénticos según el tipo de trabajo. Las tres piezas son arnés, no modelo.
-- **OpenAI** lo hizo con **app booteable por worktree** (un agente por feature, ejecutándose en paralelo, sin colisiones), **Chrome DevTools Protocol conectado al runtime** (el agente ve la UI como la ve el usuario), **observabilidad efímera consultable con LogQL/PromQL**, y `docs/` estructurado como sistema de registro (más en el cap. 6).
-- **Geoffrey Huntley** aísla la primitiva que reaparece en casi todos estos equipos: un orquestador monolítico ejecutando una iteración a la vez. No es un feature del modelo; es una decisión arquitectónica del equipo que lo opera (cap. 4).
+- **OpenAI** lo hizo con **app booteable por worktree** (un agente por funcionalidad a implementar, ejecutándose en paralelo, sin colisiones), **Chrome DevTools Protocol conectado al runtime** (el agente ve la UI como la ve el usuario), **observabilidad efímera consultable con LogQL/PromQL**, y `docs/` estructurado como sistema de registro (más en el cap. 6).
+- **Geoffrey Huntley** aísla la primitiva que reaparece en casi todos estos equipos: un orquestador monolítico ejecutando una iteración a la vez. No es una capacidad del modelo; es una decisión arquitectónica del equipo que lo opera (cap. 4).
 
 Nada de esto requiere un modelo secreto. Todo lo decide tu equipo. Todo se acumula.
 

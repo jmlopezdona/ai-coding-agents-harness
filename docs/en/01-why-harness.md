@@ -21,7 +21,7 @@ The introductory chapter breaks the harness into two mechanisms worth keeping in
 The headline numbers — Stripe's >1,000 PRs/week, OpenAI's ~1M lines and ~1,500 PRs in five months — are already in the introductory chapter. What's worth adding here is what they *specifically* built, because that's where the shape of the work we're proposing lives:
 
 - **Stripe** didn't win with a better model. They won with **Toolshed** (~500 internal tools exposed to the agent via MCP), **devboxes pre-instantiated in 10 seconds**, and a **blueprints** system that combines deterministic nodes with agentic nodes depending on the kind of work. All three pieces are harness, not model.
-- **OpenAI** did it with an **app bootable per worktree** (one agent per feature, running in parallel, no collisions), **Chrome DevTools Protocol wired to the runtime** (the agent sees the UI the way the user sees it), **ephemeral observability queryable with LogQL/PromQL**, and a `docs/` tree structured as a system of record (more in ch. 6).
+- **OpenAI** did it with an **app bootable per worktree** (one agent per feature to implement, running in parallel, no collisions), **Chrome DevTools Protocol wired to the runtime** (the agent sees the UI the way the user sees it), **ephemeral observability queryable with LogQL/PromQL**, and a `docs/` tree structured as a system of record (more in ch. 6).
 - **Geoffrey Huntley** isolates the primitive that reappears across almost all these teams: a monolithic orchestrator running one iteration at a time. It's not a feature of the model; it's an architectural decision of the team operating it (ch. 4).
 
 None of this requires a secret model. Everything is decided by your team. Everything compounds.
