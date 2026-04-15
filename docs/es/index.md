@@ -17,7 +17,7 @@ No es un tutorial paso a paso ni un manual de un producto concreto. Es un ensayo
 
 ## Cómo leer esta guía
 
-Los capítulos están ordenados de **mentalidad → pilares → práctica → mantenimiento → anti-patrones → diagnóstico**, pero cada uno se sostiene por sí solo. Si ya tienes claro el "por qué", puedes saltar directamente al capítulo que te resuelva un problema concreto.
+Los capítulos están ordenados de **mentalidad → pilares → práctica → largo plazo → anti-patrones → aplicación**, pero cada uno se sostiene por sí solo. Si ya tienes claro el "por qué", puedes saltar directamente al capítulo que te resuelva un problema concreto.
 
 ## Índice
 

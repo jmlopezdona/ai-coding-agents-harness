@@ -17,7 +17,7 @@ This isn't a step-by-step tutorial or a manual for any particular product. It's 
 
 ## How to read this guide
 
-The chapters are ordered as **mindset → pillars → practice → maintenance → anti-patterns → diagnosis**, but each one stands on its own. If you already get the "why", jump directly to the chapter that solves a concrete problem for you.
+The chapters are ordered as **mindset → pillars → practice → long-term → anti-patterns → application**, but each one stands on its own. If you already get the "why", jump directly to the chapter that solves a concrete problem for you.
 
 ## Index
 
