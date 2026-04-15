@@ -30,7 +30,7 @@ Nada de esto requiere un modelo secreto. Todo lo decide tu equipo. Todo se acumu
 
 Cuando aceptas que el arnés es donde se juega la calidad, dejas de hacer ciertas cosas y empiezas a hacer otras. Dejas de buscar el "prompt perfecto" — los prompts viven en el arnés ahora, versionados como código. Dejas de copiar y pegar errores al chat — los errores entran al bucle por sensores automáticos. Dejas de pedirle al agente que adivine el contexto — el contexto vive estructurado en el repo, accesible mecánicamente.
 
-Y empiezas a hacer cosas que antes parecían over-engineering: linters custom para una sola convención, planes de ejecución versionados, observabilidad en local, agentes de "doc-gardening" que mantienen la documentación al día.
+Y empiezas a hacer cosas que antes parecían sobreingeniería: linters a medida para una sola convención, planes de ejecución versionados, observabilidad en local, agentes de "doc-gardening" que mantienen la documentación al día.
 
 Lo que en un equipo humano sería quisquilloso, en un equipo con agentes **es un multiplicador**. Una regla codificada una vez se aplica para siempre, en cada PR, sin desgaste, sin discusión, sin necesidad de recordársela a nadie en la siguiente reunión diaria.
 
