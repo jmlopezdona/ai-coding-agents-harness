@@ -33,7 +33,32 @@ Böckeler descompone el arnés en dos mecanismos, y la distinción es la herrami
 
 Un arnés sin guías produce un agente que se desvía. Un arnés sin sensores produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.
 
-Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes arnés. Tienes prompts y suerte.
+## La anatomía mínima del harness
+
+La distinción guías/sensores dice *para qué* sirve cada cosa, pero no dice *qué piezas* hace falta tener. Si descompones lo que construyen los equipos maduros y lo ordenas por función, quedan seis piezas agrupadas en tres capas, más una dimensión transversal que las recorre todas.
+
+**Capa 1 — Sustrato: dónde y cómo se ejecuta todo.**
+
+1. **Aislamiento reproducible.** Sandboxes desechables, entornos efímeros, ejecución sin efectos colaterales sobre lo que te importa. Multiplica el valor de todo lo demás; sin esto el agente no itera con libertad y tú no sales del "in the loop".
+2. **Contrato operacional del repo.** Comandos canónicos unificados (`lint`, `typecheck`, `test:unit`, `test:integration`, `test:e2e`, `build`, `deploy`, `migrate`…), precondiciones explícitas, salidas legibles por máquina, mapa de observabilidad local, reproducibilidad del entorno, matriz de seguridad por tier, recetas para operaciones recurrentes. Es la interfaz que hace que guías y sensores sean realmente invocables.
+
+**Capa 2 — Contenido: lo que orienta y lo que valida.**
+
+3. **Guías (feedforward).** AGENTS.md como mapa corto del repo, convenciones codificadas, plantillas de plan y de PR, schemas, arquitectura materializada en markdown versionado, prompts commiteados al repo, skills y slash-commands reutilizables. Todo lo que el agente lee antes de actuar.
+4. **Sensores (feedback).** Tests rápidos y deterministas, type checkers, linters custom con mensajes dirigidos al agente, validadores de invariantes (direcciones de dependencia, capas), evals de dominio, agentes revisores, observabilidad efímera del propio agente. Todo lo que detecta desvío sin tu intervención, con velocidad suficiente para cerrar el bucle.
+
+**Capa 3 — Dinámica: cómo se mueve y evoluciona.**
+
+5. **El bucle iterativo.** Orquestador mínimo que ejecuta → observa sensores → decide → vuelve a iterar, hasta que pase o se alcance un límite. Es lo que convierte piezas estáticas en sistema autocorrectivo.
+6. **Gobierno y mantenimiento del arnés.** Flujo de PR explícito (qué revisa humano vs. agente), detectores de entropía (docs obsoletas, drift spec↔código, enlaces rotos), métricas del propio arnés (tasa de éxito, tiempo de ciclo, PRs que vuelven), y — la disciplina central — promoción sistemática: cada fallo recurrente se convierte en guía o sensor nuevo, nunca en prompt efímero.
+
+**Transversal a todas las capas.**
+
+**Especificación verificable de la intención.** ACs, specs y tickets escritos con precisión suficiente para que el agente los interprete y para que la evaluación pueda automatizarse. Si esto falla, las otras seis piezas funcionan y entregan con mucha eficacia lo que no querías.
+
+Una forma compacta de leerlo: el sustrato (1–2) hace posible que el agente opere, el contenido (3–4) le dice qué hacer y detecta cuándo se desvía, la dinámica (5–6) mantiene el sistema en movimiento y sano, y la especificación transversal define qué se le pide. Si te falta una capa entera, no tienes arnés. Si te falta una pieza dentro de una capa, el arnés existe pero cojea por esa esquina — y el diagnóstico de fallos te dice exactamente cuál.
+
+Y una heurística de madurez que recorre todo el conjunto: ante cualquier fallo deberías poder señalar sin dudar en qué pieza faltó cobertura — aislamiento insuficiente, contrato operacional impreciso, guía ausente, sensor ciego, bucle roto, o spec imprecisa. Si la respuesta más frecuente es "el modelo se equivocó" o "no sé por qué", el arnés todavía no está: tienes prompts y suerte.
 
 ## El harness que ya tienes y el que tienes que construir
 

@@ -33,7 +33,32 @@ Böckeler breaks the harness down into two mechanisms, and the distinction is th
 
 A harness without guides produces an agent that drifts. A harness without sensors produces an agent that drifts and never finds out. The two together, well calibrated, produce something that starts to look like a collaborator.
 
-Every time your agent fails, you should be able to say whether the failure is due to a missing guide or a missing sensor. If you can't, you don't have a harness. You have prompts and luck.
+## The minimum anatomy of a harness
+
+The guides/sensors distinction says *what each thing is for*, but it doesn't say *which pieces* you actually need to have. If you break down what mature teams build and sort it by function, you end up with six pieces grouped into three layers, plus one transversal dimension that runs through all of them.
+
+**Layer 1 — Substrate: where and how everything runs.**
+
+1. **Reproducible isolation.** Disposable sandboxes, ephemeral environments, execution with no side effects on the things you care about. It multiplies the value of everything else; without it the agent can't iterate freely and you can't get out of "in the loop".
+2. **Operational contract of the repo.** Unified canonical commands (`lint`, `typecheck`, `test:unit`, `test:integration`, `test:e2e`, `build`, `deploy`, `migrate`…), explicit preconditions, machine-readable output, a local observability map, environment reproducibility, a security matrix by tier, recipes for recurring operations. It's the interface that makes guides and sensors actually invokable.
+
+**Layer 2 — Content: what orients and what validates.**
+
+3. **Guides (feedforward).** AGENTS.md as a short map of the repo, codified conventions, plan and PR templates, schemas, architecture materialized in versioned markdown, prompts committed to the repo, reusable skills and slash-commands. Everything the agent reads before acting.
+4. **Sensors (feedback).** Fast, deterministic tests, type checkers, custom linters with messages addressed to the agent, invariant validators (dependency directions, layers), domain evals, reviewer agents, ephemeral observability for the agent itself. Everything that catches drift without your intervention, fast enough to close the loop.
+
+**Layer 3 — Dynamics: how it moves and evolves.**
+
+5. **The iterative loop.** A minimal orchestrator that executes → observes sensors → decides → iterates again, until it passes or hits a limit. It's what turns static pieces into a self-correcting system.
+6. **Governance and maintenance of the harness.** An explicit PR flow (what a human reviews vs. what an agent reviews), entropy detectors (stale docs, spec↔code drift, broken links), metrics about the harness itself (success rate, cycle time, PRs that come back), and — the central discipline — systematic promotion: every recurring failure becomes a new guide or sensor, never an ephemeral prompt.
+
+**Transversal to every layer.**
+
+**Verifiable specification of intent.** ACs, specs and tickets written with enough precision that the agent can interpret them and evaluation can be automated. If this fails, the other six pieces work perfectly and ship, very efficiently, what you didn't want.
+
+A compact way to read the whole thing: the substrate (1–2) makes it possible for the agent to operate, the content (3–4) tells it what to do and detects when it drifts, the dynamics (5–6) keep the system moving and healthy, and the transversal specification defines what's being asked of it. If you're missing a whole layer, you don't have a harness. If you're missing one piece inside a layer, the harness exists but limps on that corner — and the failure diagnosis tells you exactly which one.
+
+And one maturity heuristic that runs through the whole thing: for any failure, you should be able to point without hesitating to which piece lacked coverage — insufficient isolation, imprecise operational contract, missing guide, blind sensor, broken loop, or imprecise spec. If the most frequent answer is "the model got it wrong" or "I don't know why", the harness isn't there yet: you have prompts and luck.
 
 ## The harness you already have and the one you have to build
 
