@@ -600,6 +600,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#la-anatomia-minima-del-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La anatomía mínima del harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#el-harness-que-ya-tienes-y-el-que-tienes-que-construir" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1481,6 +1492,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#la-anatomia-minima-del-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La anatomía mínima del harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#el-harness-que-ya-tienes-y-el-que-tienes-que-construir" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1615,7 +1637,27 @@
 <li><strong>Sensores (feedback).</strong> Guardarraíles que actúan <em>después</em>. Tests, type checkers, linters, observabilidad efímera, evals, otros agentes revisando. Detectan cuándo el agente se ha salido del camino con suficiente velocidad y precisión para que el arnés pueda corregirlo sin tu intervención.</li>
 </ul>
 <p>Un arnés sin guías produce un agente que se desvía. Un arnés sin sensores produce un agente que se desvía y nunca se entera. Los dos juntos, bien calibrados, producen algo que empieza a parecerse a un colaborador.</p>
-<p>Cada vez que tu agente falla, deberías poder decir si el fallo se debe a una guía ausente o a un sensor ausente. Si no puedes, no tienes arnés. Tienes prompts y suerte.</p>
+<h2 id="la-anatomia-minima-del-harness">La anatomía mínima del harness<a class="headerlink" href="#la-anatomia-minima-del-harness" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>La distinción guías/sensores dice <em>para qué</em> sirve cada cosa, pero no dice <em>qué piezas</em> hace falta tener. Si descompones lo que construyen los equipos maduros y lo ordenas por función, quedan seis piezas agrupadas en tres capas, más una dimensión transversal que las recorre todas.</p>
+<p><strong>Capa 1 — Sustrato: dónde y cómo se ejecuta todo.</strong></p>
+<ol>
+<li><strong>Aislamiento reproducible.</strong> Sandboxes desechables, entornos efímeros, ejecución sin efectos colaterales sobre lo que te importa. Multiplica el valor de todo lo demás; sin esto el agente no itera con libertad y tú no sales del "in the loop".</li>
+<li><strong>Contrato operacional del repo.</strong> Comandos canónicos unificados (<code>lint</code>, <code>typecheck</code>, <code>test:unit</code>, <code>test:integration</code>, <code>test:e2e</code>, <code>build</code>, <code>deploy</code>, <code>migrate</code>…), precondiciones explícitas, salidas legibles por máquina, mapa de observabilidad local, reproducibilidad del entorno, matriz de seguridad por tier, recetas para operaciones recurrentes. Es la interfaz que hace que guías y sensores sean realmente invocables.</li>
+</ol>
+<p><strong>Capa 2 — Contenido: lo que orienta y lo que valida.</strong></p>
+<ol>
+<li><strong>Guías (feedforward).</strong> AGENTS.md como mapa corto del repo, convenciones codificadas, plantillas de plan y de PR, schemas, arquitectura materializada en markdown versionado, prompts commiteados al repo, skills y slash-commands reutilizables. Todo lo que el agente lee antes de actuar.</li>
+<li><strong>Sensores (feedback).</strong> Tests rápidos y deterministas, type checkers, linters custom con mensajes dirigidos al agente, validadores de invariantes (direcciones de dependencia, capas), evals de dominio, agentes revisores, observabilidad efímera del propio agente. Todo lo que detecta desvío sin tu intervención, con velocidad suficiente para cerrar el bucle.</li>
+</ol>
+<p><strong>Capa 3 — Dinámica: cómo se mueve y evoluciona.</strong></p>
+<ol>
+<li><strong>El bucle iterativo.</strong> Orquestador mínimo que ejecuta → observa sensores → decide → vuelve a iterar, hasta que pase o se alcance un límite. Es lo que convierte piezas estáticas en sistema autocorrectivo.</li>
+<li><strong>Gobierno y mantenimiento del arnés.</strong> Flujo de PR explícito (qué revisa humano vs. agente), detectores de entropía (docs obsoletas, drift spec↔código, enlaces rotos), métricas del propio arnés (tasa de éxito, tiempo de ciclo, PRs que vuelven), y — la disciplina central — promoción sistemática: cada fallo recurrente se convierte en guía o sensor nuevo, nunca en prompt efímero.</li>
+</ol>
+<p><strong>Transversal a todas las capas.</strong></p>
+<p><strong>Especificación verificable de la intención.</strong> ACs, specs y tickets escritos con precisión suficiente para que el agente los interprete y para que la evaluación pueda automatizarse. Si esto falla, las otras seis piezas funcionan y entregan con mucha eficacia lo que no querías.</p>
+<p>Una forma compacta de leerlo: el sustrato (1–2) hace posible que el agente opere, el contenido (3–4) le dice qué hacer y detecta cuándo se desvía, la dinámica (5–6) mantiene el sistema en movimiento y sano, y la especificación transversal define qué se le pide. Si te falta una capa entera, no tienes arnés. Si te falta una pieza dentro de una capa, el arnés existe pero cojea por esa esquina — y el diagnóstico de fallos te dice exactamente cuál.</p>
+<p>Y una heurística de madurez que recorre todo el conjunto: ante cualquier fallo deberías poder señalar sin dudar en qué pieza faltó cobertura — aislamiento insuficiente, contrato operacional impreciso, guía ausente, sensor ciego, bucle roto, o spec imprecisa. Si la respuesta más frecuente es "el modelo se equivocó" o "no sé por qué", el arnés todavía no está: tienes prompts y suerte.</p>
 <h2 id="el-harness-que-ya-tienes-y-el-que-tienes-que-construir">El harness que ya tienes y el que tienes que construir<a class="headerlink" href="#el-harness-que-ya-tienes-y-el-que-tienes-que-construir" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>Conviene aclarar algo antes de seguir: cuando hoy hablas de un "agente de codificación" rara vez te refieres a un LLM desnudo. Claude Code, GitHub Copilot, Cursor, Codex y similares <strong>ya son un harness</strong> sobre el modelo — tool calls, ejecución en sandbox, lectura y escritura de archivos, retrieval del repo, memoria de sesión, reglas de stop, subagentes, hooks, MCP, skills. Cada versión nueva empuja más capacidades dentro del producto: lo que hace doce meses tenías que construir a mano hoy viene de fábrica, y esa tendencia va a continuar a medida que modelos y herramientas maduran.</p>
 <p>Esto no elimina la ingeniería de harness; la desplaza. La capa que el vendor te da sirve para todos los equipos por igual — es una commodity compartida, igual que lo es el modelo. La capa que <em>tu</em> equipo construye — convenciones de tu repo, sensores sobre tu dominio, contexto materializado en tu markdown, validadores de tus invariantes, flujo de PR específico — es la que solo puedes construir tú, y es donde sigue estando la ventaja. La pregunta no es si usar un AI tool con harness incorporado (lo vas a hacer), sino <strong>qué capa de harness engineering construyes encima</strong>. Cuando una capacidad nueva sube al harness del vendor, retira esa parte de tu trabajo y empuja tu inversión hacia lo que aún queda específico de tu contexto.</p>

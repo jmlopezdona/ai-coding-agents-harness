@@ -600,6 +600,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-minimum-anatomy-of-a-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The minimum anatomy of a harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-harness-you-already-have-and-the-one-you-have-to-build" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1481,6 +1492,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-minimum-anatomy-of-a-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The minimum anatomy of a harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-harness-you-already-have-and-the-one-you-have-to-build" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1615,7 +1637,27 @@
 <li><strong>Sensors (feedback).</strong> Guardrails that act <em>after</em>. Tests, type checkers, linters, ephemeral observability, evals, other agents reviewing. They detect when the agent has gone off the path with enough speed and precision for the harness to correct it without your intervention.</li>
 </ul>
 <p>A harness without guides produces an agent that drifts. A harness without sensors produces an agent that drifts and never finds out. The two together, well calibrated, produce something that starts to look like a collaborator.</p>
-<p>Every time your agent fails, you should be able to say whether the failure is due to a missing guide or a missing sensor. If you can't, you don't have a harness. You have prompts and luck.</p>
+<h2 id="the-minimum-anatomy-of-a-harness">The minimum anatomy of a harness<a class="headerlink" href="#the-minimum-anatomy-of-a-harness" title="Enlace permanente a esta sección">&para;</a></h2>
+<p>The guides/sensors distinction says <em>what each thing is for</em>, but it doesn't say <em>which pieces</em> you actually need to have. If you break down what mature teams build and sort it by function, you end up with six pieces grouped into three layers, plus one transversal dimension that runs through all of them.</p>
+<p><strong>Layer 1 — Substrate: where and how everything runs.</strong></p>
+<ol>
+<li><strong>Reproducible isolation.</strong> Disposable sandboxes, ephemeral environments, execution with no side effects on the things you care about. It multiplies the value of everything else; without it the agent can't iterate freely and you can't get out of "in the loop".</li>
+<li><strong>Operational contract of the repo.</strong> Unified canonical commands (<code>lint</code>, <code>typecheck</code>, <code>test:unit</code>, <code>test:integration</code>, <code>test:e2e</code>, <code>build</code>, <code>deploy</code>, <code>migrate</code>…), explicit preconditions, machine-readable output, a local observability map, environment reproducibility, a security matrix by tier, recipes for recurring operations. It's the interface that makes guides and sensors actually invokable.</li>
+</ol>
+<p><strong>Layer 2 — Content: what orients and what validates.</strong></p>
+<ol>
+<li><strong>Guides (feedforward).</strong> AGENTS.md as a short map of the repo, codified conventions, plan and PR templates, schemas, architecture materialized in versioned markdown, prompts committed to the repo, reusable skills and slash-commands. Everything the agent reads before acting.</li>
+<li><strong>Sensors (feedback).</strong> Fast, deterministic tests, type checkers, custom linters with messages addressed to the agent, invariant validators (dependency directions, layers), domain evals, reviewer agents, ephemeral observability for the agent itself. Everything that catches drift without your intervention, fast enough to close the loop.</li>
+</ol>
+<p><strong>Layer 3 — Dynamics: how it moves and evolves.</strong></p>
+<ol>
+<li><strong>The iterative loop.</strong> A minimal orchestrator that executes → observes sensors → decides → iterates again, until it passes or hits a limit. It's what turns static pieces into a self-correcting system.</li>
+<li><strong>Governance and maintenance of the harness.</strong> An explicit PR flow (what a human reviews vs. what an agent reviews), entropy detectors (stale docs, spec↔code drift, broken links), metrics about the harness itself (success rate, cycle time, PRs that come back), and — the central discipline — systematic promotion: every recurring failure becomes a new guide or sensor, never an ephemeral prompt.</li>
+</ol>
+<p><strong>Transversal to every layer.</strong></p>
+<p><strong>Verifiable specification of intent.</strong> ACs, specs and tickets written with enough precision that the agent can interpret them and evaluation can be automated. If this fails, the other six pieces work perfectly and ship, very efficiently, what you didn't want.</p>
+<p>A compact way to read the whole thing: the substrate (1–2) makes it possible for the agent to operate, the content (3–4) tells it what to do and detects when it drifts, the dynamics (5–6) keep the system moving and healthy, and the transversal specification defines what's being asked of it. If you're missing a whole layer, you don't have a harness. If you're missing one piece inside a layer, the harness exists but limps on that corner — and the failure diagnosis tells you exactly which one.</p>
+<p>And one maturity heuristic that runs through the whole thing: for any failure, you should be able to point without hesitating to which piece lacked coverage — insufficient isolation, imprecise operational contract, missing guide, blind sensor, broken loop, or imprecise spec. If the most frequent answer is "the model got it wrong" or "I don't know why", the harness isn't there yet: you have prompts and luck.</p>
 <h2 id="the-harness-you-already-have-and-the-one-you-have-to-build">The harness you already have and the one you have to build<a class="headerlink" href="#the-harness-you-already-have-and-the-one-you-have-to-build" title="Enlace permanente a esta sección">&para;</a></h2>
 <p>One thing worth clarifying before moving on: when you talk about a "coding agent" today, you rarely mean a bare LLM. Claude Code, GitHub Copilot, Cursor, Codex and similar tools <strong>are already a harness</strong> on top of the model — tool calls, sandboxed execution, file read/write, repo retrieval, session memory, stop rules, subagents, hooks, MCP, skills. Each new release pushes more capabilities inside the product: what you had to build by hand twelve months ago now ships out of the box, and that trend will continue as models and tools mature.</p>
 <p>This doesn't eliminate harness engineering; it shifts it. The layer the vendor gives you serves every team equally — it's a shared commodity, just like the model is. The layer <em>your</em> team builds — your repo's conventions, sensors on your domain, context materialized in your markdown, validators for your invariants, your specific PR flow — is the one only you can build, and it's where the edge still lives. The question isn't whether to use an AI tool with a built-in harness (you will), it's <strong>what layer of harness engineering you build on top</strong>. When a new capability rises into the vendor's harness, it retires that part of your work and pushes your investment toward what remains specific to your context.</p>
